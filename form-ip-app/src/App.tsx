@@ -1,11 +1,17 @@
-import React from 'react';
-
+import { lazy, Suspense } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+const LoadingPage = lazy(() => import("./pages/LoadingPage"));
+const IndexForm = lazy(() => import("./pages/indexForm/IndexForm"));
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <BrowserRouter basename="/deklaracja">
+      <Suspense fallback={<LoadingPage />}>
+        <Routes>
+          <Route path="/" element={<IndexForm />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
