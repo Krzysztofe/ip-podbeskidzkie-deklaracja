@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 const LoadingPage = lazy(() => import("./pages/LoadingPage"));
-const IndexForm = lazy(() => import("./pages/indexForm/IndexForm"));
+const IndexForm = lazy(() => import("./pages/Form/IndexForm"));
 
 function App() {
   return (
