@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useMultistepForm = (steps: JSX.Element[]) => {
+const useMultistepForm = (steps: JSX.Element[] = []) => {
   const [currentStepIdx, setCurrentStepIdx] = useState(0);
 
   const next = () => {
