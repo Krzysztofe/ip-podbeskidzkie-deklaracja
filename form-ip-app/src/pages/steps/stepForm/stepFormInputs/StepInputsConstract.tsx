@@ -13,7 +13,12 @@ const StepInputsConstract = () => {
 
   return (
     <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Umowa:</FormLabel>
+      <FormLabel
+        id="demo-row-radio-buttons-group-label"
+        sx={{ p: 1, fontWeight: "bold" }}
+      >
+        Umowa:
+      </FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"

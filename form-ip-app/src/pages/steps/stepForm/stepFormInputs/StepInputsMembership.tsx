@@ -13,7 +13,10 @@ const StepInputsMembership = () => {
 
   return (
     <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">
+      <FormLabel
+        id="demo-row-radio-buttons-group-label"
+        sx={{ p: 1, fontWeight: "bold" }}
+      >
         Przynależność do innych związków:
       </FormLabel>
       <RadioGroup

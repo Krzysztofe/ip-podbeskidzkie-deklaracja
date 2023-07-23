@@ -11,10 +11,13 @@ import Typography from "@mui/material/Typography";
 const StepInputsWorktime = () => {
   const { formik } = useContext(StepsContext);
 
-  
+
   return (
     <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">
+      <FormLabel
+        id="demo-row-radio-buttons-group-label"
+        sx={{ p: 1, fontWeight: "bold" }}
+      >
         Wymiar czasu pracy:
       </FormLabel>
       <RadioGroup

@@ -19,7 +19,6 @@ const StepFormEployer = () => {
       formik.setErrors({ employer: "", employerOther: "" });
       await formik.validateForm();
       formik.setFieldValue("employerOther", "");
-      
     }
   };
 
@@ -36,7 +35,12 @@ const StepFormEployer = () => {
 
   return (
     <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Pracodawca:</FormLabel>
+      <FormLabel
+        id="demo-row-radio-buttons-group-label"
+        sx={{ p: 1, fontWeight: "bold" }}
+      >
+        Pracodawca:
+      </FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"

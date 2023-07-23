@@ -34,7 +34,10 @@ const StepInputsWorkplace = () => {
 
   return (
     <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">
+      <FormLabel
+        id="demo-row-radio-buttons-group-label"
+        sx={{ p: 1, fontWeight: "bold" }}
+      >
         Miejsce Pracy:
       </FormLabel>
       <RadioGroup
