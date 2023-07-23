@@ -15,8 +15,9 @@ const StepInputsWorkplace = () => {
   ) => {
     formik.handleChange(event);
     if (event.target.value !== "") {
-      formik.setFieldValue("workplaceOther", "");
+      formik.setErrors({ workplace: "", workplaceOther: "" });
       await formik.validateForm();
+      formik.setFieldValue("workplaceOther", "");
     }
   };
 
@@ -25,12 +26,11 @@ const StepInputsWorkplace = () => {
   ) => {
     formik.handleChange(event);
     if (event.target.value !== "") {
-      formik.setFieldValue("workplace", "");
+      formik.setErrors({ workplace: "", workplaceOther: "" });
       await formik.validateForm();
+      formik.setFieldValue("workplace", "");
     }
   };
-
-
 
   return (
     <FormControl>

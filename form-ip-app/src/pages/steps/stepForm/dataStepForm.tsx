@@ -9,7 +9,7 @@ export interface ModelInitialValues {
   workplace: string;
   workplaceOther: string;
   contract: string;
-  workingTime: string;
+  worktime: string;
   department: string;
   login: string;
   membership: string;
@@ -26,7 +26,7 @@ export const initialValues: ModelInitialValues = {
   workplace: "",
   workplaceOther: "",
   contract: "",
-  workingTime: "",
+  worktime: "",
   department: "",
   login: "",
   membership: "",
