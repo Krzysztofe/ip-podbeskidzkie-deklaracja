@@ -8,9 +8,11 @@ import useStepFormFormik from "./stepForm/useStepFormFormik";
 import useMultistepForm from "./useMultistepForm";
 import StepSummary from "./StepSummary";
 import StepsButtons from "./StepsButtons";
+import { useContext } from "react";
+import { StepsContext } from "../../context/ContextProv";
 
 const IndexSteps = () => {
-  const { formik, isSubmited } = useStepFormFormik();
+  const { formik, isSubmited } = useContext(StepsContext);
 
   const {
     steps,
@@ -24,7 +26,7 @@ const IndexSteps = () => {
   } = useMultistepForm([
     <StepDateInfo />,
     <StepGeneralnfo />,
-    <StepForm formik={formik} />,
+    <StepForm />,
     <StepSummary />,
   ]);
 
@@ -40,10 +42,7 @@ const IndexSteps = () => {
             back={back}
             currentStepIdx={currentStepIdx}
             steps={steps}
-            isSubmited={isSubmited}
-            formik = {formik}
           />
-
         </form>
       </>
     </Container>

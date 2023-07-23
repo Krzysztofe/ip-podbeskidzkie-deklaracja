@@ -1,25 +1,26 @@
 import Button from "@mui/material/Button";
-import { Formik } from "formik";
-import { useEffect } from "react";
+import Box from "@mui/material/Box";
+import { useEffect, useContext } from "react";
+import { StepsContext } from "../../context/ContextProv";
 
 interface Props {
   next: () => void;
   back: () => void;
   currentStepIdx: number;
   steps: JSX.Element[];
-  isSubmited: boolean;
-  formik: any;
 }
 
 const StepsButtons = (props: Props) => {
-  const isError = Object.values(props.formik.errors);
+  const { formik, isSubmited } = useContext(StepsContext);
+
+  const isError = Object.values(formik.errors);
 
   useEffect(() => {
-    if (props.isSubmited && isError.length === 0) props.next();
-  }, [props.isSubmited]);
+    if (isSubmited && isError.length === 0) props.next();
+  }, [isSubmited]);
 
   return (
-    <>
+    <Box>
       <Button
         variant="contained"
         onClick={() => props.back()}
@@ -44,15 +45,15 @@ const StepsButtons = (props: Props) => {
         <Button
           variant="contained"
           onClick={() => {
-            props.isSubmited && isError.length === 0 && props.next();
+            isSubmited && isError.length === 0 && props.next();
           }}
           sx={{ width: "35%", p: "0.3em" }}
           type="submit"
         >
-          Zatwierdź
+          {isError.length === 0 ? "Zatwierdź" : "Podaj dane"}
         </Button>
       )}
-    </>
+    </Box>
   );
 };
 
