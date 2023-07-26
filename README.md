@@ -1,3 +1,3 @@
 # form-ip
 
-https://krzysztofe.github.io/deklaracja/
+http://ankieta.ozzip.pl/
