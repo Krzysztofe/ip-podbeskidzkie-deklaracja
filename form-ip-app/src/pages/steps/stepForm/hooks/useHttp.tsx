@@ -13,7 +13,8 @@ const useHttp = () => {
 
     fetch(requestConfig.url, {
       method: requestConfig.method || "GET",
-      body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
+      // body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
+      body: JSON.stringify(requestConfig.body),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -21,7 +22,7 @@ const useHttp = () => {
     })
       .then(resp => {
         if (resp.ok) {
-          // console.log("ooo", resp);
+          console.log("resp", resp);
           return resp.json();
         }
         // throw Error("Nie znaleziono metody zapisu");

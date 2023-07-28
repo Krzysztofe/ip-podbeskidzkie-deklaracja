@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { useContext } from "react";
 import { StepsContext } from "../../context/ContextProv";
 import HttpRequestState from "./HttpRequestState";
+import { v4 as UUID } from "uuid";
 
 const StepSummary = () => {
   const { formik, isLoading, error } = useContext(StepsContext);
@@ -51,7 +52,7 @@ const StepSummary = () => {
 
         {dataSummary.map((text, idx) => {
           return (
-            <div key={crypto.randomUUID()}>
+            <div key={UUID()}>
               {formikValues[idx] === "" ? null : (
                 <Typography variant="body1" sx={{ p: 1 }}>
                   <span>
