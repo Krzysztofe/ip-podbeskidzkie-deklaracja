@@ -1,42 +1,33 @@
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import StepDateInfo from "./StepDateInfo";
-import StepGeneralnfo from "./StepGeneralnfo";
-import StepsHeader from "./StepsHeader";
-import StepForm from "./stepForm/StepForm";
-import useStepFormFormik from "./stepForm/useStepFormFormik";
-import useMultistepForm from "./useMultistepForm";
-import StepSummary from "./StepSummary";
-import StepsButtons from "./StepsButtons";
 import { useContext } from "react";
 import { StepsContext } from "../../context/ContextProv";
+import StepDateInfo from "./StepDateInfo";
+import StepSummary from "./StepSummary";
+import StepsButtons from "./StepsButtons";
+import StepsHeader from "./StepsHeader";
+import StepForm from "./stepForm/StepForm";
+import StepGeneralnfo from "./stepGeneralInfo/StepGeneralnfo";
+import useMultistepForm from "./useMultistepForm";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import HttpRequestState from "./HttpRequestState";
 
 const IndexSteps = () => {
-  const { formik, isSubmited } = useContext(StepsContext);
+  const { formik, isLoading, error } = useContext(StepsContext);
 
-  const {
-    steps,
-    currentStepIdx,
-    setCurrentStepIdx,
-    step,
-    isFirstStep,
-    isLastStep,
-    back,
-    next,
-  } = useMultistepForm([
-    <StepDateInfo />,
+  const { steps, currentStepIdx, step, back, next } = useMultistepForm([
     <StepGeneralnfo />,
     <StepForm />,
     <StepSummary />,
+    // <StepDateInfo />,
   ]);
 
   return (
-    <Container>
-      <StepsHeader currentStepIdx={currentStepIdx} steps={steps} />
-      <>
-        <form onSubmit={formik.handleSubmit}>
+    <main>
+      <Container>
+        <StepsHeader currentStepIdx={currentStepIdx} steps={steps} />
+        <form onSubmit={formik.handleSubmit} style={{ position: "relative" }}>
           {step}
-
           <StepsButtons
             next={next}
             back={back}
@@ -44,8 +35,8 @@ const IndexSteps = () => {
             steps={steps}
           />
         </form>
-      </>
-    </Container>
+      </Container>
+    </main>
   );
 };
 

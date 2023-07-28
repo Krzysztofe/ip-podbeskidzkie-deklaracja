@@ -68,7 +68,7 @@ const StepFormEployer = () => {
         onChange={handleLoginChange}
         onBlur={formik.handleBlur}
         size="small"
-      />
+      /> 
 
       <Typography variant="body1">
         {(formik.touched.employer || formik.touched.employerOther) &&

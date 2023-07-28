@@ -32,6 +32,7 @@ const StepInputsWorkplace = () => {
     }
   };
 
+
   return (
     <FormControl>
       <FormLabel
@@ -74,7 +75,9 @@ const StepInputsWorkplace = () => {
       <Typography variant="body1">
         {(formik.touched.workplace || formik.touched.workplaceOther) &&
           formik.errors.workplace && (
-            <span style={{ color: "red" }}>{formik.errors.workplace}</span>
+            <span style={{ color: "red" }}>
+              {formik.errors.workplace}
+            </span>
           )}
       </Typography>
     </FormControl>

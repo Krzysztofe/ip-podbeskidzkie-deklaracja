@@ -7,7 +7,7 @@ const IndexSteps = lazy(() => import("./pages/steps/IndexSteps"));
 
 function App() {
   return (
-    <BrowserRouter basename="/deklaracja">
+    <BrowserRouter>
       <Suspense fallback={<LoadingPage />}>
         <StepsContextProv>
           <Routes>

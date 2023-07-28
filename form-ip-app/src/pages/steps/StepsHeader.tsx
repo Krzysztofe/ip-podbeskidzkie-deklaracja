@@ -1,19 +1,20 @@
-import React from 'react';
-
+import React from "react";
+import Typography from "@mui/material/Typography";
 
 interface Props {
   steps: JSX.Element[];
   currentStepIdx: number;
 }
 
-const StepsHeader = (props:Props) => {
-    return (
-      <header className="wrapper wrapper--formReactionHeader ">
-        <h3 className="formReaction__stepIdx ">
-          Krok {props.currentStepIdx + 1}/{props.steps.length}
-        </h3>
-      </header>
-    );
+const StepsHeader = (props: Props) => {
+  return (
+    <header className="wrapper wrapper--formReactionHeader ">
+      <Typography>
+        Krok {props.currentStepIdx + 1}/{props.steps.length}
+      </Typography>
+     
+    </header>
+  );
 };
 
 export default StepsHeader;

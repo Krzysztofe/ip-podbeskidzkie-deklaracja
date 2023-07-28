@@ -11,7 +11,7 @@ const StepFormTopInputs = () => {
     { label: "Imię", value: "name", type: "text" },
     { label: "Nazwisko", value: "surname", type: "text" },
     { label: "Aders", value: "adress", type: "text" },
-    { label: "Telefon", value: "phone", type: "number" },
+    { label: "Telefon", value: "phone", type: "tel" },
     { label: "E-mail", value: "email", type: "email" },
   ];
 
@@ -26,6 +26,7 @@ const StepFormTopInputs = () => {
               id={value}
               name={value}
               label={label}
+        
               value={formik.values[value as keyof typeof formik.values]}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}

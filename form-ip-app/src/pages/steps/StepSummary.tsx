@@ -2,11 +2,14 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useContext } from "react";
 import { StepsContext } from "../../context/ContextProv";
-import { getValue } from "@testing-library/user-event/dist/utils";
+import HttpRequestState from "./HttpRequestState";
+
 const StepSummary = () => {
-  const { formik } = useContext(StepsContext);
+  const { formik, isLoading, error } = useContext(StepsContext);
 
   const formikValues = Object.values(formik.values);
+
+  console.log("values z forma", formik.values);
 
   const dataSummary = [
     "Imię",
@@ -26,26 +29,42 @@ const StepSummary = () => {
   ];
 
   return (
-    <Box>
-      <Typography variant="body1" sx={{ p: 1, fontWeight: "bold" }}>
-        Podsumowanie
-      </Typography>
+    <>
+      <HttpRequestState />
+      {isLoading ? (
+        <Box
+          sx={{
+            position: "absolute",
+            width: "100%",
+            height: "101%",
+            bgcolor: "white",
+            opacity: "0.8",
+            zIndex: 1,
+          }}
+        ></Box>
+      ) : null}
 
-      {dataSummary.map((text, idx) => {
-        return (
-          <>
-            {formikValues[idx] === "" ? null : (
-              <Typography variant="body1" sx={{ p: 1 }}>
-                <span key={text}>
-                  <strong>{text}: </strong>
-                  {formikValues[idx]}
-                </span>
-              </Typography>
-            )}
-          </>
-        );
-      })}
-    </Box>
+      <Box>
+        <Typography variant="body1" sx={{ p: 1, fontWeight: "bold" }}>
+          Podsumowanie
+        </Typography>
+
+        {dataSummary.map((text, idx) => {
+          return (
+            <div key={crypto.randomUUID()}>
+              {formikValues[idx] === "" ? null : (
+                <Typography variant="body1" sx={{ p: 1 }}>
+                  <span>
+                    <strong>{text}: </strong>
+                    {formikValues[idx]}
+                  </span>
+                </Typography>
+              )}
+            </div>
+          );
+        })}
+      </Box>
+    </>
   );
 };
 
