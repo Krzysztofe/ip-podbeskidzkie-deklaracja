@@ -10,8 +10,6 @@ const StepSummary = () => {
 
   const formikValues = Object.values(formik.values);
 
-  console.log("values z forma", formik.values);
-
   const dataSummary = [
     "Imię",
     "Nazwisko",
@@ -64,6 +62,11 @@ const StepSummary = () => {
             </div>
           );
         })}
+        <Typography variant="body1" sx={{ p: 1 }}>
+          <span>
+            <strong>Klauzula: </strong> Wyrażam zgodę...
+          </span>
+        </Typography>
       </Box>
     </>
   );

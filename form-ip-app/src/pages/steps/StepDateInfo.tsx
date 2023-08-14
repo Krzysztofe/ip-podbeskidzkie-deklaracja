@@ -1,9 +1,15 @@
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 
 const StepDateInfo = () => {
   return (
     <Card>
+      <Typography variant="h6" sx={{ p: 1, fontWeight: "bold" }}>
+        Deklaracja została złożona
+      </Typography>
       <Typography variant="body1" sx={{ p: 1, fontWeight: "bold" }}>
         KONTAKT: tel.
         <br /> 736-850-536 <br />
@@ -35,6 +41,18 @@ const StepDateInfo = () => {
         JEŚLI PODAŁAŚ/PODAŁEŚ E-MAIL, OTRZYMASZ DROGĄ E-MAIL POTWIERDZENIE
         ZAPISANIA DO ZWIĄZKU ORAZ DODANIA DO LISTY DYSKUSYJNEJ.
       </Typography>
+
+      <Typography variant="h6" sx={{ p: 1, fontWeight: "bold" }}>
+        Jeżeli checesz wejść na ogólną stronę OZZIP naciśnij przycisk
+      </Typography>
+      <Button variant="contained">
+        <Link
+          to={"https://www.ozzip.pl/"}
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          OZZIP.pl
+        </Link>
+      </Button>
     </Card>
   );
 };

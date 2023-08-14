@@ -3,9 +3,11 @@ import Typography from "@mui/material/Typography";
 const FormHeader = () => {
   return (
     <>
+      <Typography variant="h1" sx={{ p: 1, fontWeight: "bold" }}>
+        Deklaracja Przystąpienia Do OZZIP Amazon
+      </Typography>
       <Typography variant="body1" sx={{ p: 1, fontWeight: "bold" }}>
-        Deklaracja przystąpienia do <br /> Ogólnopolskiego <br /> Związku
-        Zawodowego „Inicjatywa Pracownicza”
+        Wypełnij deklarację w 4 krokach
       </Typography>
 
       <Typography variant="body2" sx={{ p: 1, fontWeight: "bold" }}>

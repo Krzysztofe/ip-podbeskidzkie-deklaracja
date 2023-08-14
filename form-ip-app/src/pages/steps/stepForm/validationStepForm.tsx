@@ -6,7 +6,7 @@ const validation = yup.string().required(errMsg).min(3, "Min. 3 znaki");
 export const validationSchema = yup.object({
   name: validation,
   surname: validation,
-  adress: validation,
+  address: validation,
   phone: yup.string().required(errMsg).min(6, "Min. 6 znaków"),
   email: yup.string().required(errMsg),
   employer: yup.string().test("oneOfRequired", errMsg, function (item) {

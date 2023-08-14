@@ -1,7 +1,7 @@
 export interface ModelInitialValues {
   name: string;
   surname: string;
-  adress: string;
+  address: string;
   phone: string;
   email: string;
   employer: string;
@@ -13,12 +13,13 @@ export interface ModelInitialValues {
   department: string;
   login: string;
   membership: string;
+  // confirmation: boolean;
 }
 
 export const initialValues: ModelInitialValues = {
   name: "",
   surname: "",
-  adress: "",
+  address: "",
   phone: "",
   email: "",
   employer: "",
@@ -30,4 +31,5 @@ export const initialValues: ModelInitialValues = {
   department: "",
   login: "",
   membership: "",
+  // confirmation: false,
 };
