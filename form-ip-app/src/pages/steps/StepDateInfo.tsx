@@ -1,8 +1,12 @@
-import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
+import Card from "@mui/material/CardContent";
 import { Link } from "react-router-dom";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import { AnyMxRecord } from "dns";
+import CardMedia from "@mui/material/CardMedia";
+import IconButton from "@mui/material/IconButton";
 
 const StepDateInfo = () => {
   return (
@@ -43,16 +47,41 @@ const StepDateInfo = () => {
       </Typography>
 
       <Typography variant="h6" sx={{ p: 1, fontWeight: "bold" }}>
-        Jeżeli checesz wejść na ogólną stronę OZZIP naciśnij przycisk
+        Wstąpienie do komisji zostanie zaakceptowane po wykonaniu przelewu
+        bankowego składki na konto....
       </Typography>
-      <Button variant="contained">
-        <Link
-          to={"https://www.ozzip.pl/"}
-          style={{ textDecoration: "none", color: "white" }}
-        >
-          OZZIP.pl
-        </Link>
-      </Button>
+
+      {[
+        {
+          img: "../../images/ing.png",
+          link: "https://www.bankmillennium.pl/",
+          name: "Millenium",
+        },
+        {
+          img: "../../images/ing.png",
+          link: "https://www.mbank.pl/indywidualny/",
+          name: "M Bank",
+        },
+        {
+          img: "../../images/ing.png",
+          link: "https://www.santander.pl/klient-indywidualny",
+          name: "Santander",
+        },
+      ].map(
+        ({ img, link, name }: { img: string; link: string; name: string }) => {
+          return (
+            <Card sx={{ border: "1px solid black", display: "inline-block" }}>
+              <Link
+                to={link}
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <img src="./../../images/millennium.png" alt="" />
+                {name}
+              </Link>
+            </Card>
+          );
+        }
+      )}
     </Card>
   );
 };

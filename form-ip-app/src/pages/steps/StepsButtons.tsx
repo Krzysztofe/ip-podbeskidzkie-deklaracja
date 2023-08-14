@@ -85,7 +85,11 @@ const StepsButtons = (props: Props) => {
           onClick={() => {
             isSubmited && isError.length === 0 && props.next();
           }}
-          sx={{ width: "35%", p: "0.3em" }}
+          sx={{
+            width: "35%",
+            p: "0.3em",
+            marginLeft: "auto",
+          }}
           type="submit"
         >
           Zatwierdź
@@ -98,7 +102,11 @@ const StepsButtons = (props: Props) => {
           onClick={() => {
             isConfirmed && isErrorInClause.length === 0 && props.next();
           }}
-          sx={{ width: "35%", p: "0.3em" }}
+          sx={{
+            width: "35%",
+            p: "0.3em",
+            marginLeft: "auto",
+          }}
           type="submit"
         >
           Zatwierdź
