@@ -1,9 +1,10 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useContext } from "react";
-import { StepsContext } from "../../context/ContextProv";
-import HttpRequestState from "./HttpRequestState";
+import { StepsContext } from "../../../context/ContextProv";
+import HttpRequestState from "../HttpRequestState";
 import { v4 as UUID } from "uuid";
+import Captcha from "./Captcha";
 
 const StepSummary = () => {
   const { formik, isLoading, error } = useContext(StepsContext);
@@ -64,9 +65,12 @@ const StepSummary = () => {
         })}
         <Typography variant="body1" sx={{ p: 1 }}>
           <span>
-            <strong>Klauzula: </strong> Wyrażam zgodę...
+            Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na
+            przetważanie moich danych osobowych na zasadach i w celach w niej
+            wskazanych.
           </span>
         </Typography>
+        <Captcha/>
       </Box>
     </>
   );

@@ -15,6 +15,8 @@ export type ContextType = {
   isLoading: boolean;
   error: any;
   sendRequest: any;
+  isCaptcha: boolean;
+  setIsCaptcha: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const StepsContext = createContext<ContextType>({} as ContextType);
@@ -23,6 +25,7 @@ const StepsContextProv = (props: Props) => {
   const { formik, isSubmited } = useStepFormFormik();
   const { isLoading, error, sendRequest } = useHttp();
   const { formikClause, isConfirmed } = useStepClauseFormik();
+  const [isCaptcha, setIsCaptcha] = useState(false);
 
   return (
     <StepsContext.Provider
@@ -32,6 +35,8 @@ const StepsContextProv = (props: Props) => {
         isSubmited,
         isConfirmed,
         isLoading,
+        isCaptcha,
+        setIsCaptcha,
         error,
         sendRequest,
       }}

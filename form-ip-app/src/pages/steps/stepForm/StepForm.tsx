@@ -7,10 +7,12 @@ import StepInputsWorktime from "./stepFormInputs/StepInputsWorktime";
 import StepInputsDepartment from "./stepFormInputs/StepInputsDepartment";
 import StepInputsMembership from "./stepFormInputs/StepInputsMembership";
 import Stack from "@mui/material/Stack";
+import StepFormAlert from "./StepFormAlert";
 
 const StepForm = () => {
   return (
-    <Stack>
+    <Stack spacing={2}>
+      <StepFormAlert />
       <FormHeader />
       <StepFormTopInputs />
       <StepFormEployer />

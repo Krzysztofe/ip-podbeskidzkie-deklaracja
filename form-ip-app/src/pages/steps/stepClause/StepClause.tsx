@@ -11,7 +11,7 @@ const StepClause = () => {
   const { formikClause } = useContext(StepsContext);
 
   return (
-    <Card>
+    <Card sx={{ p: 1, fontWeight: "bold" }}>
       <Typography variant="body1" sx={{ p: 1, fontWeight: "bold" }}>
         KLAUZULA INFORMACYNA
       </Typography>
@@ -27,13 +27,12 @@ const StepClause = () => {
         name="confirmation"
         checked={formikClause.values.confirmation}
         onChange={formikClause.handleChange}
-        label="Potwierdzam...."
+        label="Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetważanie moich danych osobowych na zasadach i w celach w niej wskazanych"
       />
       <Typography>
         {formikClause.touched.confirmation &&
           formikClause.errors.confirmation && (
             <span style={{ color: "red" }}>
-              
               {formikClause.errors.confirmation.toString()}
             </span>
           )}

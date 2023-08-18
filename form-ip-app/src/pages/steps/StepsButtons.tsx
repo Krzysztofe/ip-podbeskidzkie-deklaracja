@@ -18,11 +18,15 @@ const StepsButtons = (props: Props) => {
     isSubmited,
     isConfirmed,
     sendRequest,
+    isCaptcha,
   } = useContext(StepsContext);
+  
   const [responseStatus, setResponseStatus] = useState(false);
 
   const isError = Object.values(formik.errors);
   const isErrorInClause = Object.values(formikClause.errors);
+
+  console.log("cap", isCaptcha);
 
   useEffect(() => {
     if (isSubmited && isError.length === 0) props.next();
@@ -66,16 +70,15 @@ const StepsButtons = (props: Props) => {
           variant="contained"
           onClick={() => {
             props.currentStepIdx < 2 && props.next();
-            handlePOST();
+            isCaptcha && handlePOST();
           }}
           sx={{
             width: "35%",
             p: "0.3em",
             marginLeft: "auto",
           }}
-          type="button"
         >
-          {props.currentStepIdx < props.steps.length - 2 ? "Dalej" : "Wyślij"}
+          {isCaptcha ? "Wyślij" : "Zaznacz CAPTCHA"}
         </Button>
       )}
 

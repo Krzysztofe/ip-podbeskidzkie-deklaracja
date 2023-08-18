@@ -27,7 +27,11 @@ const StepInputsMembership = () => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
       >
-        {["Nie należę", "Należę", "Nie należę nie chcę"].map(membership => {
+        {[
+          "Nie należę do innego związku zawodowego u pracodawcy.",
+          "Należę do innego związku zawodowego u pracodawcy, jednak chcę pry podawaniu informacji o liczbie członków może członkowstwo uwzgędniał wyłącznie OZZIP.",
+          "Należę do inngeo związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji i liczbie członków OZZIP uwzględniał moje członkostwo.",
+        ].map(membership => {
           return (
             <FormControlLabel
               key={membership}

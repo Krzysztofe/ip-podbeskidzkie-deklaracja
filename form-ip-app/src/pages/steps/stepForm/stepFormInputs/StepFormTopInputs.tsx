@@ -15,8 +15,6 @@ const StepFormTopInputs = () => {
     { label: "E-mail", value: "email", type: "email" },
   ];
 
-  console.log('eeer',formik.errors)
-
 
   return (
     <>

@@ -1,12 +1,7 @@
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import Card from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import { AnyMxRecord } from "dns";
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
+import BanksList from "./BanksList";
 
 const StepDateInfo = () => {
   return (
@@ -40,48 +35,16 @@ const StepDateInfo = () => {
         Powyższe wynika z Uchwały nr 60/5/2018 Komisji Krajowej OZZIP z
         28.10.2018 r
       </Typography>
-
       <Typography variant="body2" sx={{ p: 1, fontWeight: "bold" }}>
-        JEŚLI PODAŁAŚ/PODAŁEŚ E-MAIL, OTRZYMASZ DROGĄ E-MAIL POTWIERDZENIE
+        DROGĄ E-MAIL otrzymasz POTWIERDZENIE
         ZAPISANIA DO ZWIĄZKU ORAZ DODANIA DO LISTY DYSKUSYJNEJ.
       </Typography>
-
       <Typography variant="h6" sx={{ p: 1, fontWeight: "bold" }}>
-        Wstąpienie do komisji zostanie zaakceptowane po wykonaniu przelewu
-        bankowego składki na konto....
+        Przystąpienie do komisji zostanie weryfikowane poprzez wykonaniu przelewu
+        bankowego pierwszej składki członkowskiej na konto ....
       </Typography>
 
-      {[
-        {
-          img: "../../images/ing.png",
-          link: "https://www.bankmillennium.pl/",
-          name: "Millenium",
-        },
-        {
-          img: "../../images/ing.png",
-          link: "https://www.mbank.pl/indywidualny/",
-          name: "M Bank",
-        },
-        {
-          img: "../../images/ing.png",
-          link: "https://www.santander.pl/klient-indywidualny",
-          name: "Santander",
-        },
-      ].map(
-        ({ img, link, name }: { img: string; link: string; name: string }) => {
-          return (
-            <Card sx={{ border: "1px solid black", display: "inline-block" }}>
-              <Link
-                to={link}
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                <img src="./../../images/millennium.png" alt="" />
-                {name}
-              </Link>
-            </Card>
-          );
-        }
-      )}
+      <BanksList />
     </Card>
   );
 };

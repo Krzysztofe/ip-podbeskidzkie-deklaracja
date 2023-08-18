@@ -2,7 +2,7 @@ import Container from "@mui/material/Container";
 import { useContext } from "react";
 import { StepsContext } from "../../context/ContextProv";
 import StepDateInfo from "./StepDateInfo";
-import StepSummary from "./StepSummary";
+import StepSummary from "./stepSummary/StepSummary";
 import StepsButtons from "./StepsButtons";
 import StepsHeader from "./StepsHeader";
 import StepForm from "./stepForm/StepForm";
@@ -19,7 +19,8 @@ const IndexSteps = () => {
     <StepDateInfo />,
   ]);
 
-const formSubmit = currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit
+  const formSubmit =
+    currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
 
   return (
     <main>
