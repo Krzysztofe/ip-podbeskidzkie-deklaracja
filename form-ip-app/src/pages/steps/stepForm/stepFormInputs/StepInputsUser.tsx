@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
 
-const StepFormTopInputs = () => {
+const StepInputsUser = () => {
   const { formik } = useContext(StepsContext);
 
   const dataTextInputs = [
@@ -15,9 +15,11 @@ const StepFormTopInputs = () => {
     { label: "E-mail", value: "email", type: "email" },
   ];
 
-
   return (
     <>
+      <Typography variant="subtitle1" color="primary">
+        Twoje dane:
+      </Typography>
       {dataTextInputs.map(({ label, value, type }) => {
         return (
           <FormGroup key={label}>
@@ -47,4 +49,4 @@ const StepFormTopInputs = () => {
   );
 };
 
-export default StepFormTopInputs;
+export default StepInputsUser;

@@ -2,12 +2,12 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
-import HttpRequestState from "../HttpRequestState";
+import HttpRequestState from "./HttpRequestState";
 import { v4 as UUID } from "uuid";
 import Captcha from "./Captcha";
 
 const StepSummary = () => {
-  const { formik, isLoading, error } = useContext(StepsContext);
+  const { formik } = useContext(StepsContext);
 
   const formikValues = Object.values(formik.values);
 
@@ -31,18 +31,6 @@ const StepSummary = () => {
   return (
     <>
       <HttpRequestState />
-      {isLoading ? (
-        <Box
-          sx={{
-            position: "absolute",
-            width: "100%",
-            height: "101%",
-            bgcolor: "white",
-            opacity: "0.8",
-            zIndex: 1,
-          }}
-        ></Box>
-      ) : null}
 
       <Box>
         <Typography variant="body1" sx={{ p: 1, fontWeight: "bold" }}>
@@ -70,7 +58,7 @@ const StepSummary = () => {
             wskazanych.
           </span>
         </Typography>
-        <Captcha/>
+        <Captcha />
       </Box>
     </>
   );

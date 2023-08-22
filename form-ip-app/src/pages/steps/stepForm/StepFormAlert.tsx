@@ -8,11 +8,13 @@ const StepFormAlert = () => {
 
   return (
     <>
-      {isError.length !== 0 && (
-        <Alert severity="error" sx={{ width: "100%", position: "fixed", zIndex: "100" }}>
-          Wypełnij brakujące pola
-        </Alert>
-      )}
+ 
+      <Alert
+        severity="error"
+        sx={{ width: "100%", position: "fixed", zIndex: "100", marginTop: isError.length > 0 ? "0": "-100px",transitionDuratio: "500ms" }}
+      >
+        Wypełnij brakujące pola formulaża
+      </Alert>
     </>
   );
 };

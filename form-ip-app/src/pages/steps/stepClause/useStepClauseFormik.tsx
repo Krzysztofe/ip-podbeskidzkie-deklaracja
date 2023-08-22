@@ -1,7 +1,6 @@
 import { useFormik } from "formik";
 import { useState } from "react";
-import { validationSchemaClause } from "../../stepClause/validationStepClauseForm";
-
+import { validationSchemaClause } from "./validationStepClauseForm";
 
 const useStepClauseFormik = () => {
   const [isConfirmed, setIsConfirmed] = useState(false);

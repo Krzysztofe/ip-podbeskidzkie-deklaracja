@@ -1,9 +1,9 @@
 import Card from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import BanksList from "./BanksList";
+import StepConfirmationBanksList from "./StepConfirmationBanksList";
 
-const StepDateInfo = () => {
+const StepConfirmation = () => {
   return (
     <Card>
       <Typography variant="h6" sx={{ p: 1, fontWeight: "bold" }}>
@@ -36,17 +36,17 @@ const StepDateInfo = () => {
         28.10.2018 r
       </Typography>
       <Typography variant="body2" sx={{ p: 1, fontWeight: "bold" }}>
-        DROGĄ E-MAIL otrzymasz POTWIERDZENIE
-        ZAPISANIA DO ZWIĄZKU ORAZ DODANIA DO LISTY DYSKUSYJNEJ.
+        DROGĄ E-MAIL otrzymasz POTWIERDZENIE ZAPISANIA DO ZWIĄZKU ORAZ DODANIA
+        DO LISTY DYSKUSYJNEJ.
       </Typography>
       <Typography variant="h6" sx={{ p: 1, fontWeight: "bold" }}>
-        Przystąpienie do komisji zostanie weryfikowane poprzez wykonaniu przelewu
-        bankowego pierwszej składki członkowskiej na konto ....
+        Przystąpienie do komisji zostanie weryfikowane poprzez wykonaniu
+        przelewu bankowego pierwszej składki członkowskiej na konto ....
       </Typography>
 
-      <BanksList />
+      <StepConfirmationBanksList />
     </Card>
   );
 };
 
-export default StepDateInfo;
+export default StepConfirmation;

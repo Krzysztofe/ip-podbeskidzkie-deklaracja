@@ -13,7 +13,6 @@ export interface ModelInitialValues {
   department: string;
   login: string;
   membership: string;
-  // confirmation: boolean;
 }
 
 export const initialValues: ModelInitialValues = {
@@ -31,5 +30,4 @@ export const initialValues: ModelInitialValues = {
   department: "",
   login: "",
   membership: "",
-  // confirmation: false,
 };

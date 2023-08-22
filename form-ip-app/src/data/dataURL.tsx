@@ -1,1 +1,2 @@
-export const URL = "https://mail-sender-production.up.railway.app/receive";
+export const URL = process.env.REACT_APP_POSTurl;
+

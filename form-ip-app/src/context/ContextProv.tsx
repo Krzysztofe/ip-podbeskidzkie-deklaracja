@@ -1,7 +1,7 @@
 import React, { createContext, FC, useState } from "react";
-import useStepFormFormik from "../pages/steps/stepForm/hooks/useStepFormFormik";
-import useHttp from "../pages/steps/stepForm/hooks/useHttp";
-import useStepClauseFormik from "../pages/steps/stepForm/hooks/useStepClauseFormik";
+import useStepFormFormik from "../pages/steps/stepForm/useStepFormFormik";
+import useHttp from "../pages/steps/stepsButtons/useHttp";
+import useStepClauseFormik from "../pages/steps/stepClause/useStepClauseFormik";
 
 interface Props {
   children: React.ReactNode;
