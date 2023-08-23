@@ -41,7 +41,7 @@ const StepInputsWorktime = () => {
       </RadioGroup>
 
       <Typography variant="body1">
-        {(formik.touched.worktime || formik.touched.worktime) &&
+        {formik.touched.worktime &&
           formik.errors.worktime && (
             <span style={{ color: "red" }}>{formik.errors.worktime}</span>
           )}

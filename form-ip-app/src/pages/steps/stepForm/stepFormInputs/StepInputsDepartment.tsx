@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-
+import TextInputsErrors from "../inputsErrors/TextInputsErrors";
 const StepInputsDepartment = () => {
   const { formik } = useContext(StepsContext);
   return (
@@ -24,14 +24,16 @@ const StepInputsDepartment = () => {
               onBlur={formik.handleBlur}
               size="small"
             />
-            <Typography variant="body1">
+            {/* <Typography variant="body1">
               {formik.touched[value as keyof typeof formik.touched] &&
                 formik.errors[value as keyof typeof formik.errors] && (
                   <span style={{ color: "red" }}>
                     {formik.errors[value as keyof typeof formik.errors]}
                   </span>
                 )}
-            </Typography>
+            </Typography> */}
+
+            <TextInputsErrors formik={formik} value={value} />
           </FormGroup>
         );
       })}

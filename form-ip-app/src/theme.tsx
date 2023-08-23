@@ -36,10 +36,10 @@ export const theme = createTheme({
       fontWeight: 600,
     },
 
-    // subtitle2: {
-    //   fontSize: "1rem",
-    //   fontWeight: 400,
-    // },
+    subtitle2: {
+      fontSize: "0.6rem",
+      fontWeight: 600,
+    },
 
     body1: {
       fontSize: "0.75rem",

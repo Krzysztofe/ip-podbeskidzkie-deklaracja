@@ -23,7 +23,7 @@ const StepsHeader = (props: Props) => {
             <Box
               sx={{
                 border: `1px solid ${theme.palette.info.main}`,
-                width: "1.3rem",
+                width: "1.4rem",
                 aspectRatio: "1/1",
                 borderRadius: "50%",
                 display: "grid",

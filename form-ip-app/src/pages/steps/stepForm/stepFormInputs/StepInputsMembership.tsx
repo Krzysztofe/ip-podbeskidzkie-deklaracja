@@ -44,7 +44,7 @@ const StepInputsMembership = () => {
       </RadioGroup>
 
       <Typography variant="body1">
-        {(formik.touched.membership || formik.touched.membership) &&
+        {formik.touched.membership &&
           formik.errors.membership && (
             <span style={{ color: "red" }}>{formik.errors.membership}</span>
           )}

@@ -68,12 +68,12 @@ const StepFormEployer = () => {
         onChange={handleLoginChange}
         onBlur={formik.handleBlur}
         size="small"
-      /> 
+      />
 
-      <Typography variant="body1">
+      <Typography variant="body2">
         {(formik.touched.employer || formik.touched.employerOther) &&
           formik.errors.employer && (
-            <span style={{ color: "red" }}>{formik.errors.employer}</span>
+            <Typography color="error">{formik.errors.employer}</Typography>
           )}
       </Typography>
     </FormControl>

@@ -31,6 +31,9 @@ const IndexSteps = () => {
             position: "fixed",
             zIndex: 2,
             height: 55,
+            left: "50%",
+            right: "50%",
+            transform: "translate(-50%)",
           }}
         >
           <StepsHeader currentStepIdx={currentStepIdx} steps={steps} />

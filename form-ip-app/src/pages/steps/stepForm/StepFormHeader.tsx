@@ -17,10 +17,11 @@ const StepFormHeader = () => {
       </Typography>
       <Typography
         variant="h5"
+        component="h2"
         color="primary"
         sx={{ margin: 0, marginTop: "2.2rem", marginBottom: "1.1rem" }}
       >
-        Wypełnij deklarację w 4 krokach
+        Wstąp do komisji w 4 krokach
       </Typography>
 
       <Typography variant="body1" color="info.dark">

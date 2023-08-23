@@ -8,7 +8,7 @@ import Radio from "@mui/material/Radio";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
-const StepInputsConstract = () => {
+const StepInputsContract = () => {
   const { formik } = useContext(StepsContext);
 
   return (
@@ -45,13 +45,12 @@ const StepInputsConstract = () => {
       </RadioGroup>
 
       <Typography variant="body1">
-        {(formik.touched.contract || formik.touched.contract) &&
-          formik.errors.contract && (
-            <span style={{ color: "red" }}>{formik.errors.contract}</span>
-          )}
+        {formik.touched.contract && formik.errors.contract && (
+          <span style={{ color: "red" }}>{formik.errors.contract}</span>
+        )}
       </Typography>
     </FormControl>
   );
 };
 
-export default StepInputsConstract;
+export default StepInputsContract;
