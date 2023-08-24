@@ -16,10 +16,19 @@ const StepsHeader = (props: Props) => {
   const dataSteps = ["Formulaż", "Klauzula", "Wyślij", "Potwierdzenie"];
 
   return (
-    <Stack direction="row" sx={{ maxWidth: 400, height: "100%", display: "flex", alignItems: "center", marginInline: "auto" }}>
+    <Stack
+      direction="row"
+      sx={{
+        maxWidth: 400,
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        marginInline: "auto",
+      }}
+    >
       {dataSteps.map((text, idx) => {
         return (
-          <Box sx={{ width: "30%" }}>
+          <Box key={text} sx={{ width: "30%" }}>
             <Box
               sx={{
                 border: `1px solid ${theme.palette.info.main}`,

@@ -25,7 +25,7 @@ const StepSummary = () => {
     "Wymiar czasu pracy",
     "Dział",
     "Login",
-    "Przynależność do innych ziwązków",
+    "Przynależność do innych ziwązków zawodowych",
   ];
 
   return (

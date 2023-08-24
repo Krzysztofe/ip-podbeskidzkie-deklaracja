@@ -1,12 +1,14 @@
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormLabel from "@mui/material/FormLabel";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import TextField from "@mui/material/TextField";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Radio from "@mui/material/Radio";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
+import InputsErrors from "../inputsPrintElements/InputsErrors";
+import InputsHeading from "../inputsPrintElements/InputsHeading";
+import Box from "@mui/material/Box";
 
 const StepInputsWorkplace = () => {
   const { formik } = useContext(StepsContext);
@@ -32,55 +34,73 @@ const StepInputsWorkplace = () => {
     }
   };
 
-
   return (
-    <FormControl>
-      <FormLabel
-        id="demo-row-radio-buttons-group-label"
-        sx={{ p: 1, fontWeight: "bold" }}
-      >
-        Miejsce Pracy:
-      </FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="workplace"
-        value={formik.values.workplace}
-        onChange={handleEmployerChange}
-        onBlur={formik.handleBlur}
-      >
-        {["poz1", "wro1", "wro2", "wro5", "lcj", "ktw1", "ktw3", "szzl"].map(
-          workplace => {
-            return (
-              <FormControlLabel
-                key={workplace}
-                value={workplace}
-                control={<Radio />}
-                label={workplace}
-              />
-            );
-          }
-        )}
-      </RadioGroup>
-      <TextField
-        type={"text"}
-        name={"workplaceOther"}
-        label={"Inne"}
-        value={formik.values.workplaceOther}
-        onChange={handleEmployerOtherChange}
-        onBlur={formik.handleBlur}
-        size="small"
-      />
-
-      <Typography variant="body1">
-        {(formik.touched.workplace || formik.touched.workplaceOther) &&
-          formik.errors.workplace && (
-            <span style={{ color: "red" }}>
-              {formik.errors.workplace}
-            </span>
+    <>
+      <InputsHeading headingText={"Miejsce Pracy:"} />
+      <FormControl sx={{ width: "100%" }}>
+        <RadioGroup
+          name="workplace"
+          value={formik.values.workplace}
+          onChange={handleEmployerChange}
+          onBlur={formik.handleBlur}
+          sx={{
+            maxWidth: 200,
+            width: "60%",
+            marginLeft: { xs: "auto", sm: "40%" },
+          }}
+        >
+          {["poz1", "wro1", "wro2", "wro5", "lcj", "ktw1", "ktw3", "szzl"].map(
+            workplace => {
+              return (
+                <FormControlLabel
+                  key={workplace}
+                  value={workplace}
+                  control={
+                    <Radio
+                    // sx={{
+                    //   marginRight: "calc(60% - 30px)",
+                    // }}
+                    />
+                  }
+                  label={workplace}
+                  sx={{
+                    ml: -1,
+                    "& .MuiFormControlLabel-label": {
+                      mr: 1,
+                      color: "info.main",
+                    },
+                  }}
+                />
+              );
+            }
           )}
-      </Typography>
-    </FormControl>
+        </RadioGroup>
+
+        <Box
+          sx={{
+            maxWidth: 200,
+            width: "60%",
+            marginLeft: { xs: "auto", sm: "40%" },
+            mt: 1,
+          }}
+        >
+          <TextField
+            type={"text"}
+            name={"workplaceOther"}
+            label={"Inne"}
+            value={formik.values.workplaceOther}
+            onChange={handleEmployerOtherChange}
+            onBlur={formik.handleBlur}
+            size="small"
+          />
+          <InputsErrors
+            value={"workplace"}
+            otherValue={"workplaceOther"}
+            formik={formik}
+          />
+        </Box>
+      </FormControl>
+    </>
   );
 };
 

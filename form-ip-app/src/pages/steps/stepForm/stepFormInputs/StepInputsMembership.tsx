@@ -7,29 +7,34 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-
+import TextInputsErrors from "../inputsPrintElements/InputsErrors";
+import InputsHeading from "../inputsPrintElements/InputsHeading";
+import Box from "@mui/material/Box";
 const StepInputsMembership = () => {
   const { formik } = useContext(StepsContext);
 
   return (
     <FormControl>
-      <FormLabel
-        id="demo-row-radio-buttons-group-label"
-        sx={{ p: 1, fontWeight: "bold" }}
-      >
-        Przynależność do innych związków:
-      </FormLabel>
+      <InputsHeading
+        headingText={"Przynależność do innych związków zawodowych:"}
+      />
+
       <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
         name="membership"
         value={formik.values.membership}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
+        sx={{
+          gap: 3,
+          // maxWidth: 400,
+          width: { xs: "100%", sm: "60%" },
+
+          marginLeft: { sm: "40%" },
+        }}
       >
         {[
           "Nie należę do innego związku zawodowego u pracodawcy.",
-          "Należę do innego związku zawodowego u pracodawcy, jednak chcę pry podawaniu informacji o liczbie członków może członkowstwo uwzgędniał wyłącznie OZZIP.",
+          "Należę do innego związku zawodowego u pracodawcy, jednak chcę by przy podawaniu informacji o liczbie członków moje członkowstwo uwzgędniał wyłącznie OZZIP.",
           "Należę do inngeo związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji i liczbie członków OZZIP uwzględniał moje członkostwo.",
         ].map(membership => {
           return (
@@ -38,17 +43,31 @@ const StepInputsMembership = () => {
               value={membership}
               control={<Radio />}
               label={membership}
+              sx={{
+                ml: -1,
+                "& .MuiFormControlLabel-label": {
+                  mr: 1,
+                  color: "info.main",
+                },
+              }}
             />
           );
         })}
       </RadioGroup>
-
-      <Typography variant="body1">
-        {formik.touched.membership &&
-          formik.errors.membership && (
-            <span style={{ color: "red" }}>{formik.errors.membership}</span>
-          )}
-      </Typography>
+      <Box
+        sx={{
+          maxWidth: 200,
+          width: "60%",
+          marginLeft: { xs: "auto", sm: "40%" },
+          mt: 1,
+        }}
+      >
+        <TextInputsErrors
+          formik={formik}
+          value={"membership"}
+          otherValue={null}
+        />
+      </Box>
     </FormControl>
   );
 };

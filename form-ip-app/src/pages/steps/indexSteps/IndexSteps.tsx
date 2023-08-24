@@ -1,4 +1,5 @@
 import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import StepConfirmation from "../stepConfirmation/StepConfirmation";
@@ -30,7 +31,7 @@ const IndexSteps = () => {
             backgroundColor: "white",
             position: "fixed",
             zIndex: 2,
-            height: 55,
+            height: theme => theme.spacing(7),
             left: "50%",
             right: "50%",
             transform: "translate(-50%)",
@@ -39,19 +40,23 @@ const IndexSteps = () => {
           <StepsHeader currentStepIdx={currentStepIdx} steps={steps} />
         </Container>
 
-        <Container sx={{ height: 55 }}></Container>
+        <Container sx={{ height: theme => theme.spacing(7) }}></Container>
       </header>
       <main>
         <Container>
           <form onSubmit={formSubmit} style={{ position: "relative" }}>
             {step}
+
             {currentStepIdx < steps.length - 1 && (
-              <StepsButtons
-                next={next}
-                back={back}
-                currentStepIdx={currentStepIdx}
-                steps={steps}
-              />
+              <>
+                <StepsButtons
+                  next={next}
+                  back={back}
+                  currentStepIdx={currentStepIdx}
+                  steps={steps}
+                />
+                <Box sx={{ height: theme => theme.spacing(13) }}></Box>
+              </>
             )}
           </form>
         </Container>

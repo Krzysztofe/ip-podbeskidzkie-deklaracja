@@ -1,12 +1,15 @@
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormLabel from "@mui/material/FormLabel";
+import Radio from "@mui/material/Radio";
+import Box from "@mui/material/Box";
+import RadioGroup from "@mui/material/RadioGroup";
+import TextField from "@mui/material/TextField";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Radio from "@mui/material/Radio";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
+import InputsErrors from "../inputsPrintElements/InputsErrors";
+import { Typography } from "@mui/material";
+import InputsHeading from "../inputsPrintElements/InputsHeading";
 
 const StepFormEployer = () => {
   const { formik } = useContext(StepsContext);
@@ -34,49 +37,77 @@ const StepFormEployer = () => {
   };
 
   return (
-    <FormControl>
-      <FormLabel
-        id="demo-row-radio-buttons-group-label"
-        sx={{ p: 1, fontWeight: "bold" }}
-      >
-        Pracodawca:
-      </FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="employer"
-        value={formik.values.employer}
-        onChange={handleEmployerChange}
-        onBlur={formik.handleBlur}
-      >
-        {["Amazon", "Adecco", "Randstad"].map(employer => {
-          return (
-            <FormControlLabel
-              key={employer}
-              value={employer}
-              control={<Radio />}
-              label={employer}
-            />
-          );
-        })}
-      </RadioGroup>
-      <TextField
-        type={"text"}
-        name={"employerOther"}
-        label={"Inny"}
-        value={formik.values.employerOther}
-        onChange={handleLoginChange}
-        onBlur={formik.handleBlur}
-        size="small"
-      />
+    <>
+      <InputsHeading headingText={"Pracodawca:"} />
+      <FormControl sx={{ width: "100%" }}>
+        <RadioGroup
+          name="employer"
+          value={formik.values.employer}
+          onChange={handleEmployerChange}
+          onBlur={formik.handleBlur}
+          sx={{
+            maxWidth: 200,
+            width: "60%",
+            marginLeft: { xs: "auto", sm: "40%" },
+          }}
+        >
+          {["Amazon", "Adecco", "Randstad"].map(employer => {
+            return (
+              <FormControlLabel
+                key={employer}
+                value={employer}
+                control={
+                  <Radio
+                    sx={
+                      {
+                        // marginRight: "calc(60% )",
+                      }
+                    }
+                  />
+                }
+                label={employer}
+                sx={{
+                  ml: -1,
+                  "& .MuiFormControlLabel-label": {
+                    mr: 1,
+                    color: "info.main",
+                  },
+                }}
+              />
+            );
+          })}
+        </RadioGroup>
+        <Box
+          sx={{
+            maxWidth: 200,
+            width: "60%",
+            marginLeft: { xs: "auto", sm: "40%" },
+            mt: 1,
+          }}
+        >
+          <TextField
+            type={"text"}
+            name={"employerOther"}
+            label={"Inny"}
+            value={formik.values.employerOther}
+            onChange={handleLoginChange}
+            onBlur={formik.handleBlur}
+            size="small"
+            // sx={{
+            //   maxWidth: 200,
+            //   width: "60%",
+            //   marginLeft: { xs: "auto", sm: 18 },
+            // }}
+          />
 
-      <Typography variant="body2">
-        {(formik.touched.employer || formik.touched.employerOther) &&
-          formik.errors.employer && (
-            <Typography color="error">{formik.errors.employer}</Typography>
-          )}
-      </Typography>
-    </FormControl>
+          <InputsErrors
+            value={"employer"}
+            otherValue={"employerOther"}
+            formik={formik}
+          />
+        </Box>
+      </FormControl>
+    </>
   );
 };
 

@@ -11,7 +11,10 @@ import StepFormAlert from "./StepFormAlert";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
 import { useTheme } from "@mui/material/styles";
+import { v4 as UUID } from "uuid";
+
 const StepForm = () => {
+
   const dataComponents = [
     <StepInputsUser />,
     <StepFormEployer />,
@@ -24,16 +27,17 @@ const StepForm = () => {
 
   return (
     <Stack>
-      {/* <StepFormAlert /> */}
+      <StepFormAlert />
       <StepFormHeader />
-      {dataComponents.map(component => {
+      {dataComponents.map((component, idx) => {
         return (
           <Box
+            key={idx}
             sx={{
               borderBottom: 1,
               borderColor: "info.light",
               paddingTop: "0.37rem",
-              paddingBottom: "1.5rem",
+              pb: 1,
             }}
           >
             {component}

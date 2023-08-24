@@ -1,11 +1,10 @@
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-import { useTheme } from "@mui/material/styles";
-import TextInputsErrors from "../inputsErrors/TextInputsErrors";
+import InputsErrors from "../inputsPrintElements/InputsErrors";
+import InputsHeading from "../inputsPrintElements/InputsHeading";
 
 const StepInputsUser = () => {
   const { formik } = useContext(StepsContext);
@@ -20,12 +19,17 @@ const StepInputsUser = () => {
 
   return (
     <>
-      <Typography variant="subtitle1" color="primary" mb={3}>
-        Twoje dane:
-      </Typography>
+      <InputsHeading headingText={"Twoje dane:"} />
       {dataTextInputs.map(({ label, value, type }) => {
         return (
-          <FormGroup key={label}>
+          <FormGroup
+            key={label}
+            sx={{
+              maxWidth: 200,
+              width: "60%",
+              marginLeft: { xs: "auto", sm: "40%" },
+            }}
+          >
             <TextField
               key={label}
               type={type}
@@ -37,15 +41,8 @@ const StepInputsUser = () => {
               onBlur={formik.handleBlur}
               size="small"
             />
-            {/* <Box sx={{ height: theme => theme.spacing(3) }}>
-              {formik.touched[value as keyof typeof formik.touched] &&
-                formik.errors[value as keyof typeof formik.errors] && (
-                  <Typography variant="subtitle2" color="error">
-                    {formik.errors[value as keyof typeof formik.errors]}
-                  </Typography>
-                )}
-            </Box> */}
-            <TextInputsErrors formik={formik} value={value} />
+
+            <InputsErrors value={value} otherValue={null} formik={formik} />
           </FormGroup>
         );
       })}
