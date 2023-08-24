@@ -7,7 +7,7 @@ import StepSummary from "../stepSummary/StepSummary";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import StepForm from "../stepForm/StepForm";
-import StepGeneralnfo from "../stepClause/StepClause";
+import StepClause from "../stepClause/StepClause";
 import useMultistepForm from "./useMultistepForm";
 
 const IndexSteps = () => {
@@ -15,7 +15,7 @@ const IndexSteps = () => {
 
   const { steps, currentStepIdx, step, back, next } = useMultistepForm([
     <StepForm />,
-    <StepGeneralnfo />,
+    <StepClause />,
     <StepSummary />,
     <StepConfirmation />,
   ]);

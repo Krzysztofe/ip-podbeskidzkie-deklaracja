@@ -16,7 +16,7 @@ const StepFormHeader = () => {
         Deklaracja Przystąpienia do OZZIP Amazon
       </Typography>
       <Typography
-        variant="h5"
+        variant="subtitle1"
         component="h2"
         color="primary"
         sx={{ margin: 0, marginTop: "2.2rem", marginBottom: "1.1rem" }}

@@ -88,7 +88,7 @@ const StepsButtons = (props: Props) => {
         sx={{
           height: "100%",
           display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
+          flexDirection: { xs: "column-reverse", sm: "row" },
           alignItems: "center",
           gap: 1,
           justifyContent: { xs: "center", sm: "space-between" },
