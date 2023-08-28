@@ -12,20 +12,22 @@ const StepClauseForm = () => {
     <Box
       sx={{
         position: "sticky",
-        bottom: theme => theme.spacing(13),
+        bottom: { xs: "6rem", sm: "3rem" },
         left: 0,
         backgroundColor: "white",
         width: "100%",
         height: {
-          xs: "7rem",
-          sm: "4rem",
+          xs: "8rem",
+          sm: "6rem",
+          md: "4rem",
         },
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "end",
         borderTop: 1,
-        borderBottom: 1,
+        borderBottom:1,
         borderColor: "info.light",
+        outline: "10px solid white"
       }}
     >
       <FormControlLabel

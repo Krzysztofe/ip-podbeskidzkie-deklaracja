@@ -2,13 +2,10 @@ import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
   palette: {
-    // primary: {
-    //   main: "rgb(242,242,242)",
-    // light:
-    // },
 
     secondary: {
       main: "rgb(153,161,173)",
+      light: "#FAFAFA",
     },
     info: {
       dark: "#3E3E3E",
@@ -23,22 +20,30 @@ export const theme = createTheme({
       fontSize: "2rem",
       fontWeight: 500,
     },
-    h5: {
+    h4: {
       fontSize: "1rem",
       fontWeight: 600,
     },
-    h6: {
+    h5: {
       fontSize: "1rem",
       fontWeight: 400,
     },
+    h6: {
+      fontSize: "0.625rem",
+      fontWeight: 600,
+      // 10px
+    },
+
     subtitle1: {
       fontSize: "0.875rem",
       fontWeight: 600,
+      // 14px
     },
 
     subtitle2: {
-      fontSize: "0.6rem",
-      fontWeight: 600,
+      fontSize: "0.875rem",
+      fontWeight: 400,
+      // 14px
     },
 
     body1: {

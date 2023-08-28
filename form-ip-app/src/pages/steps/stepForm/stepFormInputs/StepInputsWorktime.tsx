@@ -33,17 +33,8 @@ const StepInputsWorktime = () => {
               <FormControlLabel
                 key={worktime}
                 value={worktime}
-                control={
-                  <Radio
-                    sx={
-                      {
-                        // marginRight: "calc(60% - 30px)",
-                      }
-                    }
-                  />
-                }
+                control={<Radio />}
                 label={worktime}
-            
                 sx={{
                   ml: -1,
                   "& .MuiFormControlLabel-label": {

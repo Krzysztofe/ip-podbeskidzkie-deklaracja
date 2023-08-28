@@ -43,7 +43,7 @@ const IndexSteps = () => {
         <Container sx={{ height: theme => theme.spacing(7) }}></Container>
       </header>
       <main>
-        <Container>
+        <Container sx={{ }}>
           <form onSubmit={formSubmit} style={{ position: "relative" }}>
             {step}
 
@@ -55,7 +55,7 @@ const IndexSteps = () => {
                   currentStepIdx={currentStepIdx}
                   steps={steps}
                 />
-                <Box sx={{ height: theme => theme.spacing(13) }}></Box>
+                <Box sx={{ height: { xs: "6rem", sm: "3rem" } }}></Box>
               </>
             )}
           </form>

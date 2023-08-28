@@ -10,6 +10,7 @@ import KeyboardDoubleArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardDou
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import zIndex from "@mui/material/styles/zIndex";
 // import { Container } from "@mui/material";
+import Captcha from "../stepSummary/Captcha";
 
 interface Props {
   next: () => void;
@@ -54,6 +55,7 @@ const StepsButtons = (props: Props) => {
 
   const handlePOST = () => {
     if (props.currentStepIdx === 2) {
+      console.log("", URL);
       sendRequest(
         {
           url: URL,
@@ -80,8 +82,9 @@ const StepsButtons = (props: Props) => {
         left: 0,
         backgroundColor: "white",
         width: "100%",
-        height: theme => theme.spacing(13),
+        height: { xs: "6rem", sm: "3rem" },
         zIndex: 2,
+        // bgcolor: "blue",
       }}
     >
       <Container
@@ -89,9 +92,9 @@ const StepsButtons = (props: Props) => {
           height: "100%",
           display: "flex",
           flexDirection: { xs: "column-reverse", sm: "row" },
+          justifyContent: { xs: "center", sm: "space-between" },
           alignItems: "center",
           gap: 1,
-          justifyContent: { xs: "center", sm: "space-between" },
         }}
       >
         {props.currentStepIdx > 0 && (
@@ -117,7 +120,6 @@ const StepsButtons = (props: Props) => {
             }}
             sx={{
               width: { xs: "65%", sm: "15rem" },
-              height: "fit-content",
               "&:hover": { backgroundColor: "red" },
               marginLeft: { xs: 0, sm: "auto" },
             }}
@@ -129,6 +131,7 @@ const StepsButtons = (props: Props) => {
         {props.currentStepIdx === 1 && (
           <Button
             variant="contained"
+            type="submit"
             endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
             onClick={() => {
               isConfirmed && isErrorInClause.length === 0 && props.next();
@@ -136,7 +139,6 @@ const StepsButtons = (props: Props) => {
             sx={{
               width: { xs: "65%", sm: "15rem" },
             }}
-            type="submit"
           >
             Zatwierdź
           </Button>
@@ -145,16 +147,17 @@ const StepsButtons = (props: Props) => {
         {props.currentStepIdx === 2 && (
           <Button
             variant="contained"
-            endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
+            endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
             onClick={() => {
               props.currentStepIdx < 2 && props.next();
-              isCaptcha && handlePOST();
+              // isCaptcha && handlePOST();
+              handlePOST();
             }}
             sx={{
-              width: { xs: "65%", sm: "15rem" },
+              width: { xs: "65%", sm: "15rem", textTransform: "none" },
             }}
           >
-            {isCaptcha ? "Wyślij" : "Zaznacz CAPTCHA"}
+            {isCaptcha ? "Wyślij" : "Zaznacz reCAPTCHA"}
           </Button>
         )}
       </Container>

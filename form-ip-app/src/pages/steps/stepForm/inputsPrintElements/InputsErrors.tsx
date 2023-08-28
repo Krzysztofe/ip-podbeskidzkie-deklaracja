@@ -15,7 +15,7 @@ if (props.otherValue === null) {
         props.formik.errors[
           props.value as keyof typeof props.formik.errors
         ] && (
-          <Typography variant="subtitle2" color="error">
+          <Typography variant="h6" color="error">
             {
               props.formik.errors[
                 props.value as keyof typeof props.formik.errors
@@ -31,7 +31,7 @@ return (
     {(props.formik.touched[props.value] ||
       props.formik.touched[props.otherValue]) &&
       props.formik.errors[props.value] && (
-        <Typography variant="subtitle2" color="error">
+        <Typography variant="h6" color="error">
           {props.formik.errors[props.value]}
         </Typography>
       )}

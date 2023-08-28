@@ -24,7 +24,7 @@ const StepFormAlert = () => {
           justifyContent: "center",
         }}
       >
-        Wypełnij brakujące pola formulaża
+        Wypełnij pola formulaża
       </Alert>
     </>
   );

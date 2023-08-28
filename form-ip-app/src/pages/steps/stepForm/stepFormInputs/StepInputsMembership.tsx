@@ -14,7 +14,7 @@ const StepInputsMembership = () => {
   const { formik } = useContext(StepsContext);
 
   return (
-    <FormControl>
+    <FormControl sx={{ width: "100%" }}>
       <InputsHeading
         headingText={"Przynależność do innych związków zawodowych:"}
       />
@@ -26,9 +26,7 @@ const StepInputsMembership = () => {
         onBlur={formik.handleBlur}
         sx={{
           gap: 3,
-          // maxWidth: 400,
           width: { xs: "100%", sm: "60%" },
-
           marginLeft: { sm: "40%" },
         }}
       >
@@ -56,8 +54,7 @@ const StepInputsMembership = () => {
       </RadioGroup>
       <Box
         sx={{
-          maxWidth: 200,
-          width: "60%",
+          width: { xs: "100%", sm: "60%" },
           marginLeft: { xs: "auto", sm: "40%" },
           mt: 1,
         }}
