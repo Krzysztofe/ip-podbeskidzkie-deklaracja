@@ -1,10 +1,9 @@
+import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Typography from "@mui/material/Typography";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "../../stepForm/inputsPrintElements/InputsErrors";
-import Box from "@mui/material/Box";
 
 const StepClauseForm = () => {
   const { formikClause } = useContext(StepsContext);
