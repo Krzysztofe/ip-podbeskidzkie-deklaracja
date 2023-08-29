@@ -1,13 +1,13 @@
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import { useContext } from "react";
+import Container from "@mui/material/Container";
+import { useContext, useEffect } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import StepClause from "../stepClause/StepClause";
 import StepConfirmation from "../stepConfirmation/StepConfirmation";
+import StepForm from "../stepForm/StepForm";
 import StepSummary from "../stepSummary/StepSummary";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
-import StepForm from "../stepForm/StepForm";
-import StepClause from "../stepClause/StepClause";
 import useMultistepForm from "./useMultistepForm";
 
 const IndexSteps = () => {
@@ -20,6 +20,10 @@ const IndexSteps = () => {
     <StepConfirmation />,
   ]);
 
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+  }, [currentStepIdx]);
+  
   const formSubmit =
     currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
 
@@ -43,7 +47,7 @@ const IndexSteps = () => {
         <Container sx={{ height: theme => theme.spacing(7) }}></Container>
       </header>
       <main>
-        <Container sx={{ }}>
+        <Container sx={{}}>
           <form onSubmit={formSubmit} style={{ position: "relative" }}>
             {step}
 

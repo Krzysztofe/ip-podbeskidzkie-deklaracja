@@ -8,7 +8,7 @@ export const validationSchema = yup.object({
   surname: validation,
   address: validation,
   phone: yup.string().required(errMsg).min(6, "Min. 6 znaków"),
-  email: yup.string().required(errMsg),
+  email: yup.string().required(errMsg).email("Podaj poprawny email"),
   employer: yup.string().test("oneOfRequired", errMsg, function (item) {
     return this.parent.employer || this.parent.employerOther;
   }),

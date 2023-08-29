@@ -1,8 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
-import StepConfirmationBanksList from "./StepConfirmationBanksList";
 import InputsHeading from "../stepForm/inputsPrintElements/InputsHeading";
+import StepConfirmationBanksList from "./StepConfirmationBanksList";
 import StepConfirmationFooter from "./StepConfirmationFooter";
 
 const StepConfirmation = () => {
@@ -27,8 +26,8 @@ const StepConfirmation = () => {
         <strong>a)</strong> członkowi prezydium organizacji podstawowej Związku
         (również poprzed odebranie ze skrzynki pocztowej na tablicy związkowej)
         <br />
-        <strong>b)</strong>
-        bezpośrednio osobie działającej z upoważnienia prezydium Komisji <br />
+        <strong>b)</strong> bezpośrednio osobie działającej z upoważnienia
+        prezydium Komisji <br />
         <strong>c)</strong> na ujawniony w KRS adres Związku (aktualnie: ul.
         Kościelna 4/1a, 60-538 Poznań)
         <br />
@@ -43,7 +42,7 @@ const StepConfirmation = () => {
         OZZIP z 12.03.2022 r
       </Typography>
       <Typography variant="subtitle1" color="info.dark" sx={{ marginBlock: 2 }}>
-        DROGĄ E-MAIL otrzymasz POTWIERDZENIE ZAPISANIA DO ZWIĄZKU ORAZ DODANIA
+        DROGĄ E-MAIL OTRZYMASZ POTWIERDZENIE ZAPISANIA DO ZWIĄZKU ORAZ DODANIA
         DO LISTY DYSKUSYJNEJ.
       </Typography>
 

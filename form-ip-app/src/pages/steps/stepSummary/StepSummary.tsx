@@ -51,13 +51,11 @@ const StepSummary = () => {
     <>
       <HttpRequestState />
 
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", pb: 10 }}>
         <InputsHeading headingText={"Podsumowanie"} />
         {dataSummary.map((text, idx) => {
           return (
-            <div
-            //  key={UUID()}
-            >
+            <div key={UUID()}>
               {formikValues[idx] === "" ? null : (
                 <Box
                   sx={{
@@ -113,9 +111,8 @@ const StepSummary = () => {
           Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetważanie
           moich danych osobowych na zasadach i w celach w niej wskazanych.
         </Typography>
-
-        <Captcha />
       </Box>
+      <Captcha />
     </>
   );
 };

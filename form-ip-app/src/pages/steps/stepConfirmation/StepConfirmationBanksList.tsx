@@ -6,7 +6,16 @@ import { dataBanksList } from "./dataStepConfirmation";
 
 const StepConfirmationBanksList = () => {
   return (
-    <ImageList sx={{ display: "flex", flexWrap: "wrap", marginInline: "auto" }}>
+    <ImageList
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        marginInline: "auto",
+        maxWidth: "400px",
+        width: "100%",
+      }}
+    >
       {dataBanksList.map(
         ({ img, link, alt }: { img: string; link: string; alt: string }) => {
           return (
@@ -15,7 +24,7 @@ const StepConfirmationBanksList = () => {
                 border: 1,
                 borderColor: "info.light",
                 bgcolor: "secondary.light",
-                width: "5rem",
+                width: "23%",
                 aspectRatio: "1/1",
               }}
             >
@@ -23,16 +32,10 @@ const StepConfirmationBanksList = () => {
                 to={link}
                 style={{
                   height: "100%",
-                  textDecoration: "none",
                   display: "flex",
                 }}
               >
-                <img
-                  src={img}
-                  alt={alt}
-                  loading="lazy"
-                  style={{ marginInline: "auto" }}
-                />
+                <img src={img} alt={alt} loading="lazy" />
               </Link>
             </ImageListItem>
           );

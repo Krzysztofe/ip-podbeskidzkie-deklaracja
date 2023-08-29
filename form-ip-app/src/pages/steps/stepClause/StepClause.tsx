@@ -6,20 +6,21 @@ import InputsHeading from "../stepForm/inputsPrintElements/InputsHeading";
 
 const StepClause = () => {
   return (
-    <Box sx={{bgcolor:"secondary.light"}}>
+    <Box sx={{ bgcolor: "secondary.light" }}>
       <InputsHeading headingText={" KLAUZULA INFORMACYNA"} />
-
-      {dataClauseParagraphs.map(paragraph => {
-        return (
-          <Typography
-            key={paragraph}
-            variant="body2"
-            sx={{ py: 1, maxWidth: 400, marginInline:"auto" }}
-          >
-            {paragraph}
-          </Typography>
-        );
-      })}
+      <Box sx={{ pb: 2 }}>
+        {dataClauseParagraphs.map(paragraph => {
+          return (
+            <Typography
+              key={paragraph}
+              variant="body2"
+              sx={{ py: 1, maxWidth: 400, marginInline: "auto" }}
+            >
+              {paragraph}
+            </Typography>
+          );
+        })}
+      </Box>
 
       <StepClauseForm />
     </Box>

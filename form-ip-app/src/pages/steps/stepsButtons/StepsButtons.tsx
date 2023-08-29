@@ -150,14 +150,14 @@ const StepsButtons = (props: Props) => {
             endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
             onClick={() => {
               props.currentStepIdx < 2 && props.next();
-              // isCaptcha && handlePOST();
-              handlePOST();
+              isCaptcha && handlePOST();
+              // handlePOST();
             }}
             sx={{
               width: { xs: "65%", sm: "15rem", textTransform: "none" },
             }}
           >
-            {isCaptcha ? "Wyślij" : "Zaznacz reCAPTCHA"}
+            {isCaptcha ? "Wyślij" : "ZAZNACZ reCAPTCHA"}
           </Button>
         )}
       </Container>
