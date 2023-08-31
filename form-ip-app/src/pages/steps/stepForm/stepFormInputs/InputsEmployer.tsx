@@ -7,11 +7,11 @@ import RadioGroup from "@mui/material/RadioGroup";
 import TextField from "@mui/material/TextField";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "../inputsPrintElements/InputsErrors";
+import InputsErrors from "./InputsErrors";
 import { Typography } from "@mui/material";
-import InputsHeading from "../inputsPrintElements/InputsHeading";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 
-const StepFormEployer = () => {
+const InputsEployer = () => {
   const { formik } = useContext(StepsContext);
 
   const handleEmployerChange = async (
@@ -38,7 +38,7 @@ const StepFormEployer = () => {
 
   return (
     <>
-      <InputsHeading headingText={"Pracodawca:"} />
+      <HeadingPrimary headingText={"Pracodawca:"} />
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name="employer"
@@ -46,9 +46,10 @@ const StepFormEployer = () => {
           onChange={handleEmployerChange}
           onBlur={formik.handleBlur}
           sx={{
-            maxWidth: 200,
-            width: "60%",
-            marginLeft: { xs: "auto", sm: "40%" },
+            width: { xs: "80%", sm: "60%" },
+            marginInline: "auto",
+            ml: { xs: "auto", sm: "40%" },
+            mt: { xs: 2, sm: 4 },
           }}
         >
           {["Amazon", "Adecco", "Randstad"].map(employer => {
@@ -56,21 +57,14 @@ const StepFormEployer = () => {
               <FormControlLabel
                 key={employer}
                 value={employer}
-                control={
-                  <Radio
-                    sx={
-                      {
-                        // marginRight: "calc(60% )",
-                      }
-                    }
-                  />
-                }
+                control={<Radio />}
                 label={employer}
                 sx={{
                   ml: -1,
                   "& .MuiFormControlLabel-label": {
                     mr: 1,
-                    color: "info.main",
+                    color: "info.dark",
+                    fontSize: theme => theme.typography.fs_16_rg,
                   },
                 }}
               />
@@ -79,10 +73,10 @@ const StepFormEployer = () => {
         </RadioGroup>
         <Box
           sx={{
-            maxWidth: 200,
-            width: "60%",
-            marginLeft: { xs: "auto", sm: "40%" },
-            mt: 1,
+            maxWidth: "24rem",
+            width: { xs: "80%", sm: "60%" },
+            marginInline: "auto",
+            ml: { xs: "auto", sm: "40%" },
           }}
         >
           <TextField
@@ -93,11 +87,7 @@ const StepFormEployer = () => {
             onChange={handleLoginChange}
             onBlur={formik.handleBlur}
             size="small"
-            // sx={{
-            //   maxWidth: 200,
-            //   width: "60%",
-            //   marginLeft: { xs: "auto", sm: 18 },
-            // }}
+            sx={{ width: "100%" }}
           />
 
           <InputsErrors
@@ -111,4 +101,4 @@ const StepFormEployer = () => {
   );
 };
 
-export default StepFormEployer;
+export default InputsEployer;

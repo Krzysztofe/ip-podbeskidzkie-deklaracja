@@ -7,15 +7,15 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import InputsErrors from "../inputsPrintElements/InputsErrors";
-import InputsHeading from "../inputsPrintElements/InputsHeading";
+import InputsErrors from "./InputsErrors";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 
-const StepInputsWorktime = () => {
+const InputsWorktime = () => {
   const { formik } = useContext(StepsContext);
 
   return (
     <>
-      <InputsHeading headingText={" Wymiar czasu pracy:"} />
+      <HeadingPrimary headingText={" Wymiar czasu pracy:"} />
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name="worktime"
@@ -23,9 +23,10 @@ const StepInputsWorktime = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           sx={{
-            maxWidth: 200,
-            width: "60%",
-            marginLeft: { xs: "auto", sm: "40%" },
+            width: { xs: "80%", sm: "60%" },
+            marginInline: "auto",
+            ml: { xs: "auto", sm: "40%" },
+            mt: { xs: 2, sm: 4 },
           }}
         >
           {["Cały etat", "Pół etatu"].map(worktime => {
@@ -33,13 +34,14 @@ const StepInputsWorktime = () => {
               <FormControlLabel
                 key={worktime}
                 value={worktime}
-                control={<Radio />}
+                control={<Radio sx={{ pl: 0 }} />}
                 label={worktime}
                 sx={{
-                  ml: -1,
+                  ml: "5px",
                   "& .MuiFormControlLabel-label": {
                     mr: 1,
-                    color: "info.main",
+                    color: "info.dark",
+                    fontSize: theme => theme.typography.fs_16_rg,
                   },
                 }}
               />
@@ -59,4 +61,4 @@ const StepInputsWorktime = () => {
   );
 };
 
-export default StepInputsWorktime;
+export default InputsWorktime;

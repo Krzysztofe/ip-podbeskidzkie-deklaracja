@@ -12,6 +12,7 @@ const StepConfirmationBanksList = () => {
         flexWrap: "wrap",
         justifyContent: "space-between",
         marginInline: "auto",
+        marginBlock:0,
         maxWidth: "400px",
         width: "100%",
       }}
@@ -20,6 +21,7 @@ const StepConfirmationBanksList = () => {
         ({ img, link, alt }: { img: string; link: string; alt: string }) => {
           return (
             <ImageListItem
+              key={alt}
               sx={{
                 border: 1,
                 borderColor: "info.light",

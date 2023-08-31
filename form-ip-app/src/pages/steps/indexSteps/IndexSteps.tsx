@@ -23,7 +23,7 @@ const IndexSteps = () => {
   useEffect(() => {
     document.documentElement.scrollTop = 0;
   }, [currentStepIdx]);
-  
+
   const formSubmit =
     currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
 
@@ -35,7 +35,9 @@ const IndexSteps = () => {
             backgroundColor: "white",
             position: "fixed",
             zIndex: 2,
-            height: theme => theme.spacing(7),
+            // height: theme => theme.spacing(7),
+            // pt: { sx: 3, sm: 10 },
+            // mb: { sx: 8, sm: 10 },
             left: "50%",
             right: "50%",
             transform: "translate(-50%)",
@@ -53,13 +55,26 @@ const IndexSteps = () => {
 
             {currentStepIdx < steps.length - 1 && (
               <>
-                <StepsButtons
-                  next={next}
-                  back={back}
-                  currentStepIdx={currentStepIdx}
-                  steps={steps}
-                />
-                <Box sx={{ height: { xs: "6rem", sm: "3rem" } }}></Box>
+                <Box
+                  sx={{
+                    position: "fixed",
+                    bottom: 0,
+                    left: 0,
+                    backgroundColor: "white",
+                    width: "100%",
+                    height: { xs: "7rem", sm: "5rem" },
+                    zIndex: 2,
+                    // bgcolor: "blue",
+                  }}
+                >
+                  <StepsButtons
+                    next={next}
+                    back={back}
+                    currentStepIdx={currentStepIdx}
+                    steps={steps}
+                  />
+                </Box>
+                <Box sx={{ height: { xs: "7rem", sm: "5rem" } }}></Box>
               </>
             )}
           </form>

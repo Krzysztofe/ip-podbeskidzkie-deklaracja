@@ -7,15 +7,16 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import TextInputsErrors from "../inputsPrintElements/InputsErrors";
-import InputsHeading from "../inputsPrintElements/InputsHeading";
+import TextInputsErrors from "./InputsErrors";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 import Box from "@mui/material/Box";
-const StepInputsMembership = () => {
+
+const InputsMembership = () => {
   const { formik } = useContext(StepsContext);
 
   return (
     <FormControl sx={{ width: "100%" }}>
-      <InputsHeading
+      <HeadingPrimary
         headingText={"Przynależność do innych związków zawodowych:"}
       />
 
@@ -26,8 +27,10 @@ const StepInputsMembership = () => {
         onBlur={formik.handleBlur}
         sx={{
           gap: 3,
-          width: { xs: "100%", sm: "60%" },
-          marginLeft: { sm: "40%" },
+          width: { xs: "80%", sm: "60%" },
+          marginInline: "auto",
+          ml: { xs: "auto", sm: "40%" },
+          mt: { xs: 2, sm: 4 },
         }}
       >
         {[
@@ -45,7 +48,8 @@ const StepInputsMembership = () => {
                 ml: -1,
                 "& .MuiFormControlLabel-label": {
                   mr: 1,
-                  color: "info.main",
+                  color: "info.dark",
+                  fontSize: theme => theme.typography.fs_16_rg,
                 },
               }}
             />
@@ -69,4 +73,4 @@ const StepInputsMembership = () => {
   );
 };
 
-export default StepInputsMembership;
+export default InputsMembership;

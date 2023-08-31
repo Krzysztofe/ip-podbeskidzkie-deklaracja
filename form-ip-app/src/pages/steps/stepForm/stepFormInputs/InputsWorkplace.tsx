@@ -6,11 +6,11 @@ import RadioGroup from "@mui/material/RadioGroup";
 import TextField from "@mui/material/TextField";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "../inputsPrintElements/InputsErrors";
-import InputsHeading from "../inputsPrintElements/InputsHeading";
+import InputsErrors from "./InputsErrors";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 import Box from "@mui/material/Box";
 
-const StepInputsWorkplace = () => {
+const InputsWorkplace = () => {
   const { formik } = useContext(StepsContext);
   const handleEmployerChange = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -36,7 +36,7 @@ const StepInputsWorkplace = () => {
 
   return (
     <>
-      <InputsHeading headingText={"Miejsce Pracy:"} />
+      <HeadingPrimary headingText={"Miejsce Pracy:"} />
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name="workplace"
@@ -44,9 +44,10 @@ const StepInputsWorkplace = () => {
           onChange={handleEmployerChange}
           onBlur={formik.handleBlur}
           sx={{
-            maxWidth: 200,
-            width: "60%",
-            marginLeft: { xs: "auto", sm: "40%" },
+            width: { xs: "80%", sm: "60%" },
+            marginInline: "auto",
+            ml: { xs: "auto", sm: "40%" },
+            mt: { xs: 2, sm: 4 },
           }}
         >
           {["poz1", "wro1", "wro2", "wro5", "lcj", "ktw1", "ktw3", "szzl"].map(
@@ -55,19 +56,14 @@ const StepInputsWorkplace = () => {
                 <FormControlLabel
                   key={workplace}
                   value={workplace}
-                  control={
-                    <Radio
-                    // sx={{
-                    //   marginRight: "calc(60% - 30px)",
-                    // }}
-                    />
-                  }
+                  control={<Radio />}
                   label={workplace}
                   sx={{
                     ml: -1,
                     "& .MuiFormControlLabel-label": {
                       mr: 1,
-                      color: "info.main",
+                      color: "info.dark",
+                      fontSize: theme => theme.typography.fs_16_rg,
                     },
                   }}
                 />
@@ -78,10 +74,10 @@ const StepInputsWorkplace = () => {
 
         <Box
           sx={{
-            maxWidth: 200,
-            width: "60%",
-            marginLeft: { xs: "auto", sm: "40%" },
-            mt: 1,
+            maxWidth: "24rem",
+            width: { xs: "80%", sm: "60%" },
+            marginInline: "auto",
+            ml: { xs: "auto", sm: "40%" },
           }}
         >
           <TextField
@@ -92,6 +88,7 @@ const StepInputsWorkplace = () => {
             onChange={handleEmployerOtherChange}
             onBlur={formik.handleBlur}
             size="small"
+            sx={{ width: "100%" }}
           />
           <InputsErrors
             value={"workplace"}
@@ -104,4 +101,4 @@ const StepInputsWorkplace = () => {
   );
 };
 
-export default StepInputsWorkplace;
+export default InputsWorkplace;

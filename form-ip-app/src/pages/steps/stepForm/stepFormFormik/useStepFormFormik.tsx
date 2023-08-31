@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import { useState } from "react";
-import { ModelInitialValues, initialValues } from "./dataStepForm";
-import { validationSchema } from "./validationStepForm";
+import { ModelInitialValues, initialValues } from "./dataStepFormik";
+import { validationSchema } from "./validationStepFormik";
 
 const useStepFormFormik = () => {
   const [isSubmited, setIsSubmited] = useState(false);

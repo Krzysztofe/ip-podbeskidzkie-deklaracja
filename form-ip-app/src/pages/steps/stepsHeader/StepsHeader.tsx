@@ -1,8 +1,8 @@
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import useWindowWidth from "../../../hooks/useWindowWidth";
+import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
+import useWindowWidth from "../../../hooks/useWindowWidth";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 interface Props {
   steps: JSX.Element[];
@@ -10,53 +10,71 @@ interface Props {
 }
 
 const StepsHeader = (props: Props) => {
-  const theme = useTheme();
-  const { windowWidth } = useWindowWidth();
 
-  const dataSteps = ["Formulaż", "Klauzula", "Wyślij", "Potwierdzenie"];
+  const dataSteps = ["Formulaż", "Klauzula", "Podsumowanie", "Potwierdzenie"];
 
   return (
-    <Stack
-      direction="row"
+    <Box
       sx={{
-        maxWidth: 400,
-        height: "100%",
+        width: { xs: "100%", sm: "360px", md: "100%" },
         display: "flex",
+        mt: { xs: 3, sm: 6 },
+        mb: { xs: 6, sm: 10 },
         alignItems: "center",
-        marginInline: "auto",
+        flexWrap: "wrap",
+        gap: 1,
       }}
     >
-      {dataSteps.map((text, idx) => {
+      {dataSteps.map((text, idx, arr) => {
         return (
-          <Box key={text} sx={{ width: "30%" }}>
+          <Box
+            key={text}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: { xs: "48%", md: "auto" },
+            }}
+          >
             <Box
               sx={{
-                border: `1px solid ${theme.palette.info.main}`,
-                width: "1.4rem",
+                width: { xs: "1.25rem", sm: "2rem" },
                 aspectRatio: "1/1",
-                borderRadius: "50%",
+                border: 1,
+                borderRadius: "100%",
                 display: "grid",
                 placeItems: "center",
-                marginInline: "auto",
                 backgroundColor:
                   props.currentStepIdx >= idx ? "primary.main" : "transparent",
                 color: props.currentStepIdx >= idx ? "white" : "info.main",
               }}
             >
-              <Typography color="info">{idx + 1}</Typography>
+              <Typography variant="fs_14_sb" color="info">
+                {idx + 1}
+              </Typography>
             </Box>
             <Typography
+              variant="fs_12_sb"
+              color="info.dark"
               sx={{
-                fontWeight: windowWidth < 385 ? "100" : "600",
-                textAlign: "center",
+                marginInline: 1,
               }}
             >
               {text}
             </Typography>
+            {idx < arr.length - 1 && (
+              <ArrowForwardIosIcon
+                color="secondary"
+                sx={{
+                  marginRight: { sm: "1rem" },
+                  marginLeft: { xs: "0", sm: "auto" },
+                  fontSize: { xs: "0.8rem", sm: "small" },
+                }}
+              />
+            )}
           </Box>
         );
       })}
-    </Stack>
+    </Box>
   );
 };
 

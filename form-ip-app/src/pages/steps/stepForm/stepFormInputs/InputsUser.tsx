@@ -3,10 +3,10 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "../inputsPrintElements/InputsErrors";
-import InputsHeading from "../inputsPrintElements/InputsHeading";
+import InputsErrors from "./InputsErrors";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 
-const StepInputsUser = () => {
+const InputsUser = () => {
   const { formik } = useContext(StepsContext);
 
   const dataTextInputs = [
@@ -19,15 +19,17 @@ const StepInputsUser = () => {
 
   return (
     <>
-      <InputsHeading headingText={"Twoje dane:"} />
-      {dataTextInputs.map(({ label, value, type }) => {
+      <HeadingPrimary headingText={"Twoje dane:"} />
+      {dataTextInputs.map(({ label, value, type }, idx) => {
         return (
           <FormGroup
             key={label}
             sx={{
-              maxWidth: 200,
-              width: "60%",
-              marginLeft: { xs: "auto", sm: "40%" },
+              maxWidth: "24rem",
+              width: {xs: "80%", sm: "60%"},
+              marginInline: "auto",
+              ml: { xs: "auto", sm: "40%" },
+              mt: idx === 0 ? { xs: 2, sm: 4 }:0,
             }}
           >
             <TextField
@@ -50,4 +52,4 @@ const StepInputsUser = () => {
   );
 };
 
-export default StepInputsUser;
+export default InputsUser;

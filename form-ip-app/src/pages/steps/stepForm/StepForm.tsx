@@ -2,28 +2,27 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import StepFormAlert from "./StepFormAlert";
 import StepFormHeader from "./StepFormHeader";
-import StepInputsContract from "./stepFormInputs/StepInputsContract";
-import StepInputsDepartment from "./stepFormInputs/StepInputsDepartment";
-import StepFormEployer from "./stepFormInputs/StepInputsEmployer";
-import StepInputsMembership from "./stepFormInputs/StepInputsMembership";
-import StepInputsUser from "./stepFormInputs/StepInputsUser";
-import StepInputsWorkplace from "./stepFormInputs/StepInputsWorkplace";
-import StepInputsWorktime from "./stepFormInputs/StepInputsWorktime";
+import InputsContract from "./stepFormInputs/InputsContract";
+import InputsDepartment from "./stepFormInputs/InputsDepartment";
+import InputsEployer from "./stepFormInputs/InputsEmployer";
+import InputsMembership from "./stepFormInputs/InputsMembership";
+import InputsUser from "./stepFormInputs/InputsUser";
+import InputsWorkplace from "./stepFormInputs/InputsWorkplace";
+import InputsWorktime from "./stepFormInputs/InputsWorktime";
 
 const StepForm = () => {
-
   const dataComponents = [
-    <StepInputsUser />,
-    <StepFormEployer />,
-    <StepInputsWorkplace />,
-    <StepInputsContract />,
-    <StepInputsWorktime />,
-    <StepInputsDepartment />,
-    <StepInputsMembership />,
+    <InputsUser />,
+    <InputsEployer />,
+    <InputsWorkplace />,
+    <InputsContract />,
+    <InputsWorktime />,
+    <InputsDepartment />,
+    <InputsMembership />,
   ];
 
   return (
-    <Stack>
+    <Box>
       <StepFormAlert />
       <StepFormHeader />
       {dataComponents.map((component, idx) => {
@@ -33,15 +32,15 @@ const StepForm = () => {
             sx={{
               borderBottom: 1,
               borderColor: "info.light",
-              paddingTop: "0.37rem",
-              pb: 1,
+              pt: { xs: 1, sm: 2 },
+              pb: { xs: 2, sm: 2 },
             }}
           >
             {component}
           </Box>
         );
       })}
-    </Stack>
+    </Box>
   );
 };
 

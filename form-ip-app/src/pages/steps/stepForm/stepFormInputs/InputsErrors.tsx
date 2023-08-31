@@ -10,12 +10,12 @@ interface Props {
 const InputsErrors = (props: Props) => {
 if (props.otherValue === null) {
   return (
-    <Box sx={{ height: theme => theme.spacing(3) }}>
+    <Box sx={{ height: theme => theme.spacing(2.5) }}>
       {props.formik.touched[props.value as keyof typeof props.formik.touched] &&
         props.formik.errors[
           props.value as keyof typeof props.formik.errors
         ] && (
-          <Typography variant="h6" color="error">
+          <Typography variant="subtitle1" color="error">
             {
               props.formik.errors[
                 props.value as keyof typeof props.formik.errors
@@ -27,11 +27,11 @@ if (props.otherValue === null) {
   );
 }
 return (
-  <Box sx={{ height: theme => theme.spacing(3) }}>
+  <Box sx={{ height: theme => theme.spacing(2.5) }}>
     {(props.formik.touched[props.value] ||
       props.formik.touched[props.otherValue]) &&
       props.formik.errors[props.value] && (
-        <Typography variant="h6" color="error">
+        <Typography variant="subtitle1" color="error">
           {props.formik.errors[props.value]}
         </Typography>
       )}

@@ -3,53 +3,44 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "../../stepForm/inputsPrintElements/InputsErrors";
+import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
+import Container from "@mui/material/Container";
 
 const StepClauseForm = () => {
   const { formikClause } = useContext(StepsContext);
 
   return (
-    <Box
-      sx={{
-        position: "sticky",
-        bottom: { xs: "6rem", sm: "3rem" },
-        left: 0,
-        backgroundColor: "white",
-        width: "100%",
-        height: {
-          xs: "8rem",
-          sm: "6rem",
-          md: "4rem",
-        },
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "end",
-        borderTop: 1,
-        borderBottom:1,
-        borderColor: "info.light",
-        outline: "10px solid white"
-      }}
-    >
-      <FormControlLabel
-        control={<Checkbox />}
-        name="confirmation"
-        checked={formikClause.values.confirmation}
-        onChange={formikClause.handleChange}
-        label="Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetważanie moich danych osobowych na zasadach i w celach w niej wskazanych"
+    <>
+      <Container
         sx={{
-          "& .css-19rnxuj-MuiTypography-root": {
-            color: "info.main",
-          },
+          // display: "flex",
+          // alignItems: "center"
+          // flexDirection: "column",
+          // justifyContent: "end",
         }}
-      />
-      <Box sx={{ ml: 4 }}>
-        <InputsErrors
-          formik={formikClause}
-          value={"confirmation"}
-          otherValue={null}
+      >
+        <FormControlLabel
+          control={<Checkbox />}
+          name="confirmation"
+          checked={formikClause.values.confirmation}
+          onChange={formikClause.handleChange}
+          label="Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetważanie moich danych osobowych na zasadach i w celach w niej wskazanych"
+          sx={{
+            "& .css-1ismtrt-MuiTypography-root": {
+              color: "main.dark",
+              fontSize: theme => theme.typography.fs_12_rg,
+            },
+          }}
         />
-      </Box>
-    </Box>
+        <Box sx={{ ml: 4, position: "absolute", bottom: 0 }}>
+          <InputsErrors
+            formik={formikClause}
+            value={"confirmation"}
+            otherValue={null}
+          />
+        </Box>
+      </Container>
+    </>
   );
 };
 

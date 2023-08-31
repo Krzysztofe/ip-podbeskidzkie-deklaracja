@@ -1,8 +1,84 @@
 import { createTheme } from "@mui/material/styles";
+declare module "@mui/material/styles" {
+  interface TypographyVariants {
+    fs_12_rg: {
+      fontSize: string;
+      [key: string]: any;
+    };
+    fs_12_sb: {
+      fontSize: string;
+      [key: string]: any;
+    };
+
+    // fs_14_sb: React.CSSProperties;
+    // fs_14_rg: React.CSSProperties;
+
+    fs_14_sb: {
+      fontSize: string;
+      [key: string]: any;
+    };
+    fs_14_rg: {
+      fontSize: string;
+      [key: string]: any;
+    };
+
+    fs_16_sb: {
+      fontSize: string;
+      [key: string]: any;
+    };
+    fs_16_rg: {
+      fontSize: string;
+      [key: string]: any;
+    };
+  }
+
+  interface TypographyVariantsOptions {
+    fs_12_rg: {
+      fontSize: string;
+      [key: string]: any;
+    };
+    fs_12_sb: {
+      fontSize: string;
+      [key: string]: any;
+    };
+
+    // fs_14_sb: React.CSSProperties;
+    // fs_14_rg: React.CSSProperties;
+
+    fs_14_sb: {
+      fontSize: string;
+      [key: string]: any;
+    };
+    fs_14_rg: {
+      fontSize: string;
+      [key: string]: any;
+    };
+
+    fs_16_sb: {
+      fontSize: string;
+      [key: string]: any;
+    };
+    fs_16_rg: {
+      fontSize: string;
+      [key: string]: any;
+    };
+  }
+}
+
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    fs_12_rg: true;
+    fs_12_sb: true;
+    fs_14_rg: true;
+    fs_14_sb: true;
+    fs_16_rg: true;
+    fs_16_sb: true;
+  }
+}
 
 export const theme = createTheme({
   palette: {
-
+    primary: { main: "#2569F4" },
     secondary: {
       main: "rgb(153,161,173)",
       light: "#FAFAFA",
@@ -13,6 +89,7 @@ export const theme = createTheme({
       light: "#E2E2E2",
     },
   },
+
   typography: {
     fontFamily: ["Poppins", "sans-serif"].join(","),
 
@@ -20,40 +97,93 @@ export const theme = createTheme({
       fontSize: "2rem",
       fontWeight: 500,
     },
-    h4: {
-      fontSize: "1rem",
-      fontWeight: 600,
-    },
-    h5: {
-      fontSize: "1rem",
-      fontWeight: 400,
-    },
-    h6: {
-      fontSize: "0.625rem",
-      fontWeight: 600,
-      // 10px
-    },
+    // h4: {
+    //   fontSize: "1rem",
+    //   fontWeight: 600,
+    // },
+    // h5: {
+    //   fontSize: "1rem",
+    //   fontWeight: 400,
+    // },
+    // h6: {
+    //   fontSize: "0.625rem",
+    //   fontWeight: 600,
+    //   // 10px
+    // },
 
     subtitle1: {
-      fontSize: "0.875rem",
-      fontWeight: 600,
-      // 14px
-    },
-
-    subtitle2: {
-      fontSize: "0.875rem",
-      fontWeight: 400,
-      // 14px
-    },
-
-    body1: {
-      fontSize: "0.75rem",
+      fontSize: "0.625rem",
       fontWeight: 600,
     },
-    body2: {
-      fontSize: "0.75rem",
-      fontWeight: 400,
+
+    // subtitle2: {
+    //   fontSize: "0.875rem",
+    //   fontWeight: 400,
+    //   // 14px
+    // },
+
+    fs_12_sb: {
+      fontSize: "0.625rem",
+      fontWeight: 600,
+      fontFamily: ["Poppins", "sans-serif"].join(","),
+      "@media (min-width:500px)": {
+        fontSize: "0.75rem",
+      },
     },
+
+    fs_12_rg: {
+      fontSize: "0.625rem",
+      fontWeight: 400,
+      fontFamily: ["Poppins", "sans-serif"].join(","),
+      "@media (min-width:500px)": {
+        fontSize: "0.75rem",
+      },
+    },
+
+    fs_14_sb: {
+      fontSize: "0.687rem",
+      fontWeight: 600,
+      fontFamily: ["Poppins", "sans-serif"].join(","),
+      "@media (min-width:500px)": {
+        fontSize: "0.875rem",
+      },
+    },
+
+    fs_14_rg: {
+      fontSize: "0.687rem",
+      fontWeight: 400,
+      fontFamily: ["Poppins", "sans-serif"].join(","),
+      "@media (min-width:500px)": {
+        fontSize: "0.875rem",
+      },
+    },
+
+    fs_16_rg: {
+      fontSize: "0.875rem",
+      fontWeight: 400,
+      fontFamily: ["Poppins", "sans-serif"].join(","),
+      "@media (min-width:500px)": {
+        fontSize: "1rem",
+      },
+    },
+
+    fs_16_sb: {
+      fontSize: "0.875rem",
+      fontWeight: 600,
+      fontFamily: ["Poppins", "sans-serif"].join(","),
+      "@media (min-width:500px)": {
+        fontSize: "1rem",
+      },
+    },
+
+    // body1: {
+    //   fontSize: "0.75rem",
+    //   fontWeight: 600,
+    // },
+    // body2: {
+    //   fontSize: "0.75rem",
+    //   fontWeight: 400,
+    // },
   },
 
   breakpoints: {

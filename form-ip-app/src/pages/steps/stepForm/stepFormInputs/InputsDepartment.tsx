@@ -3,23 +3,25 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "../inputsPrintElements/InputsErrors";
+import InputsErrors from "./InputsErrors";
 
-const StepInputsDepartment = () => {
+const InputsDepartment = () => {
   const { formik } = useContext(StepsContext);
   return (
-    <Box sx={{ pt: 4 }}>
+    <Box sx={{ pt: 2 }}>
       {[
         { label: "Dział", value: "department" },
         { label: "Login", value: "login" },
-      ].map(({ label, value }) => {
+      ].map(({ label, value }, idx) => {
         return (
           <FormGroup
             key={label}
             sx={{
-              maxWidth: 200,
-              width: "60%",
-              marginLeft: { xs: "auto", sm: "40%" },
+              maxWidth: "24rem",
+              width: { xs: "80%", sm: "60%" },
+              marginInline: "auto",
+              ml: { xs: "auto", sm: "40%" },
+              mt: idx === 0 ? { xs: 2, sm: 4 } : 0,
             }}
           >
             <TextField
@@ -40,4 +42,4 @@ const StepInputsDepartment = () => {
   );
 };
 
-export default StepInputsDepartment;
+export default InputsDepartment;

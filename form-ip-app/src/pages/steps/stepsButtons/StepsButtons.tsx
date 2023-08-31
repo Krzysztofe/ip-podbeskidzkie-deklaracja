@@ -71,22 +71,11 @@ const StepsButtons = (props: Props) => {
     width: "35%",
     p: "0.3em",
     marginLeft: "auto",
-    "&:hover": { backgroundColor: "red" },
+    "&:hover": { backgroundColor: "#2455BA" },
   });
 
   return (
-    <Box
-      sx={{
-        position: "fixed",
-        bottom: 0,
-        left: 0,
-        backgroundColor: "white",
-        width: "100%",
-        height: { xs: "6rem", sm: "3rem" },
-        zIndex: 2,
-        // bgcolor: "blue",
-      }}
-    >
+    <>
       <Container
         sx={{
           height: "100%",
@@ -94,7 +83,7 @@ const StepsButtons = (props: Props) => {
           flexDirection: { xs: "column-reverse", sm: "row" },
           justifyContent: { xs: "center", sm: "space-between" },
           alignItems: "center",
-          gap: 1,
+          gap: 2,
         }}
       >
         {props.currentStepIdx > 0 && (
@@ -120,7 +109,7 @@ const StepsButtons = (props: Props) => {
             }}
             sx={{
               width: { xs: "65%", sm: "15rem" },
-              "&:hover": { backgroundColor: "red" },
+              "&:hover": { backgroundColor: "#2455BA" },
               marginLeft: { xs: 0, sm: "auto" },
             }}
           >
@@ -154,14 +143,14 @@ const StepsButtons = (props: Props) => {
               // handlePOST();
             }}
             sx={{
-              width: { xs: "65%", sm: "15rem", textTransform: "none" },
+              width: { xs: "65%", sm: "15rem" },
             }}
           >
-            {isCaptcha ? "Wyślij" : "ZAZNACZ reCAPTCHA"}
+            {isCaptcha ? "Wyślij" : "ZAZNACZ CAPTCHA"}
           </Button>
         )}
       </Container>
-    </Box>
+    </>
   );
 };
 

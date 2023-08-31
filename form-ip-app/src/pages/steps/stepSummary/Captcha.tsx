@@ -23,7 +23,7 @@ const Captcha = () => {
         position: "fixed",
         width: "100%",
         left: 0,
-        bottom: { xs: "5.36rem", sm: "2.36rem" },
+        bottom: { xs: "6.4rem", sm: "4.4rem" },
       }}
     >
       <Container
