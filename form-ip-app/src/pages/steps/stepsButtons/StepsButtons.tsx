@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import { URL } from "../../../data/dataURL";
 import ButtonReturn from "./ButtonReturn";
+import ButtonFormSubmit from "./ButtonFormSubmit";
 
 interface Props {
   next: () => void;
@@ -31,9 +32,9 @@ const StepsButtons = (props: Props) => {
   const isError = Object.values(formik.errors);
   const isErrorInClause = Object.values(formikClause.errors);
 
-  useEffect(() => {
-    if (isSubmited && isError.length === 0) props.next();
-  }, [isSubmited]);
+  // useEffect(() => {
+  //   if (isSubmited && isError.length === 0) props.next();
+  // }, [isSubmited]);
 
   useEffect(() => {
     if (isConfirmed && isErrorInClause.length === 0) props.next();
@@ -82,24 +83,7 @@ const StepsButtons = (props: Props) => {
         }}
       >
         <ButtonReturn />
-
-        {props.currentStepIdx === 0 && (
-          <Button
-            variant="contained"
-            endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
-            type="submit"
-            onClick={() => {
-              isSubmited && isError.length === 0 && props.next();
-            }}
-            sx={{
-              width: { xs: "65%", sm: "15rem" },
-              "&:hover": { backgroundColor: "#2455BA" },
-              marginLeft: { xs: 0, sm: "auto" },
-            }}
-          >
-            Zatwierdź
-          </Button>
-        )}
+        <ButtonFormSubmit />
 
         {props.currentStepIdx === 1 && (
           <Button
