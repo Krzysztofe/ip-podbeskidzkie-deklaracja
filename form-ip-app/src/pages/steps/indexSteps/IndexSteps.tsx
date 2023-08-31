@@ -32,7 +32,7 @@ const IndexSteps = () => {
             transform: "translate(-50%)",
           }}
         >
-          <StepsHeader currentStepIdx={currentStepIdx} steps={steps} />
+          <StepsHeader />
         </Container>
 
         <Container sx={{ height: theme => theme.spacing(7) }}></Container>
