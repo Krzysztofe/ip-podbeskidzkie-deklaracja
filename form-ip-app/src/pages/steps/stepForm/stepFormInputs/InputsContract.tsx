@@ -53,11 +53,13 @@ const InputsContract = () => {
       </RadioGroup>
       <Box
         sx={{
-          width: "60%",
-          marginLeft: "auto",
+          width: { xs: "80%", sm: "60%" },
+          marginInline: "auto",
+          marginLeft: { xs: "auto", sm: "40%" },
+          mt: 1,
         }}
       >
-        <InputsErrors formik={formik} value={"contract"} otherValue={null} />
+        <InputsErrors formik={formik} value={"contract"} />
       </Box>
     </FormControl>
   );

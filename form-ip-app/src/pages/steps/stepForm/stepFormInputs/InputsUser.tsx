@@ -44,7 +44,7 @@ const InputsUser = () => {
               size="small"
             />
 
-            <InputsErrors value={value} otherValue={null} formik={formik} />
+            <InputsErrors value={value} formik={formik} />
           </FormGroup>
         );
       })}

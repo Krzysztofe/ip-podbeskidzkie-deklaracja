@@ -1,16 +1,11 @@
-import Box from "@mui/material/Box";
-import { styled } from "@mui/system";
+import KeyboardDoubleArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowLeftOutlined";
+import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
+import { styled } from "@mui/system";
 import { useContext, useEffect, useState } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import { URL } from "../../../data/dataURL";
-import SendIcon from "@mui/icons-material/Send";
-import KeyboardDoubleArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowLeftOutlined";
-import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
-import zIndex from "@mui/material/styles/zIndex";
-// import { Container } from "@mui/material";
-import Captcha from "../stepSummary/Captcha";
 
 interface Props {
   next: () => void;
@@ -55,7 +50,6 @@ const StepsButtons = (props: Props) => {
 
   const handlePOST = () => {
     if (props.currentStepIdx === 2) {
-      console.log("", URL);
       sendRequest(
         {
           url: URL,
@@ -93,6 +87,7 @@ const StepsButtons = (props: Props) => {
             onClick={() => props.back()}
             sx={{
               width: { xs: "65%", sm: "15rem" },
+              "&:hover": { backgroundColor: "#2455BA" },
             }}
           >
             Wstecz
@@ -127,6 +122,7 @@ const StepsButtons = (props: Props) => {
             }}
             sx={{
               width: { xs: "65%", sm: "15rem" },
+              "&:hover": { backgroundColor: "#2455BA" },
             }}
           >
             Zatwierdź
@@ -139,11 +135,12 @@ const StepsButtons = (props: Props) => {
             endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
             onClick={() => {
               props.currentStepIdx < 2 && props.next();
-              isCaptcha && handlePOST();
-              // handlePOST();
+              // isCaptcha && handlePOST();
+              handlePOST();
             }}
             sx={{
               width: { xs: "65%", sm: "15rem" },
+              "&:hover": { backgroundColor: "#2455BA" },
             }}
           >
             {isCaptcha ? "Wyślij" : "ZAZNACZ CAPTCHA"}

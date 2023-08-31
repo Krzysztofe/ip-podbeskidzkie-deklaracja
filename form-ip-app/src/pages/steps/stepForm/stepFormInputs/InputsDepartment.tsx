@@ -34,7 +34,7 @@ const InputsDepartment = () => {
               onBlur={formik.handleBlur}
               size="small"
             />
-            <InputsErrors formik={formik} value={value} otherValue={null} />
+            <InputsErrors formik={formik} value={value} />
           </FormGroup>
         );
       })}

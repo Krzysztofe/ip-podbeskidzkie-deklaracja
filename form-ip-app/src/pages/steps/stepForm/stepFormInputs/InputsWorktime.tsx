@@ -50,11 +50,13 @@ const InputsWorktime = () => {
         </RadioGroup>
         <Box
           sx={{
-            width: "60%",
-            marginLeft: "auto",
+            width: { xs: "80%", sm: "60%" },
+            marginInline: "auto",
+            marginLeft: { xs: "auto", sm: "40%" },
+            mt: 1,
           }}
         >
-          <InputsErrors formik={formik} value={"worktime"} otherValue={null} />
+          <InputsErrors formik={formik} value={"worktime"} />
         </Box>
       </FormControl>
     </>

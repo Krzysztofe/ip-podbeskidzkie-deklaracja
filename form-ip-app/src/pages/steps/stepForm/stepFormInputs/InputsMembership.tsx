@@ -58,16 +58,13 @@ const InputsMembership = () => {
       </RadioGroup>
       <Box
         sx={{
-          width: { xs: "100%", sm: "60%" },
+          width: { xs: "80%", sm: "60%" },
+          marginInline: "auto",
           marginLeft: { xs: "auto", sm: "40%" },
           mt: 1,
         }}
       >
-        <TextInputsErrors
-          formik={formik}
-          value={"membership"}
-          otherValue={null}
-        />
+        <TextInputsErrors formik={formik} value={"membership"} />
       </Box>
     </FormControl>
   );

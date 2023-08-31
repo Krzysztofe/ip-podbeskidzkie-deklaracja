@@ -11,14 +11,14 @@ import StepsHeader from "../stepsHeader/StepsHeader";
 import useMultistepForm from "./useMultistepForm";
 
 const IndexSteps = () => {
-  const { formik, formikClause } = useContext(StepsContext);
+  const {steps, currentStepIdx, step, back, next, formik, formikClause } = useContext(StepsContext);
 
-  const { steps, currentStepIdx, step, back, next } = useMultistepForm([
-    <StepForm />,
-    <StepClause />,
-    <StepSummary />,
-    <StepConfirmation />,
-  ]);
+  // const { steps, currentStepIdx, step, back, next } = useMultistepForm([
+  //   <StepForm />,
+  //   <StepClause />,
+  //   <StepSummary />,
+  //   <StepConfirmation />,
+  // ]);
 
   useEffect(() => {
     document.documentElement.scrollTop = 0;
