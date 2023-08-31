@@ -2,23 +2,12 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { useContext, useEffect } from "react";
 import { StepsContext } from "../../../context/ContextProv";
-import StepClause from "../stepClause/StepClause";
-import StepConfirmation from "../stepConfirmation/StepConfirmation";
-import StepForm from "../stepForm/StepForm";
-import StepSummary from "../stepSummary/StepSummary";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
-import useMultistepForm from "./useMultistepForm";
 
 const IndexSteps = () => {
-  const {steps, currentStepIdx, step, back, next, formik, formikClause } = useContext(StepsContext);
-
-  // const { steps, currentStepIdx, step, back, next } = useMultistepForm([
-  //   <StepForm />,
-  //   <StepClause />,
-  //   <StepSummary />,
-  //   <StepConfirmation />,
-  // ]);
+  const { steps, currentStepIdx, step, back, next, formik, formikClause } =
+    useContext(StepsContext);
 
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -67,12 +56,7 @@ const IndexSteps = () => {
                     // bgcolor: "blue",
                   }}
                 >
-                  <StepsButtons
-                    next={next}
-                    back={back}
-                    currentStepIdx={currentStepIdx}
-                    steps={steps}
-                  />
+                  <StepsButtons />
                 </Box>
                 <Box sx={{ height: { xs: "7rem", sm: "5rem" } }}></Box>
               </>
