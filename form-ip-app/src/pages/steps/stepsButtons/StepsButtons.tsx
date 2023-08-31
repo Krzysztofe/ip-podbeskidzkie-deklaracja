@@ -8,6 +8,7 @@ import { StepsContext } from "../../../context/ContextProv";
 import { URL } from "../../../data/dataURL";
 import ButtonReturn from "./ButtonReturn";
 import ButtonFormSubmit from "./ButtonFormSubmit";
+import ButtonClauseSumit from "./ButtonClauseSumit";
 
 interface Props {
   next: () => void;
@@ -36,9 +37,9 @@ const StepsButtons = (props: Props) => {
   //   if (isSubmited && isError.length === 0) props.next();
   // }, [isSubmited]);
 
-  useEffect(() => {
-    if (isConfirmed && isErrorInClause.length === 0) props.next();
-  }, [isConfirmed]);
+  // useEffect(() => {
+  //   if (isConfirmed && isErrorInClause.length === 0) props.next();
+  // }, [isConfirmed]);
 
   useEffect(() => {
     if (responseStatus) props.next();
@@ -84,24 +85,9 @@ const StepsButtons = (props: Props) => {
       >
         <ButtonReturn />
         <ButtonFormSubmit />
+        <ButtonClauseSumit />
 
-        {props.currentStepIdx === 1 && (
-          <Button
-            variant="contained"
-            type="submit"
-            endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
-            onClick={() => {
-              isConfirmed && isErrorInClause.length === 0 && props.next();
-            }}
-            sx={{
-              width: { xs: "65%", sm: "15rem" },
-              "&:hover": { backgroundColor: "#2455BA" },
-            }}
-          >
-            Zatwierdź
-          </Button>
-        )}
-
+       
         {props.currentStepIdx === 2 && (
           <Button
             variant="contained"
