@@ -6,6 +6,7 @@ import { styled } from "@mui/system";
 import { useContext, useEffect, useState } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import { URL } from "../../../data/dataURL";
+import ButtonReturn from "./ButtonReturn";
 
 interface Props {
   next: () => void;
@@ -80,19 +81,7 @@ const StepsButtons = (props: Props) => {
           gap: 2,
         }}
       >
-        {props.currentStepIdx > 0 && (
-          <Button
-            variant="contained"
-            startIcon={<KeyboardDoubleArrowLeftOutlinedIcon />}
-            onClick={() => props.back()}
-            sx={{
-              width: { xs: "65%", sm: "15rem" },
-              "&:hover": { backgroundColor: "#2455BA" },
-            }}
-          >
-            Wstecz
-          </Button>
-        )}
+        <ButtonReturn />
 
         {props.currentStepIdx === 0 && (
           <Button
