@@ -11,8 +11,6 @@ const StepsHeader = () => {
       sx={{
         width: { xs: "100%", sm: "360px", md: "100%" },
         display: "flex",
-        mt: { xs: 3, sm: 6 },
-        mb: { xs: 6, sm: 10 },
         alignItems: "center",
         flexWrap: "wrap",
         gap: 1,

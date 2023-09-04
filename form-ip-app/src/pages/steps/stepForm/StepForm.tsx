@@ -22,7 +22,7 @@ const StepForm = () => {
   ];
 
   return (
-    <Box>
+    <>
       <StepFormAlert />
       <StepFormHeader />
       {dataComponents.map((component, idx) => {
@@ -40,7 +40,7 @@ const StepForm = () => {
           </Box>
         );
       })}
-    </Box>
+    </>
   );
 };
 

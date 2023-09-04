@@ -18,7 +18,7 @@ const StepFormAlert = () => {
           right: "50%",
           transform: "translate(-50%)",
           zIndex: "100",
-          marginTop: isError.length > 0 ? "0" : "-110px",
+          marginTop: isError.length > 0 ? "0" : "-510px",
           // transitionDuratio: "500ms",
           display: "flex",
           justifyContent: "center",

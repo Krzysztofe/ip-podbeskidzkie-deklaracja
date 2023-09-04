@@ -195,4 +195,15 @@ export const theme = createTheme({
       xl: 1400,
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          width:  "15rem" ,
+          // width: { xs: "65%", sm: "15rem" },
+          "&:hover": { backgroundColor: "#2455BA" },
+        },
+      },
+    },
+  },
 });

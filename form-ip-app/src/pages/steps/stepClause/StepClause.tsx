@@ -3,6 +3,8 @@ import Typography from "@mui/material/Typography";
 import { dataClauseParagraphs } from "./dataStepClause";
 import StepClauseForm from "./stepClauseForm/StepClauseForm";
 import HeadingPrimary from "../../../components/HeadingPrimary";
+import { useContext, useEffect } from "react";
+import { StepsContext } from "../../../context/ContextProv";
 
 const StepClause = () => {
   return (
@@ -34,37 +36,6 @@ const StepClause = () => {
             );
           })}
         </Box>
-        <Box
-          sx={{
-            height: {
-              xs: "7rem",
-              sm: "6rem",
-              md: "4rem",
-            },
-          }}
-        ></Box>
-      </Box>
-      <Box
-        sx={{
-          position: "fixed",
-          bottom: { xs: "7rem", sm: "5rem" },
-          left: 0,
-          backgroundColor: "white",
-          width: "100%",
-          height: {
-            xs: "7rem",
-            sm: "6rem",
-            md: "4rem",
-          },
-          display: "flex",
-          alignItems: "center",
-          borderTop: 1,
-          borderBottom: 1,
-          borderColor: "info.light",
-          outline: "10px solid white",
-        }}
-      >
-        <StepClauseForm />
       </Box>
     </>
   );

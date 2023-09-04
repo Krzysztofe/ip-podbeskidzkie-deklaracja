@@ -5,22 +5,26 @@ import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
 import Container from "@mui/material/Container";
+import { styled } from "@mui/material/styles";
 
 const StepClauseForm = () => {
   const { formikClause } = useContext(StepsContext);
+
+  const StyledLabel = styled(FormControlLabel)(({ theme }) => ({
+    color: "green",
+  }));
 
   return (
     <>
       <Container
         sx={{
-          // display: "flex",
-          // alignItems: "center"
-          // flexDirection: "column",
-          // justifyContent: "end",
+          paddingBlock: 2,
+          borderBottom: 1,
+          borderColor: "info.light"
         }}
       >
         <FormControlLabel
-          control={<Checkbox />}
+          control={<Checkbox color="secondary" />}
           name="confirmation"
           checked={formikClause.values.confirmation}
           onChange={formikClause.handleChange}
@@ -32,7 +36,7 @@ const StepClauseForm = () => {
             },
           }}
         />
-        <Box sx={{ ml: 4, position: "absolute", bottom: 0 }}>
+        <Box sx={{ ml: 4, position: "absolute" }}>
           <InputsErrors
             formik={formikClause}
             value={"confirmation"}

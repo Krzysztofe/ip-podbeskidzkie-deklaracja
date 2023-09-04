@@ -18,12 +18,14 @@ const StepsButtons = () => {
     <>
       <Container
         sx={{
-          height: "100%",
+          // height: "100%",
           display: "flex",
           flexDirection: { xs: "column-reverse", sm: "row" },
           justifyContent: { xs: "center", sm: "space-between" },
           alignItems: "center",
           gap: 2,
+          paddingBlock: 4,
+          // backgroundColor: "lightgrey",
         }}
       >
         <ButtonReturn />

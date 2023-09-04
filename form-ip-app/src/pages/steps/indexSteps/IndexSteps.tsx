@@ -1,16 +1,21 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
+import StepClauseForm from "../stepClause/stepClauseForm/StepClauseForm";
 
 const IndexSteps = () => {
-  const { steps, currentStepIdx, step, back, next, formik, formikClause } =
+  const { steps, currentStepIdx, step, formik, formikClause } =
     useContext(StepsContext);
 
+  const scrollBoxRef = useRef(null);
+
   useEffect(() => {
-    document.documentElement.scrollTop = 0;
+    if (scrollBoxRef.current) {
+      (scrollBoxRef.current as HTMLDivElement).scrollTop = 0;
+    }
   }, [currentStepIdx]);
 
   const formSubmit =
@@ -21,44 +26,42 @@ const IndexSteps = () => {
       <header>
         <Container
           sx={{
-            backgroundColor: "white",
-            position: "fixed",
-            zIndex: 2,
-            // height: theme => theme.spacing(7),
-            // pt: { sx: 3, sm: 10 },
-            // mb: { sx: 8, sm: 10 },
-            left: "50%",
-            right: "50%",
-            transform: "translate(-50%)",
+            height: { xs: "15vh", md: "10vh" },
+            display: "flex",
+            alignItems: "center",
           }}
         >
           <StepsHeader />
         </Container>
-
-        <Container sx={{ height: theme => theme.spacing(7) }}></Container>
       </header>
       <main>
-        <Container sx={{}}>
-          <form onSubmit={formSubmit} style={{ position: "relative" }}>
-            {step}
-
+        <Container
+          sx={{
+            height: { xs: "85vh", md: "90vh" },
+            padding: "0px !important",
+          }}
+        >
+          <form
+            onSubmit={formSubmit}
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <Box
+              ref={scrollBoxRef}
+              id="scroll"
+              sx={{ paddingInline: "16px", overflowY: "scroll" }}
+            >
+              {step}
+            </Box>
+            {currentStepIdx === 1 && <StepClauseForm />}
             {currentStepIdx < steps.length - 1 && (
               <>
-                <Box
-                  sx={{
-                    position: "fixed",
-                    bottom: 0,
-                    left: 0,
-                    backgroundColor: "white",
-                    width: "100%",
-                    height: { xs: "7rem", sm: "5rem" },
-                    zIndex: 2,
-                    // bgcolor: "blue",
-                  }}
-                >
+                <Box>
                   <StepsButtons />
                 </Box>
-                <Box sx={{ height: { xs: "7rem", sm: "5rem" } }}></Box>
               </>
             )}
           </form>

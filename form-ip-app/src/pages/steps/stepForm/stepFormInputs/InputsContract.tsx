@@ -1,13 +1,12 @@
+import { Box } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import FormLabel from "@mui/material/FormLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import { useContext } from "react";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
-import { Box } from "@mui/material";
 
 const InputsContract = () => {
   const { formik } = useContext(StepsContext);

@@ -1,8 +1,23 @@
 import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/system";
 
 const StepConfirmationParagraphs = () => {
+  const StyledParagraph = styled(Typography)(({ theme }) => ({
+    color: theme.palette.info.dark,
+    // fontSize: theme.typography.h1,
+  }));
+
+  //   const buttonStyles = styled(Button)({
+  //     width: "35%",
+  //     p: "0.3em",
+  //     marginLeft: "auto",
+  //     "&:hover": { backgroundColor: "#2455BA" },
+  //   });
+
   return (
     <>
+      <StyledParagraph>eeeee</StyledParagraph>
       <Typography
         variant="fs_16_rg"
         color="info.dark"
@@ -14,7 +29,7 @@ const StepConfirmationParagraphs = () => {
       </Typography>
       <Typography variant="fs_16_rg" color="info.dark" component="p">
         <strong> 1) </strong> ostatni dzień miesiąca, w którym oświadczenie to
-        zostało doręczone: <br />
+        zostało doręczone:
       </Typography>
 
       <Typography
@@ -35,7 +50,7 @@ const StepConfirmationParagraphs = () => {
       <Typography variant="fs_16_rg" color="info.dark" component="p">
         <strong>2)</strong> dzień, w którym po otrzymaniu tego oświadczenia
         prezydium Komisji podjęło się Twojej obrony wobec podmiotu
-        zatrudniającego (w tym pracodawcy). <br />
+        zatrudniającego (w tym pracodawcy).
       </Typography>
     </>
   );
