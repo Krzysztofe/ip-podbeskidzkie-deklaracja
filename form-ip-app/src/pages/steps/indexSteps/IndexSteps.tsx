@@ -4,7 +4,6 @@ import { useContext, useEffect, useRef } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
-import StepClauseForm from "../stepClause/stepClauseForm/StepClauseForm";
 
 const IndexSteps = () => {
   const { steps, currentStepIdx, step, formik, formikClause } =
@@ -21,12 +20,25 @@ const IndexSteps = () => {
   const formSubmit =
     currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
 
+  const height =
+    currentStepIdx === 0
+      ? {
+          xs: "calc(100% - 120px)",
+          sm: "calc(100% - 90px)",
+        }
+      : currentStepIdx === 3
+      ? "auto"
+      : {
+          xs: "calc(100% - 120px - 74px)",
+          sm: "calc(100% - 90px - 72px)",
+        };
+
   return (
     <>
       <header>
         <Container
           sx={{
-            height: { xs: "15vh", md: "10vh" },
+            height: "10vh",
             display: "flex",
             alignItems: "center",
           }}
@@ -37,7 +49,7 @@ const IndexSteps = () => {
       <main>
         <Container
           sx={{
-            height: { xs: "85vh", md: "90vh" },
+            height: "90vh",
             padding: "0px !important",
           }}
         >
@@ -45,25 +57,20 @@ const IndexSteps = () => {
             onSubmit={formSubmit}
             style={{
               height: "100%",
-              display: "flex",
-              flexDirection: "column",
             }}
           >
             <Box
               ref={scrollBoxRef}
-              id="scroll"
-              sx={{ paddingInline: "16px", overflowY: "scroll" }}
+              sx={{
+                px: 1.6,
+                overflowY: "auto",
+                height: height,
+              }}
             >
               {step}
             </Box>
-            {currentStepIdx === 1 && <StepClauseForm />}
-            {currentStepIdx < steps.length - 1 && (
-              <>
-                <Box>
-                  <StepsButtons />
-                </Box>
-              </>
-            )}
+
+            {currentStepIdx < steps.length - 1 && <StepsButtons />}
           </form>
         </Container>
       </main>

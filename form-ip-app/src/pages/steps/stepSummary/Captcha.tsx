@@ -20,29 +20,24 @@ const Captcha = () => {
   return (
     <Box
       sx={{
-        position: "fixed",
-        width: "100%",
-        left: 0,
-        bottom: { xs: "6.4rem", sm: "4.4rem" },
+        position: "absolute",
+        right: "50%",
+        left: "50%",
+        transform: "translate(-50%)",
+        bottom: { xs: "120px", sm: "90px" },
+        display: "flex",
+        justifyContent: { xs: "center", sm: "end" },
+        width: { xs: "90%", sm: "100%" },
+        backgroundColor: "white",
       }}
     >
-      <Container
+      <Box
         sx={{
-          display: "flex",
-          justifyContent: { xs: "center", sm: "end" },
+          transform: "scale(0.79)",
         }}
       >
-        <Box
-          sx={{
-            width: { xs: "425px", sm: "16px" },
-            transform: "scale(0.79)",
-            display: "flex",
-            justifyContent: { xs: "center", sm: "end" },
-          }}
-        >
-          <ReCAPTCHA sitekey={key} onChange={handleChange} />
-        </Box>
-      </Container>
+        <ReCAPTCHA sitekey={key} onChange={handleChange} />
+      </Box>
     </Box>
   );
 };

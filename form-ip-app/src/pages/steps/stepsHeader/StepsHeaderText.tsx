@@ -1,10 +1,10 @@
 import Typography from "@mui/material/Typography";
 
-interface Props{
-    text: string
+type Props = {
+  text: string;
 }
 
-const StepsHeaderText = (props:Props) => {
+const StepsHeaderText = (props: Props) => {
   return (
     <Typography
       variant="fs_12_sb"

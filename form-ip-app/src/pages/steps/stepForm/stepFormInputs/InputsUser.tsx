@@ -26,10 +26,10 @@ const InputsUser = () => {
             key={label}
             sx={{
               maxWidth: "24rem",
-              width: {xs: "80%", sm: "60%"},
+              width: { xs: "80%", sm: "60%" },
               marginInline: "auto",
               ml: { xs: "auto", sm: "40%" },
-              mt: idx === 0 ? { xs: 2, sm: 4 }:0,
+              mt: idx === 0 ? { xs: 4.2, sm: 5.9 } : 0,
             }}
           >
             <TextField

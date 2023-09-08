@@ -13,6 +13,7 @@ const ButtonReturn = () => {
           startIcon={<KeyboardDoubleArrowLeftOutlinedIcon />}
           onClick={() => back()}
           sx={{
+            height: "fit-content",
             width: { xs: "65%", sm: "15rem" },
             "&:hover": { backgroundColor: "#2455BA" },
           }}

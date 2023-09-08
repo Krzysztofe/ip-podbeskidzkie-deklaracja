@@ -89,7 +89,7 @@ export const theme = createTheme({
       light: "#E2E2E2",
     },
   },
-
+  spacing: 10,
   typography: {
     fontFamily: ["Poppins", "sans-serif"].join(","),
 
@@ -199,7 +199,7 @@ export const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          width:  "15rem" ,
+          width: "15rem",
           // width: { xs: "65%", sm: "15rem" },
           "&:hover": { backgroundColor: "#2455BA" },
         },

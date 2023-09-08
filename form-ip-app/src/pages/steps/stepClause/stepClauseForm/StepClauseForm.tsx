@@ -6,44 +6,58 @@ import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
 import Container from "@mui/material/Container";
 import { styled } from "@mui/material/styles";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 const StepClauseForm = () => {
   const { formikClause } = useContext(StepsContext);
 
-  const StyledLabel = styled(FormControlLabel)(({ theme }) => ({
-    color: "green",
-  }));
-
   return (
     <>
-      <Container
+      <Box
         sx={{
-          paddingBlock: 2,
+          py: { xs: 1.6, md: 1.5 },
+          pl:{xs:1.6, sm:0},
           borderBottom: 1,
-          borderColor: "info.light"
+          borderColor: "info.light",
+          position: "relative",
         }}
       >
         <FormControlLabel
-          control={<Checkbox color="secondary" />}
+          control={
+            <Checkbox
+              checkedIcon={<CheckCircleOutlineIcon />}
+              icon={<HighlightOffIcon />}
+              sx={{ "&:hover": { boxShadow: 2 } }}
+            />
+          }
           name="confirmation"
           checked={formikClause.values.confirmation}
           onChange={formikClause.handleChange}
-          label="Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetważanie moich danych osobowych na zasadach i w celach w niej wskazanych"
+          label="Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetwarzanie moich danych osobowych na zasadach i w celach w niej wskazanych"
           sx={{
-            "& .css-1ismtrt-MuiTypography-root": {
-              color: "main.dark",
+            "& .MuiFormControlLabel-label": {
+              color: formikClause.values.confirmation
+                ? "primary.main"
+                : "main.dark",
               fontSize: theme => theme.typography.fs_12_rg,
             },
           }}
         />
-        <Box sx={{ ml: 4, position: "absolute" }}>
+        <Box
+          sx={{
+            ml: 3.2,
+            position: "absolute",
+            bottom: { xs: "-8", md: "-1px" },
+          }}
+        >
           <InputsErrors
             formik={formikClause}
             value={"confirmation"}
             otherValue={null}
           />
         </Box>
-      </Container>
+      </Box>
     </>
   );
 };

@@ -6,6 +6,10 @@ import { StepsContext } from "../../../context/ContextProv";
 const StepSummaryMembership = () => {
   const { formik } = useContext(StepsContext);
 
+  const formikValue = Object.values(formik.values).slice(-1);
+
+
+
   return (
     <Box sx={{ display: { xs: "block", md: "flex" } }}>
       <Typography
@@ -28,7 +32,7 @@ const StepSummaryMembership = () => {
           textAlign: { xs: "center", md: "left" },
         }}
       >
-        Przynależność do związków zawodowych
+        {formikValue}
       </Typography>
     </Box>
   );

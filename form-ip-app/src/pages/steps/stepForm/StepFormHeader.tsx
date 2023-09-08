@@ -10,17 +10,17 @@ const StepFormHeader = () => {
   return (
     <Stack
       sx={{
-        paddingBlock: 4,
+        paddingBlock: 3.9,
         borderBottom: `1px solid ${theme.palette.info.light}`,
       }}
     >
-      <Typography variant="h1" color="info.dark" sx={{mb:5}}>
-        Deklaracja Przystąpienia do OZZIP Amazon
+      <Typography variant="h1" color="info.dark" sx={{mb:4.2}}>
+        Deklaracja Przystąpienia <br/>do OZZIP Amazon
       </Typography>
 
-      <HeadingPrimary headingText={" Wstąp do komisji w 4 krokach"} />
+      <HeadingPrimary headingText={"Wstąp do komisji w 4 krokach"} />
 
-      <Typography variant="fs_12_sb" color="info.dark" sx={{mt:2.5}}>
+      <Typography variant="fs_12_sb" color="info.dark" sx={{mt:{xs:3.9, sm:2}}}>
         DEKLARACJA
       </Typography>
       <Typography variant="fs_12_rg" color="info.dark">

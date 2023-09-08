@@ -1,45 +1,37 @@
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
-// import { styled } from "@mui/system";
+import { useTheme } from "@mui/material/styles";
 
 const StepConfirmationParagraphs = () => {
+ const theme = useTheme();
+
   const StyledParagraph = styled(Typography)(({ theme }) => ({
-    color: theme.palette.info.dark,
+    // color: theme.palette.info.dark,
     // fontSize: theme.typography.h1,
+    variant: theme.typography.fs_16_rg.variant,
+    color: "info.dark",
+    component: "p",
   }));
 
-  //   const buttonStyles = styled(Button)({
-  //     width: "35%",
-  //     p: "0.3em",
-  //     marginLeft: "auto",
-  //     "&:hover": { backgroundColor: "#2455BA" },
-  //   });
+  const typographyProps = {
+    variant: theme.typography.fs_16_rg.variant,
+    color: "info.dark",
+    component: "p",
+  };
 
   return (
     <>
-      <StyledParagraph>eeeee</StyledParagraph>
-      <Typography
-        variant="fs_16_rg"
-        color="info.dark"
-        component="p"
-        sx={{ marginBlock: { xs: 4 } }}
-      >
+      <Typography {...typographyProps} sx={{ marginBlock: { xs: 3 } }}>
         Jeżeli nasza Komisja nie postanowi inaczej, datą przyjęcia Ciebie do
         związku będzie:
       </Typography>
-      <Typography variant="fs_16_rg" color="info.dark" component="p">
+      <Typography {...typographyProps}>
         <strong> 1) </strong> ostatni dzień miesiąca, w którym oświadczenie to
         zostało doręczone:
       </Typography>
-
-      <Typography
-        variant="fs_16_rg"
-        color="info.dark"
-        component="p"
-        sx={{ ml: 3, marginBlock: 3 }}
-      >
+      <Typography {...typographyProps} sx={{ ml: 3, marginBlock: 1.6 }}>
         <strong>a)</strong> członkowi prezydium organizacji podstawowej Związku
-        (również poprzed odebranie ze skrzynki pocztowej na tablicy związkowej)
+        (również poprzez odebranie ze skrzynki pocztowej na tablicy związkowej)
         <br />
         <strong>b)</strong> bezpośrednio osobie działającej z upoważnienia
         prezydium Komisji <br />
@@ -47,7 +39,7 @@ const StepConfirmationParagraphs = () => {
         Kościelna 4/1a, 60-538 Poznań)
         <br />
       </Typography>
-      <Typography variant="fs_16_rg" color="info.dark" component="p">
+      <Typography {...typographyProps}>
         <strong>2)</strong> dzień, w którym po otrzymaniu tego oświadczenia
         prezydium Komisji podjęło się Twojej obrony wobec podmiotu
         zatrudniającego (w tym pracodawcy).

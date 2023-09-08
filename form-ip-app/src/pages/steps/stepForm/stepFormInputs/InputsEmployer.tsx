@@ -49,7 +49,7 @@ const InputsEployer = () => {
             width: { xs: "80%", sm: "60%" },
             marginInline: "auto",
             ml: { xs: "auto", sm: "40%" },
-            mt: { xs: 2, sm: 4 },
+            mt: { xs: 4.2, sm: 5.9 },
           }}
         >
           {["Amazon", "Adecco", "Randstad"].map(employer => {

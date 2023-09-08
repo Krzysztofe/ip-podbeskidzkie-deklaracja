@@ -25,7 +25,7 @@ const StepConfirmation = () => {
         variant="fs_12_rg"
         color="info.dark"
         component="p"
-        sx={{ marginBlock: { xs: 4 } }}
+        sx={{ marginBlock: { xs: 3 } }}
       >
         Powyższe wynika z Uchwały nr 10 Krajowego Zjazdu Dlegatów i Dlelegatek
         OZZIP z 12.03.2022 r

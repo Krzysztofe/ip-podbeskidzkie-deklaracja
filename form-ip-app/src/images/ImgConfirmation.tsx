@@ -19,9 +19,9 @@ const ImgConfirmation = () => {
             y2="2.72"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#2569f4" />
-            <stop offset="0.004" stop-color="#2569f4" />
-            <stop offset="1" stop-color="#9571f6" />
+            <stop offset="0" stopColor="#2569f4" />
+            <stop offset="0.004" stopColor="#2569f4" />
+            <stop offset="1" stopColor="#9571f6" />
           </linearGradient>
           <clipPath id="clip-path">
             <rect
@@ -94,9 +94,9 @@ const ImgConfirmation = () => {
             y2="1.627"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#444b8c" />
-            <stop offset="0.996" stop-color="#26264f" />
-            <stop offset="1" stop-color="#26264f" />
+            <stop offset="0" stopColor="#444b8c" />
+            <stop offset="0.996" stopColor="#26264f" />
+            <stop offset="1" stopColor="#26264f" />
           </linearGradient>
           <clipPath id="clip-path-8">
             <path
@@ -132,9 +132,9 @@ const ImgConfirmation = () => {
             y2="1.66"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#2569f4" />
-            <stop offset="0.996" stop-color="#6165d7" />
-            <stop offset="1" stop-color="#6165d7" />
+            <stop offset="0" stopColor="#2569f4" />
+            <stop offset="0.996" stopColor="#6165d7" />
+            <stop offset="1" stopColor="#6165d7" />
           </linearGradient>
           <clipPath id="clip-path-10">
             <path
@@ -170,9 +170,9 @@ const ImgConfirmation = () => {
             y2="1.652"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#ffc444" />
-            <stop offset="0.996" stop-color="#f36f56" />
-            <stop offset="1" stop-color="#f36f56" />
+            <stop offset="0" stopColor="#ffc444" />
+            <stop offset="0.996" stopColor="#f36f56" />
+            <stop offset="1" stopColor="#f36f56" />
           </linearGradient>
           <clipPath id="clip-path-12">
             <rect
@@ -252,9 +252,9 @@ const ImgConfirmation = () => {
             y2="4.804"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#aa80f9" />
-            <stop offset="0.996" stop-color="#6165d7" />
-            <stop offset="1" stop-color="#6165d7" />
+            <stop offset="0" stopColor="#aa80f9" />
+            <stop offset="0.996" stopColor="#6165d7" />
+            <stop offset="1" stopColor="#6165d7" />
           </linearGradient>
           <clipPath id="clip-path-19">
             <path
@@ -273,9 +273,9 @@ const ImgConfirmation = () => {
             y2="2.263"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#ebeff2" />
-            <stop offset="0.004" stop-color="#ebeff2" />
-            <stop offset="1" stop-color="#fff" />
+            <stop offset="0" stopColor="#ebeff2" />
+            <stop offset="0.004" stopColor="#ebeff2" />
+            <stop offset="1" stopColor="#fff" />
           </linearGradient>
           <clipPath id="clip-path-21">
             <rect
@@ -533,8 +533,8 @@ const ImgConfirmation = () => {
             y2="3.208"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#ff9085" />
-            <stop offset="1" stop-color="#fb6fbb" />
+            <stop offset="0" stopColor="#ff9085" />
+            <stop offset="1" stopColor="#fb6fbb" />
           </linearGradient>
           <clipPath id="clip-path-38">
             <path
@@ -570,8 +570,8 @@ const ImgConfirmation = () => {
             y2="1.275"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#311944" />
-            <stop offset="1" stop-color="#893976" />
+            <stop offset="0" stopColor="#311944" />
+            <stop offset="1" stopColor="#893976" />
           </linearGradient>
           <clipPath id="clip-path-41">
             <rect
@@ -975,8 +975,8 @@ const ImgConfirmation = () => {
             y2="30.982"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#ab316d" />
-            <stop offset="1" stop-color="#792d3d" />
+            <stop offset="0" stopColor="#ab316d" />
+            <stop offset="1" stopColor="#792d3d" />
           </linearGradient>
           <clipPath id="clip-path-70">
             <path
@@ -1055,9 +1055,9 @@ const ImgConfirmation = () => {
             y2="37.409"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#f36f56" />
-            <stop offset="0.004" stop-color="#f36f56" />
-            <stop offset="1" stop-color="#ffc444" />
+            <stop offset="0" stopColor="#f36f56" />
+            <stop offset="0.004" stopColor="#f36f56" />
+            <stop offset="1" stopColor="#ffc444" />
           </linearGradient>
           <clipPath id="clip-path-76">
             <path
@@ -1274,7 +1274,7 @@ const ImgConfirmation = () => {
             id="Group_5738"
             data-name="Group 5738"
             transform="translate(0 0.003)"
-            clip-path="url(#clip-path)"
+            clipPath="url(#clip-path)"
           >
             <path
               id="Path_2583"
@@ -1329,7 +1329,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5486"
                       data-name="Group 5486"
-                      clip-path="url(#clip-path-2)"
+                      clipPath="url(#clip-path-2)"
                     >
                       <path
                         id="Path_2491"
@@ -1379,7 +1379,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5489"
                       data-name="Group 5489"
-                      clip-path="url(#clip-path-3)"
+                      clipPath="url(#clip-path-3)"
                     >
                       <path
                         id="Path_2496"
@@ -1401,7 +1401,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5492"
                       data-name="Group 5492"
-                      clip-path="url(#clip-path-4)"
+                      clipPath="url(#clip-path-4)"
                     >
                       <path
                         id="Path_2497"
@@ -1430,7 +1430,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5495"
                       data-name="Group 5495"
-                      clip-path="url(#clip-path-5)"
+                      clipPath="url(#clip-path-5)"
                     >
                       <path
                         id="Path_2499"
@@ -1452,7 +1452,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5498"
                       data-name="Group 5498"
-                      clip-path="url(#clip-path-6)"
+                      clipPath="url(#clip-path-6)"
                     >
                       <path
                         id="Path_2500"
@@ -1523,7 +1523,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5503"
                 data-name="Group 5503"
-                clip-path="url(#clip-path-7)"
+                clipPath="url(#clip-path-7)"
               >
                 <rect
                   id="Rectangle_4603"
@@ -1543,7 +1543,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5505"
                 data-name="Group 5505"
-                clip-path="url(#clip-path-8)"
+                clipPath="url(#clip-path-8)"
               >
                 <rect
                   id="Rectangle_4604"
@@ -1563,7 +1563,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5507"
                 data-name="Group 5507"
-                clip-path="url(#clip-path-9)"
+                clipPath="url(#clip-path-9)"
               >
                 <rect
                   id="Rectangle_4605"
@@ -1583,7 +1583,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5509"
                 data-name="Group 5509"
-                clip-path="url(#clip-path-10)"
+                clipPath="url(#clip-path-10)"
               >
                 <rect
                   id="Rectangle_4606"
@@ -1603,7 +1603,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5511"
                 data-name="Group 5511"
-                clip-path="url(#clip-path-11)"
+                clipPath="url(#clip-path-11)"
               >
                 <rect
                   id="Rectangle_4607"
@@ -1623,7 +1623,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5518"
                 data-name="Group 5518"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5517"
@@ -1636,7 +1636,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5515"
                       data-name="Group 5515"
-                      clip-path="url(#clip-path-13)"
+                      clipPath="url(#clip-path-13)"
                     >
                       <g
                         id="Group_5514"
@@ -1646,7 +1646,7 @@ const ImgConfirmation = () => {
                         <g
                           id="Group_5513"
                           data-name="Group 5513"
-                          clip-path="url(#clip-path-14)"
+                          clipPath="url(#clip-path-14)"
                         >
                           <rect
                             id="Rectangle_4608"
@@ -1671,7 +1671,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5520"
                 data-name="Group 5520"
-                clip-path="url(#clip-path-15)"
+                clipPath="url(#clip-path-15)"
               >
                 <rect
                   id="Rectangle_4611"
@@ -1691,7 +1691,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5527"
                 data-name="Group 5527"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5526"
@@ -1704,7 +1704,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5524"
                       data-name="Group 5524"
-                      clip-path="url(#clip-path-17)"
+                      clipPath="url(#clip-path-17)"
                     >
                       <g
                         id="Group_5523"
@@ -1714,7 +1714,7 @@ const ImgConfirmation = () => {
                         <g
                           id="Group_5522"
                           data-name="Group 5522"
-                          clip-path="url(#clip-path-18)"
+                          clipPath="url(#clip-path-18)"
                         >
                           <rect
                             id="Rectangle_4612"
@@ -1739,7 +1739,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5529"
                 data-name="Group 5529"
-                clip-path="url(#clip-path-19)"
+                clipPath="url(#clip-path-19)"
               >
                 <rect
                   id="Rectangle_4615"
@@ -1759,7 +1759,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5536"
                 data-name="Group 5536"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5535"
@@ -1771,7 +1771,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5533"
                       data-name="Group 5533"
-                      clip-path="url(#clip-path-21)"
+                      clipPath="url(#clip-path-21)"
                     >
                       <g
                         id="Group_5532"
@@ -1781,7 +1781,7 @@ const ImgConfirmation = () => {
                         <g
                           id="Group_5531"
                           data-name="Group 5531"
-                          clip-path="url(#clip-path-22)"
+                          clipPath="url(#clip-path-22)"
                         >
                           <rect
                             id="Rectangle_4616"
@@ -1806,7 +1806,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5538"
                 data-name="Group 5538"
-                clip-path="url(#clip-path-23)"
+                clipPath="url(#clip-path-23)"
               >
                 <rect
                   id="Rectangle_4619"
@@ -1826,7 +1826,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5540"
                 data-name="Group 5540"
-                clip-path="url(#clip-path-24)"
+                clipPath="url(#clip-path-24)"
               >
                 <rect
                   id="Rectangle_4620"
@@ -1846,7 +1846,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5542"
                 data-name="Group 5542"
-                clip-path="url(#clip-path-25)"
+                clipPath="url(#clip-path-25)"
               >
                 <rect
                   id="Rectangle_4621"
@@ -1866,7 +1866,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5544"
                 data-name="Group 5544"
-                clip-path="url(#clip-path-26)"
+                clipPath="url(#clip-path-26)"
               >
                 <rect
                   id="Rectangle_4622"
@@ -1886,7 +1886,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5546"
                 data-name="Group 5546"
-                clip-path="url(#clip-path-27)"
+                clipPath="url(#clip-path-27)"
               >
                 <rect
                   id="Rectangle_4623"
@@ -1906,7 +1906,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5548"
                 data-name="Group 5548"
-                clip-path="url(#clip-path-28)"
+                clipPath="url(#clip-path-28)"
               >
                 <rect
                   id="Rectangle_4624"
@@ -1926,7 +1926,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5555"
                 data-name="Group 5555"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5554"
@@ -1939,7 +1939,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5552"
                       data-name="Group 5552"
-                      clip-path="url(#clip-path-30)"
+                      clipPath="url(#clip-path-30)"
                     >
                       <g
                         id="Group_5551"
@@ -1949,7 +1949,7 @@ const ImgConfirmation = () => {
                         <g
                           id="Group_5550"
                           data-name="Group 5550"
-                          clip-path="url(#clip-path-31)"
+                          clipPath="url(#clip-path-31)"
                         >
                           <rect
                             id="Rectangle_4625"
@@ -1974,7 +1974,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5557"
                 data-name="Group 5557"
-                clip-path="url(#clip-path-32)"
+                clipPath="url(#clip-path-32)"
               >
                 <path
                   id="Path_2525"
@@ -1993,7 +1993,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5559"
                 data-name="Group 5559"
-                clip-path="url(#clip-path-33)"
+                clipPath="url(#clip-path-33)"
               >
                 <rect
                   id="Rectangle_4628"
@@ -2013,7 +2013,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5561"
                 data-name="Group 5561"
-                clip-path="url(#clip-path-34)"
+                clipPath="url(#clip-path-34)"
               >
                 <rect
                   id="Rectangle_4629"
@@ -2033,7 +2033,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5563"
                 data-name="Group 5563"
-                clip-path="url(#clip-path-35)"
+                clipPath="url(#clip-path-35)"
               >
                 <rect
                   id="Rectangle_4630"
@@ -2053,7 +2053,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5565"
                 data-name="Group 5565"
-                clip-path="url(#clip-path-36)"
+                clipPath="url(#clip-path-36)"
               >
                 <rect
                   id="Rectangle_4631"
@@ -2073,7 +2073,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5567"
                 data-name="Group 5567"
-                clip-path="url(#clip-path-37)"
+                clipPath="url(#clip-path-37)"
               >
                 <rect
                   id="Rectangle_4632"
@@ -2093,7 +2093,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5569"
                 data-name="Group 5569"
-                clip-path="url(#clip-path-38)"
+                clipPath="url(#clip-path-38)"
               >
                 <rect
                   id="Rectangle_4633"
@@ -2113,7 +2113,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5571"
                 data-name="Group 5571"
-                clip-path="url(#clip-path-39)"
+                clipPath="url(#clip-path-39)"
               >
                 <rect
                   id="Rectangle_4634"
@@ -2133,7 +2133,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5578"
                 data-name="Group 5578"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5577"
@@ -2146,7 +2146,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5575"
                       data-name="Group 5575"
-                      clip-path="url(#clip-path-41)"
+                      clipPath="url(#clip-path-41)"
                     >
                       <g
                         id="Group_5574"
@@ -2156,7 +2156,7 @@ const ImgConfirmation = () => {
                         <g
                           id="Group_5573"
                           data-name="Group 5573"
-                          clip-path="url(#clip-path-42)"
+                          clipPath="url(#clip-path-42)"
                         >
                           <rect
                             id="Rectangle_4635"
@@ -2181,7 +2181,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5580"
                 data-name="Group 5580"
-                clip-path="url(#clip-path-43)"
+                clipPath="url(#clip-path-43)"
               >
                 <rect
                   id="Rectangle_4638"
@@ -2201,7 +2201,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5582"
                 data-name="Group 5582"
-                clip-path="url(#clip-path-44)"
+                clipPath="url(#clip-path-44)"
               >
                 <rect
                   id="Rectangle_4639"
@@ -2221,7 +2221,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5584"
                 data-name="Group 5584"
-                clip-path="url(#clip-path-45)"
+                clipPath="url(#clip-path-45)"
               >
                 <rect
                   id="Rectangle_4640"
@@ -2241,7 +2241,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5586"
                 data-name="Group 5586"
-                clip-path="url(#clip-path-46)"
+                clipPath="url(#clip-path-46)"
               >
                 <rect
                   id="Rectangle_4641"
@@ -2261,7 +2261,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5588"
                 data-name="Group 5588"
-                clip-path="url(#clip-path-47)"
+                clipPath="url(#clip-path-47)"
               >
                 <rect
                   id="Rectangle_4642"
@@ -2281,7 +2281,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5595"
                 data-name="Group 5595"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5594"
@@ -2294,7 +2294,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5592"
                       data-name="Group 5592"
-                      clip-path="url(#clip-path-49)"
+                      clipPath="url(#clip-path-49)"
                     >
                       <g
                         id="Group_5591"
@@ -2304,7 +2304,7 @@ const ImgConfirmation = () => {
                         <g
                           id="Group_5590"
                           data-name="Group 5590"
-                          clip-path="url(#clip-path-50)"
+                          clipPath="url(#clip-path-50)"
                         >
                           <rect
                             id="Rectangle_4643"
@@ -2329,7 +2329,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5597"
                 data-name="Group 5597"
-                clip-path="url(#clip-path-51)"
+                clipPath="url(#clip-path-51)"
               >
                 <rect
                   id="Rectangle_4646"
@@ -2349,7 +2349,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5599"
                 data-name="Group 5599"
-                clip-path="url(#clip-path-52)"
+                clipPath="url(#clip-path-52)"
               >
                 <rect
                   id="Rectangle_4647"
@@ -2369,7 +2369,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5601"
                 data-name="Group 5601"
-                clip-path="url(#clip-path-53)"
+                clipPath="url(#clip-path-53)"
               >
                 <rect
                   id="Rectangle_4648"
@@ -2389,7 +2389,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5603"
                 data-name="Group 5603"
-                clip-path="url(#clip-path-54)"
+                clipPath="url(#clip-path-54)"
               >
                 <rect
                   id="Rectangle_4649"
@@ -2409,7 +2409,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5605"
                 data-name="Group 5605"
-                clip-path="url(#clip-path-55)"
+                clipPath="url(#clip-path-55)"
               >
                 <rect
                   id="Rectangle_4650"
@@ -2429,7 +2429,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5607"
                 data-name="Group 5607"
-                clip-path="url(#clip-path-56)"
+                clipPath="url(#clip-path-56)"
               >
                 <rect
                   id="Rectangle_4651"
@@ -2449,7 +2449,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5609"
                 data-name="Group 5609"
-                clip-path="url(#clip-path-57)"
+                clipPath="url(#clip-path-57)"
               >
                 <rect
                   id="Rectangle_4652"
@@ -2469,7 +2469,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5611"
                 data-name="Group 5611"
-                clip-path="url(#clip-path-58)"
+                clipPath="url(#clip-path-58)"
               >
                 <rect
                   id="Rectangle_4653"
@@ -2489,7 +2489,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5613"
                 data-name="Group 5613"
-                clip-path="url(#clip-path-59)"
+                clipPath="url(#clip-path-59)"
               >
                 <rect
                   id="Rectangle_4654"
@@ -2509,7 +2509,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5615"
                 data-name="Group 5615"
-                clip-path="url(#clip-path-60)"
+                clipPath="url(#clip-path-60)"
               >
                 <rect
                   id="Rectangle_4655"
@@ -2529,7 +2529,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5617"
                 data-name="Group 5617"
-                clip-path="url(#clip-path-61)"
+                clipPath="url(#clip-path-61)"
               >
                 <rect
                   id="Rectangle_4656"
@@ -2548,7 +2548,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5619"
                 data-name="Group 5619"
-                clip-path="url(#clip-path-62)"
+                clipPath="url(#clip-path-62)"
               >
                 <rect
                   id="Rectangle_4657"
@@ -2568,7 +2568,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5621"
                 data-name="Group 5621"
-                clip-path="url(#clip-path-63)"
+                clipPath="url(#clip-path-63)"
               >
                 <rect
                   id="Rectangle_4658"
@@ -2588,7 +2588,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5623"
                 data-name="Group 5623"
-                clip-path="url(#clip-path-64)"
+                clipPath="url(#clip-path-64)"
               >
                 <rect
                   id="Rectangle_4659"
@@ -2608,7 +2608,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5625"
                 data-name="Group 5625"
-                clip-path="url(#clip-path-65)"
+                clipPath="url(#clip-path-65)"
               >
                 <rect
                   id="Rectangle_4660"
@@ -2628,7 +2628,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5627"
                 data-name="Group 5627"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <path
                   id="Path_2556"
@@ -2647,7 +2647,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5629"
                 data-name="Group 5629"
-                clip-path="url(#clip-path-67)"
+                clipPath="url(#clip-path-67)"
               >
                 <rect
                   id="Rectangle_4662"
@@ -2667,7 +2667,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5631"
                 data-name="Group 5631"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <path
                   id="Path_2558"
@@ -2693,7 +2693,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5633"
                 data-name="Group 5633"
-                clip-path="url(#clip-path-69)"
+                clipPath="url(#clip-path-69)"
               >
                 <rect
                   id="Rectangle_4664"
@@ -2713,7 +2713,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5635"
                 data-name="Group 5635"
-                clip-path="url(#clip-path-70)"
+                clipPath="url(#clip-path-70)"
               >
                 <rect
                   id="Rectangle_4665"
@@ -2733,7 +2733,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5642"
                 data-name="Group 5642"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5641"
@@ -2746,7 +2746,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5639"
                       data-name="Group 5639"
-                      clip-path="url(#clip-path-72)"
+                      clipPath="url(#clip-path-72)"
                     >
                       <g
                         id="Group_5638"
@@ -2756,7 +2756,7 @@ const ImgConfirmation = () => {
                         <g
                           id="Group_5637"
                           data-name="Group 5637"
-                          clip-path="url(#clip-path-73)"
+                          clipPath="url(#clip-path-73)"
                         >
                           <rect
                             id="Rectangle_4666"
@@ -2781,7 +2781,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5644"
                 data-name="Group 5644"
-                clip-path="url(#clip-path-74)"
+                clipPath="url(#clip-path-74)"
               >
                 <rect
                   id="Rectangle_4669"
@@ -2801,7 +2801,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5646"
                 data-name="Group 5646"
-                clip-path="url(#clip-path-75)"
+                clipPath="url(#clip-path-75)"
               >
                 <rect
                   id="Rectangle_4670"
@@ -2821,7 +2821,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5648"
                 data-name="Group 5648"
-                clip-path="url(#clip-path-76)"
+                clipPath="url(#clip-path-76)"
               >
                 <rect
                   id="Rectangle_4671"
@@ -2841,7 +2841,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5650"
                 data-name="Group 5650"
-                clip-path="url(#clip-path-77)"
+                clipPath="url(#clip-path-77)"
               >
                 <rect
                   id="Rectangle_4672"
@@ -2861,7 +2861,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5652"
                 data-name="Group 5652"
-                clip-path="url(#clip-path-78)"
+                clipPath="url(#clip-path-78)"
               >
                 <rect
                   id="Rectangle_4673"
@@ -2881,7 +2881,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5654"
                 data-name="Group 5654"
-                clip-path="url(#clip-path-79)"
+                clipPath="url(#clip-path-79)"
               >
                 <rect
                   id="Rectangle_4674"
@@ -2901,7 +2901,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5656"
                 data-name="Group 5656"
-                clip-path="url(#clip-path-80)"
+                clipPath="url(#clip-path-80)"
               >
                 <rect
                   id="Rectangle_4675"
@@ -2921,7 +2921,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5658"
                 data-name="Group 5658"
-                clip-path="url(#clip-path-81)"
+                clipPath="url(#clip-path-81)"
               >
                 <rect
                   id="Rectangle_4676"
@@ -2941,7 +2941,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5660"
                 data-name="Group 5660"
-                clip-path="url(#clip-path-82)"
+                clipPath="url(#clip-path-82)"
               >
                 <rect
                   id="Rectangle_4677"
@@ -2961,7 +2961,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5662"
                 data-name="Group 5662"
-                clip-path="url(#clip-path-83)"
+                clipPath="url(#clip-path-83)"
               >
                 <rect
                   id="Rectangle_4678"
@@ -2981,7 +2981,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5669"
                 data-name="Group 5669"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5668"
@@ -2994,7 +2994,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5666"
                       data-name="Group 5666"
-                      clip-path="url(#clip-path-85)"
+                      clipPath="url(#clip-path-85)"
                     >
                       <g
                         id="Group_5665"
@@ -3004,7 +3004,7 @@ const ImgConfirmation = () => {
                         <g
                           id="Group_5664"
                           data-name="Group 5664"
-                          clip-path="url(#clip-path-86)"
+                          clipPath="url(#clip-path-86)"
                         >
                           <rect
                             id="Rectangle_4679"
@@ -3029,7 +3029,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5671"
                 data-name="Group 5671"
-                clip-path="url(#clip-path-87)"
+                clipPath="url(#clip-path-87)"
               >
                 <rect
                   id="Rectangle_4682"
@@ -3049,7 +3049,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5676"
                 data-name="Group 5676"
-                clip-path="url(#clip-path-12)"
+                clipPath="url(#clip-path-12)"
               >
                 <g
                   id="Group_5675"
@@ -3062,7 +3062,7 @@ const ImgConfirmation = () => {
                     <g
                       id="Group_5673"
                       data-name="Group 5673"
-                      clip-path="url(#clip-path-89)"
+                      clipPath="url(#clip-path-89)"
                     >
                       <path
                         id="Path_2575"
@@ -3084,7 +3084,7 @@ const ImgConfirmation = () => {
               <g
                 id="Group_5678"
                 data-name="Group 5678"
-                clip-path="url(#clip-path-90)"
+                clipPath="url(#clip-path-90)"
               >
                 <rect
                   id="Rectangle_4685"

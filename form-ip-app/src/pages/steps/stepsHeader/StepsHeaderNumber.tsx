@@ -1,10 +1,9 @@
-import React from "react";
 import Box from "@mui/material/Box";
-import { useContext, useEffect } from "react";
-import { StepsContext } from "../../../context/ContextProv";
 import Typography from "@mui/material/Typography";
+import { useContext } from "react";
+import { StepsContext } from "../../../context/ContextProv";
 
-interface Props {
+type Props = {
   idx: number;
 }
 

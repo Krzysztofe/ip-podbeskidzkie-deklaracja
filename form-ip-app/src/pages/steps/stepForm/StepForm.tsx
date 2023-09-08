@@ -32,8 +32,8 @@ const StepForm = () => {
             sx={{
               borderBottom: 1,
               borderColor: "info.light",
-              pt: { xs: 1, sm: 2 },
-              pb: { xs: 2, sm: 2 },
+              pt: { xs: 1, sm: 2.4 },
+              pb: { xs: 0, sm: 2.3 },
             }}
           >
             {component}

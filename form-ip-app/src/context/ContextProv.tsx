@@ -1,33 +1,36 @@
-import React, { createContext, FC, useState } from "react";
+import React, { createContext, useState } from "react";
+import useMultistepForm from "../pages/steps/indexSteps/useMultistepForm";
+import StepClause from "../pages/steps/stepClause/StepClause";
+import useStepClauseFormik from "../pages/steps/stepClause/stepClauseForm/useStepClauseFormik";
+import StepConfirmation from "../pages/steps/stepConfirmation/StepConfirmation";
+import StepForm from "../pages/steps/stepForm/StepForm";
 import useStepFormFormik from "../pages/steps/stepForm/stepFormFormik/useStepFormFormik";
 import useHttp from "../pages/steps/stepsButtons/useHttp";
-import useStepClauseFormik from "../pages/steps/stepClause/stepClauseForm/useStepClauseFormik";
-import StepForm from "../pages/steps/stepForm/StepForm";
-import StepClause from "../pages/steps/stepClause/StepClause";
 import StepSummary from "../pages/steps/stepSummary/StepSummary";
-import StepConfirmation from "../pages/steps/stepConfirmation/StepConfirmation";
-import useMultistepForm from "../pages/steps/indexSteps/useMultistepForm";
 
-interface Props {
+type Props = {
   children: React.ReactNode;
 }
 
-export type ContextType = {
-  formik: ReturnType<typeof useStepFormFormik>["formik"];
-  formikClause: ReturnType<typeof useStepClauseFormik>["formikClause"];
-  isSubmited: boolean;
-  isConfirmed: boolean;
-  isLoading: boolean;
-  error: any;
-  sendRequest: any;
-  isCaptcha: boolean;
-  setIsCaptcha: React.Dispatch<React.SetStateAction<boolean>>;
-  steps: any;
-  currentStepIdx: number;
-  step: any;
-  back: any;
-  next: any
-};
+ type ContextType = {
+   formik: ReturnType<typeof useStepFormFormik>["formik"];
+   formikClause: ReturnType<typeof useStepClauseFormik>["formikClause"];
+   isSubmited: boolean;
+   isConfirmed: boolean;
+   isLoading: boolean;
+   error: any;
+   sendRequest: (
+     requestConfig: any,
+     returnData: React.Dispatch<React.SetStateAction<boolean>>
+   ) => void;
+   isCaptcha: boolean;
+   setIsCaptcha: React.Dispatch<React.SetStateAction<boolean>>;
+   steps: JSX.Element[];
+   currentStepIdx: number;
+   step: JSX.Element;
+   back: () => void;
+   next: () => void;
+ };
 
 export const StepsContext = createContext<ContextType>({} as ContextType);
 

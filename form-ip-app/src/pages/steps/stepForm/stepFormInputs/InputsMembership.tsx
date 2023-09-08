@@ -1,15 +1,12 @@
-import { useContext } from "react";
-import { StepsContext } from "../../../../context/ContextProv";
+import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
-import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import TextInputsErrors from "./InputsErrors";
+import RadioGroup from "@mui/material/RadioGroup";
+import { useContext } from "react";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
-import Box from "@mui/material/Box";
+import { StepsContext } from "../../../../context/ContextProv";
+import TextInputsErrors from "./InputsErrors";
 
 const InputsMembership = () => {
   const { formik } = useContext(StepsContext);
@@ -30,7 +27,7 @@ const InputsMembership = () => {
           width: { xs: "80%", sm: "60%" },
           marginInline: "auto",
           ml: { xs: "auto", sm: "40%" },
-          mt: { xs: 2, sm: 4 },
+          mt: { xs: 4.2, sm: 5.9 },
         }}
       >
         {[

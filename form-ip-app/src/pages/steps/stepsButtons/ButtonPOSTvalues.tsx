@@ -4,41 +4,34 @@ import Button from "@mui/material/Button";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import { URL } from "../../../data/dataURL";
 
-
 const ButtonPOSTvalues = () => {
-  const {
-    formik,
-    sendRequest,
-    isCaptcha,
-    setIsCaptcha,
-    currentStepIdx,
-    next,
-  } = useContext(StepsContext);
+  const { formik, sendRequest, isCaptcha, setIsCaptcha, currentStepIdx, next } =
+    useContext(StepsContext);
 
   const [responseStatus, setResponseStatus] = useState(false);
 
-   useEffect(() => {
-     if (responseStatus) next();
-   }, [responseStatus]);
+  useEffect(() => {
+    if (responseStatus) next();
+  }, [responseStatus]);
 
-   useEffect(() => {
-     if (currentStepIdx !== 2) {
-       setIsCaptcha(false);
-     }
-   }, [currentStepIdx]);
+  useEffect(() => {
+    if (currentStepIdx !== 2) {
+      setIsCaptcha(false);
+    }
+  }, [currentStepIdx]);
 
- const handlePOST = () => {
-   if (currentStepIdx === 2) {
-     sendRequest(
-       {
-         url: URL,
-         body: { member: formik.values },
-         method: "POST",
-       },
-       setResponseStatus
-     );
-   }
- };
+  const handlePOST = () => {
+    if (currentStepIdx === 2) {
+      sendRequest(
+        {
+          url: URL,
+          body: { member: formik.values },
+          method: "POST",
+        },
+        setResponseStatus
+      );
+    }
+  };
 
   return (
     <>
@@ -48,8 +41,8 @@ const ButtonPOSTvalues = () => {
           endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
           onClick={() => {
             currentStepIdx < 2 && next();
-            // isCaptcha && handlePOST();
-            handlePOST();
+            isCaptcha && handlePOST();
+            // handlePOST();
           }}
           sx={{
             width: { xs: "65%", sm: "15rem" },

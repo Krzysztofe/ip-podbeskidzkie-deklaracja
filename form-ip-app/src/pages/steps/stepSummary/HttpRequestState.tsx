@@ -4,7 +4,9 @@ import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 
 const HttpRequestState = () => {
-  const { isLoading, error } = useContext(StepsContext);
+  const { error, isLoading } = useContext(StepsContext);
+
+  // const isLoading = true;
 
   if (isLoading) {
     return (
@@ -12,24 +14,26 @@ const HttpRequestState = () => {
         <Box
           sx={{
             position: "absolute",
+            right: "1%",
+            width: "calc(100% - 16px)",
+            height: "90%",
+            bgcolor: "white",
+            opacity: "0.8",
+            zIndex: 3,
+            backgroundColor: "white",
+          }}
+        ></Box>
+        <Box
+          sx={{
+            position: "absolute",
             left: "50%",
             top: "50%",
             transform: "translate(-50%, -50%)",
-            zIndex: 2,
+            zIndex: 4,
           }}
         >
           <CircularProgress />
         </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            width: "100%",
-            height: "101%",
-            bgcolor: "white",
-            opacity: "0.8",
-            zIndex: 1,
-          }}
-        ></Box>
       </>
     );
   } else if (error) {
@@ -43,7 +47,7 @@ const HttpRequestState = () => {
           color: "red",
         }}
       >
-        {error}
+        Błąd: {error}
       </Box>
     );
   } else return <></>;

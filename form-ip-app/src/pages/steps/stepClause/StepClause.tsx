@@ -1,10 +1,8 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import HeadingPrimary from "../../../components/HeadingPrimary";
 import { dataClauseParagraphs } from "./dataStepClause";
 import StepClauseForm from "./stepClauseForm/StepClauseForm";
-import HeadingPrimary from "../../../components/HeadingPrimary";
-import { useContext, useEffect } from "react";
-import { StepsContext } from "../../../context/ContextProv";
 
 const StepClause = () => {
   return (
@@ -12,16 +10,16 @@ const StepClause = () => {
       <Box
         sx={{
           bgcolor: "secondary.light",
-          paddingInline: { xs: 3, md: 16.4 },
-          paddingBlock: 4,
-          marginInline: { xs: -2, md: 0 },
+          px: { xs: 3.2, md: 13.8 },
+          py: { xs: 4.2, md: 5.7 },
+          mx: { xs: -1.6, md: 0 },
         }}
       >
-        <Box sx={{ mb: 4 }}>
+        <Box sx={{ mb: 2.5 }}>
           <HeadingPrimary headingText={"KLAUZULA INFORMACYNA"} />
         </Box>
 
-        <Box sx={{ pb: 2 }}>
+        <Box>
           {dataClauseParagraphs.map(paragraph => {
             return (
               <Typography
@@ -29,10 +27,9 @@ const StepClause = () => {
                 variant="fs_16_rg"
                 component="p"
                 color="info.dark"
-                sx={{ py: 1, marginInline: "auto" }}
-              >
-                {paragraph}
-              </Typography>
+                sx={{ py: 1 }}
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+              />
             );
           })}
         </Box>

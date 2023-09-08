@@ -25,7 +25,7 @@ const useHttp = () => {
     })
       .then(resp => {
         if (resp.ok) {
-          // console.log("resp", resp);
+          console.log("resp", resp);
            returnData(resp.ok);
           return resp.json();
         }
@@ -41,7 +41,7 @@ const useHttp = () => {
         // return null;
       })
       .catch(err => {
-        // console.log('err',err)
+        console.log('err',err)
         setError(err);
         setIsLoading(false);
       });
