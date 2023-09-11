@@ -4,6 +4,7 @@ import { useContext, useEffect, useRef } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
+import useWindowWidth from "../../../hooks/useWindowWidth";
 
 const IndexSteps = () => {
   const { steps, currentStepIdx, step, formik, formikClause } =
@@ -19,6 +20,8 @@ const IndexSteps = () => {
 
   const formSubmit =
     currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
+
+  const { windowWidth } = useWindowWidth();
 
   const height =
     currentStepIdx === 0
@@ -39,8 +42,7 @@ const IndexSteps = () => {
         <Container
           sx={{
             height: "10vh",
-            display: "flex",
-            alignItems: "center",
+            pt: { xs: "4%", sm: "1.5%", md: "1,8%" },
           }}
         >
           <StepsHeader />

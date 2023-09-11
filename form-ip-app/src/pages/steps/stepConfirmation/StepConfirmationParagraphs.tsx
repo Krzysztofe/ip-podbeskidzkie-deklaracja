@@ -20,7 +20,7 @@ const StepConfirmationParagraphs = () => {
   };
 
   return (
-    <>
+    <article>
       <Typography {...typographyProps} sx={{ marginBlock: { xs: 3 } }}>
         Jeżeli nasza Komisja nie postanowi inaczej, datą przyjęcia Ciebie do
         związku będzie:
@@ -44,7 +44,7 @@ const StepConfirmationParagraphs = () => {
         prezydium Komisji podjęło się Twojej obrony wobec podmiotu
         zatrudniającego (w tym pracodawcy).
       </Typography>
-    </>
+    </article>
   );
 };
 

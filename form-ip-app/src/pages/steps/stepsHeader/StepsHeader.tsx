@@ -2,7 +2,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Box from "@mui/material/Box";
 import StepsHeaderNumber from "./StepsHeaderNumber";
 import StepsHeaderText from "./StepsHeaderText";
-import { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import useWindowWidth from "../../../hooks/useWindowWidth";
 
@@ -12,54 +12,65 @@ const StepsHeader = () => {
 
   const { windowWidth } = useWindowWidth();
 
-  const dataSteps = ["Formulaż", "Klauzula", "Podsumowanie", "Potwierdzenie"];
+  const dataSteps = ["Formulaż", "Klauzula", "Wyślij", "Potwierdzenie"];
 
   return (
     <Box
       sx={{
+        width: "fit-content",
+        mx: {xs:"auto",md:0},
         display: "flex",
+        // pt:"1%"
         alignItems: "center",
-        flexWrap: "wrap",
-        gap: 1,
-        position: "relative",
+        // justifyContentc:"center",
+        // gap: 1,
+        // position: "relative",
       }}
     >
       {dataSteps.map((text, idx, arr) => {
         return (
-          <Box key={text}>
+          <React.Fragment key={text}>
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
+                position: "relative",
                 // width: { xs: "48%", md: "auto" },
               }}
             >
               <StepsHeaderNumber idx={idx} />
-              {windowWidth > 900 && <StepsHeaderText text={text} />}
+              <StepsHeaderText text={text} />
+              {/* <ArrowForwardIosIcon
+                color="secondary"
+                sx={{
+                  mx: "21px",
+                  fontSize: { xs: "0.8rem", sm: "small" },
+                }}
+              /> */}
+
               {idx < arr.length - 1 && (
                 <ArrowForwardIosIcon
                   color="secondary"
                   sx={{
-                    marginRight: { sm: "1rem" },
-                    marginLeft: { xs: "0", sm: "auto" },
+                    mx: "21px",
                     fontSize: { xs: "0.8rem", sm: "small" },
                   }}
                 />
               )}
             </Box>
 
-            <Box
+            {/* <Box
               sx={{
                 position: "absolute",
                 bottom: "-70%",
                 left: "-3%",
               }}
             >
-              {windowWidth < 900 && idx === currentStepIdx && (
+              {windowWidth < 900 && (
                 <StepsHeaderText text={text} />
               )}
-            </Box>
-          </Box>
+            </Box> */}
+          </React.Fragment>
         );
       })}
     </Box>
