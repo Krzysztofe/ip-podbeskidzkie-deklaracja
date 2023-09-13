@@ -19,10 +19,10 @@ const StepConfirmationBanksList = () => {
       }}
     >
       {dataBanksList.map(
-        ({ img, link }: { img: JSX.Element; link: string }) => {
+        ({ img, link }: { img: JSX.Element; link: string }, idx) => {
           return (
             <ImageListItem
-              key={link}
+              key={idx}
               sx={{
                 border: 1,
                 borderColor: "info.light",
