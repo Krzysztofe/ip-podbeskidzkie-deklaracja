@@ -24,7 +24,7 @@ const ButtonPOSTvalues = () => {
     if (currentStepIdx === 2) {
       sendRequest(
         {
-          url: URL,
+          url: "https://mail-sender-production.up.railway.app/receive",
           body: { member: formik.values },
           method: "POST",
         },
@@ -41,8 +41,8 @@ const ButtonPOSTvalues = () => {
           endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
           onClick={() => {
             currentStepIdx < 2 && next();
-            isCaptcha && handlePOST();
-            // handlePOST();
+            // isCaptcha && handlePOST();
+            handlePOST();
           }}
           sx={{
             width: { xs: "65%", sm: "12rem" },

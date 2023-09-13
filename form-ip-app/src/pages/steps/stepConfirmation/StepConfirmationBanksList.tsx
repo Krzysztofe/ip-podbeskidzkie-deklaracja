@@ -5,6 +5,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { dataBanksList } from "./dataStepConfirmation";
 import useWindowWidth from "../../../hooks/useWindowWidth";
 
+
 const StepConfirmationBanksList = () => {
   const { windowWidth } = useWindowWidth();
 
@@ -38,6 +39,7 @@ const StepConfirmationBanksList = () => {
                   display: "grid",
                   placeItems: "center",
                 }}
+                target="_blank"
               >
                 {/* <img src={img} alt={alt} loading="lazy" /> */}
                 {img}
@@ -46,6 +48,7 @@ const StepConfirmationBanksList = () => {
           );
         }
       )}
+     
     </List>
   );
 };

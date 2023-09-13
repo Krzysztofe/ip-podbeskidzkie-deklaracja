@@ -1,12 +1,17 @@
 import React from "react";
+import useWindowWidth from "../../hooks/useWindowWidth";
 
 const ImgPekaoMobile = () => {
+
+  const { windowWidth } = useWindowWidth();
+
+
   return (
     <svg
       id="Bank_PeKaO"
       xmlns="http://www.w3.org/2000/svg"
       // xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="120"
+      width={windowWidth < 400 ? "110" : "80"}
       height="80"
       viewBox="0 0 58 43"
     >

@@ -36,7 +36,10 @@ const HttpRequestState = () => {
         </Box>
       </>
     );
-  } else if (error) {
+  } 
+  
+  
+  else if (error) {
     return (
       <Box
         sx={{
@@ -50,6 +53,9 @@ const HttpRequestState = () => {
         Błąd: {error}
       </Box>
     );
+
+
+
   } else return <></>;
 };
 

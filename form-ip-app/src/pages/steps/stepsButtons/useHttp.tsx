@@ -24,13 +24,21 @@ const useHttp = () => {
       },
     })
       .then(resp => {
-        if (resp.ok) {
+        // if (resp.ok) {
+        //   console.log("resp", resp);
+        //    returnData(resp.ok);
+        //   return resp.json();
+        // }
+        // throw Error("Nie znaleziono metody zapisu");
+        // returnData(resp);
+
+        if (!resp.ok) {
+          throw Error("Coś poszło nie tak");
+        } else {
           console.log("resp", resp);
-           returnData(resp.ok);
+          returnData(resp.ok);
           return resp.json();
         }
-        // throw Error("Nie znaleziono metody zapisu");
-          // returnData(resp);
       })
       .then(data => {
         setIsLoading(false);
@@ -41,7 +49,7 @@ const useHttp = () => {
         // return null;
       })
       .catch(err => {
-        console.log('err',err)
+        console.log("err", err);
         setError(err);
         setIsLoading(false);
       });
