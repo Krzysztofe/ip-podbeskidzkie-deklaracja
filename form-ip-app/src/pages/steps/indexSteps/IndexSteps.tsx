@@ -4,7 +4,6 @@ import { useContext, useEffect, useRef } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
-import useWindowWidth from "../../../hooks/useWindowWidth";
 
 const IndexSteps = () => {
   const { steps, currentStepIdx, step, formik, formikClause } =
@@ -20,8 +19,6 @@ const IndexSteps = () => {
 
   const formSubmit =
     currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
-
-  const { windowWidth } = useWindowWidth();
 
   const height =
     currentStepIdx === 0
@@ -41,8 +38,17 @@ const IndexSteps = () => {
       <header>
         <Container
           sx={{
-            height: "10vh",
-            pt: { xs: "4%", sm: "1.5%", md: "1,8%" },
+            height: { xs: "56px", sm: "92px" },
+            position: "fixed",
+            top: 0,
+            left: "50%",
+            right: "50%",
+            transform: "translate(-50%)",
+            display: "flex",
+            alignItems: "center",
+            pl: "16px !important",
+            bgcolor: "white",
+            zIndex: 2,
           }}
         >
           <StepsHeader />
@@ -51,7 +57,8 @@ const IndexSteps = () => {
       <main>
         <Container
           sx={{
-            height: "90vh",
+            height: { xs: "calc(100vh - 56px)", sm: "calc(100vh - 92px)" },
+            mt: { xs: "56px", sm: "92px" },
             padding: "0px !important",
           }}
         >
@@ -67,6 +74,15 @@ const IndexSteps = () => {
                 px: 1.6,
                 overflowY: "auto",
                 height: height,
+                // "&::-webkit-scrollbar-thumb": {
+                //   backgroundColor: "red",
+                // },
+                "&::-webkit-scrollbar": {
+                  // width: "5px",
+                },
+                "&::-webkit-scrollbar-track": {
+                    backgroundColor: "red",
+                },
               }}
             >
               {step}

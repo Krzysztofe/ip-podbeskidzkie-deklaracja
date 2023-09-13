@@ -10,39 +10,28 @@ const StepFormAlert = () => {
   return (
     <Box
       sx={{
-        maxWidth: "1400px",
+        maxWidth: "1200px",
         width: "100%",
-        height: "10vh",
+        height: { xs: "56px", sm: "92px" },
         position: "fixed",
+        top:0,
         left: "50%",
         right: "50%",
         transform: "translate(-50%)",
-        marginTop: isError.length > 0 ? "-10vh" : "-510px",
+        marginTop: isError.length > 0 ? "0" : "-510px",
         display: "grid",
         placeItems: "center",
-        // border: 3,
         bgcolor: "rgb(253, 237, 237)",
+        zIndex: 3,
       }}
     >
       <Alert
         severity="error"
         sx={{
-          // width:"100%",
           height: "fit-content",
-          // maxWidth: "1400px",
-          // width: "100%",
-          // height: "10vh",
-          // position: "fixed",
-          // left: "50%",
-          // right: "50%",
-          // transform: "translate(-50%)",
-          p: 0,
-          zIndex: "100",
-          // marginTop: isError.length > 0 ? "-10vh" : "-510px",
-          // transitionDuratio: "500ms",
         }}
       >
-        <div>Wypełnij pola formulaża</div>
+        Wypełnij pola formulaża
       </Alert>
     </Box>
   );

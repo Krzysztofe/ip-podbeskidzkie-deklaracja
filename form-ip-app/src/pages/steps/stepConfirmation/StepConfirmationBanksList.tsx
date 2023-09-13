@@ -1,49 +1,52 @@
 import Card from "@mui/material/CardContent";
 import { Link } from "react-router-dom";
-import ImageList from "@mui/material/ImageList";
+import List from "@mui/material/List";
 import ImageListItem from "@mui/material/ImageListItem";
 import { dataBanksList } from "./dataStepConfirmation";
+import useWindowWidth from "../../../hooks/useWindowWidth";
 
 const StepConfirmationBanksList = () => {
+  const { windowWidth } = useWindowWidth();
+
   return (
-    <ImageList
+    <List
       sx={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-between",
-        marginInline: "auto",
-        marginBlock:0,
-        maxWidth: "400px",
+        maxWidth: "500px",
         width: "100%",
+        mx: "auto",
+        display: "grid",
+        gridTemplateColumns: windowWidth < 400 ? "50% 50%" : "25% 25% 25% 25%",
       }}
     >
       {dataBanksList.map(
-        ({ img, link, alt }: { img: string; link: string; alt: string }) => {
+        ({ img, link }: { img: JSX.Element; link: string }) => {
           return (
             <ImageListItem
-              key={alt}
+              key={link}
               sx={{
                 border: 1,
                 borderColor: "info.light",
-                bgcolor: "secondary.light",
-                width: "23%",
-                aspectRatio: "1/1",
+                m: { xs: 0.3, sm: 0.8 },
+                p: {xs:"5%", sm:"10%"}
               }}
             >
               <Link
                 to={link}
                 style={{
+                  width: "100%",
                   height: "100%",
-                  display: "flex",
+                  display: "grid",
+                  placeItems: "center",
                 }}
               >
-                <img src={img} alt={alt} loading="lazy" />
+                {/* <img src={img} alt={alt} loading="lazy" /> */}
+                {img}
               </Link>
             </ImageListItem>
           );
         }
       )}
-    </ImageList>
+    </List>
   );
 };
 

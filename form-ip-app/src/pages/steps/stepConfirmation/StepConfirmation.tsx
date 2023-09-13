@@ -44,7 +44,7 @@ const StepConfirmation = () => {
             "Przystąpienie do komisji zostanie zweryfikowane po wykonaniu przelewu bankowego pierwszej składki członkowskiej na konto:"
           }
         />
-        <HeadingPrimary
+        {/* <HeadingPrimary
           headingText={
             "28 2130 0004 2001 0577 6570 0014 <br> OZZ Inicjatywa Pracownicza ul. Kościelna 4, 60-538 Poznań."
           }
@@ -53,7 +53,7 @@ const StepConfirmation = () => {
           headingText={
             "Tytuł przelweu: (imię i nazwisko), składka za (miesiąc/kwartał)."
           }
-        />
+        /> */}
       </Box>
       <StepConfirmationBanksList />
       <StepConfirmationFooter />

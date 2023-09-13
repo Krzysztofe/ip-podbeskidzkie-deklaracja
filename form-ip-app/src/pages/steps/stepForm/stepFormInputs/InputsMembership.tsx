@@ -23,7 +23,7 @@ const InputsMembership = () => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         sx={{
-          gap: 3,
+          // gap: 3,
           width: { xs: "80%", sm: "60%" },
           marginInline: "auto",
           ml: { xs: "auto", sm: "40%" },
@@ -34,7 +34,7 @@ const InputsMembership = () => {
           "Nie należę do innego związku zawodowego u pracodawcy.",
           "Należę do innego związku zawodowego u pracodawcy, jednak chcę by przy podawaniu informacji o liczbie członków moje członkowstwo uwzgędniał wyłącznie OZZIP.",
           "Należę do inngeo związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji i liczbie członków OZZIP uwzględniał moje członkostwo.",
-        ].map(membership => {
+        ].map((membership, idx) => {
           return (
             <FormControlLabel
               key={membership}
@@ -42,6 +42,7 @@ const InputsMembership = () => {
               control={<Radio />}
               label={membership}
               sx={{
+                mt: idx!==0 ? 2 : 0,
                 ml: -1,
                 "& .MuiFormControlLabel-label": {
                   mr: 1,

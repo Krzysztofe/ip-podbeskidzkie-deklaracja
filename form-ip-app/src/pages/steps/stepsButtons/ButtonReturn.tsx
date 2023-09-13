@@ -14,8 +14,9 @@ const ButtonReturn = () => {
           onClick={() => back()}
           sx={{
             height: "fit-content",
-            width: { xs: "65%", sm: "15rem" },
+            width: { xs: "65%", sm: "12rem" },
             "&:hover": { backgroundColor: "#2455BA" },
+            mt: { xs: 1, sm: 0 },
           }}
         >
           Wstecz

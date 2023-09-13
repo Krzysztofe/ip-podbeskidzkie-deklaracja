@@ -14,7 +14,7 @@ const StepsHeaderNumber = (props: Props) => {
       <Box
         sx={{
           width: { xs: "20px", sm: "30px" },
-          aspectRatio: "1/1",
+          height: {xs: "20px", sm: "30px"},
           border: 1,
           borderRadius: "100%",
           display: "grid",
@@ -22,6 +22,7 @@ const StepsHeaderNumber = (props: Props) => {
           backgroundColor:
             currentStepIdx >= props.idx ? "primary.main" : "transparent",
           color: currentStepIdx >= props.idx ? "white" : "info.main",
+          
         }}
       >
         <Typography variant="fs_14_sb" color="info">

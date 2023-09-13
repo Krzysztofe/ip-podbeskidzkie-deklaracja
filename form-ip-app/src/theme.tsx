@@ -97,30 +97,12 @@ export const theme = createTheme({
       fontSize: "2rem",
       fontWeight: 500,
     },
-    // h4: {
-    //   fontSize: "1rem",
-    //   fontWeight: 600,
-    // },
-    // h5: {
-    //   fontSize: "1rem",
-    //   fontWeight: 400,
-    // },
-    // h6: {
-    //   fontSize: "0.625rem",
-    //   fontWeight: 600,
-    //   // 10px
-    // },
+    
 
     subtitle1: {
       fontSize: "0.625rem",
       fontWeight: 600,
     },
-
-    // subtitle2: {
-    //   fontSize: "0.875rem",
-    //   fontWeight: 400,
-    //   // 14px
-    // },
 
     fs_12_sb: {
       fontSize: "0.625rem",

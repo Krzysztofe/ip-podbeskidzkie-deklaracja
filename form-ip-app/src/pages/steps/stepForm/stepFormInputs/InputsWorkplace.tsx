@@ -50,7 +50,7 @@ const InputsWorkplace = () => {
             mt: { xs: 4.2, sm: 5.9 },
           }}
         >
-          {["poz1", "wro1", "wro2", "wro5", "lcj", "ktw1", "ktw3", "szzl"].map(
+          {["poz1","poz2", "wro1", "wro2", "wro5", "lcj", "ktw1", "ktw3", "szzl"].map(
             workplace => {
               return (
                 <FormControlLabel

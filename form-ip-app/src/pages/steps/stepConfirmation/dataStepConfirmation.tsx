@@ -1,51 +1,43 @@
-const ing = require("./../../../images/ing.png");
-const millenium = require("./../../../images/millennium.png");
-const santander = require("./../../../images/santander.png");
-const alior = require("./../../../images/alior.png");
-const credit = require("./../../../images/credit-agricole.png");
-const mbank = require("./../../../images/mbank.png");
-const pekao = require("./../../../images/pekao.png");
-const pko = require("./../../../images/pko-bank-polski.png");
+import ImgMbankMobile from "../../../images/mobile/ImgMbankMobile";
+import ImgIngMobile from "../../../images/mobile/ImgIngMobile";
+import ImgPekaoMobile from "../../../images/mobile/ImgPekaoMobile";
+import ImgAliorMobile from "../../../images/mobile/ImgAliorMobile";
+import ImgCreditMobile from "../../../images/mobile/ImgCreditMobile";
+import ImgMilleniumMobile from "../../../images/mobile/ImgMilleniumMobile";
+import ImgPkoMobile from "../../../images/mobile/ImgPkoMobile";
+import ImgSantanderMobile from "../../../images/mobile/ImgSantanderMobile";
 
 export const dataBanksList = [
   {
-    img: ing,
+    img: <ImgIngMobile />,
     link: "https://www.ing.pl/",
-    alt: "Ing",
   },
   {
-    img: millenium,
+    img: <ImgPekaoMobile />,
+    link: "https://www.ing.pl/",
+  },
+  {
+    img: <ImgMilleniumMobile />,
     link: "https://www.bankmillennium.pl/",
-    alt: "Millenium",
   },
   {
-    img: santander,
+    img: <ImgSantanderMobile />,
     link: "https://www.santander.pl/klient-indywidualny",
-    alt: "Santander",
   },
   {
-    img: alior,
+    img: <ImgAliorMobile />,
     link: "https://www.santander.pl/klient-indywidualny",
-    alt: "Alior",
   },
   {
-    img: credit,
+    img: <ImgCreditMobile />,
     link: "https://www.santander.pl/klient-indywidualny",
-    alt: "Credit",
   },
   {
-    img: mbank,
+    img: <ImgMbankMobile />,
     link: "https://www.santander.pl/klient-indywidualny",
-    alt: "Mbank",
   },
   {
-    img: pekao,
+    img: <ImgPkoMobile />,
     link: "https://www.santander.pl/klient-indywidualny",
-    alt: "Pekao",
-  },
-  {
-    img: pko,
-    link: "https://www.santander.pl/klient-indywidualny",
-    alt: "PKO",
   },
 ];

@@ -25,7 +25,7 @@ const StepSummary = () => {
     "Miejsce Pracy",
     "Miejsce Pracy",
     "Umowa",
-    "Wymiar czasu pracy",
+    "Czas pracy",
     "Dział",
     "Login",
   ];
@@ -52,7 +52,7 @@ const StepSummary = () => {
       <HttpRequestState />
       <Box sx={{ width: "100%", mb: 10 }}>
         <Box sx={{ mb: { xs: 4.1, sm: 5.1 } }}>
-          <HeadingPrimary headingText={"Podsumowanie"} />
+          <HeadingPrimary headingText={"Zweryfikuj przekazane dane"} />
         </Box>
 
         {dataSummary.map((text, idx) => {

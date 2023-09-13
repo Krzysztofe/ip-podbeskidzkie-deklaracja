@@ -16,7 +16,7 @@ const StepClause = () => {
         }}
       >
         <Box sx={{ mb: 2.5 }}>
-          <HeadingPrimary headingText={"KLAUZULA INFORMACYNA"} />
+          <HeadingPrimary headingText={"Zapoznaj się z klauzulą informacyjną"} />
         </Box>
 
         <Box>

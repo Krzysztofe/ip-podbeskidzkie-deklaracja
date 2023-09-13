@@ -1,30 +1,21 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Box from "@mui/material/Box";
+import React from "react";
 import StepsHeaderNumber from "./StepsHeaderNumber";
 import StepsHeaderText from "./StepsHeaderText";
-import React, { useContext, useEffect, useRef } from "react";
-import { StepsContext } from "../../../context/ContextProv";
-import useWindowWidth from "../../../hooks/useWindowWidth";
 
 const StepsHeader = () => {
-  const { steps, currentStepIdx, step, formik, formikClause } =
-    useContext(StepsContext);
-
-  const { windowWidth } = useWindowWidth();
-
   const dataSteps = ["Formulaż", "Klauzula", "Wyślij", "Potwierdzenie"];
 
   return (
     <Box
       sx={{
+        // position: "fixed",
         width: "fit-content",
-        mx: {xs:"auto",md:0},
+        mx: { xs: "auto", md: 0 },
         display: "flex",
-        // pt:"1%"
         alignItems: "center",
-        // justifyContentc:"center",
-        // gap: 1,
-        // position: "relative",
+        mb: { xs: 1.3, md: 0 },
       }}
     >
       {dataSteps.map((text, idx, arr) => {
@@ -35,7 +26,6 @@ const StepsHeader = () => {
                 display: "flex",
                 alignItems: "center",
                 position: "relative",
-                // width: { xs: "48%", md: "auto" },
               }}
             >
               <StepsHeaderNumber idx={idx} />

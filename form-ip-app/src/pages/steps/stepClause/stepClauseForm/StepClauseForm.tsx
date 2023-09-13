@@ -16,11 +16,17 @@ const StepClauseForm = () => {
     <>
       <Box
         sx={{
-          py: { xs: 1.6, md: 1.5 },
-          pl:{xs:1.6, sm:0},
+          height: {
+            xs: "74px",
+            sm: "72px",
+          },
+          // py: { xs: 1.6, md: 1.5 },
+          pl: { xs: 1.6, sm: 0 },
           borderBottom: 1,
           borderColor: "info.light",
           position: "relative",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         <FormControlLabel
@@ -48,7 +54,7 @@ const StepClauseForm = () => {
           sx={{
             ml: 3.2,
             position: "absolute",
-            bottom: { xs: "-8", md: "-1px" },
+            bottom: { xs: "-11px", sm: "-8px", md: "-1px" },
           }}
         >
           <InputsErrors

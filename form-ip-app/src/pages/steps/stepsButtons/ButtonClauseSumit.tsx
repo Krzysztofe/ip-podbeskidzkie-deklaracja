@@ -24,7 +24,7 @@ const ButtonClauseSumit = () => {
             isConfirmed && isErrorInClause.length === 0 && next();
           }}
           sx={{
-            width: { xs: "65%", sm: "15rem" },
+            width: { xs: "65%", sm: "12rem" },
             "&:hover": { backgroundColor: "#2455BA" },
           }}
         >

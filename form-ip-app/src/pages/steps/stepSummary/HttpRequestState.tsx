@@ -16,7 +16,7 @@ const HttpRequestState = () => {
             position: "absolute",
             right: "1%",
             width: "calc(100% - 16px)",
-            height: "90%",
+            height: { xs: "calc(100vh - 56px)", sm: "calc(100vh - 92px)" },
             bgcolor: "white",
             opacity: "0.8",
             zIndex: 3,

@@ -31,6 +31,7 @@ const InputsContract = () => {
           "Na czas określony",
           "Okres próbny",
           "Umowa zlecenie",
+          "Praca tymczasowa"
         ].map(contract => {
           return (
             <FormControlLabel

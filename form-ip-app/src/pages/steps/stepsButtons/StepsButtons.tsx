@@ -49,7 +49,6 @@ const StepsButtons = () => {
             flexDirection: { xs: "column-reverse", sm: "row" },
             justifyContent: { xs: "center", sm: "space-between" },
             alignItems: "center",
-            gap: 1,
           }}
         >
           <ButtonReturn />
