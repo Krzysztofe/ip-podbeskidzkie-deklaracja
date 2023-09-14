@@ -34,7 +34,7 @@ const StepsButtons = () => {
           justifyContent: "center",
           backgroundColor: "white",
           zIndex: 2,
-          px:1
+          px:2
         }}
       >
         {currentStepIdx === 1 && <StepClauseForm />}

@@ -9,7 +9,9 @@ import StepConfirmationParagraphs from "./StepConfirmationParagraphs";
 const StepConfirmation = () => {
   return (
     <Box>
-      <HeadingPrimary headingText={"Deklaracja została złożona"} />
+      <Box sx={{mt: 3}}>
+        <HeadingPrimary headingText={"Deklaracja została złożona"} />
+      </Box>
 
       <Box sx={{ display: "grid", placeItems: "center", marginBlock: 8 }}>
         <ImgConfirmation />
@@ -25,7 +27,7 @@ const StepConfirmation = () => {
         variant="fs_12_rg"
         color="info.dark"
         component="p"
-        sx={{ marginBlock: { xs: 3 } }}
+        sx={{ my: { xs: 3 } }}
       >
         Powyższe wynika z Uchwały nr 10 Krajowego Zjazdu Dlegatów i Dlelegatek
         OZZIP z 12.03.2022 r
@@ -44,7 +46,7 @@ const StepConfirmation = () => {
             "Przystąpienie do komisji zostanie zweryfikowane po wykonaniu przelewu bankowego pierwszej składki członkowskiej na konto:"
           }
         />
-        {/* <HeadingPrimary
+        <HeadingPrimary
           headingText={
             "28 2130 0004 2001 0577 6570 0014 <br> OZZ Inicjatywa Pracownicza ul. Kościelna 4, 60-538 Poznań."
           }
@@ -53,7 +55,7 @@ const StepConfirmation = () => {
           headingText={
             "Tytuł przelweu: (imię i nazwisko), składka za (miesiąc/kwartał)."
           }
-        /> */}
+        />
       </Box>
       <StepConfirmationBanksList />
       <StepConfirmationFooter />

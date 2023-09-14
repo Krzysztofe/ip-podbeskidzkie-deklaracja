@@ -24,7 +24,7 @@ const ButtonPOSTvalues = () => {
     if (currentStepIdx === 2) {
       sendRequest(
         {
-          url: "https://mail-sender-production.up.railway.app/receive",
+          url: URL,
           body: { member: formik.values },
           method: "POST",
         },

@@ -40,9 +40,9 @@ const StepsContextProv = (props: Props) => {
   const { formikClause, isConfirmed } = useStepClauseFormik();
   const [isCaptcha, setIsCaptcha] = useState(false);
   const { steps, currentStepIdx, step, back, next } = useMultistepForm([
-    // <StepForm />,
-    // <StepClause />,
-    // <StepSummary />,
+    <StepForm />,
+    <StepClause />,
+    <StepSummary />,
     <StepConfirmation />,
   ]);
 

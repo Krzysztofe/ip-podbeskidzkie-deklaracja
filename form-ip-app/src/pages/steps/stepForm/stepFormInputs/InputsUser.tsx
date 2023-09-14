@@ -42,6 +42,9 @@ const InputsUser = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               size="small"
+              sx={{"& .MuiInputBase-input":{
+                color:"info.main"
+              }}}
             />
 
             <InputsErrors value={value} formik={formik} />

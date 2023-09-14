@@ -15,8 +15,8 @@ const StepConfirmationBanksList = () => {
         maxWidth: "500px",
         width: "100%",
         mx: "auto",
-        display: "grid",
-        gridTemplateColumns: windowWidth < 400 ? "50% 50%" : "25% 25% 25% 25%",
+        display:"grid",
+        gridTemplateColumns: windowWidth < 400 ? "50% 50%" : "repeat(4, 25%)",
       }}
     >
       {dataBanksList.map(
@@ -28,7 +28,7 @@ const StepConfirmationBanksList = () => {
                 border: 1,
                 borderColor: "info.light",
                 m: { xs: 0.3, sm: 0.8 },
-                p: {xs:"5%", sm:"10%"}
+                p: { xs: "5%", sm: "10%" },
               }}
             >
               <Link
@@ -41,14 +41,12 @@ const StepConfirmationBanksList = () => {
                 }}
                 target="_blank"
               >
-                {/* <img src={img} alt={alt} loading="lazy" /> */}
                 {img}
               </Link>
             </ImageListItem>
           );
         }
       )}
-     
     </List>
   );
 };

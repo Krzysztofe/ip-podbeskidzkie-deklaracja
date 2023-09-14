@@ -26,6 +26,7 @@ const StepFormHeader = () => {
 
       <Typography
         variant="fs_12_sb"
+        component="p"
         color="info.dark"
         sx={{ mt: { xs: 3.9, sm: 2 } }}
       >

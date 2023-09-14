@@ -11,45 +11,28 @@ const useHttp = () => {
     setIsLoading(true);
     setError(null);
 
-    // console.log("body z fetch", requestConfig.body);
-    // console.log("body JSON z fetch", JSON.stringify(requestConfig.body));
-
     fetch(requestConfig.url, {
       method: requestConfig.method || "GET",
       body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
-      // body: JSON.stringify(requestConfig.body),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
     })
       .then(resp => {
-        // if (resp.ok) {
-        //   console.log("resp", resp);
-        //    returnData(resp.ok);
-        //   return resp.json();
-        // }
-        // throw Error("Nie znaleziono metody zapisu");
-        // returnData(resp);
-
         if (!resp.ok) {
-          throw Error("Coś poszło nie tak");
+          throw Error("Coś poszło nie tak...");
         } else {
           console.log("resp", resp);
           returnData(resp.ok);
           return resp.json();
         }
       })
-      .then(data => {
+      .then(() => {
         setIsLoading(false);
-        // returnData(resp);
-        // if (typeof returnData === "function") {
-        //   return returnData(data);
-        // }
-        // return null;
       })
       .catch(err => {
-        console.log("err", err);
+    
         setError(err);
         setIsLoading(false);
       });
