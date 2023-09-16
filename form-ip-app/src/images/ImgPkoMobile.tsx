@@ -1,5 +1,5 @@
 import React from "react";
-import useWindowWidth from "../../hooks/useWindowWidth";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 const ImgPkoMobile = () => {
   const { windowWidth } = useWindowWidth();
@@ -11,8 +11,8 @@ const ImgPkoMobile = () => {
       // xmlns:xlink="http://www.w3.org/1999/xlink"
       id="svg164"
       version="1.1"
-      width= "60"
-      height= "60"
+      width="60"
+      height="60"
       viewBox="-2.13059304 -2.13059304 75.28095408 92.13105908"
     >
       <defs id="defs161">

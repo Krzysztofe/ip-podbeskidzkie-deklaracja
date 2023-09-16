@@ -19,7 +19,7 @@ const StepConfirmationFooter = () => {
 
 
   return (
-    <Box sx={{ marginBlock: { xs: 6.6, sm: 8.4 } }}>
+    <Box sx={{ py: { xs: 6.6, sm: 8.4 } }}>
       {[
         "KONTAKT",
         "tel. 736-850-536 <br />ipamazon@wp.pl <br />www.ozzip.p",

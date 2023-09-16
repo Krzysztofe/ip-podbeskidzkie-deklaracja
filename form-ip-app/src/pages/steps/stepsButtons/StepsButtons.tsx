@@ -13,52 +13,40 @@ const StepsButtons = () => {
   const { currentStepIdx } = useContext(StepsContext);
 
   return (
-    <>
-      <Container
+    <Container
+      sx={{
+        position: "fixed",
+        bottom: 0,
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        px: { xs: "20px !importand", md: "16px !important" },
+        bgcolor: "white",
+        zIndex: 2,
+      }}
+    >
+      {currentStepIdx === 1 && <StepClauseForm />}
+      {currentStepIdx === 2 && <Captcha />}
+
+      <Box
         sx={{
-          position: "fixed",
-          bottom: 0,
-          width: "100%",
-          height:
-            currentStepIdx === 1
-              ? {
-                  xs: "calc(120px + 74px)",
-                  sm: "calc(90px + 72px)",
-                }
-              : {
-                  xs: "calc(120px)",
-                  sm: "calc(90px)",
-                },
+          height: {
+            xs: "calc(120px)",
+            sm: "calc(90px)",
+          },
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          backgroundColor: "white",
-          zIndex: 2,
-          px:2
+          flexDirection: { xs: "column-reverse", sm: "row" },
+          justifyContent: { xs: "center", sm: "space-between" },
+          alignItems: "center",
         }}
       >
-        {currentStepIdx === 1 && <StepClauseForm />}
-        {currentStepIdx === 2 && <Captcha />}
-
-        <Box
-          sx={{
-            height: {
-              xs: "calc(120px)",
-              sm: "calc(90px)",
-            },
-            display: "flex",
-            flexDirection: { xs: "column-reverse", sm: "row" },
-            justifyContent: { xs: "center", sm: "space-between" },
-            alignItems: "center",
-          }}
-        >
-          <ButtonReturn />
-          <ButtonFormSubmit />
-          <ButtonClauseSumit />
-          <ButtonPOSTvalues />
-        </Box>
-      </Container>
-    </>
+        <ButtonReturn />
+        <ButtonFormSubmit />
+        <ButtonClauseSumit />
+        <ButtonPOSTvalues />
+      </Box>
+    </Container>
   );
 };
 

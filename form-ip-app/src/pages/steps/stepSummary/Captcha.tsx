@@ -1,8 +1,7 @@
+import Box from "@mui/material/Box";
 import { useContext } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { StepsContext } from "../../../context/ContextProv";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 
 const Captcha = () => {
   const { setIsCaptcha } = useContext(StepsContext);
@@ -27,13 +26,14 @@ const Captcha = () => {
         bottom: { xs: "120px", sm: "90px" },
         display: "flex",
         justifyContent: { xs: "center", sm: "end" },
-        width: { xs: "90%", sm: "100%" },
+        width: "100%",
         backgroundColor: "white",
       }}
     >
       <Box
         sx={{
           transform: "scale(0.79)",
+          mr: { xs: 0, md: -1.6 },
         }}
       >
         <ReCAPTCHA sitekey={key} onChange={handleChange} />

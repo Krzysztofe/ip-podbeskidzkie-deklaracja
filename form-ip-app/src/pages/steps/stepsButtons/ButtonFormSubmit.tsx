@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react";
-import { StepsContext } from "../../../context/ContextProv";
-import Button from "@mui/material/Button";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
+import Button from "@mui/material/Button";
+import { useContext, useEffect } from "react";
+import { StepsContext } from "../../../context/ContextProv";
 
 const ButtonFormSubmit = () => {
   const {
@@ -22,14 +22,14 @@ const ButtonFormSubmit = () => {
       {currentStepIdx === 0 && (
         <Button
           variant="contained"
-          endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
           type="submit"
           onClick={() => {
             isSubmited && isError.length === 0 && next();
           }}
+          endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
           sx={{
             width: { xs: "65%", sm: "12rem" },
-            "&:hover": { backgroundColor: "#2455BA" },
+            "&:hover": { bgcolor: "#2455BA" },
             marginLeft: { xs: 0, sm: "auto" },
           }}
         >

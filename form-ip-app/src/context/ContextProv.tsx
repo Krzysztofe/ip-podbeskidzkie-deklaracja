@@ -5,7 +5,7 @@ import useStepClauseFormik from "../pages/steps/stepClause/stepClauseForm/useSte
 import StepConfirmation from "../pages/steps/stepConfirmation/StepConfirmation";
 import StepForm from "../pages/steps/stepForm/StepForm";
 import useStepFormFormik from "../pages/steps/stepForm/stepFormFormik/useStepFormFormik";
-import useHttp from "../pages/steps/stepsButtons/useHttp";
+import useHttp from "../services/useHttp";
 import StepSummary from "../pages/steps/stepSummary/StepSummary";
 
 type Props = {
@@ -27,6 +27,7 @@ type Props = {
    setIsCaptcha: React.Dispatch<React.SetStateAction<boolean>>;
    steps: JSX.Element[];
    currentStepIdx: number;
+   isLastStep: boolean;
    step: JSX.Element;
    back: () => void;
    next: () => void;
@@ -39,12 +40,13 @@ const StepsContextProv = (props: Props) => {
   const { isLoading, error, sendRequest } = useHttp();
   const { formikClause, isConfirmed } = useStepClauseFormik();
   const [isCaptcha, setIsCaptcha] = useState(false);
-  const { steps, currentStepIdx, step, back, next } = useMultistepForm([
-    <StepForm />,
-    <StepClause />,
-    <StepSummary />,
-    <StepConfirmation />,
-  ]);
+  const { steps, currentStepIdx, step, back, next, isLastStep } =
+    useMultistepForm([
+      <StepForm />,
+      <StepClause />,
+      <StepSummary />,
+      <StepConfirmation />,
+    ]);
 
   return (
     <StepsContext.Provider
@@ -60,6 +62,7 @@ const StepsContextProv = (props: Props) => {
         sendRequest,
         steps,
         currentStepIdx,
+        isLastStep,
         step,
         back,
         next,

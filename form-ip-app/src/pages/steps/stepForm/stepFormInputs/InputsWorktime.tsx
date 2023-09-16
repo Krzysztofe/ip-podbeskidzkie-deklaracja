@@ -1,21 +1,20 @@
-import { useContext } from "react";
-import { StepsContext } from "../../../../context/ContextProv";
-import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
-import RadioGroup from "@mui/material/RadioGroup";
+import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import InputsErrors from "./InputsErrors";
+import RadioGroup from "@mui/material/RadioGroup";
+import { useContext } from "react";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
+import { StepsContext } from "../../../../context/ContextProv";
+import InputsErrors from "./InputsErrors";
 
 const InputsWorktime = () => {
   const { formik } = useContext(StepsContext);
 
   return (
     <>
-      <HeadingPrimary headingText={" Wymiar czasu pracy:"} />
+      <HeadingPrimary headingText={"Wymiar czasu pracy:"} />
+      
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name="worktime"

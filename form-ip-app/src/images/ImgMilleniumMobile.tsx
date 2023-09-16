@@ -1,10 +1,8 @@
 import React from "react";
-import useWindowWidth from "../../hooks/useWindowWidth";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 const ImgMilleniumMobile = () => {
-
   const { windowWidth } = useWindowWidth();
-
 
   return (
     <svg

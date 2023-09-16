@@ -4,10 +4,8 @@ import { useContext } from "react";
 import { v4 as UUID } from "uuid";
 import HeadingPrimary from "../../../components/HeadingPrimary";
 import { StepsContext } from "../../../context/ContextProv";
-import HttpRequestState from "./HttpRequestState";
 import StepSummaryClauseConfirmation from "./StepSummaryClauseConfirmation";
 import StepSummaryMembership from "./StepSummaryMembership";
-import Captcha from "./Captcha";
 
 const StepSummary = () => {
   const { formik } = useContext(StepsContext);
@@ -30,29 +28,12 @@ const StepSummary = () => {
     "Login",
   ];
 
-  // const formikValues = [
-  //   "Imię",
-  //   "Nazwisko",
-  //   "Adres",
-  //   "Telefon",
-  //   "E-mail",
-  //   "Pracodawca",
-  //   "Pracodawca",
-  //   "Miejsce Pracy",
-  //   "Miejsce Pracy",
-  //   "Umowa",
-  //   "Wymiar czasu pracy",
-  //   "Dział",
-  //   "Login",
-  //   "Przynależność do związków zawodowych",
-  // ];
 
   return (
-    <>
-      <HttpRequestState />
-      <Box sx={{ width: "100%", mb: 10 }}>
-        <Box sx={{ mb: { xs: 4.1, sm: 5.1 } }}>
-          <HeadingPrimary headingText={"Zweryfikuj przekazane dane"} />
+    <Box sx={{ position: "relative" }}>
+      <Box sx={{ width: "100%" }}>
+        <Box sx={{ mb: { xs: 4.1, sm: 5.1 }, mt: { xs: 2.5, sm: 3.9 } }}>
+          <HeadingPrimary headingText={"Sprawdź przekazane dane"} />
         </Box>
 
         {dataSummary.map((text, idx) => {
@@ -95,8 +76,7 @@ const StepSummary = () => {
         <StepSummaryMembership />
         <StepSummaryClauseConfirmation />
       </Box>
-      {/* <Captcha /> */}
-    </>
+    </Box>
   );
 };
 

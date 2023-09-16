@@ -2,11 +2,13 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { useContext, useEffect, useRef } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import StepConfirmation from "../stepConfirmation/StepConfirmation";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
+import HttpRequestState from "./HttpRequestState";
 
 const IndexSteps = () => {
-  const { steps, currentStepIdx, step, formik, formikClause } =
+  const { steps, currentStepIdx, formik, formikClause, isLastStep } =
     useContext(StepsContext);
 
   const scrollBoxRef = useRef(null);
@@ -26,12 +28,19 @@ const IndexSteps = () => {
           xs: "calc(100% - 120px)",
           sm: "calc(100% - 90px)",
         }
-      : currentStepIdx === 3
+      : isLastStep
       ? "auto"
       : {
           xs: "calc(100% - 120px - 74px)",
           sm: "calc(100% - 90px - 72px)",
         };
+
+  const translate =
+    currentStepIdx === 0
+      ? "translate(0)"
+      : currentStepIdx === 1
+      ? "translate(-100%)"
+      : "translate(-200%)";
 
   return (
     <>
@@ -55,6 +64,7 @@ const IndexSteps = () => {
         </Container>
       </header>
       <main>
+        <HttpRequestState />
         <Container
           sx={{
             height: { xs: "calc(100vh - 56px)", sm: "calc(100vh - 92px)" },
@@ -62,34 +72,42 @@ const IndexSteps = () => {
             padding: "0px !important",
           }}
         >
-          <form
-            onSubmit={formSubmit}
-            style={{
-              height: "100%",
-            }}
-          >
-            <Box
-              ref={scrollBoxRef}
-              sx={{
-                px: 1.6,
-                overflowY: "auto",
-                height: height,
-                // "&::-webkit-scrollbar-thumb": {
-                //   backgroundColor: "red",
-                // },
-                "&::-webkit-scrollbar": {
-                  // width: "5px",
-                },
-                "&::-webkit-scrollbar-track": {
-                    backgroundColor: "red",
-                },
+          {currentStepIdx < 3 && (
+            <form
+              onSubmit={formSubmit}
+              style={{
+                height: "100%",
+                overflow: "hidden",
               }}
             >
-              {step}
-            </Box>
-
-            {currentStepIdx < steps.length - 1 && <StepsButtons />}
-          </form>
+              <Box
+                sx={{
+                  height: height,
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 100%)",
+                  transform: translate,
+                  transition: "transform 0.5s ease",
+                }}
+              >
+                {steps.slice(0, -1).map((step, idx) => {
+                  return (
+                    <Box
+                      key={idx}
+                      // ref={scrollBoxRef}
+                      sx={{
+                        overflowY: "auto",
+                        px: 1.6,
+                      }}
+                    >
+                      {step}
+                    </Box>
+                  );
+                })}
+              </Box>
+              {!isLastStep && <StepsButtons />}
+            </form>
+          )}
+          {isLastStep && <StepConfirmation />}
         </Container>
       </main>
     </>

@@ -11,6 +11,8 @@ const StepConfirmationParagraphs = () => {
     variant: theme.typography.fs_16_rg.variant,
     color: "info.dark",
     component: "p",
+
+ 
   }));
 
   const typographyProps = {

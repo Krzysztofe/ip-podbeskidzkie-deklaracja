@@ -1,17 +1,17 @@
+import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import FormLabel from "@mui/material/FormLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import TextField from "@mui/material/TextField";
 import { useContext } from "react";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
-import Box from "@mui/material/Box";
 
 const InputsWorkplace = () => {
   const { formik } = useContext(StepsContext);
+
   const handleEmployerChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -37,6 +37,7 @@ const InputsWorkplace = () => {
   return (
     <>
       <HeadingPrimary headingText={"Miejsce Pracy:"} />
+      
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name="workplace"

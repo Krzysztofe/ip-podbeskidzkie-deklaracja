@@ -38,12 +38,12 @@ const ButtonPOSTvalues = () => {
       {currentStepIdx === 2 && (
         <Button
           variant="contained"
-          endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
           onClick={() => {
             currentStepIdx < 2 && next();
-            // isCaptcha && handlePOST();
-            handlePOST();
+            isCaptcha && handlePOST();
+            // handlePOST()
           }}
+          endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
           sx={{
             width: { xs: "65%", sm: "12rem" },
             "&:hover": { backgroundColor: "#2455BA" },

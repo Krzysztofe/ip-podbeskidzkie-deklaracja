@@ -1,10 +1,9 @@
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
 import { useContext } from "react";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
 
 const InputsUser = () => {
   const { formik } = useContext(StepsContext);
@@ -35,7 +34,6 @@ const InputsUser = () => {
             <TextField
               key={label}
               type={type}
-              id={value}
               name={value}
               label={label}
               value={formik.values[value as keyof typeof formik.values]}

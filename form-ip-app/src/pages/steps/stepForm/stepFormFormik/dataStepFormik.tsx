@@ -1,4 +1,4 @@
-export interface ModelInitialValues {
+export  type InitialValues = {
   name: string;
   surname: string;
   address: string;
@@ -15,7 +15,7 @@ export interface ModelInitialValues {
   membership: string;
 }
 
-export const initialValues: ModelInitialValues = {
+export const initialValues: InitialValues = {
   name: "",
   surname: "",
   address: "",

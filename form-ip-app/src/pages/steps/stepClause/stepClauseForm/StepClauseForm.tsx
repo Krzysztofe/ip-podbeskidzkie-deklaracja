@@ -1,13 +1,11 @@
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
-import Container from "@mui/material/Container";
-import { styled } from "@mui/material/styles";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 const StepClauseForm = () => {
   const { formikClause } = useContext(StepsContext);
@@ -20,7 +18,6 @@ const StepClauseForm = () => {
             xs: "74px",
             sm: "72px",
           },
-          // py: { xs: 1.6, md: 1.5 },
           pl: { xs: 1.6, sm: 0 },
           borderBottom: 1,
           borderColor: "info.light",
@@ -57,11 +54,7 @@ const StepClauseForm = () => {
             bottom: { xs: "-11px", sm: "-8px", md: "-1px" },
           }}
         >
-          <InputsErrors
-            formik={formikClause}
-            value={"confirmation"}
-            otherValue={null}
-          />
+          <InputsErrors formik={formikClause} value={"confirmation"} />
         </Box>
       </Box>
     </>

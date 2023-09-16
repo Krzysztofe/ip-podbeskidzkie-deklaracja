@@ -1,28 +1,16 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useTheme } from "@mui/material/styles";
 import HeadingPrimary from "../../../components/HeadingPrimary";
 
-
 const StepFormHeader = () => {
-  const theme = useTheme();
-
   return (
-    <Box
-      sx={{
-        py: 3.9,
-        borderBottom: `1px solid ${theme.palette.info.light}`,
-      }}
-    >
-      <Typography variant="h1" color="info.dark" sx={{ mb: 4.2 }}>
+    <Box py={3.9} borderBottom={1} borderColor={"info.light"}>
+      <Typography variant="h1" color="info.dark" mb={4.2}>
         Deklaracja Przystąpienia <br />
         do OZZIP Amazon
       </Typography>
 
-     
-      <HeadingPrimary
-        headingText={"Wypełnij formulaż"}
-      />
+      <HeadingPrimary headingText={"Wypełnij formulaż"} />
 
       <Typography
         variant="fs_12_sb"
@@ -33,8 +21,7 @@ const StepFormHeader = () => {
         DEKLARACJA
       </Typography>
       <Typography variant="fs_12_rg" color="info.dark">
-        Ja, niżej wskazany/wskazana oświadczam, iż przystępuję do
-        Ogólnopolskiego Związku Zawodowego „Inicjatywa Pracownicza” z siedzibą w
+        Ja, niżej wskazany/wskazana oświadczam, iż przystępuję do Ogólnopolskiego Związku Zawodowego „Inicjatywa Pracownicza” z siedzibą w
         Poznaniu (KRS nr 0000215247).
       </Typography>
     </Box>

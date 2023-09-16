@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+
 declare module "@mui/material/styles" {
   interface TypographyVariants {
     fs_12_rg: {
@@ -9,9 +10,6 @@ declare module "@mui/material/styles" {
       fontSize: string;
       [key: string]: any;
     };
-
-    // fs_14_sb: React.CSSProperties;
-    // fs_14_rg: React.CSSProperties;
 
     fs_14_sb: {
       fontSize: string;
@@ -41,9 +39,6 @@ declare module "@mui/material/styles" {
       fontSize: string;
       [key: string]: any;
     };
-
-    // fs_14_sb: React.CSSProperties;
-    // fs_14_rg: React.CSSProperties;
 
     fs_14_sb: {
       fontSize: string;
@@ -88,8 +83,16 @@ export const theme = createTheme({
       main: "#797979",
       light: "#E2E2E2",
     },
+
+    // common: {
+    //   white: {
+    //     main: "#FFFFFF",
+    //   },
+    // },
   },
+
   spacing: 10,
+
   typography: {
     fontFamily: ["Poppins", "sans-serif"].join(","),
 
@@ -97,7 +100,6 @@ export const theme = createTheme({
       fontSize: "2rem",
       fontWeight: 500,
     },
-    
 
     subtitle1: {
       fontSize: "0.625rem",
@@ -157,15 +159,6 @@ export const theme = createTheme({
         fontSize: "1rem",
       },
     },
-
-    // body1: {
-    //   fontSize: "0.75rem",
-    //   fontWeight: 600,
-    // },
-    // body2: {
-    //   fontSize: "0.75rem",
-    //   fontWeight: 400,
-    // },
   },
 
   breakpoints: {
@@ -175,17 +168,6 @@ export const theme = createTheme({
       md: 900,
       lg: 1200,
       xl: 1400,
-    },
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          width: "15rem",
-          // width: { xs: "65%", sm: "15rem" },
-          "&:hover": { backgroundColor: "#2455BA" },
-        },
-      },
     },
   },
 });

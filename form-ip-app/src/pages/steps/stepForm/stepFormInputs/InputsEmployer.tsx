@@ -1,15 +1,13 @@
+import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import FormLabel from "@mui/material/FormLabel";
 import Radio from "@mui/material/Radio";
-import Box from "@mui/material/Box";
 import RadioGroup from "@mui/material/RadioGroup";
 import TextField from "@mui/material/TextField";
 import { useContext } from "react";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
-import { Typography } from "@mui/material";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
 
 const InputsEployer = () => {
   const { formik } = useContext(StepsContext);
@@ -25,7 +23,7 @@ const InputsEployer = () => {
     }
   };
 
-  const handleLoginChange = async (
+  const handleEmployerOtherChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     formik.handleChange(event);
@@ -84,7 +82,7 @@ const InputsEployer = () => {
             name={"employerOther"}
             label={"Inny"}
             value={formik.values.employerOther}
-            onChange={handleLoginChange}
+            onChange={handleEmployerOtherChange}
             onBlur={formik.handleBlur}
             size="small"
             sx={{ width: "100%" }}

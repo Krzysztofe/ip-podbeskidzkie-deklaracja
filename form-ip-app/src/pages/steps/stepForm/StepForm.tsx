@@ -1,6 +1,4 @@
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import StepFormAlert from "./StepFormAlert";
 import StepFormHeader from "./StepFormHeader";
 import InputsContract from "./stepFormInputs/InputsContract";
 import InputsDepartment from "./stepFormInputs/InputsDepartment";
@@ -9,9 +7,11 @@ import InputsMembership from "./stepFormInputs/InputsMembership";
 import InputsUser from "./stepFormInputs/InputsUser";
 import InputsWorkplace from "./stepFormInputs/InputsWorkplace";
 import InputsWorktime from "./stepFormInputs/InputsWorktime";
+import { v4 as UUID } from "uuid";
+
 
 const StepForm = () => {
-  const dataComponents = [
+  const dataInputs = [
     <InputsUser />,
     <InputsEployer />,
     <InputsWorkplace />,
@@ -23,9 +23,8 @@ const StepForm = () => {
 
   return (
     <>
-      <StepFormAlert />
       <StepFormHeader />
-      {dataComponents.map((component, idx) => {
+      {dataInputs.map((input, idx) => {
         return (
           <Box
             key={idx}
@@ -36,7 +35,7 @@ const StepForm = () => {
               pb: { xs: 0, sm: 2.3 },
             }}
           >
-            {component}
+            {input}
           </Box>
         );
       })}

@@ -1,11 +1,11 @@
-import ImgMbankMobile from "../../../images/mobile/ImgMbankMobile";
-import ImgIngMobile from "../../../images/mobile/ImgIngMobile";
-import ImgPekaoMobile from "../../../images/mobile/ImgPekaoMobile";
-import ImgAliorMobile from "../../../images/mobile/ImgAliorMobile";
-import ImgCreditMobile from "../../../images/mobile/ImgCreditMobile";
-import ImgMilleniumMobile from "../../../images/mobile/ImgMilleniumMobile";
-import ImgPkoMobile from "../../../images/mobile/ImgPkoMobile";
-import ImgSantanderMobile from "../../../images/mobile/ImgSantanderMobile";
+import ImgMbankMobile from "../../../images/ImgMbankMobile";
+import ImgIngMobile from "../../../images/ImgIngMobile";
+import ImgPekaoMobile from "../../../images/ImgPekaoMobile";
+import ImgAliorMobile from "../../../images/ImgAliorMobile";
+import ImgCreditMobile from "../../../images/ImgCreditMobile";
+import ImgMilleniumMobile from "../../../images/ImgMilleniumMobile";
+import ImgPkoMobile from "../../../images/ImgPkoMobile";
+import ImgSantanderMobile from "../../../images/ImgSantanderMobile";
 
 export const dataBanksList = [
   {

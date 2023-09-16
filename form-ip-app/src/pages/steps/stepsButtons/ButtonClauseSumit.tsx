@@ -25,7 +25,7 @@ const ButtonClauseSumit = () => {
           }}
           sx={{
             width: { xs: "65%", sm: "12rem" },
-            "&:hover": { backgroundColor: "#2455BA" },
+            "&:hover": { bgcolor: "#2455BA" },
           }}
         >
           Zatwierdź

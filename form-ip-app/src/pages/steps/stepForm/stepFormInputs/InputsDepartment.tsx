@@ -1,17 +1,16 @@
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
 import { useContext } from "react";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
 
 const InputsDepartment = () => {
   const { formik } = useContext(StepsContext);
+  
   return (
     <>
       <HeadingPrimary headingText={"Dział:"} />
-
       
         {[
           { label: "Dział", value: "department" },

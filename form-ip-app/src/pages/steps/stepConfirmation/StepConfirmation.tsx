@@ -8,8 +8,8 @@ import StepConfirmationParagraphs from "./StepConfirmationParagraphs";
 
 const StepConfirmation = () => {
   return (
-    <Box>
-      <Box sx={{mt: 3}}>
+    <Box sx={{ px: 1.6 }}>
+      <Box sx={{ mb: { xs: 4.1, sm: 5.1 }, mt: { xs: 2.5, sm: 3.9 } }}>
         <HeadingPrimary headingText={"Deklaracja została złożona"} />
       </Box>
 

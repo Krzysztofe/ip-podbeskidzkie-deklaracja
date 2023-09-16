@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react";
-import { StepsContext } from "../../../context/ContextProv";
 import KeyboardDoubleArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowLeftOutlined";
 import Button from "@mui/material/Button";
+import { useContext } from "react";
+import { StepsContext } from "../../../context/ContextProv";
 
 const ButtonReturn = () => {
   const { currentStepIdx, back } = useContext(StepsContext);
@@ -15,7 +15,7 @@ const ButtonReturn = () => {
           sx={{
             height: "fit-content",
             width: { xs: "65%", sm: "12rem" },
-            "&:hover": { backgroundColor: "#2455BA" },
+            "&:hover": { bgcolor: "#2455BA" },
             mt: { xs: 1, sm: 0 },
           }}
         >

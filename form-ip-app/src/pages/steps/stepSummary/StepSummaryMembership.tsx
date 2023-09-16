@@ -8,8 +8,6 @@ const StepSummaryMembership = () => {
 
   const formikValue = Object.values(formik.values).slice(-1);
 
-
-
   return (
     <Box sx={{ display: { xs: "block", md: "flex" } }}>
       <Typography

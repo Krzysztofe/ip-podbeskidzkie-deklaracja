@@ -11,7 +11,6 @@ const StepSummaryClauseConfirmation = () => {
         mt: 1,
         maxWidth: 300,
         marginInline: "auto",
-        pt: 2,
       }}
     >
       Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetważanie

@@ -1,10 +1,9 @@
-import Card from "@mui/material/CardContent";
-import { Link } from "react-router-dom";
-import List from "@mui/material/List";
 import ImageListItem from "@mui/material/ImageListItem";
-import { dataBanksList } from "./dataStepConfirmation";
+import List from "@mui/material/List";
+import { Link } from "react-router-dom";
+import { v4 as UUID } from "uuid";
 import useWindowWidth from "../../../hooks/useWindowWidth";
-
+import { dataBanksList } from "./dataStepConfirmation";
 
 const StepConfirmationBanksList = () => {
   const { windowWidth } = useWindowWidth();
@@ -20,10 +19,10 @@ const StepConfirmationBanksList = () => {
       }}
     >
       {dataBanksList.map(
-        ({ img, link }: { img: JSX.Element; link: string }, idx) => {
+        ({ img, link }: { img: JSX.Element; link: string }) => {
           return (
             <ImageListItem
-              key={idx}
+              key={UUID()}
               sx={{
                 border: 1,
                 borderColor: "info.light",
