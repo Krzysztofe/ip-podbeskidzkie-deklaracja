@@ -41,7 +41,9 @@ formik, yup, <br/>
 
 
 <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/7d27c0bd-3459-459f-b428-82c05b34886d"  width: = "40%" alt="Mobile Screenshot">
+</div>
 
+<div align="center" margin="20px">
 
 <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/c52e776f-d200-4dd4-92ca-10454fb245ea"  width: = "40%" alt="Mobile Screenshot">
  
