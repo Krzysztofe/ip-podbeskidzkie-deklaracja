@@ -35,9 +35,9 @@ formik, yup, <br/>
 
 ## Desktop
 <div align="center">
- <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/b6f58d47-d8d2-452a-a8c6-e3d0a8552fd6" width: = "40%"  alt="Mobile Screenshot"> 
+ <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/b6f58d47-d8d2-452a-a8c6-e3d0a8552fd6" width: = "20%"  alt="Mobile Screenshot"> 
 
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/f0d64899-f842-4d2a-9ddd-059352737b3a"  width: = "40%" alt="Mobile Screenshot">
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/f0d64899-f842-4d2a-9ddd-059352737b3a"  width: = "20%" alt="Mobile Screenshot">
 
 
 </div>
