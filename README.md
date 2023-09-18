@@ -37,14 +37,16 @@ formik, yup, <br/>
 ## Mobile
 
 <div align="center">
-<div padding="10px"> <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/f3ee6797-9aa0-4d6f-869e-01dca1efc6b2" style="margin: 25px; width: 20%; display: block;"  alt="Mobile Screenshot"> </div>
+ <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/422c3da2-94d0-4c1b-9b71-f4c60a29ee3a" width: = "40%"  alt="Mobile Screenshot"> 
 
 
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/491fcefd-43a1-43a1-a36f-c445c2698613" margin="25px"  width="20%" alt="Mobile Screenshot">
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/7d27c0bd-3459-459f-b428-82c05b34886d"  width: = "40%" alt="Mobile Screenshot">
 
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/c52e776f-d200-4dd4-92ca-10454fb245ea" margin="25px"  width="20%" alt="Mobile Screenshot">
+
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/c52e776f-d200-4dd4-92ca-10454fb245ea"  width: = "40%" alt="Mobile Screenshot">
  
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/dbba44b0-12b2-4951-adae-74dd1ae584de" padding="25px" display="block"  width="20%" height="200px" alt="Mobile Screenshot">
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/0ac85586-eeb7-4000-9eeb-7884e7dee2c1"  width: = "40%" alt="Mobile Screenshot">
+
 
 
 </div>
