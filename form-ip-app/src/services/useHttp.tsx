@@ -23,7 +23,6 @@ const useHttp = () => {
         if (!resp.ok) {
           throw Error("Coś poszło nie tak...");
         } else {
-          console.log("resp", resp);
           returnData(resp.ok);
           return resp.json();
         }
@@ -32,7 +31,6 @@ const useHttp = () => {
         setIsLoading(false);
       })
       .catch(err => {
-    
         setError(err);
         setIsLoading(false);
       });
