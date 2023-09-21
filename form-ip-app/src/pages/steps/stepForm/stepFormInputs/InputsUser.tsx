@@ -40,9 +40,12 @@ const InputsUser = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               size="small"
-              sx={{"& .MuiInputBase-input":{
-                color:"info.main"
-              }}}
+              sx={{
+                "& .MuiInputBase-input": {
+                  color: "info.main",
+                },
+              }}
+              autoFocus={idx === 0 ? true : false}
             />
 
             <InputsErrors value={value} formik={formik} />

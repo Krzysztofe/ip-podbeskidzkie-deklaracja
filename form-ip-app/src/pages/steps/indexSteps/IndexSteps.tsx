@@ -35,13 +35,6 @@ const IndexSteps = () => {
           sm: "calc(100% - 90px - 72px)",
         };
 
-  const translate =
-    currentStepIdx === 0
-      ? "translate(0)"
-      : currentStepIdx === 1
-      ? "translate(-100%)"
-      : "translate(-200%)";
-
   return (
     <>
       <header>
@@ -51,7 +44,6 @@ const IndexSteps = () => {
             position: "fixed",
             top: 0,
             left: "50%",
-            right: "50%",
             transform: "translate(-50%)",
             display: "flex",
             alignItems: "center",
@@ -85,7 +77,7 @@ const IndexSteps = () => {
                   height: height,
                   display: "grid",
                   gridTemplateColumns: "repeat(3, 100%)",
-                  transform: translate,
+                  transform: `translate(-${currentStepIdx}00%)`,
                   transition: "transform 0.5s ease",
                 }}
               >
@@ -93,7 +85,7 @@ const IndexSteps = () => {
                   return (
                     <Box
                       key={idx}
-                      // ref={scrollBoxRef}
+                      ref={scrollBoxRef}
                       sx={{
                         overflowY: "auto",
                         px: 1.6,

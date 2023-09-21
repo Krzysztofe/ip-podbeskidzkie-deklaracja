@@ -8,7 +8,7 @@ import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
 
 const StepClauseForm = () => {
-  const { formikClause } = useContext(StepsContext);
+  const { formikClause, currentStepIdx } = useContext(StepsContext);
 
   return (
     <>

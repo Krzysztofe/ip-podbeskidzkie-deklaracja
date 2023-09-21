@@ -19,7 +19,7 @@ const ButtonReturn = () => {
             mt: { xs: 1, sm: 0 },
           }}
         >
-          Wstecz
+          Wróć
         </Button>
       )}
     </>

@@ -24,26 +24,20 @@ const StepConfirmationParagraphs = () => {
   return (
     <article>
       <Typography {...typographyProps} sx={{ marginBlock: { xs: 3 } }}>
-        Jeżeli nasza Komisja nie postanowi inaczej, datą przyjęcia Ciebie do
-        związku będzie:
-      </Typography>
-      <Typography {...typographyProps}>
-        <strong> 1) </strong> ostatni dzień miesiąca, w którym oświadczenie to
-        zostało doręczone:
+        {" "}
+        Datą przystąpienia do związku osoby, która oświadczy przy użyciu środków
+        komunikacji elektronicznej wolę wstąpienia do związku jest:
       </Typography>
       <Typography {...typographyProps} sx={{ ml: 3, marginBlock: 1.6 }}>
-        <strong>a)</strong> członkowi prezydium organizacji podstawowej Związku
-        (również poprzez odebranie ze skrzynki pocztowej na tablicy związkowej)
-        <br />
-        <strong>b)</strong> bezpośrednio osobie działającej z upoważnienia
-        prezydium Komisji <br />
-        <strong>c)</strong> na ujawniony w KRS adres Związku (aktualnie: ul.
-        Kościelna 4/1a, 60-538 Poznań)
-        <br />
+        <strong> a) </strong> ostatni dzień miesiąca, w którym oświadczenie to
+        zostało wprowadzone do systemu teleinformatycznego w taki sposób by
+        członkowie prezydium organizacji podstawowych lub osoby działające w
+        imieniu prezydium mogły się z nimi zapoznać,
       </Typography>
-      <Typography {...typographyProps}>
-        <strong>2)</strong> dzień, w którym po otrzymaniu tego oświadczenia
-        prezydium Komisji podjęło się Twojej obrony wobec podmiotu
+      <Typography {...typographyProps} sx={{ ml: 3, marginBlock: 1.6 }}>
+        <strong>b)</strong> dzień, w którym po wprowadzeniu tego oświadczenia (
+        w sposób wskazany w lit. a) prezydium podstawowej jednostki
+        organizacyjnej związku podjęło się jej obrony wobec podmiotu
         zatrudniającego (w tym pracodawcy).
       </Typography>
     </article>
