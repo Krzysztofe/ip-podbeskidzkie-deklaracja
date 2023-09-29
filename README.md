@@ -31,7 +31,7 @@ react-router, react-router-dom, <br/>
 formik, yup, <br/>
 
 
-## Production version in tests mode deployed on home.pl <a href = "http://ankieta.ozzip.pl/"> here --> </a>
+## Production version in tests mode deployed on home.pl <a href = "https://deklaracja.ozzip.pl/"> here --> </a>
 
 ## Desktop
 <div align="center">
