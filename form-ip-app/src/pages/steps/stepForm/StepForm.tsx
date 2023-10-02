@@ -9,7 +9,6 @@ import InputsWorkplace from "./stepFormInputs/InputsWorkplace";
 import InputsWorktime from "./stepFormInputs/InputsWorktime";
 import { v4 as UUID } from "uuid";
 
-
 const StepForm = () => {
   const dataInputs = [
     <InputsUser />,
@@ -17,8 +16,8 @@ const StepForm = () => {
     <InputsWorkplace />,
     <InputsContract />,
     <InputsWorktime />,
-    <InputsDepartment />,
     <InputsMembership />,
+    <InputsDepartment />,
   ];
 
   return (

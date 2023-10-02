@@ -14,7 +14,7 @@ export const dataBanksList = [
   },
   {
     img: <ImgPekaoMobile />,
-    link: "https://www.ing.pl/",
+    link: "https://www.pekao.com.pl/",
   },
   {
     img: <ImgMilleniumMobile />,
@@ -26,18 +26,18 @@ export const dataBanksList = [
   },
   {
     img: <ImgAliorMobile />,
-    link: "https://www.santander.pl/klient-indywidualny",
+    link: "https://www.aliorbank.pl/",
   },
   {
     img: <ImgCreditMobile />,
-    link: "https://www.santander.pl/klient-indywidualny",
+    link: "https://www.credit-agricole.pl/klienci-indywidualni",
   },
   {
     img: <ImgMbankMobile />,
-    link: "https://www.santander.pl/klient-indywidualny",
+    link: "https://www.mbank.pl/indywidualny/",
   },
   {
     img: <ImgPkoMobile />,
-    link: "https://www.santander.pl/klient-indywidualny",
+    link: "https://www.pkobp.pl/",
   },
 ];

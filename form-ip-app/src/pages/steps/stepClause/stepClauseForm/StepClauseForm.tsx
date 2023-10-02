@@ -1,5 +1,5 @@
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -8,7 +8,7 @@ import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
 
 const StepClauseForm = () => {
-  const { formikClause, currentStepIdx } = useContext(StepsContext);
+  const { formikClause } = useContext(StepsContext);
 
   return (
     <>
@@ -29,9 +29,16 @@ const StepClauseForm = () => {
         <FormControlLabel
           control={
             <Checkbox
-              checkedIcon={<CheckCircleOutlineIcon />}
-              icon={<HighlightOffIcon />}
-              sx={{ "&:hover": { boxShadow: 2 } }}
+              checkedIcon={
+                <CheckCircleOutlineIcon sx={{ color: "info.dark" }} />
+              }
+              icon={<RadioButtonUncheckedIcon />}
+              sx={{
+                "&:hover": { boxShadow: 2 },
+                color: formikClause.values.confirmation
+                  ? "main.dark"
+                  : "primary.main",
+              }}
             />
           }
           name="confirmation"
@@ -41,8 +48,8 @@ const StepClauseForm = () => {
           sx={{
             "& .MuiFormControlLabel-label": {
               color: formikClause.values.confirmation
-                ? "primary.main"
-                : "main.dark",
+                ? "main.dark"
+                : "primary.main",
               fontSize: theme => theme.typography.fs_12_rg,
             },
           }}

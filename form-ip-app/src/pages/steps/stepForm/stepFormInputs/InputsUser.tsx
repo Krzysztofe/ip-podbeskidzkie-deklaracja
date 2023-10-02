@@ -11,10 +11,16 @@ const InputsUser = () => {
   const dataTextInputs = [
     { label: "Imię", value: "name", type: "text" },
     { label: "Nazwisko", value: "surname", type: "text" },
-    { label: "Adres", value: "address", type: "text" },
+    { label: "Miasto zamieszkania", value: "city", type: "text" },
+    { label: "Ulica", value: "street", type: "text" },
+    { label: "Nr mieszkania", value: "apartmentNumber", type: "text" },
+    { label: "Kod pocztowy", value: "postCode", type: "text" },
     { label: "Telefon", value: "phone", type: "tel" },
     { label: "E-mail", value: "email", type: "email" },
+    { label: "Login", value: "login", type: "text" },
   ];
+
+  console.log("", formik.errors);
 
   return (
     <>

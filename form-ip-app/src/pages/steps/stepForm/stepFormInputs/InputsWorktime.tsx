@@ -7,19 +7,44 @@ import { useContext } from "react";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
+import TextField from "@mui/material/TextField";
 
 const InputsWorktime = () => {
   const { formik } = useContext(StepsContext);
 
+  const handleWorkTimeChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    formik.handleChange(event);
+    if (event.target.value !== "") {
+      formik.setErrors({ worktime: "", workTimeOther: "" });
+      await formik.validateForm();
+      formik.setFieldValue("workTimeOther", "");
+    }
+  };
+
+  const handleWorkTimeOtherChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    formik.handleChange(event);
+    if (event.target.value !== "") {
+      formik.setErrors({ worktime: "", workTimeOther: "" });
+      await formik.validateForm();
+      formik.setFieldValue("worktime", "");
+    }
+  };
+
+  console.log("", formik.values);
+
   return (
     <>
       <HeadingPrimary headingText={"Wymiar czasu pracy:"} />
-      
+
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name="worktime"
           value={formik.values.worktime}
-          onChange={formik.handleChange}
+          onChange={handleWorkTimeChange}
           onBlur={formik.handleBlur}
           sx={{
             width: { xs: "80%", sm: "60%" },
@@ -47,16 +72,44 @@ const InputsWorktime = () => {
             );
           })}
         </RadioGroup>
+
         <Box
+          sx={{
+            maxWidth: "24rem",
+            width: { xs: "80%", sm: "60%" },
+            marginInline: "auto",
+            ml: { xs: "auto", sm: "40%" },
+          }}
+        >
+          <TextField
+            type={"text"}
+            name={"workTimeOther"}
+            label={"Inny"}
+            value={formik.values.workTimeOther}
+            onChange={handleWorkTimeOtherChange}
+            onBlur={formik.handleBlur}
+            size="small"
+            sx={{ width: "100%" }}
+          />
+
+          <InputsErrors
+            value={"workTimeOther"}
+            otherValue={"workTimeOther"}
+            formik={formik}
+          />
+        </Box>
+
+        {/* <Box
           sx={{
             width: { xs: "80%", sm: "60%" },
             marginInline: "auto",
             marginLeft: { xs: "auto", sm: "40%" },
             mt: 1,
+            pl:0.5
           }}
         >
           <InputsErrors formik={formik} value={"worktime"} />
-        </Box>
+        </Box> */}
       </FormControl>
     </>
   );

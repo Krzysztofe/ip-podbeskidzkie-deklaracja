@@ -10,8 +10,16 @@ const StepFormHeader = () => {
         do OZZIP Amazon
       </Typography>
 
-      <HeadingPrimary headingText={"Wypełnij formulaż"} />
+      <HeadingPrimary headingText={"Wypełnij formularz"} />
 
+      <Typography
+        variant="fs_12_sb"
+        component="p"
+        color="info.dark"
+        sx={{ mt: { xs: 3.9, sm: 2 } }}
+      >
+       Przekazane dane są wyłącznie do wiadomości OZZIP Amazon
+      </Typography>
       <Typography
         variant="fs_12_sb"
         component="p"
@@ -21,7 +29,8 @@ const StepFormHeader = () => {
         DEKLARACJA
       </Typography>
       <Typography variant="fs_12_rg" color="info.dark">
-        Ja, niżej wskazany/wskazana oświadczam, iż przystępuję do Ogólnopolskiego Związku Zawodowego „Inicjatywa Pracownicza” z siedzibą w
+        Ja, niżej wskazany/wskazana oświadczam, iż przystępuję do
+        Ogólnopolskiego Związku Zawodowego „Inicjatywa Pracownicza” z siedzibą w
         Poznaniu (KRS nr 0000215247).
       </Typography>
     </Box>

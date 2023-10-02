@@ -83,12 +83,6 @@ export const theme = createTheme({
       main: "#797979",
       light: "#E2E2E2",
     },
-
-    // common: {
-    //   white: {
-    //     main: "#FFFFFF",
-    //   },
-    // },
   },
 
   spacing: 10,
@@ -97,7 +91,7 @@ export const theme = createTheme({
     fontFamily: ["Poppins", "sans-serif"].join(","),
 
     h1: {
-      fontSize: "2rem",
+      fontSize: "32px",
       fontWeight: 500,
     },
 
@@ -107,56 +101,56 @@ export const theme = createTheme({
     },
 
     fs_12_sb: {
-      fontSize: "0.625rem",
+      fontSize: "10px",
       fontWeight: 600,
       fontFamily: ["Poppins", "sans-serif"].join(","),
       "@media (min-width:500px)": {
-        fontSize: "0.75rem",
+        fontSize: "12px",
       },
     },
 
     fs_12_rg: {
-      fontSize: "0.625rem",
+      fontSize: "10px",
       fontWeight: 400,
       fontFamily: ["Poppins", "sans-serif"].join(","),
       "@media (min-width:500px)": {
-        fontSize: "0.75rem",
+        fontSize: "12px",
       },
     },
 
     fs_14_sb: {
-      fontSize: "0.687rem",
+      fontSize: "11px",
       fontWeight: 600,
       fontFamily: ["Poppins", "sans-serif"].join(","),
       "@media (min-width:500px)": {
-        fontSize: "0.875rem",
+        fontSize: "14px",
       },
     },
 
     fs_14_rg: {
-      fontSize: "0.687rem",
+      fontSize: "11px",
       fontWeight: 400,
       fontFamily: ["Poppins", "sans-serif"].join(","),
       "@media (min-width:500px)": {
-        fontSize: "0.875rem",
+        fontSize: "14px",
       },
     },
 
     fs_16_rg: {
-      fontSize: "0.875rem",
+      fontSize: "14px",
       fontWeight: 400,
       fontFamily: ["Poppins", "sans-serif"].join(","),
       "@media (min-width:500px)": {
-        fontSize: "1rem",
+        fontSize: "16px",
       },
     },
 
     fs_16_sb: {
-      fontSize: "0.875rem",
+      fontSize: "14px",
       fontWeight: 600,
       fontFamily: ["Poppins", "sans-serif"].join(","),
       "@media (min-width:500px)": {
-        fontSize: "1rem",
+        fontSize: "16px",
       },
     },
   },
@@ -170,4 +164,5 @@ export const theme = createTheme({
       xl: 1400,
     },
   },
+  components: {},
 });

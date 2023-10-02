@@ -34,7 +34,7 @@ const StepFormAlert = () => {
           height: "fit-content",
         }}
       >
-        Wypełnij pola formulaża
+        Wypełnij pola formularza
       </Alert>
     </Box>
   );

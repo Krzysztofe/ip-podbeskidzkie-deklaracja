@@ -6,7 +6,7 @@ import StepsHeaderNumber from "./StepsHeaderNumber";
 import StepsHeaderText from "./StepsHeaderText";
 
 const StepsHeader = () => {
-  const dataSteps = ["Formulaż", "Klauzula", "Wyślij", "Potwierdzenie"];
+  const dataSteps = ["Formularz", "Klauzula", "Wyślij", "Potwierdzenie"];
 
   return (
     <>

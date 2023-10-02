@@ -7,11 +7,12 @@ const phoneRegex = /^[0-9]{6,}$/;
 export const validationSchema = yup.object({
   name: validation,
   surname: validation,
-  address: validation,
-  phone: yup.string()
+  city: validation,
+  phone: yup
+    .string()
     .required(errMsg)
     .matches(phoneRegex, "Podaj poprawny numer telefonu")
-    .min(6, "Min. 6 znaków"),
+    .min(9, "Min. 9 znaków"),
   email: yup.string().required(errMsg).email("Podaj poprawny email"),
   employer: yup.string().test("oneOfRequired", errMsg, function (item) {
     return this.parent.employer || this.parent.employerOther;
@@ -27,8 +28,12 @@ export const validationSchema = yup.object({
     return this.parent.workplace || this.parent.workplaceOther;
   }),
   contract: validation,
-  worktime: validation,
-  department: validation,
+  worktime: yup.string().test("oneOfRequired", errMsg, function (item) {
+    return this.parent.worktime || this.parent.workTimeOther;
+  }),
+  workTimeOther: yup.string().test("oneOfRequired", errMsg, function (item) {
+    return this.parent.worktime || this.parent.workTimeOther;
+  }),
   login: validation,
   membership: validation,
 });

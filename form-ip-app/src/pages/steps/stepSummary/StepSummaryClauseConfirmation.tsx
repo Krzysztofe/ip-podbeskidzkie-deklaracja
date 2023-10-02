@@ -8,9 +8,11 @@ const StepSummaryClauseConfirmation = () => {
       color="info.dark"
       sx={{
         textAlign: "center",
-        mt: 1,
+        my: 1,
         maxWidth: 300,
         marginInline: "auto",
+        border: 1,
+        p:1
       }}
     >
       Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetważanie

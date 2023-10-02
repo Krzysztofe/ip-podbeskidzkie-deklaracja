@@ -14,7 +14,7 @@ const StepConfirmationBanksList = () => {
         maxWidth: "500px",
         width: "100%",
         mx: "auto",
-        display:"grid",
+        display: "grid",
         gridTemplateColumns: windowWidth < 400 ? "50% 50%" : "repeat(4, 25%)",
       }}
     >
@@ -28,6 +28,8 @@ const StepConfirmationBanksList = () => {
                 borderColor: "info.light",
                 m: { xs: 0.3, sm: 0.8 },
                 p: { xs: "5%", sm: "10%" },
+                "&:hover": { bgcolor: "rgba(0,0,0,0.1)" },
+               
               }}
             >
               <Link

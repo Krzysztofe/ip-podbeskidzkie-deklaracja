@@ -37,7 +37,7 @@ const InputsWorkplace = () => {
   return (
     <>
       <HeadingPrimary headingText={"Miejsce Pracy:"} />
-      
+
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name="workplace"
@@ -51,26 +51,39 @@ const InputsWorkplace = () => {
             mt: { xs: 4.2, sm: 5.9 },
           }}
         >
-          {["poz1","poz2", "wro1", "wro2", "wro5", "lcj", "ktw1", "ktw3", "szzl"].map(
-            workplace => {
-              return (
-                <FormControlLabel
-                  key={workplace}
-                  value={workplace}
-                  control={<Radio />}
-                  label={workplace}
-                  sx={{
-                    ml: -1,
-                    "& .MuiFormControlLabel-label": {
-                      mr: 1,
-                      color: "info.dark",
-                      fontSize: theme => theme.typography.fs_16_rg,
-                    },
-                  }}
-                />
-              );
-            }
-          )}
+          {[
+            "poz1",
+            "poz2",
+            "wro1",
+            "wro2",
+            "wro4",
+            "wro5",
+            "lcj",
+            "lcj2",
+            "lcj3",
+            "lcj4",
+            "ktw1",
+            "ktw3",
+            "ktw4",
+            "szzl",
+          ].map(workplace => {
+            return (
+              <FormControlLabel
+                key={workplace}
+                value={workplace}
+                control={<Radio />}
+                label={workplace}
+                sx={{
+                  ml: -1,
+                  "& .MuiFormControlLabel-label": {
+                    mr: 1,
+                    color: "info.dark",
+                    fontSize: theme => theme.typography.fs_16_rg,
+                  },
+                }}
+              />
+            );
+          })}
         </RadioGroup>
 
         <Box
