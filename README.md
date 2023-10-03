@@ -35,26 +35,36 @@ formik, yup, <br/>
 
 ## Desktop
 <div align="center">
- <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/b6f58d47-d8d2-452a-a8c6-e3d0a8552fd6" width: = "20%"  alt="Mobile Screenshot"> 
+ <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/47041a81-ef2d-4c31-b212-cc473a80b621" width: = "20%"  alt="Mobile Screenshot"> 
 
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/f0d64899-f842-4d2a-9ddd-059352737b3a"  width: = "20%" alt="Mobile Screenshot">
 
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/a6b05d1e-29a0-4687-b07d-58cfddee68bf"  width: = "20%" alt="Mobile Screenshot">
 
 </div>
 
 ## Mobile
 
 <div align="center">
- <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/422c3da2-94d0-4c1b-9b71-f4c60a29ee3a" width: = "40%"  alt="Mobile Screenshot"> 
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/7d27c0bd-3459-459f-b428-82c05b34886d"  width: = "40%" alt="Mobile Screenshot">
+ <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/78b70c68-3143-491b-84f3-1405d1d0bea7" width: = "40%"  alt="Mobile Screenshot"> 
+
+
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/d2e4cd2c-52a2-43d7-81f6-a2d71c67ea10"  width: = "40%" alt="Mobile Screenshot">
 </div>
+
 
 
 &nbsp;
 <div align="center">
 
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/c52e776f-d200-4dd4-92ca-10454fb245ea"  width: = "40%" alt="Mobile Screenshot">
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/0ac85586-eeb7-4000-9eeb-7884e7dee2c1"  width: = "40%" alt="Mobile Screenshot">
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/1fb32cef-53e2-4a48-b509-248d08273a58"  width: = "40%" alt="Mobile Screenshot">
+
+
+
+
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/ebc7833b-1fc9-46e4-b9f8-7977669e187d"  width: = "40%" alt="Mobile Screenshot">
+
+
+
 
 </div>
 
