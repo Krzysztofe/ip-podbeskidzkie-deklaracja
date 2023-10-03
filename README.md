@@ -35,10 +35,10 @@ formik, yup, <br/>
 
 ## Desktop
 <div align="center">
- <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/b6f58d47-d8d2-452a-a8c6-e3d0a8552fd6" width: = "20%"  alt="Mobile Screenshot"> 
+ <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/47041a81-ef2d-4c31-b212-cc473a80b621" width: = "20%"  alt="Mobile Screenshot"> 
 
-<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/f0d64899-f842-4d2a-9ddd-059352737b3a"  width: = "20%" alt="Mobile Screenshot">
 
+<img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/a6b05d1e-29a0-4687-b07d-58cfddee68bf"  width: = "20%" alt="Mobile Screenshot">
 
 </div>
 
