@@ -1,7 +1,7 @@
-import React from "react";
+
 import useWindowWidth from "../hooks/useWindowWidth";
 
-const ImgPekaoMobile = () => {
+const ImgPekao = () => {
   const { windowWidth } = useWindowWidth();
 
   return (
@@ -135,4 +135,4 @@ const ImgPekaoMobile = () => {
   );
 };
 
-export default ImgPekaoMobile;
+export default ImgPekao;

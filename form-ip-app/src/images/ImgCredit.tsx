@@ -1,6 +1,6 @@
-import React from "react";
 
-const ImgCreditMobile = () => {
+
+const ImgCredit = () => {
   return (
     <svg
       id="Credit_Agricole_mobile"
@@ -181,4 +181,4 @@ const ImgCreditMobile = () => {
   );
 };
 
-export default ImgCreditMobile;
+export default ImgCredit;

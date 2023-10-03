@@ -1,12 +1,8 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { currentDateInNumbers } from "../../../utils/currentDateInNumbers";
 
-const StepSummaryCurrentDate = () => {
-  const currentDate = new Date();
-  const day = currentDate.getDate();
-  const month = currentDate.getMonth() + 1;
-  const year = currentDate.getFullYear();
-
+const StepSummarySubmitDate = () => {
   return (
     <Box sx={{ display: { xs: "block", md: "flex" } }}>
       <Typography
@@ -29,10 +25,10 @@ const StepSummaryCurrentDate = () => {
           textAlign: { xs: "center", md: "left" },
         }}
       >
-        {day}.&nbsp;{month}.&nbsp;{year}
+        {currentDateInNumbers()}
       </Typography>
     </Box>
   );
 };
 
-export default StepSummaryCurrentDate;
+export default StepSummarySubmitDate;

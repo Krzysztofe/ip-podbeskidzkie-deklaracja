@@ -1,7 +1,7 @@
-import React from "react";
+
 import useWindowWidth from "../hooks/useWindowWidth";
 
-const ImgPkoMobile = () => {
+const ImgPko = () => {
   const { windowWidth } = useWindowWidth();
 
   return (
@@ -62,4 +62,4 @@ const ImgPkoMobile = () => {
   );
 };
 
-export default ImgPkoMobile;
+export default ImgPko;

@@ -1,43 +1,43 @@
-import ImgMbankMobile from "../../../images/ImgMbankMobile";
-import ImgIngMobile from "../../../images/ImgIngMobile";
-import ImgPekaoMobile from "../../../images/ImgPekaoMobile";
-import ImgAliorMobile from "../../../images/ImgAliorMobile";
-import ImgCreditMobile from "../../../images/ImgCreditMobile";
-import ImgMilleniumMobile from "../../../images/ImgMilleniumMobile";
-import ImgPkoMobile from "../../../images/ImgPkoMobile";
-import ImgSantanderMobile from "../../../images/ImgSantanderMobile";
+import ImgMbank from "../../../images/ImgMbank";
+import ImgIng from "../../../images/ImgIng";
+import ImgPekao from "../../../images/ImgPekao";
+import ImgAlior from "../../../images/ImgAlior";
+import ImgCredit from "../../../images/ImgCredit";
+import ImgMillenium from "../../../images/ImgMillenium";
+import ImgPko from "../../../images/ImgPko";
+import ImgSantander from "../../../images/ImgSantander";
 
 export const dataBanksList = [
   {
-    img: <ImgIngMobile />,
+    img: <ImgIng />,
     link: "https://www.ing.pl/",
   },
   {
-    img: <ImgPekaoMobile />,
+    img: <ImgPekao />,
     link: "https://www.pekao.com.pl/",
   },
   {
-    img: <ImgMilleniumMobile />,
+    img: <ImgMillenium />,
     link: "https://www.bankmillennium.pl/",
   },
   {
-    img: <ImgSantanderMobile />,
+    img: <ImgSantander />,
     link: "https://www.santander.pl/klient-indywidualny",
   },
   {
-    img: <ImgAliorMobile />,
+    img: <ImgAlior />,
     link: "https://www.aliorbank.pl/",
   },
   {
-    img: <ImgCreditMobile />,
+    img: <ImgCredit />,
     link: "https://www.credit-agricole.pl/klienci-indywidualni",
   },
   {
-    img: <ImgMbankMobile />,
+    img: <ImgMbank />,
     link: "https://www.mbank.pl/indywidualny/",
   },
   {
-    img: <ImgPkoMobile />,
+    img: <ImgPko />,
     link: "https://www.pkobp.pl/",
   },
 ];

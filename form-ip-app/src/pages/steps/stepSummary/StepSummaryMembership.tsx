@@ -6,10 +6,27 @@ import { StepsContext } from "../../../context/ContextProv";
 const StepSummaryMembership = () => {
   const { formik } = useContext(StepsContext);
 
-  const formikValue = Object.values(formik.values).slice(-1);
+  const formikValue = Object.values(formik.values).slice(-2, -1);
 
   return (
-    <Box sx={{ display: { xs: "block", md: "flex" } }}>
+    <Box
+      sx={{
+        display: { xs: "block", md: "flex" },
+        mb: 2,
+        position: "relative",
+        "&::after": {
+          content: "''",
+          position: "absolute",
+          bottom: "-10px",
+          right: "50%",
+          left: "50%",
+          transform: "translate(-50%)",
+          width: "40%",
+          height: "1px",
+          backgroundColor: "info.main",
+        },
+      }}
+    >
       <Typography
         variant="fs_16_sb"
         component="p"

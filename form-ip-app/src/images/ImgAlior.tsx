@@ -1,7 +1,7 @@
-import React from "react";
+
 import useWindowWidth from "../hooks/useWindowWidth";
 
-const ImgAliorMobile = () => {
+const ImgAlior = () => {
   const { windowWidth } = useWindowWidth();
 
   return (
@@ -229,4 +229,4 @@ const ImgAliorMobile = () => {
   );
 };
 
-export default ImgAliorMobile;
+export default ImgAlior;

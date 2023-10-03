@@ -13,11 +13,22 @@ const IndexSteps = () => {
 
   const scrollBoxRef = useRef(null);
 
-  useEffect(() => {
-    if (scrollBoxRef.current) {
-      (scrollBoxRef.current as HTMLDivElement).scrollTop = 0;
-    }
-  }, [currentStepIdx]);
+  // useEffect(() => {
+  //   if (scrollBoxRef.current) {
+  //     (scrollBoxRef.current as HTMLDivElement).scrollTop = 0;
+  //     console.log("yy", (scrollBoxRef.current as HTMLDivElement).scrollTop);
+  //   }
+  // }, [currentStepIdx]);
+
+  const scrollBoxRefs = steps.map(() => scrollBoxRef.current);
+
+  //   useEffect(() => {
+  //     if (scrollBoxRefs[currentStepIdx]?.current) {
+  //       scrollBoxRefs[currentStepIdx].current.scrollTop = 0
+  //     }
+  //   }, [currentStepIdx]);
+
+  console.log("",formik.values);
 
   const formSubmit =
     currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;

@@ -1,7 +1,7 @@
 import React from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
 
-const ImgMilleniumMobile = () => {
+const ImgMillenium = () => {
   const { windowWidth } = useWindowWidth();
 
   return (
@@ -65,4 +65,4 @@ const ImgMilleniumMobile = () => {
   );
 };
 
-export default ImgMilleniumMobile;
+export default ImgMillenium;

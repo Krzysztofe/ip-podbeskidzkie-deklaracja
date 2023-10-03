@@ -1,9 +1,9 @@
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
 import { useContext } from "react";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
-
 
 const InputsDepartment = () => {
   const { formik } = useContext(StepsContext);
@@ -31,6 +31,7 @@ const InputsDepartment = () => {
           onBlur={formik.handleBlur}
           size="small"
         />
+        <Box sx={{ height: "25px" }}></Box>
       </FormGroup>
     </>
   );

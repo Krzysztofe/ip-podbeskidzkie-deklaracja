@@ -1,7 +1,6 @@
-import React from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
 
-const ImgMbankMobile = () => {
+const ImgMbank = () => {
   const { windowWidth } = useWindowWidth();
 
   return (
@@ -104,4 +103,4 @@ const ImgMbankMobile = () => {
   );
 };
 
-export default ImgMbankMobile;
+export default ImgMbank;

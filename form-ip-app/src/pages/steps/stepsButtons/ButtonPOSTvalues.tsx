@@ -3,6 +3,7 @@ import { StepsContext } from "../../../context/ContextProv";
 import Button from "@mui/material/Button";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import { URL } from "../../../data/dataURL";
+import { currentDateInNumbers } from "../../../utils/currentDateInNumbers";
 
 const ButtonPOSTvalues = () => {
   const { formik, sendRequest, isCaptcha, setIsCaptcha, currentStepIdx, next } =
@@ -25,7 +26,9 @@ const ButtonPOSTvalues = () => {
       sendRequest(
         {
           url: URL,
-          body: { member: formik.values },
+          body: {
+            member: { ...formik.values, submitDate: currentDateInNumbers() },
+          },
           method: "POST",
         },
         setResponseStatus
@@ -41,7 +44,7 @@ const ButtonPOSTvalues = () => {
           onClick={() => {
             currentStepIdx < 2 && next();
             // isCaptcha && handlePOST();
-            handlePOST()
+            handlePOST();
           }}
           endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
           sx={{

@@ -6,7 +6,7 @@ import HeadingPrimary from "../../../components/HeadingPrimary";
 import { StepsContext } from "../../../context/ContextProv";
 import StepSummaryClauseConfirmation from "./StepSummaryClauseConfirmation";
 import StepSummaryMembership from "./StepSummaryMembership";
-import StepSummaryCurrentDate from "./StepSummaryCurrentDate";
+import StepSummarySubmitDate from "./StepSummarySubmitDate";
 
 const StepSummary = () => {
   const { formik } = useContext(StepsContext);
@@ -16,13 +16,13 @@ const StepSummary = () => {
   const dataSummary = [
     "Imię",
     "Nazwisko",
+    "Telefon",
+    "E-mail",
+    "Login",
     "Miasto",
     "Ulica",
     "Nr mieszkania",
     "Kod",
-    "Telefon",
-    "E-mail",
-    "Login",
     "Pracodawca",
     "Pracodawca",
     "Miejsce Pracy",
@@ -47,10 +47,10 @@ const StepSummary = () => {
                 <Box
                   sx={{
                     display: "flex",
-                    mb: idx === 8 ? 2 : 0,
+                    mb: idx === 4 || idx === 8 ? 2 : 0,
                     position: "relative",
                     "&::after":
-                      idx === 8
+                      idx === 4 || idx === 8
                         ? {
                             content: "''",
                             position: "absolute",
@@ -92,8 +92,9 @@ const StepSummary = () => {
             </Box>
           );
         })}
+
         <StepSummaryMembership />
-        <StepSummaryCurrentDate />
+        <StepSummarySubmitDate />
         <StepSummaryClauseConfirmation />
       </Box>
     </Box>

@@ -6,12 +6,13 @@ import InputsEployer from "./stepFormInputs/InputsEmployer";
 import InputsMembership from "./stepFormInputs/InputsMembership";
 import InputsUser from "./stepFormInputs/InputsUser";
 import InputsWorkplace from "./stepFormInputs/InputsWorkplace";
-import InputsWorktime from "./stepFormInputs/InputsWorktime";
-import { v4 as UUID } from "uuid";
+import InputsWorktime from "./stepFormInputs/InputsWorkTime";
+import InputsAdress from "./stepFormInputs/InputsAdress";
 
 const StepForm = () => {
   const dataInputs = [
     <InputsUser />,
+    <InputsAdress/>,
     <InputsEployer />,
     <InputsWorkplace />,
     <InputsContract />,

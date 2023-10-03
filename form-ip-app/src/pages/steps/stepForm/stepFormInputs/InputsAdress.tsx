@@ -1,25 +1,24 @@
+import { useContext } from "react";
+import { StepsContext } from "../../../../context/ContextProv";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
+import InputsErrors from "./InputsErrors";
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
-import { useContext } from "react";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
-import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "./InputsErrors";
 
-const InputsUser = () => {
+const InputsAdress = () => {
   const { formik } = useContext(StepsContext);
 
-  const dataTextInputs = [
-    { label: "Imię", value: "name", type: "text" },
-    { label: "Nazwisko", value: "surname", type: "text" },
-    { label: "Telefon", value: "phone", type: "tel" },
-    { label: "E-mail", value: "email", type: "email" },
-    { label: "Login", value: "login", type: "text" },
+  const dataAdressInputs = [
+    { label: "Miasto", value: "city", type: "text" },
+    { label: "Ulica", value: "street", type: "text" },
+    { label: "Nr mieszkania", value: "apartmentNumber", type: "text" },
+    { label: "Kod pocztowy", value: "postCode", type: "text" },
   ];
 
   return (
     <>
-      <HeadingPrimary headingText={"Twoje dane:"} />
-      {dataTextInputs.map(({ label, value, type }, idx) => {
+      <HeadingPrimary headingText={"Twój adres:"} />
+      {dataAdressInputs.map(({ label, value, type }, idx) => {
         return (
           <FormGroup
             key={label}
@@ -45,7 +44,6 @@ const InputsUser = () => {
                   color: "info.main",
                 },
               }}
-              autoFocus={idx === 0 ? true : false}
             />
 
             <InputsErrors value={value} formik={formik} />
@@ -56,4 +54,4 @@ const InputsUser = () => {
   );
 };
 
-export default InputsUser;
+export default InputsAdress;

@@ -9,7 +9,7 @@ import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
 import TextField from "@mui/material/TextField";
 
-const InputsWorktime = () => {
+const InputsWorkTime = () => {
   const { formik } = useContext(StepsContext);
 
   const handleWorkTimeChange = async (
@@ -17,7 +17,7 @@ const InputsWorktime = () => {
   ) => {
     formik.handleChange(event);
     if (event.target.value !== "") {
-      formik.setErrors({ worktime: "", workTimeOther: "" });
+      formik.setErrors({ workTime: "", workTimeOther: "" });
       await formik.validateForm();
       formik.setFieldValue("workTimeOther", "");
     }
@@ -28,13 +28,11 @@ const InputsWorktime = () => {
   ) => {
     formik.handleChange(event);
     if (event.target.value !== "") {
-      formik.setErrors({ worktime: "", workTimeOther: "" });
+      formik.setErrors({ workTime: "", workTimeOther: "" });
       await formik.validateForm();
-      formik.setFieldValue("worktime", "");
+      formik.setFieldValue("workTime", "");
     }
   };
-
-  console.log("", formik.values);
 
   return (
     <>
@@ -42,8 +40,8 @@ const InputsWorktime = () => {
 
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
-          name="worktime"
-          value={formik.values.worktime}
+          name="workTime"
+          value={formik.values.workTime}
           onChange={handleWorkTimeChange}
           onBlur={formik.handleBlur}
           sx={{
@@ -53,13 +51,13 @@ const InputsWorktime = () => {
             mt: { xs: 4.2, sm: 5.9 },
           }}
         >
-          {["Cały etat", "Pół etatu"].map(worktime => {
+          {["Cały etat", "Pół etatu"].map(workTime => {
             return (
               <FormControlLabel
-                key={worktime}
-                value={worktime}
+                key={workTime}
+                value={workTime}
                 control={<Radio sx={{ pl: 0 }} />}
-                label={worktime}
+                label={workTime}
                 sx={{
                   ml: "5px",
                   "& .MuiFormControlLabel-label": {
@@ -98,21 +96,9 @@ const InputsWorktime = () => {
             formik={formik}
           />
         </Box>
-
-        {/* <Box
-          sx={{
-            width: { xs: "80%", sm: "60%" },
-            marginInline: "auto",
-            marginLeft: { xs: "auto", sm: "40%" },
-            mt: 1,
-            pl:0.5
-          }}
-        >
-          <InputsErrors formik={formik} value={"worktime"} />
-        </Box> */}
       </FormControl>
     </>
   );
 };
 
-export default InputsWorktime;
+export default InputsWorkTime;

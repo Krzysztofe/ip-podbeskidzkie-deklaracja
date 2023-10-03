@@ -10,35 +10,35 @@ import StepSummary from "../pages/steps/stepSummary/StepSummary";
 
 type Props = {
   children: React.ReactNode;
-}
+};
 
- type ContextType = {
-   formik: ReturnType<typeof useStepFormFormik>["formik"];
-   formikClause: ReturnType<typeof useStepClauseFormik>["formikClause"];
-   isSubmited: boolean;
-   isConfirmed: boolean;
-   isLoading: boolean;
-   error: any;
-   sendRequest: (
-     requestConfig: any,
-     returnData: React.Dispatch<React.SetStateAction<boolean>>
-   ) => void;
-   isCaptcha: boolean;
-   setIsCaptcha: React.Dispatch<React.SetStateAction<boolean>>;
-   steps: JSX.Element[];
-   currentStepIdx: number;
-   isLastStep: boolean;
-   step: JSX.Element;
-   back: () => void;
-   next: () => void;
- };
+type ContextType = {
+  formik: ReturnType<typeof useStepFormFormik>["formik"];
+  formikClause: ReturnType<typeof useStepClauseFormik>["formikClause"];
+  isSubmited: boolean;
+  isConfirmed: boolean;
+  isLoading: boolean;
+  error: any;
+  sendRequest: (
+    requestConfig: any,
+    returnData: React.Dispatch<React.SetStateAction<boolean>>
+  ) => void;
+  isCaptcha: boolean;
+  setIsCaptcha: React.Dispatch<React.SetStateAction<boolean>>;
+  steps: JSX.Element[];
+  currentStepIdx: number;
+  isLastStep: boolean;
+  step: JSX.Element;
+  back: () => void;
+  next: () => void;
+};
 
 export const StepsContext = createContext<ContextType>({} as ContextType);
 
 const StepsContextProv = (props: Props) => {
   const { formik, isSubmited } = useStepFormFormik();
-  const { isLoading, error, sendRequest } = useHttp();
   const { formikClause, isConfirmed } = useStepClauseFormik();
+  const { isLoading, error, sendRequest } = useHttp();
   const [isCaptcha, setIsCaptcha] = useState(false);
   const { steps, currentStepIdx, step, back, next, isLastStep } =
     useMultistepForm([

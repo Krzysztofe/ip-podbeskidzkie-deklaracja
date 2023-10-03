@@ -1,19 +1,21 @@
 export type InitialValues = {
   name: string;
   surname: string;
+  phone: string;
+  email: string;
+  login: string;
+
   city: string;
   street: string;
   apartmentNumber: string;
   postCode: string;
-  phone: string;
-  email: string;
-  login: string;
+
   employer: string;
   employerOther: string;
   workplace: string;
   workplaceOther: string;
   contract: string;
-  worktime: string;
+  workTime: string;
   workTimeOther: string;
   department: string;
   membership: string;
@@ -22,19 +24,21 @@ export type InitialValues = {
 export const initialValues: InitialValues = {
   name: "",
   surname: "",
+  phone: "",
+  email: "",
+  login: "",
+
   city: "",
   street: "",
   apartmentNumber: "",
   postCode: "",
-  phone: "",
-  email: "",
-  login: "",
+
   employer: "",
   employerOther: "",
   workplace: "",
   workplaceOther: "",
   contract: "",
-  worktime: "",
+  workTime: "",
   workTimeOther: "",
   department: "",
   membership: "",

@@ -1,7 +1,7 @@
-import React from "react";
+
 import useWindowWidth from "../hooks/useWindowWidth";
 
-const ImgSantanderMobile = () => {
+const ImgSantander = () => {
   const { windowWidth } = useWindowWidth();
 
   return (
@@ -54,4 +54,4 @@ const ImgSantanderMobile = () => {
   );
 };
 
-export default ImgSantanderMobile;
+export default ImgSantander;
