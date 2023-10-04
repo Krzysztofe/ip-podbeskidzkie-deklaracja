@@ -28,8 +28,6 @@ const IndexSteps = () => {
   //     }
   //   }, [currentStepIdx]);
 
-  console.log("",formik.values);
-
   const formSubmit =
     currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
 

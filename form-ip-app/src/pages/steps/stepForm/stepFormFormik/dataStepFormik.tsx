@@ -7,6 +7,7 @@ export type InitialValues = {
 
   city: string;
   street: string;
+  houseNumber: string;
   apartmentNumber: string;
   postCode: string;
 
@@ -30,6 +31,7 @@ export const initialValues: InitialValues = {
 
   city: "",
   street: "",
+  houseNumber: "",
   apartmentNumber: "",
   postCode: "",
 

@@ -8,16 +8,23 @@ import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
 
-const InputsContract = () => {
+type Props = {
+  headingText: string;
+  inputsData: string[];
+  inputValue: string;
+  membership?: boolean;
+};
+
+const InputsRadio = (props: Props) => {
   const { formik } = useContext(StepsContext);
 
   return (
     <>
-      <HeadingPrimary headingText={"Umowa:"} />
+      <HeadingPrimary headingText={props.headingText} />
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
-          name="contract"
-          value={formik.values.contract}
+          name={props.inputValue}
+          value={formik.values[props.inputValue as keyof typeof formik.values]}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           sx={{
@@ -27,20 +34,15 @@ const InputsContract = () => {
             mt: { xs: 4.2, sm: 5.9 },
           }}
         >
-          {[
-            "Na czas nieokreślony",
-            "Na czas określony",
-            "Okres próbny",
-            "Umowa zlecenie",
-            "Umowa o pracę tymczasową (agecje)",
-          ].map(contract => {
+          {props.inputsData.map((data, idx) => {
             return (
               <FormControlLabel
-                key={contract}
-                value={contract}
+                key={data}
+                value={data}
                 control={<Radio />}
-                label={contract}
+                label={data}
                 sx={{
+                  mt: props.membership ? 2 : 0,
                   ml: -1,
                   "& .MuiFormControlLabel-label": {
                     mr: 1,
@@ -60,11 +62,11 @@ const InputsContract = () => {
             mt: 1,
           }}
         >
-          <InputsErrors formik={formik} value={"contract"} />
+          <InputsErrors formik={formik} value={props.inputValue} />
         </Box>
       </FormControl>
     </>
   );
 };
 
-export default InputsContract;
+export default InputsRadio;

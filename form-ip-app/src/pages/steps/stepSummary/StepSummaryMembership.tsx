@@ -6,8 +6,6 @@ import { StepsContext } from "../../../context/ContextProv";
 const StepSummaryMembership = () => {
   const { formik } = useContext(StepsContext);
 
-  const formikValue = Object.values(formik.values).slice(-2, -1);
-
   return (
     <Box
       sx={{
@@ -47,7 +45,7 @@ const StepSummaryMembership = () => {
           textAlign: { xs: "center", md: "left" },
         }}
       >
-        {formikValue}
+        {formik.values.membership}
       </Typography>
     </Box>
   );

@@ -3,46 +3,53 @@ import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
-import TextField from "@mui/material/TextField";
 import { useContext } from "react";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
+import TextField from "@mui/material/TextField";
 
-const InputsWorkplace = () => {
+type Props = {
+  headingText: string;
+  inputsData: string[];
+  radioValue: string;
+  textValue: string;
+};
+
+const InputsRadioWithText = (props: Props) => {
   const { formik } = useContext(StepsContext);
 
-  const handleEmployerChange = async (
+  const handleWorkTimeChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     formik.handleChange(event);
     if (event.target.value !== "") {
-      formik.setErrors({ workplace: "", workplaceOther: "" });
+      formik.setErrors({ [props.radioValue]: "", [props.textValue]: "" });
       await formik.validateForm();
-      formik.setFieldValue("workplaceOther", "");
+      formik.setFieldValue(props.textValue, "");
     }
   };
 
-  const handleEmployerOtherChange = async (
+  const handleWorkTimeOtherChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     formik.handleChange(event);
     if (event.target.value !== "") {
-      formik.setErrors({ workplace: "", workplaceOther: "" });
+      formik.setErrors({ [props.radioValue]: "", [props.textValue]: "" });
       await formik.validateForm();
-      formik.setFieldValue("workplace", "");
+      formik.setFieldValue(props.radioValue, "");
     }
   };
 
   return (
     <>
-      <HeadingPrimary headingText={"Miejsce Pracy:"} />
+      <HeadingPrimary headingText={props.headingText} />
 
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
-          name="workplace"
-          value={formik.values.workplace}
-          onChange={handleEmployerChange}
+          name={props.radioValue}
+          value={formik.values[props.radioValue as keyof typeof formik.values]}
+          onChange={handleWorkTimeChange}
           onBlur={formik.handleBlur}
           sx={{
             width: { xs: "80%", sm: "60%" },
@@ -51,30 +58,15 @@ const InputsWorkplace = () => {
             mt: { xs: 4.2, sm: 5.9 },
           }}
         >
-          {[
-            "poz1",
-            "poz2",
-            "wro1",
-            "wro2",
-            "wro4",
-            "wro5",
-            "lcj",
-            "lcj2",
-            "lcj3",
-            "lcj4",
-            "ktw1",
-            "ktw3",
-            "ktw4",
-            "szzl",
-          ].map(workplace => {
+          {props.inputsData.map(data => {
             return (
               <FormControlLabel
-                key={workplace}
-                value={workplace}
-                control={<Radio />}
-                label={workplace}
+                key={data}
+                value={data}
+                control={<Radio sx={{ pl: 0 }} />}
+                label={data}
                 sx={{
-                  ml: -1,
+                  ml: "5px",
                   "& .MuiFormControlLabel-label": {
                     mr: 1,
                     color: "info.dark",
@@ -96,17 +88,18 @@ const InputsWorkplace = () => {
         >
           <TextField
             type={"text"}
-            name={"workplaceOther"}
-            label={"Inne"}
-            value={formik.values.workplaceOther}
-            onChange={handleEmployerOtherChange}
+            name={props.textValue}
+            label={"Inny"}
+            value={formik.values[props.textValue as keyof typeof formik.values]}
+            onChange={handleWorkTimeOtherChange}
             onBlur={formik.handleBlur}
             size="small"
             sx={{ width: "100%" }}
           />
+
           <InputsErrors
-            value={"workplace"}
-            otherValue={"workplaceOther"}
+            value={props.textValue}
+            otherValue={props.textValue}
             formik={formik}
           />
         </Box>
@@ -115,4 +108,4 @@ const InputsWorkplace = () => {
   );
 };
 
-export default InputsWorkplace;
+export default InputsRadioWithText;

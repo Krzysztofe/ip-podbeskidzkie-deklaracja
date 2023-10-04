@@ -1,25 +1,22 @@
-import FormGroup from "@mui/material/FormGroup";
-import TextField from "@mui/material/TextField";
+import { StepsContext } from "../../../../context/ContextProv";
 import { useContext } from "react";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
-import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
+import FormGroup from "@mui/material/FormGroup";
+import TextField from "@mui/material/TextField";
 
-const InputsUser = () => {
+type Props = {
+  headingText: string;
+  inputsData: { label: string; value: string; type: string }[];
+};
+
+const InputsTexts = (props: Props) => {
   const { formik } = useContext(StepsContext);
-
-  const dataTextInputs = [
-    { label: "Imię", value: "name", type: "text" },
-    { label: "Nazwisko", value: "surname", type: "text" },
-    { label: "Telefon", value: "phone", type: "tel" },
-    { label: "E-mail", value: "email", type: "email" },
-    { label: "Login", value: "login", type: "text" },
-  ];
 
   return (
     <>
-      <HeadingPrimary headingText={"Twoje dane:"} />
-      {dataTextInputs.map(({ label, value, type }, idx) => {
+      <HeadingPrimary headingText={props.headingText} />
+      {props.inputsData.map(({ label, value, type }, idx) => {
         return (
           <FormGroup
             key={label}
@@ -45,7 +42,6 @@ const InputsUser = () => {
                   color: "info.main",
                 },
               }}
-              autoFocus={idx === 0 ? true : false}
             />
 
             <InputsErrors value={value} formik={formik} />
@@ -56,4 +52,4 @@ const InputsUser = () => {
   );
 };
 
-export default InputsUser;
+export default InputsTexts;

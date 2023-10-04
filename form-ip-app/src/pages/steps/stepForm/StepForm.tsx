@@ -1,24 +1,57 @@
 import Box from "@mui/material/Box";
 import StepFormHeader from "./StepFormHeader";
-import InputsContract from "./stepFormInputs/InputsContract";
-import InputsDepartment from "./stepFormInputs/InputsDepartment";
-import InputsEployer from "./stepFormInputs/InputsEmployer";
-import InputsMembership from "./stepFormInputs/InputsMembership";
-import InputsUser from "./stepFormInputs/InputsUser";
-import InputsWorkplace from "./stepFormInputs/InputsWorkplace";
-import InputsWorktime from "./stepFormInputs/InputsWorkTime";
-import InputsAdress from "./stepFormInputs/InputsAdress";
+import InputsRadio from "./stepFormInputs/InputsRadio";
+import InputsRadioWithText from "./stepFormInputs/InputsRadioWithText";
+import InputsTexts from "./stepFormInputs/InputsTexts";
+import { dataEmployerInputs } from "./dataStepForm";
+import { dataUserInputs } from "./dataStepForm";
+import { dataAdressInputs } from "./dataStepForm";
+import { dataWorkplaceInputs } from "./dataStepForm";
+import { dataContractInpts } from "./dataStepForm";
+import { dataWorkTimeInputs } from "./dataStepForm";
+import { dataMembershipInputs } from "./dataStepForm";
+import { dataDepartmentInputs } from "./dataStepForm";
 
 const StepForm = () => {
+
   const dataInputs = [
-    <InputsUser />,
-    <InputsAdress/>,
-    <InputsEployer />,
-    <InputsWorkplace />,
-    <InputsContract />,
-    <InputsWorktime />,
-    <InputsMembership />,
-    <InputsDepartment />,
+    <InputsTexts headingText="Twoje dane:" inputsData={dataUserInputs} />,
+    <InputsTexts headingText="Twój adres:" inputsData={dataAdressInputs} />,
+
+    <InputsRadioWithText
+      headingText="Pracodawca:"
+      inputsData={dataEmployerInputs}
+      radioValue="employer"
+      textValue="employerOther"
+    />,
+
+    <InputsRadioWithText
+      headingText="Miejsce Pracy:"
+      inputsData={dataWorkplaceInputs}
+      radioValue="workplace"
+      textValue="workplaceOther"
+    />,
+
+    <InputsRadio
+      headingText="Umowa:"
+      inputsData={dataContractInpts}
+      inputValue="contract"
+    />,
+    <InputsRadioWithText
+      headingText="Wymiar czasu pracy"
+      inputsData={dataWorkTimeInputs}
+      radioValue="workTime"
+      textValue="workTimeOther"
+    />,
+
+    <InputsRadio
+      headingText="Przynależność do innych związków zawodowych:"
+      inputsData={dataMembershipInputs}
+      inputValue="membership"
+      membership={true}
+    />,
+
+    <InputsTexts headingText="Dział:" inputsData={dataDepartmentInputs} />,
   ];
 
   return (

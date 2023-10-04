@@ -19,8 +19,9 @@ const StepSummary = () => {
     "Telefon",
     "E-mail",
     "Login",
-    "Miasto",
+    "Miejscowość",
     "Ulica",
+    "Nr domu",
     "Nr mieszkania",
     "Kod",
     "Pracodawca",
@@ -47,10 +48,10 @@ const StepSummary = () => {
                 <Box
                   sx={{
                     display: "flex",
-                    mb: idx === 4 || idx === 8 ? 2 : 0,
+                    mb: idx === 4 || idx === 9 ? 2 : 0,
                     position: "relative",
                     "&::after":
-                      idx === 4 || idx === 8
+                      idx === 4 || idx === 9
                         ? {
                             content: "''",
                             position: "absolute",

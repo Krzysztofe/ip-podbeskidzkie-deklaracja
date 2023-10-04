@@ -31,7 +31,7 @@ const ImgLogoIp = () => {
         <g id="g12">
           <g transform="translate(0,-0.92334)" id="g14">
             <g id="g16">
-              <g clip-path="url(#clipPath22)" id="g18">
+              <g clipPath="url(#clipPath22)" id="g18">
                 <g id="g24">
                   <path
                     id="path26"
@@ -917,7 +917,7 @@ const ImgLogoIp = () => {
           </text>
           <g transform="translate(0,-0.92334)" id="g220">
             <g id="g222">
-              <g clip-path="url(#clipPath228)" id="g224">
+              <g clipPath="url(#clipPath228)" id="g224">
                 <g id="g230">
                   <path
                     id="path232"
