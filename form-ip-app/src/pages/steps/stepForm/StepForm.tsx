@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import StepFormHeader from "./StepFormHeader";
 import InputsRadio from "./stepFormInputs/InputsRadio";
-import InputsRadioWithText from "./stepFormInputs/InputsRadioWithText";
+import InputsRadioWithText from "./stepFormInputs/inputsRadioWithText/InputsRadioWithText";
 import InputsTexts from "./stepFormInputs/InputsTexts";
 import { dataEmployerInputs } from "./dataStepForm";
 import { dataUserInputs } from "./dataStepForm";
@@ -13,7 +13,6 @@ import { dataMembershipInputs } from "./dataStepForm";
 import { dataDepartmentInputs } from "./dataStepForm";
 
 const StepForm = () => {
-
   const dataInputs = [
     <InputsTexts headingText="Twoje dane:" inputsData={dataUserInputs} />,
     <InputsTexts headingText="Twój adres:" inputsData={dataAdressInputs} />,

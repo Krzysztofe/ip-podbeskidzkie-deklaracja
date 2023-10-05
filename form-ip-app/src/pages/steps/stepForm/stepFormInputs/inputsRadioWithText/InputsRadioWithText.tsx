@@ -4,10 +4,12 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import { useContext } from "react";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
-import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "./InputsErrors";
+import HeadingPrimary from "../../../../../components/HeadingPrimary";
+import { StepsContext } from "../../../../../context/ContextProv";
+import InputsErrors from "../InputsErrors";
 import TextField from "@mui/material/TextField";
+import { handleRadioChange } from "./utilsRadioWithText";
+import { handleTextChange } from "./utilsRadioWithText";
 
 type Props = {
   headingText: string;
@@ -19,28 +21,6 @@ type Props = {
 const InputsRadioWithText = (props: Props) => {
   const { formik } = useContext(StepsContext);
 
-  const handleWorkTimeChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    formik.handleChange(event);
-    if (event.target.value !== "") {
-      formik.setErrors({ [props.radioValue]: "", [props.textValue]: "" });
-      await formik.validateForm();
-      formik.setFieldValue(props.textValue, "");
-    }
-  };
-
-  const handleWorkTimeOtherChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    formik.handleChange(event);
-    if (event.target.value !== "") {
-      formik.setErrors({ [props.radioValue]: "", [props.textValue]: "" });
-      await formik.validateForm();
-      formik.setFieldValue(props.radioValue, "");
-    }
-  };
-
   return (
     <>
       <HeadingPrimary headingText={props.headingText} />
@@ -49,7 +29,9 @@ const InputsRadioWithText = (props: Props) => {
         <RadioGroup
           name={props.radioValue}
           value={formik.values[props.radioValue as keyof typeof formik.values]}
-          onChange={handleWorkTimeChange}
+          onChange={e =>
+            handleRadioChange(e, formik, props.radioValue, props.textValue)
+          }
           onBlur={formik.handleBlur}
           sx={{
             width: { xs: "80%", sm: "60%" },
@@ -91,7 +73,9 @@ const InputsRadioWithText = (props: Props) => {
             name={props.textValue}
             label={"Inny"}
             value={formik.values[props.textValue as keyof typeof formik.values]}
-            onChange={handleWorkTimeOtherChange}
+            onChange={e =>
+              handleTextChange(e, formik, props.radioValue, props.textValue)
+            }
             onBlur={formik.handleBlur}
             size="small"
             sx={{ width: "100%" }}

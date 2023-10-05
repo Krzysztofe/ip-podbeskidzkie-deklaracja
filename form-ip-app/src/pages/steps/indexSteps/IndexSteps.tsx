@@ -11,22 +11,19 @@ const IndexSteps = () => {
   const { steps, currentStepIdx, formik, formikClause, isLastStep } =
     useContext(StepsContext);
 
-  const scrollBoxRef = useRef(null);
+  const scrollBoxRefs = [
+    useRef<HTMLElement | null>(null),
+    useRef<HTMLElement | null>(null),
+    useRef<HTMLElement | null>(null),
+  ];
 
-  // useEffect(() => {
-  //   if (scrollBoxRef.current) {
-  //     (scrollBoxRef.current as HTMLDivElement).scrollTop = 0;
-  //     console.log("yy", (scrollBoxRef.current as HTMLDivElement).scrollTop);
-  //   }
-  // }, [currentStepIdx]);
-
-  const scrollBoxRefs = steps.map(() => scrollBoxRef.current);
-
-  //   useEffect(() => {
-  //     if (scrollBoxRefs[currentStepIdx]?.current) {
-  //       scrollBoxRefs[currentStepIdx].current.scrollTop = 0
-  //     }
-  //   }, [currentStepIdx]);
+  useEffect(() => {
+    scrollBoxRefs.forEach(scrollBoxRef => {
+      if (scrollBoxRef.current) {
+        scrollBoxRef.current.scrollTop = 0;
+      }
+    });
+  }, [currentStepIdx]);
 
   const formSubmit =
     currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
@@ -94,7 +91,7 @@ const IndexSteps = () => {
                   return (
                     <Box
                       key={idx}
-                      ref={scrollBoxRef}
+                      ref={scrollBoxRefs[idx]}
                       sx={{
                         overflowY: "auto",
                         px: 1.6,
