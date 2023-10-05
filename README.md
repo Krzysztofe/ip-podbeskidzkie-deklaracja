@@ -25,7 +25,7 @@ The application's styles are designed based on the UI graphic design created in 
 * Formik / Yup 
 * Lazy loading
  <br/><br/>
-* React hooks: <br/> useState, useEffect, <br/> useContext, useFormik, custom hooks
+* React hooks: <br/> useState, useEffect, useRef <br/> useContext, useFormik, custom hooks
 * Libraries: <br/>
 react-router, react-router-dom, <br/>
 formik, yup, <br/>
