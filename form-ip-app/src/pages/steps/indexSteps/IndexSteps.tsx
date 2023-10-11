@@ -34,8 +34,6 @@ const IndexSteps = () => {
           xs: "calc(100% - 120px)",
           sm: "calc(100% - 90px)",
         }
-      : isLastStep
-      ? "auto"
       : {
           xs: "calc(100% - 120px - 74px)",
           sm: "calc(100% - 90px - 72px)",

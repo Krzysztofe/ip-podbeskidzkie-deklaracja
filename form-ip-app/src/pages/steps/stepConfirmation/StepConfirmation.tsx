@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import HeadingPrimary from "../../../components/HeadingPrimary";
+import StepConfirmationHeading from "./StepConfirmationHeading";
 import StepConfirmationBanksList from "./StepConfirmationBanksList";
 import StepConfirmationFooter from "./StepConfirmationFooter";
 import StepConfirmationParagraphs from "./StepConfirmationParagraphs";
@@ -14,9 +15,7 @@ const StepConfirmation = () => {
 
   return (
     <Box sx={{ px: 1.6, pt: 4 }}>
-      <Typography variant="h1" color="info.dark" component="p" sx={{ mb: 3 }}>
-        Deklaracja została złożona
-      </Typography>
+      <StepConfirmationHeading />
 
       {HeadingPrimaryTexts.map(text => {
         return (
@@ -25,16 +24,13 @@ const StepConfirmation = () => {
           </Box>
         );
       })}
-
       <StepConfirmationBanksList />
-
       <Box sx={{ mt: 3 }}>
         <HeadingPrimary
           headingText={"INFORMACJA O DACIE PRZYJĘCIA DO ZWIĄZKU"}
           color={"info.dark"}
         />
       </Box>
-
       <StepConfirmationParagraphs />
       <Typography
         variant="fs_12_rg"
@@ -51,7 +47,6 @@ const StepConfirmation = () => {
         }
         color={"info.dark"}
       />
-
       <StepConfirmationFooter />
     </Box>
   );
