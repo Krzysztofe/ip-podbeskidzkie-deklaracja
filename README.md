@@ -24,6 +24,7 @@ The application's styles are designed based on the UI graphic design created in 
 * HTTP: POST
 * Formik / Yup 
 * Lazy loading
+* reCAPTCHA
  <br/><br/>
 * React hooks: <br/> useState, useEffect, useRef <br/> useContext, useFormik, custom hooks
 * Libraries: <br/>
