@@ -30,6 +30,7 @@ The application's styles are designed based on the UI graphic design created in 
 * Libraries: <br/>
 react-router, react-router-dom, <br/>
 formik, yup, <br/>
+* Regex
 
 
 ## Production version deployed on home.pl <a href = "https://deklaracja.ozzip.pl/"> here --> </a>
