@@ -25,12 +25,13 @@ The application's styles are designed based on the UI graphic design created in 
 * Formik / Yup 
 * Lazy loading
 * reCAPTCHA
+* Regex
  <br/><br/>
 * React hooks: <br/> useState, useEffect, useRef <br/> useContext, useFormik, custom hooks
 * Libraries: <br/>
 react-router, react-router-dom, <br/>
 formik, yup, <br/>
-* Regex
+
 
 
 ## Production version deployed on home.pl <a href = "https://deklaracja.ozzip.pl/"> here --> </a>
