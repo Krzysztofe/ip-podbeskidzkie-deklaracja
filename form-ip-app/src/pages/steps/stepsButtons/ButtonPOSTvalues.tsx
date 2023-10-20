@@ -43,8 +43,8 @@ const ButtonPOSTvalues = () => {
           variant="contained"
           onClick={() => {
             currentStepIdx < 2 && next();
-            // isCaptcha && handlePOST();
-            handlePOST();
+            isCaptcha && handlePOST();
+            // handlePOST();
           }}
           endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
           sx={{

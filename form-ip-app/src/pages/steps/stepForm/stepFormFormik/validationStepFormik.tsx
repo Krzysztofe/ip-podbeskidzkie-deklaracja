@@ -7,19 +7,15 @@ const validationWithOther = (radioInput: string, textInput: string) => {
     return this.parent[radioInput] || this.parent[textInput];
   });
 };
-const phoneRegex = /^[0-9]{6,}$/;
+const phoneRegex = /^\d{9,}$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 export const validationSchema = yup.object({
   name: validation,
   surname: validation,
   city: validation,
-  phone: yup
-    .string()
-    .required(errMsg)
-    .matches(phoneRegex, "Podaj poprawny numer telefonu")
-    .min(9, "Min. 9 znaków"),
-  email: yup.string().required(errMsg).email("Podaj poprawny email"),
-
+  phone: yup.string().required(errMsg).matches(phoneRegex, "Min. 9 cyfr"),
+  email: yup.string().required(errMsg).matches(emailRegex, "Podaj właściwy e-mail"),
   employer: validationWithOther("employer", "employerOther"),
   employerOther: validationWithOther("employer", "employerOther"),
 

@@ -42,9 +42,9 @@ const StepsContextProv = (props: Props) => {
   const [isCaptcha, setIsCaptcha] = useState(false);
   const { steps, currentStepIdx, step, back, next, isLastStep } =
     useMultistepForm([
-      // <StepForm />,
-      // <StepClause />,
-      // <StepSummary />,
+      <StepForm />,
+      <StepClause />,
+      <StepSummary />,
       <StepConfirmation />,
     ]);
 

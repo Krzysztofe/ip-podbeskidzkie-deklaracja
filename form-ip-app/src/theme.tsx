@@ -58,6 +58,9 @@ declare module "@mui/material/styles" {
       [key: string]: any;
     };
   }
+  interface PaletteOptions {
+    themeWhite: string; 
+  }
 }
 
 declare module "@mui/material/Typography" {
@@ -83,6 +86,7 @@ export const theme = createTheme({
       main: "#797979",
       light: "#E2E2E2",
     },
+    themeWhite: "#ffffff",
   },
 
   spacing: 10,
@@ -164,5 +168,4 @@ export const theme = createTheme({
       xl: 1400,
     },
   },
-  components: {},
 });

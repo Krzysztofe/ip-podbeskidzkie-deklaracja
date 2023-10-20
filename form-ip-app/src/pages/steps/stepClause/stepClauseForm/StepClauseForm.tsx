@@ -44,7 +44,7 @@ const StepClauseForm = () => {
           name="confirmation"
           checked={formikClause.values.confirmation}
           onChange={formikClause.handleChange}
-          label="Zapoznałem się z klauzulą informacyjną i wyrażam zgodę na przetwarzanie moich danych osobowych na zasadach i w celach w niej wskazanych"
+          label="Zapoznałem/-łam się z klauzulą informacyjną i wyrażam zgodę na przetwarzanie moich danych osobowych na zasadach i w celach w niej wskazanych"
           sx={{
             "& .MuiFormControlLabel-label": {
               color: formikClause.values.confirmation

@@ -38,7 +38,7 @@ const StepSummary = () => {
     <Box sx={{ position: "relative" }}>
       <Box sx={{ width: "100%" }}>
         <Box sx={{ mb: { xs: 4.1, sm: 5.1 }, mt: { xs: 2.5, sm: 3.9 } }}>
-          <HeadingPrimary headingText={"Sprawdź  dane z formularza"} />
+          <HeadingPrimary headingText={"Sprawdź przekazane dane"} />
         </Box>
 
         {dataSummary.map((text, idx) => {

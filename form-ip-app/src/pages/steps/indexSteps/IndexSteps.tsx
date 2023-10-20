@@ -6,6 +6,8 @@ import StepConfirmation from "../stepConfirmation/StepConfirmation";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
+import StepConfirmationAnimation from "../stepConfirmation/StepConfirmationHeading";
+
 
 const IndexSteps = () => {
   const { steps, currentStepIdx, formik, formikClause, isLastStep } =
@@ -39,6 +41,8 @@ const IndexSteps = () => {
           sm: "calc(100% - 90px - 72px)",
         };
 
+         
+
   return (
     <>
       <header>
@@ -68,6 +72,8 @@ const IndexSteps = () => {
             padding: "0px !important",
           }}
         >
+          
+          {/* <StepConfirmationAnimation /> */}
           {currentStepIdx < 3 && (
             <form
               onSubmit={formSubmit}
