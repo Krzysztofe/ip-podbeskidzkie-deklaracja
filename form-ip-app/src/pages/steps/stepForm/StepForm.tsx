@@ -14,34 +14,34 @@ import { dataDepartmentInputs } from "./dataStepForm";
 
 const StepForm = () => {
   const dataInputs = [
-    // <InputsTexts headingText="Twoje dane:" inputsData={dataUserInputs} />,
-    // <InputsTexts headingText="Twój adres:" inputsData={dataAdressInputs} />,
+    <InputsTexts headingText="Twoje dane:" inputsData={dataUserInputs} />,
+    <InputsTexts headingText="Twój adres:" inputsData={dataAdressInputs} />,
 
-    // <InputsRadioWithText
-    //   headingText="Pracodawca:"
-    //   inputsData={dataEmployerInputs}
-    //   radioValue="employer"
-    //   textValue="employerOther"
-    // />,
+    <InputsRadioWithText
+      headingText="Pracodawca:"
+      inputsData={dataEmployerInputs}
+      radioValue="employer"
+      textValue="employerOther"
+    />,
 
-    // <InputsRadioWithText
-    //   headingText="Miejsce Pracy:"
-    //   inputsData={dataWorkplaceInputs}
-    //   radioValue="workplace"
-    //   textValue="workplaceOther"
-    // />,
+    <InputsRadioWithText
+      headingText="Miejsce Pracy:"
+      inputsData={dataWorkplaceInputs}
+      radioValue="workplace"
+      textValue="workplaceOther"
+    />,
 
-    // <InputsRadio
-    //   headingText="Umowa:"
-    //   inputsData={dataContractInpts}
-    //   inputValue="contract"
-    // />,
-    // <InputsRadioWithText
-    //   headingText="Wymiar czasu pracy"
-    //   inputsData={dataWorkTimeInputs}
-    //   radioValue="workTime"
-    //   textValue="workTimeOther"
-    // />,
+    <InputsRadio
+      headingText="Umowa:"
+      inputsData={dataContractInpts}
+      inputValue="contract"
+    />,
+    <InputsRadioWithText
+      headingText="Wymiar czasu pracy"
+      inputsData={dataWorkTimeInputs}
+      radioValue="workTime"
+      textValue="workTimeOther"
+    />,
 
     <InputsRadio
       headingText="Przynależność do innych związków zawodowych:"
