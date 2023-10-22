@@ -43,7 +43,7 @@ const IndexSteps = () => {
 
   return (
     <>
-      {/* <header>
+      <header>
         <Container
           sx={{
             height: breakpointsValues(["56px", "92px"]),
@@ -60,9 +60,9 @@ const IndexSteps = () => {
         >
           <StepsHeader />
         </Container>
-      </header> */}
+      </header>
       <main>
-        {/* <HttpRequestState /> */}
+        <HttpRequestState />
         <Container
           sx={{
             height: breakpointsValues([
@@ -76,7 +76,7 @@ const IndexSteps = () => {
           {/* <StepConfirmationAnimation /> */}
           {currentStepIdx < 3 && (
             <form
-              // onSubmit={formSubmit}
+              onSubmit={formSubmit}
               style={{
                 height: "100%",
                 overflow: "hidden",
