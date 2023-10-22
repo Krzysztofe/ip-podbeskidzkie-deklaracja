@@ -32,8 +32,9 @@ const StepsButtons = () => {
       <Box
         sx={{
           height: {
-            xs: "calc(120px)",
-            sm: "calc(90px)",
+            xs: "120px",
+            sm: "90px",
+            md: "inherit"
           },
           display: "flex",
           flexDirection: { xs: "column-reverse", sm: "row" },

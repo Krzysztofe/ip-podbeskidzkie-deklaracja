@@ -6,6 +6,7 @@ import StepConfirmation from "../stepConfirmation/StepConfirmation";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
+import { breakpointsValues } from "../../../utils/breakpointsValues";
 import StepConfirmationAnimation from "../stepConfirmation/StepConfirmationHeading";
 
 
@@ -32,23 +33,20 @@ const IndexSteps = () => {
 
   const height =
     currentStepIdx === 0
-      ? {
-          xs: "calc(100% - 120px)",
-          sm: "calc(100% - 90px)",
-        }
-      : {
-          xs: "calc(100% - 120px - 74px)",
-          sm: "calc(100% - 90px - 72px)",
-        };
+      ? breakpointsValues(["calc(100% - 120px)", "calc(100% - 90px)"])
+      : breakpointsValues([
+          "calc(100% - 120px - 74px)",
+          "calc(100% - 90px - 72px)",
+        ]);
 
-         
+  console.log("hhh",);
 
   return (
     <>
-      <header>
+      {/* <header>
         <Container
           sx={{
-            height: { xs: "56px", sm: "92px" },
+            height: breakpointsValues(["56px", "92px"]),
             position: "fixed",
             top: 0,
             left: "50%",
@@ -62,21 +60,23 @@ const IndexSteps = () => {
         >
           <StepsHeader />
         </Container>
-      </header>
+      </header> */}
       <main>
-        <HttpRequestState />
+        {/* <HttpRequestState /> */}
         <Container
           sx={{
-            height: { xs: "calc(100vh - 56px)", sm: "calc(100vh - 92px)" },
-            mt: { xs: "56px", sm: "92px" },
+            height: breakpointsValues([
+              "calc(100vh - 56px)",
+              "calc(100vh - 92px)",
+            ]),
+            mt: breakpointsValues(["56px", "92px"]),
             padding: "0px !important",
           }}
         >
-          
           {/* <StepConfirmationAnimation /> */}
           {currentStepIdx < 3 && (
             <form
-              onSubmit={formSubmit}
+              // onSubmit={formSubmit}
               style={{
                 height: "100%",
                 overflow: "hidden",
@@ -84,7 +84,7 @@ const IndexSteps = () => {
             >
               <Box
                 sx={{
-                  height: height,
+                  height,
                   display: "grid",
                   gridTemplateColumns: "repeat(3, 100%)",
                   transform: `translate(-${currentStepIdx}00%)`,
