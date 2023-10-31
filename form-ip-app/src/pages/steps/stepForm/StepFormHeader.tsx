@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import HeadingPrimary from "../../../components/HeadingPrimary";
+import { rwd } from "../../../utils/rwd";
 
 const StepFormHeader = () => {
   return (
@@ -16,15 +17,15 @@ const StepFormHeader = () => {
         variant="fs_12_sb"
         component="p"
         color="info.dark"
-        sx={{ mt: { xs: 3.9, sm: 2 } }}
+        sx={{ mt: rwd(3.9, 2) }}
       >
-       Przekazane dane są wyłącznie do wiadomości OZZIP Amazon
+        Przekazane dane są wyłącznie do wiadomości OZZIP Amazon
       </Typography>
       <Typography
         variant="fs_12_sb"
         component="p"
         color="info.dark"
-        sx={{ mt: { xs: 3.9, sm: 2 } }}
+        sx={{ mt: rwd(3.9, 2) }}
       >
         DEKLARACJA
       </Typography>

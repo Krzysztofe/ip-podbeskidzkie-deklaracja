@@ -11,6 +11,7 @@ import { dataContractInpts } from "./dataStepForm";
 import { dataWorkTimeInputs } from "./dataStepForm";
 import { dataMembershipInputs } from "./dataStepForm";
 import { dataDepartmentInputs } from "./dataStepForm";
+import { rwd } from "../../../utils/rwd";
 
 const StepForm = () => {
   const dataInputs = [
@@ -63,8 +64,8 @@ const StepForm = () => {
             sx={{
               borderBottom: 1,
               borderColor: "info.light",
-              pt: { xs: 1, sm: 2.4 },
-              pb: { xs: 0, sm: 2.3 },
+              pt: rwd(1, 2.4),
+              pb: rwd(0, 2.3),
             }}
           >
             {input}

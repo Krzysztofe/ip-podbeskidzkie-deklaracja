@@ -4,6 +4,7 @@ import HeadingPrimary from "../../../../components/HeadingPrimary";
 import InputsErrors from "./InputsErrors";
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
+import { rwd } from "../../../../utils/rwd";
 
 type Props = {
   headingText: string;
@@ -22,10 +23,10 @@ const InputsTexts = (props: Props) => {
             key={label}
             sx={{
               maxWidth: "24rem",
-              width: { xs: "80%", sm: "60%" },
+              width: rwd("80%", "60%"),
               marginInline: "auto",
-              ml: { xs: "auto", sm: "40%" },
-              mt: idx === 0 ? { xs: 4.2, sm: 5.9 } : 0,
+              ml: rwd("auto", "40%"),
+              mt: idx === 0 ? rwd(4.2, 5.9) : 0,
             }}
           >
             <TextField

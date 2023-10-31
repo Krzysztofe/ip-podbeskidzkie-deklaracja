@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { v4 as UUID } from "uuid";
 import useWindowWidth from "../../../hooks/useWindowWidth";
 import { dataBanksList } from "./dataStepConfirmation";
+import { rwd } from "../../../utils/rwd";
 
 const StepConfirmationBanksList = () => {
   const { windowWidth } = useWindowWidth();
@@ -26,10 +27,9 @@ const StepConfirmationBanksList = () => {
               sx={{
                 border: 1,
                 borderColor: "info.light",
-                m: { xs: 0.3, sm: 0.8 },
-                p: { xs: "5%", sm: "10%" },
+                m: rwd(0.3, 0.8),
+                p: rwd("5%", "10%"),
                 "&:hover": { bgcolor: "rgba(0,0,0,0.1)" },
-               
               }}
             >
               <Link

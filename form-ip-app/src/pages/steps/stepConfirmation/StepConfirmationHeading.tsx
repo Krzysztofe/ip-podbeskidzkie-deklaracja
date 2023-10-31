@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
+import { rwd } from "../../../utils/rwd";
 
 const StepConfirmationHeading = () => {
   const [counterIncrease, setCounterIncrease] = useState(0);
@@ -30,14 +31,13 @@ const StepConfirmationHeading = () => {
     };
   }, [counterDecrease]);
 
-
   return (
     <Box
       sx={{
         mb: 3,
         display: "flex",
-        flexDirection: { xs: "column", sm: "row" },
-        alignItems: { sm: "center" },
+        flexDirection: rwd("column", "row"),
+        alignItems: rwd("auto", "center"),
       }}
     >
       <Typography variant="h1" color="info.dark" component="p">
@@ -47,9 +47,9 @@ const StepConfirmationHeading = () => {
         sx={{
           width: "45px",
           height: "45px",
-          mx: { xs: "auto", sm: "0" },
-          ml: { sm: 2 },
-          mt: { xs: 3, sm: "0" },
+          mx: rwd("auto", 0),
+          ml: rwd("auto", 2),
+          mt: rwd(3, 0),
           borderRadius: "100%",
           display: "grid",
           placeItems: "center",

@@ -7,6 +7,7 @@ import { useContext } from "react";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "./InputsErrors";
+import { rwd } from "../../../../utils/rwd";
 
 type Props = {
   headingText: string;
@@ -28,13 +29,13 @@ const InputsRadio = (props: Props) => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           sx={{
-            width: { xs: "80%", sm: "60%" },
+            width: rwd("80%", "60%"),
             marginInline: "auto",
-            ml: { xs: "auto", sm: "40%" },
-            mt: { xs: 4.2, sm: 5.9 },
+            ml: rwd("auto", "40%"),
+            mt: rwd(4.2, 5.9),
           }}
         >
-          {props.inputsData.map((data, idx) => {
+          {props.inputsData.map(data => {
             return (
               <FormControlLabel
                 key={data}
@@ -56,9 +57,9 @@ const InputsRadio = (props: Props) => {
         </RadioGroup>
         <Box
           sx={{
-            width: { xs: "80%", sm: "60%" },
+            width: rwd("80%", "60%"),
             marginInline: "auto",
-            marginLeft: { xs: "auto", sm: "40%" },
+            marginLeft: rwd("auto", "40%"),
             mt: 1,
           }}
         >

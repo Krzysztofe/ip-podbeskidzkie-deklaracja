@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import { useTheme } from "@mui/material/styles";
 
 const StepConfirmationParagraphs = () => {
- const theme = useTheme();
+  const theme = useTheme();
 
   const StyledParagraph = styled(Typography)(({ theme }) => ({
     // color: theme.palette.info.dark,
@@ -11,8 +11,6 @@ const StepConfirmationParagraphs = () => {
     variant: theme.typography.fs_16_rg.variant,
     color: "info.dark",
     component: "p",
-
- 
   }));
 
   const typographyProps = {
@@ -23,8 +21,8 @@ const StepConfirmationParagraphs = () => {
 
   return (
     <article>
-      <Typography {...typographyProps} sx={{ my: { xs: 3 } }}>
-        {" "}
+      <Typography {...typographyProps} sx={{ my: 3 }}>
+    
         Datą przystąpienia do związku osoby, która oświadczy przy użyciu środków
         komunikacji elektronicznej wolę wstąpienia do związku jest:
       </Typography>

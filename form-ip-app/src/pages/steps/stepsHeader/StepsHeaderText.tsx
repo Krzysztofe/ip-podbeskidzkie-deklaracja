@@ -1,4 +1,5 @@
 import Typography from "@mui/material/Typography";
+import { rwd } from "../../../utils/rwd";
 
 type Props = {
   text: string;
@@ -11,12 +12,12 @@ const StepsHeaderText = (props: Props) => {
       color="info.dark"
       component="p"
       sx={{
-        width: {xs:"100%", md: "fit-content"},
-        position: { xs: "absolute", md: "unset" },
-        top: { xs: "22px", sm: "32px" },
+        width: rwd("100%", "100%", "fit-content"),
+        position: rwd("absolute", "absolute", "unset"),
+        top: rwd("22px", "32px"),
         left: "-27px",
         textAlign: "center",
-        ml: {xs:0, md: 1.3}
+        ml: rwd(0,0, 1.3),
       }}
     >
       {props.text}

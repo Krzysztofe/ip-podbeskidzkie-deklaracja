@@ -3,25 +3,28 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
 
 const HttpRequestState = () => {
   const { error, isLoading } = useContext(StepsContext);
 
-  const BoxStylesPrimary = {
+  const BoxStylesBackground = {
     position: "absolute",
-    height: { xs: "calc(100vh - 56px)", sm: "calc(100vh - 92px)" },
+    height: rwd("calc(100vh - 56px)", "calc(100vh - 92px)"),
     width: "100%",
     bgcolor: "white",
-    opacity: "0.8",
+    opacity: "0.9",
     zIndex: 3,
     backgroundColor: "white",
   };
 
-  const BoxStylesSecondary = {
+  const BoxStylesContent = {
     position: "absolute",
     left: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
+    minWidth: "300px",
+    textAlign: "center",
     color: "red",
     zIndex: 4,
   };
@@ -29,8 +32,8 @@ const HttpRequestState = () => {
   if (isLoading) {
     return (
       <>
-        <Box sx={BoxStylesPrimary}></Box>
-        <Box sx={BoxStylesSecondary}>
+        <Box sx={BoxStylesBackground}></Box>
+        <Box sx={BoxStylesContent}>
           <CircularProgress />
         </Box>
       </>
@@ -38,10 +41,12 @@ const HttpRequestState = () => {
   } else if (error) {
     return (
       <>
-        <Box sx={BoxStylesPrimary}></Box>
-        <Box sx={BoxStylesSecondary}>
-          <Typography>{error.message}</Typography>
-          <Typography variant={"fs_12_rg"} component={"p"} textAlign={"center"}>
+        <Box sx={BoxStylesBackground}></Box>
+        <Box sx={BoxStylesContent}>
+          <Typography variant={"h1"} component={"p"}>
+            {error.message}
+          </Typography>
+          <Typography variant={"fs_12_rg"} component={"p"}>
             Ponów próbę
           </Typography>
         </Box>

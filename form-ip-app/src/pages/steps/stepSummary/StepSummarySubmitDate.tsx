@@ -1,17 +1,18 @@
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import { currentDateInNumbers } from "../../../utils/currentDateInNumbers";
+import { rwd } from "../../../utils/rwd";
 
 const StepSummarySubmitDate = () => {
   return (
-    <Box sx={{ display: { xs: "block", md: "flex" } }}>
+    <Box sx={{ display: rwd("block", "block", "flex") }}>
       <Typography
         variant="fs_16_sb"
         component="p"
         color="info.dark"
         sx={{
-          width: { xs: "100%", md: "50%" },
-          textAlign: { xs: "center", md: "right" },
+          width: rwd("100%", "100%", "50%"),
+          textAlign: rwd("center", "center", "right"),
         }}
       >
         Data złożenia deklaracji członkowskiej:&nbsp;&nbsp;&nbsp;
@@ -21,8 +22,8 @@ const StepSummarySubmitDate = () => {
         component="p"
         color="info.dark"
         sx={{
-          width: { xs: "100%", md: "50%" },
-          textAlign: { xs: "center", md: "left" },
+          width: rwd("100%", "100%", "50%"),
+          textAlign: rwd("center", "center", "left"),
         }}
       >
         {currentDateInNumbers()}

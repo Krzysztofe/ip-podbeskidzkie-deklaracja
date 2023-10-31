@@ -2,13 +2,11 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { useContext, useEffect, useRef } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
 import StepConfirmation from "../stepConfirmation/StepConfirmation";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
-import { breakpointsValues } from "../../../utils/breakpointsValues";
-import StepConfirmationAnimation from "../stepConfirmation/StepConfirmationHeading";
-
 
 const IndexSteps = () => {
   const { steps, currentStepIdx, formik, formikClause, isLastStep } =
@@ -33,20 +31,17 @@ const IndexSteps = () => {
 
   const height =
     currentStepIdx === 0
-      ? breakpointsValues(["calc(100% - 120px)", "calc(100% - 90px)"])
-      : breakpointsValues([
-          "calc(100% - 120px - 74px)",
-          "calc(100% - 90px - 72px)",
-        ]);
+      ? rwd("calc(100% - 120px)", "calc(100% - 90px)")
+      : rwd("calc(100% - 120px - 74px)", "calc(100% - 90px - 72px)");
 
-  console.log("hhh",);
+  console.log("hhh");
 
   return (
     <>
       <header>
         <Container
           sx={{
-            height: breakpointsValues(["56px", "92px"]),
+            height: rwd("56px", "92px"),
             position: "fixed",
             top: 0,
             left: "50%",
@@ -65,15 +60,12 @@ const IndexSteps = () => {
         <HttpRequestState />
         <Container
           sx={{
-            height: breakpointsValues([
-              "calc(100vh - 56px)",
-              "calc(100vh - 92px)",
-            ]),
-            mt: breakpointsValues(["56px", "92px"]),
+            height: rwd("calc(100vh - 56px)", "calc(100vh - 92px)"),
+            mt: rwd("56px", "92px"),
             padding: "0px !important",
           }}
         >
-          {/* <StepConfirmationAnimation /> */}
+         
           {currentStepIdx < 3 && (
             <form
               onSubmit={formSubmit}

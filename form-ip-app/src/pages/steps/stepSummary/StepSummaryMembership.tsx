@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
 
 const StepSummaryMembership = () => {
   const { formik } = useContext(StepsContext);
@@ -9,7 +10,7 @@ const StepSummaryMembership = () => {
   return (
     <Box
       sx={{
-        display: { xs: "block", md: "flex" },
+        display: rwd("block", "block", "flex"),
         mb: 2,
         position: "relative",
         "&::after": {
@@ -30,8 +31,8 @@ const StepSummaryMembership = () => {
         component="p"
         color="info.dark"
         sx={{
-          width: { xs: "100%", md: "50%" },
-          textAlign: { xs: "center", md: "right" },
+          width: rwd("100%", "100%", "50%"),
+          textAlign: rwd("center", "center", "right"),
         }}
       >
         Przynależność do związków zawodowych:&nbsp; &nbsp;&nbsp;
@@ -41,8 +42,8 @@ const StepSummaryMembership = () => {
         component="p"
         color="info.dark"
         sx={{
-          width: { xs: "100%", md: "50%" },
-          textAlign: { xs: "center", md: "left" },
+          width: rwd("100%", "100%", "50%"),
+          textAlign: rwd("center", "center", "left"),
         }}
       >
         {formik.values.membership}

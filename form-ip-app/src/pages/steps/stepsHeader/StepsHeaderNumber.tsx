@@ -2,10 +2,11 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
 
 type Props = {
   idx: number;
-}
+};
 
 const StepsHeaderNumber = (props: Props) => {
   const { currentStepIdx } = useContext(StepsContext);
@@ -13,8 +14,8 @@ const StepsHeaderNumber = (props: Props) => {
     <>
       <Box
         sx={{
-          width: { xs: "20px", sm: "30px" },
-          height: {xs: "20px", sm: "30px"},
+          width: rwd("20px", "30px"),
+          height: rwd("20px", "30px"),
           border: 1,
           borderRadius: "100%",
           display: "grid",
@@ -22,7 +23,6 @@ const StepsHeaderNumber = (props: Props) => {
           backgroundColor:
             currentStepIdx >= props.idx ? "primary.main" : "transparent",
           color: currentStepIdx >= props.idx ? "white" : "info.main",
-          
         }}
       >
         <Typography variant="fs_14_sb" color="info">

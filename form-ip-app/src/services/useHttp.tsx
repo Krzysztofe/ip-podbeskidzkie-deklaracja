@@ -21,7 +21,7 @@ const useHttp = () => {
     })
       .then(resp => {
         if (!resp.ok) {
-          throw Error("Coś poszło nie tak...");
+          throw Error("Mamy problem...");
         } else {
           returnData(resp.ok);
           return resp.json();

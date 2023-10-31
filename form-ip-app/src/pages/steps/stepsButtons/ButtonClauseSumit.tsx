@@ -2,6 +2,7 @@ import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDo
 import Button from "@mui/material/Button";
 import { useContext, useEffect } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
 
 const ButtonClauseSumit = () => {
   const { currentStepIdx, next, formikClause, isConfirmed } =
@@ -24,7 +25,7 @@ const ButtonClauseSumit = () => {
             isConfirmed && isErrorInClause.length === 0 && next();
           }}
           sx={{
-            width: { xs: "65%", sm: "12rem" },
+            width: rwd("65%", "12rem"),
             "&:hover": { bgcolor: "#2455BA" },
           }}
         >

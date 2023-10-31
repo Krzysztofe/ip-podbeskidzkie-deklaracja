@@ -8,6 +8,7 @@ import ButtonClauseSumit from "./ButtonClauseSumit";
 import ButtonFormSubmit from "./ButtonFormSubmit";
 import ButtonPOSTvalues from "./ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";
+import { rwd } from "../../../utils/rwd";
 
 const StepsButtons = () => {
   const { currentStepIdx } = useContext(StepsContext);
@@ -21,7 +22,7 @@ const StepsButtons = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        px: { xs: "20px !importand", md: "16px !important" },
+        px: rwd("20px !importand", "20px !importand", "16px !important"),
         bgcolor: "white",
         zIndex: 2,
       }}
@@ -31,14 +32,10 @@ const StepsButtons = () => {
 
       <Box
         sx={{
-          height: {
-            xs: "120px",
-            sm: "90px",
-            md: "inherit"
-          },
+          height: rwd("120px", "90px"),
           display: "flex",
-          flexDirection: { xs: "column-reverse", sm: "row" },
-          justifyContent: { xs: "center", sm: "space-between" },
+          flexDirection: rwd("column-reverse", "row"),
+          justifyContent: rwd("center", "space-between"),
           alignItems: "center",
         }}
       >

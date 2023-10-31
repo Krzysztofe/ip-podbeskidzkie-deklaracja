@@ -4,6 +4,7 @@ import React from "react";
 import StepFormAlert from "./StepFormAlert";
 import StepsHeaderNumber from "./StepsHeaderNumber";
 import StepsHeaderText from "./StepsHeaderText";
+import { rwd } from "../../../utils/rwd";
 
 const StepsHeader = () => {
   const dataSteps = ["Formularz", "Klauzula", "Wysyłka", "Potwierdzenie"];
@@ -14,10 +15,10 @@ const StepsHeader = () => {
       <Box
         sx={{
           width: "fit-content",
-          mx: { xs: "auto", md: 0 },
+          mx: rwd("auto", "auto", "0"),
           display: "flex",
           alignItems: "center",
-          mb: { xs: 1.3, md: 0 },
+          mb: rwd(1.3, 1.3, 0),
         }}
       >
         {dataSteps.map((text, idx, arr) => {
@@ -38,7 +39,7 @@ const StepsHeader = () => {
                     color="secondary"
                     sx={{
                       mx: "21px",
-                      fontSize: { xs: "0.8rem", sm: "small" },
+                      fontSize: rwd("0.8rem", "small"),
                     }}
                   />
                 )}

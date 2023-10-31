@@ -2,17 +2,16 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import HeadingPrimary from "../../../components/HeadingPrimary";
 import { dataClauseParagraphs } from "./dataStepClause";
+import { rwd } from "../../../utils/rwd";
 
 const StepClause = () => {
-
   return (
     <Box
       sx={{
         bgcolor: "secondary.light",
-        px: { xs: 3.2, md: 13.8 },
-        py: { xs: 4.2, md: 5.7 },
-        mx: { xs: -1.6, md: 0 },
-       
+        px: rwd(3.2, 3.2, 13.8),
+        py: rwd(4.2, 4.2, 5.7),
+        mx: rwd(-1.6, -1.6, 0),
       }}
     >
       <Box sx={{ mb: 2.5 }}>

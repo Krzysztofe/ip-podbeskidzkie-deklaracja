@@ -2,6 +2,7 @@ import KeyboardDoubleArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardDou
 import Button from "@mui/material/Button";
 import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
 
 const ButtonReturn = () => {
   const { currentStepIdx, back } = useContext(StepsContext);
@@ -14,9 +15,9 @@ const ButtonReturn = () => {
           onClick={() => back()}
           sx={{
             height: "fit-content",
-            width: { xs: "65%", sm: "12rem" },
+            width: rwd("65%", "12rem"),
             "&:hover": { bgcolor: "#2455BA" },
-            mt: { xs: 1, sm: 0 },
+            mt: rwd(1, 0),
           }}
         >
           Wróć

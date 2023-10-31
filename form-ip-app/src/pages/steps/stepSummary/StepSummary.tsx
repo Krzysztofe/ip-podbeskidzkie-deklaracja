@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { v4 as UUID } from "uuid";
 import HeadingPrimary from "../../../components/HeadingPrimary";
 import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
 import StepSummaryClauseConfirmation from "./StepSummaryClauseConfirmation";
 import StepSummaryMembership from "./StepSummaryMembership";
 import StepSummarySubmitDate from "./StepSummarySubmitDate";
@@ -37,7 +38,7 @@ const StepSummary = () => {
   return (
     <Box sx={{ position: "relative" }}>
       <Box sx={{ width: "100%" }}>
-        <Box sx={{ mb: { xs: 4.1, sm: 5.1 }, mt: { xs: 2.5, sm: 3.9 } }}>
+        <Box sx={{ mb: rwd(4.1, 5.1), mt: rwd(2.5, 3.9) }}>
           <HeadingPrimary headingText={"Sprawdź przekazane dane"} />
         </Box>
 

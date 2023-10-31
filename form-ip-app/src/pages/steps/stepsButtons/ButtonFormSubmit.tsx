@@ -2,14 +2,10 @@ import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDo
 import Button from "@mui/material/Button";
 import { useContext, useEffect } from "react";
 import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
 
 const ButtonFormSubmit = () => {
-  const {
-    currentStepIdx,
-    isSubmited,
-    next,
-    formik,
-  } = useContext(StepsContext);
+  const { currentStepIdx, isSubmited, next, formik } = useContext(StepsContext);
 
   const isError = Object.values(formik.errors);
 
@@ -28,9 +24,9 @@ const ButtonFormSubmit = () => {
           }}
           endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
           sx={{
-            width: { xs: "65%", sm: "12rem" },
+            width: rwd("65%", "12rem"),
             "&:hover": { bgcolor: "#2455BA" },
-            marginLeft: { xs: 0, sm: "auto" },
+            marginLeft: rwd(0, "auto"),
           }}
         >
           Zatwierdź

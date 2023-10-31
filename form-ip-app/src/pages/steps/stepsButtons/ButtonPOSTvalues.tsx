@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import { URL } from "../../../data/dataURL";
 import { currentDateInNumbers } from "../../../utils/currentDateInNumbers";
+import { rwd } from "../../../utils/rwd";
 
 const ButtonPOSTvalues = () => {
   const { formik, sendRequest, isCaptcha, setIsCaptcha, currentStepIdx, next } =
@@ -44,11 +45,10 @@ const ButtonPOSTvalues = () => {
           onClick={() => {
             currentStepIdx < 2 && next();
             isCaptcha && handlePOST();
-            // handlePOST();
           }}
           endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
           sx={{
-            width: { xs: "65%", sm: "12rem" },
+            width: rwd("65%", "12rem"),
             "&:hover": { backgroundColor: "#2455BA" },
           }}
         >
