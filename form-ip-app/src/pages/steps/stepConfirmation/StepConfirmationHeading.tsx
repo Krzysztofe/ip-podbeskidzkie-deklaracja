@@ -2,10 +2,11 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import { rwd } from "../../../utils/rwd";
+import { keyframes } from "@mui/system";
+import CheckIcon from "@mui/icons-material/Check";
 
 const StepConfirmationHeading = () => {
   const [counterIncrease, setCounterIncrease] = useState(0);
-  const [counterDecrease, setCounterDecrease] = useState(360);
 
   useEffect(() => {
     const intervalID = setInterval(() => {
@@ -19,17 +20,35 @@ const StepConfirmationHeading = () => {
     };
   }, [counterIncrease]);
 
-  useEffect(() => {
-    const intervalID = setInterval(() => {
-      if (counterDecrease > 0) {
-        setCounterDecrease(prev => prev - 3);
-      }
-    }, 15);
+  const checkAnimation = keyframes`
+  0% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.8);
+     opacity: 1;
+  }
+  100% {
+    transform: scale(2.4);
+      opacity: 1;
+  }
+`;
 
-    return () => {
-      clearInterval(intervalID);
-    };
-  }, [counterDecrease]);
+  const backgroundAnimation = keyframes`
+  0% {
+    transform: scale(2) rotate(47deg) ;
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1) rotate(47deg);
+     opacity: 1;
+  }
+  100% {
+    transform: scale(2) rotate(47deg);
+      opacity: 1;
+  }
+`;
 
   return (
     <Box
@@ -59,41 +78,39 @@ const StepConfirmationHeading = () => {
       >
         <Box
           sx={{
-            width: "90%",
-            height: "90%",
+            width: "85%",
+            height: "85%",
             borderRadius: "100%",
             backgroundColor: "themeWhite",
             position: "relative",
           }}
         >
+          <CheckIcon
+            sx={{
+              opacity: 0,
+              color: "info.dark",
+              position: "absolute",
+              top: "4px",
+              left: "12px",
+              animation: `${checkAnimation} 2s 2s forwards`,
+              zIndex: "2",
+            }}
+          />
+
           <Box
             sx={{
-              width: "38%",
-              height: "65%",
+              opacity: 0,
+              width: "8px",
+              height: "8px",
+              backgroundColor: "themeWhite",
               position: "absolute",
-              top: "11%",
-              left: "29%",
-              transform: "rotate(40deg)",
-              display: "grid",
-              placeItems: "center",
-              backgroundImage: `conic-gradient(at 40% 30%,transparent 0deg, transparent ${counterDecrease}deg, #3e3e3e 0deg)`,
+              top: "3px",
+              left: "33px",
+              transform: "rotate(47deg)",
+              animation: `${backgroundAnimation} 2s 2s forwards`,
+              zIndex: "1",
             }}
-          >
-            <Box
-              sx={{
-                width: "107%",
-                height: "104%",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "13px",
-                  height: "24px",
-                  backgroundColor: "themeWhite",
-                }}
-              ></Box>
-            </Box>
-          </Box>
+          ></Box>
         </Box>
       </Box>
     </Box>

@@ -46,7 +46,7 @@ const InputsRadioWithText = (props: Props) => {
               <FormControlLabel
                 key={data}
                 value={data}
-                control={<Radio sx={{ pl: 0 }} />}
+                control={<Radio sx={{ ml: -1 }} />}
                 label={data}
                 sx={{
                   ml: "5px",

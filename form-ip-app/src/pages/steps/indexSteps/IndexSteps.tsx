@@ -8,6 +8,7 @@ import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
 
+
 const IndexSteps = () => {
   const { steps, currentStepIdx, formik, formikClause, isLastStep } =
     useContext(StepsContext);
@@ -58,6 +59,7 @@ const IndexSteps = () => {
       </header>
       <main>
         <HttpRequestState />
+
         <Container
           sx={{
             height: rwd("calc(100vh - 56px)", "calc(100vh - 92px)"),
@@ -65,7 +67,7 @@ const IndexSteps = () => {
             padding: "0px !important",
           }}
         >
-         
+      
           {currentStepIdx < 3 && (
             <form
               onSubmit={formSubmit}
