@@ -13,7 +13,7 @@ const StepConfirmationHeading = () => {
       if (counterIncrease < 360) {
         setCounterIncrease(prev => prev + 5);
       }
-    }, 10);
+    }, 1);
 
     return () => {
       clearInterval(intervalID);
@@ -26,7 +26,7 @@ const StepConfirmationHeading = () => {
     opacity: 0;
   }
   50% {
-    transform: scale(1.8);
+    transform: scale(1.5);
      opacity: 1;
   }
   100% {
@@ -45,7 +45,7 @@ const StepConfirmationHeading = () => {
      opacity: 1;
   }
   100% {
-    transform: scale(2) rotate(47deg);
+    transform: scale(2.5) rotate(47deg);
       opacity: 1;
   }
 `;
@@ -92,7 +92,7 @@ const StepConfirmationHeading = () => {
               position: "absolute",
               top: "4px",
               left: "12px",
-              animation: `${checkAnimation} 2s 2s forwards`,
+              animation: `${checkAnimation} 1.5s 1s forwards`,
               zIndex: "2",
             }}
           />
@@ -107,7 +107,7 @@ const StepConfirmationHeading = () => {
               top: "3px",
               left: "33px",
               transform: "rotate(47deg)",
-              animation: `${backgroundAnimation} 2s 2s forwards`,
+              animation: `${backgroundAnimation} 1.5s 1s forwards`,
               zIndex: "1",
             }}
           ></Box>

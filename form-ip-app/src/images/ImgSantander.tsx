@@ -8,7 +8,6 @@ const ImgSantander = () => {
     <svg
       id="Santander__mobile"
       xmlns="http://www.w3.org/2000/svg"
-      // xmlns:xlink="http://www.w3.org/1999/xlink"
       width={windowWidth < 400 ? "110" : "80"}
       height="80"
       viewBox="0 0 58 43"

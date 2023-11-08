@@ -8,7 +8,6 @@ import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
 
-
 const IndexSteps = () => {
   const { steps, currentStepIdx, formik, formikClause, isLastStep } =
     useContext(StepsContext);
@@ -34,8 +33,6 @@ const IndexSteps = () => {
     currentStepIdx === 0
       ? rwd("calc(100% - 120px)", "calc(100% - 90px)")
       : rwd("calc(100% - 120px - 74px)", "calc(100% - 90px - 72px)");
-
-  console.log("hhh");
 
   return (
     <>
@@ -67,7 +64,6 @@ const IndexSteps = () => {
             padding: "0px !important",
           }}
         >
-      
           {currentStepIdx < 3 && (
             <form
               onSubmit={formSubmit}
@@ -103,6 +99,7 @@ const IndexSteps = () => {
               {!isLastStep && <StepsButtons />}
             </form>
           )}
+
           {isLastStep && <StepConfirmation />}
         </Container>
       </main>

@@ -14,6 +14,7 @@ type Props = {
 const InputsTexts = (props: Props) => {
   const { formik } = useContext(StepsContext);
 
+
   return (
     <>
       <HeadingPrimary headingText={props.headingText} />

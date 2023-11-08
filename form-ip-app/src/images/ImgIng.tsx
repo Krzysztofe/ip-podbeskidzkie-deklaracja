@@ -5,7 +5,7 @@ const ImgIngMobile = () => {
     <svg
       id="ING__mobile"
       xmlns="http://www.w3.org/2000/svg"
-      // xmlns:xlink="http://www.w3.org/1999/xlink"
+
       width="80"
       height="80"
       viewBox="0 0 58 43"

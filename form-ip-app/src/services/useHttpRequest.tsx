@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useHttp = () => {
+const useHttpRequest = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -21,7 +21,7 @@ const useHttp = () => {
     })
       .then(resp => {
         if (!resp.ok) {
-          throw Error("Mamy problem...");
+          throw Error("Coś poszło nie tak...");
         } else {
           returnData(resp.ok);
           return resp.json();
@@ -38,4 +38,4 @@ const useHttp = () => {
   return { isLoading, error, sendRequest };
 };
 
-export default useHttp;
+export default useHttpRequest;

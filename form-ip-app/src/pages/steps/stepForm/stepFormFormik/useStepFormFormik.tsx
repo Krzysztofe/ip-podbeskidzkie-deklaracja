@@ -6,6 +6,8 @@ import { validationSchema } from "./validationStepFormik";
 const useStepFormFormik = () => {
   const [isSubmited, setIsSubmited] = useState(false);
 
+
+
   const formik = useFormik<InitialValues>({
     initialValues: initialValues,
     validationSchema: validationSchema,

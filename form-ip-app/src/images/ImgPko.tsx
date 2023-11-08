@@ -6,9 +6,7 @@ const ImgPko = () => {
 
   return (
     <svg
-      // xmlns:svg="http://www.w3.org/2000/svg"
       xmlns="http://www.w3.org/2000/svg"
-      // xmlns:xlink="http://www.w3.org/1999/xlink"
       id="svg164"
       version="1.1"
       width="60"
@@ -23,7 +21,6 @@ const ImgPko = () => {
           gradientTransform="matrix(0.99,0,0,0.99,-21.60985,-13.32)"
           gradientUnits="userSpaceOnUse"
           id="radialGradient88"
-          // xlink:href="#radial-gradient"
         />
         <radialGradient
           gradientUnits="userSpaceOnUse"

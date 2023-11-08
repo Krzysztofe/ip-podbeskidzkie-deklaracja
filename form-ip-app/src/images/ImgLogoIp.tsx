@@ -1,23 +1,17 @@
 const ImgLogoIp = () => {
   return (
-    //    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  
     <svg
-      //    xmlns:dc="http://purl.org/dc/elements/1.1/"
-      //    xmlns:cc="http://creativecommons.org/ns#"
-      //    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-      //    xmlns:svg="http://www.w3.org/2000/svg"
+     
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1444.2225 1480.1022"
       height="100"
       width="100"
-      //    xml:space="preserve"
       id="svg2"
       version="1.1"
     >
       <metadata id="metadata8">
-        {/* <rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF> */}
+
       </metadata>
       <defs id="defs6">
         <clipPath id="clipPath22" clipPathUnits="userSpaceOnUse">
@@ -49,7 +43,7 @@ const ImgLogoIp = () => {
           </g>
           <text
             id="text30"
-            //  style= {{fontVariant:"normal",fontWeight:"normal",fontSize:"71.32617188px",fontFamily:"DINPro-Regular",-inkscapeFontSpecification:"DINPro-Regular",writingMode:"lr-tb;fill:#231f20",fillOpacity:"1", fillRule:"nonzero",stroke:"none"}}
+         
 
             style={{
               fontVariant: "normal",
@@ -57,7 +51,6 @@ const ImgLogoIp = () => {
               fontSize: "71.32617188px",
               fontFamily: "DINPro-Regular",
               fontFeatureSettings: "DINPro-Regular",
-              //   writingMode: "lr-tb",
               fill: "#231f20",
               fillOpacity: "1",
               fillRule: "nonzero",
