@@ -9,31 +9,31 @@ import StepSummaryClauseConfirmation from "./StepSummaryClauseConfirmation";
 import StepSummaryMembership from "./StepSummaryMembership";
 import StepSummarySubmitDate from "./StepSummarySubmitDate";
 
+const dataSummary = [
+  "Imię",
+  "Nazwisko",
+  "Telefon",
+  "E-mail",
+  "Login",
+  "Miejscowość",
+  "Ulica",
+  "Nr domu",
+  "Nr mieszkania",
+  "Kod",
+  "Pracodawca",
+  "Pracodawca",
+  "Miejsce Pracy",
+  "Miejsce Pracy",
+  "Umowa",
+  "Czas pracy",
+  "Czas pracy",
+  "Dział",
+];
+
 const StepSummary = () => {
   const { formik } = useContext(StepsContext);
 
   const formikValues = Object.values(formik.values).slice(0, -1);
-
-  const dataSummary = [
-    "Imię",
-    "Nazwisko",
-    "Telefon",
-    "E-mail",
-    "Login",
-    "Miejscowość",
-    "Ulica",
-    "Nr domu",
-    "Nr mieszkania",
-    "Kod",
-    "Pracodawca",
-    "Pracodawca",
-    "Miejsce Pracy",
-    "Miejsce Pracy",
-    "Umowa",
-    "Czas pracy",
-    "Czas pracy",
-    "Dział",
-  ];
 
   return (
     <Box sx={{ position: "relative" }}>

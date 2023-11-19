@@ -5,6 +5,7 @@ import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDo
 import { URL } from "../../../data/dataURL";
 import { currentDateInNumbers } from "../../../utils/currentDateInNumbers";
 import { rwd } from "../../../utils/rwd";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 
 const ButtonPOSTvalues = () => {
   const { formik, sendRequest, isCaptcha, setIsCaptcha, currentStepIdx, next } =
@@ -46,7 +47,7 @@ const ButtonPOSTvalues = () => {
             currentStepIdx < 2 && next();
             isCaptcha && handlePOST();
           }}
-          endIcon={isCaptcha && <KeyboardDoubleArrowRightOutlinedIcon />}
+          endIcon={isCaptcha ? <KeyboardDoubleArrowRightOutlinedIcon />: <KeyboardDoubleArrowUpIcon />}
           sx={{
             width: rwd("65%", "12rem"),
             "&:hover": { backgroundColor: "#2455BA" },

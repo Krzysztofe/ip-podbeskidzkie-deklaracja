@@ -13,8 +13,8 @@ import { dataMembershipInputs } from "./dataStepForm";
 import { dataDepartmentInputs } from "./dataStepForm";
 import { rwd } from "../../../utils/rwd";
 
-const StepForm = () => {
-  const dataInputs = [
+
+ const dataInputs = [
     <InputsTexts headingText="Twoje dane:" inputsData={dataUserInputs} />,
     <InputsTexts headingText="Twój adres:" inputsData={dataAdressInputs} />,
 
@@ -54,6 +54,9 @@ const StepForm = () => {
     <InputsTexts headingText="Dział:" inputsData={dataDepartmentInputs} />,
   ];
 
+
+const StepForm = () => {
+ 
   return (
     <>
       <StepFormHeader />
