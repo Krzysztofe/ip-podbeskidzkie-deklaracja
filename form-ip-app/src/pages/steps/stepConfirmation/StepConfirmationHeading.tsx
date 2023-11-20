@@ -5,21 +5,6 @@ import { rwd } from "../../../utils/rwd";
 import { keyframes } from "@mui/system";
 import CheckIcon from "@mui/icons-material/Check";
 
-const StepConfirmationHeading = () => {
-  const [counterIncrease, setCounterIncrease] = useState(0);
-
-  useEffect(() => {
-    const intervalID = setInterval(() => {
-      if (counterIncrease < 360) {
-        setCounterIncrease(prev => prev + 5);
-      }
-    }, 1);
-
-    return () => {
-      clearInterval(intervalID);
-    };
-  }, [counterIncrease]);
-
   const checkAnimation = keyframes`
   0% {
     transform: scale(2.4);
@@ -49,6 +34,27 @@ const StepConfirmationHeading = () => {
       opacity: 1;
   }
 `;
+
+
+
+const StepConfirmationHeading = () => {
+  const [counterIncrease, setCounterIncrease] = useState(0);
+
+  useEffect(() => {
+    const intervalID = setInterval(() => {
+      if (counterIncrease < 360) {
+        setCounterIncrease(prev => prev + 5);
+      }
+    }, 1);
+
+    return () => {
+      clearInterval(intervalID);
+    };
+  }, [counterIncrease]);
+
+ 
+
+
 
   return (
     <Box
@@ -94,7 +100,7 @@ const StepConfirmationHeading = () => {
               position: "absolute",
               top: "4px",
               left: "12px",
-              animation: `${checkAnimation} 1.5s 1s forwards`,
+              animation: `${checkAnimation} 2s 1.5s forwards`,
               zIndex: "2",
             }}
           />
@@ -109,7 +115,7 @@ const StepConfirmationHeading = () => {
               top: "3px",
               left: "33px",
               transform: "rotate(47deg)",
-              animation: `${backgroundAnimation} 1.5s 1s forwards`,
+              animation: `${backgroundAnimation} 2s 1.5s forwards`,
               zIndex: "1",
             }}
           ></Box>
