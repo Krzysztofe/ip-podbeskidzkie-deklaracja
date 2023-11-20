@@ -11,16 +11,12 @@ const StepFormHeader = () => {
         do OZZIP Amazon
       </Typography>
 
-      <HeadingPrimary headingText={"Wypełnij formularz"} />
+      <HeadingPrimary
+        headingText={
+          "Przekazane dane są wyłącznie do wiadomości OZZIP Amazon"
+        }
+      />
 
-      <Typography
-        variant="fs_12_sb"
-        component="p"
-        color="info.dark"
-        sx={{ mt: rwd(3.9, 2) }}
-      >
-        Przekazane dane są wyłącznie do wiadomości OZZIP Amazon
-      </Typography>
       <Typography
         variant="fs_12_sb"
         component="p"

@@ -74,6 +74,8 @@ const StepConfirmationHeading = () => {
           placeItems: "center",
           backgroundImage: `conic-gradient(#3e3e3e 0deg, #3e3e3e ${counterIncrease}deg, transparent 0deg)`,
           backgroundRepeat: "no-repeat",
+          position: "relative",
+          zIndex: "-1",
         }}
       >
         <Box
