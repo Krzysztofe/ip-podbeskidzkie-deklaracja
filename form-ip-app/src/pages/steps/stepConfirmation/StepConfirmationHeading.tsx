@@ -45,7 +45,7 @@ const StepConfirmationHeading = () => {
       if (counterIncrease < 360) {
         setCounterIncrease(prev => prev + 5);
       }
-    }, 1);
+    }, 10);
 
     return () => {
       clearInterval(intervalID);

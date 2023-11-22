@@ -81,7 +81,7 @@ const IndexSteps = () => {
                   transition: "transform 0.5s ease",
                 }}
               >
-                {steps.slice(0, -1).map((step, idx) => {
+                {steps.slice(0,-1).map((step, idx) => {
                   return (
                     <Box
                       key={idx}

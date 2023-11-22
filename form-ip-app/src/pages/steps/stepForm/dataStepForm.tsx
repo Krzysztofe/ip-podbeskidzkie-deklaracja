@@ -38,7 +38,7 @@ export const dataContractInpts = [
   "Na czas określony",
   "Okres próbny",
   "Umowa zlecenie",
-  "Umowa o pracę tymczasową (agecje)",
+  "Umowa o pracę tymczasową (agencje)",
 ];
 
 export const dataWorkTimeInputs = ["Cały etat", "Pół etatu"];

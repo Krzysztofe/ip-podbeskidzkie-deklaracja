@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { v4 as UUID } from "uuid";
 import HeadingPrimary from "../../../components/HeadingPrimary";
 import { StepsContext } from "../../../context/ContextProv";
@@ -44,27 +44,11 @@ const StepSummary = () => {
 
         {dataSummary.map((text, idx) => {
           return (
-            <Box key={UUID()}>
+            <React.Fragment key={UUID()}>
               {formikValues[idx] === "" ? null : (
                 <Box
                   sx={{
                     display: "flex",
-                    mb: idx === 4 || idx === 9 ? 2 : 0,
-                    position: "relative",
-                    "&::after":
-                      idx === 4 || idx === 9
-                        ? {
-                            content: "''",
-                            position: "absolute",
-                            bottom: "-10px",
-                            right: "50%",
-                            left: "50%",
-                            transform: "translate(-50%)",
-                            width: "40%",
-                            height: "1px",
-                            backgroundColor: "info.main",
-                          }
-                        : {},
                   }}
                 >
                   <Typography
@@ -91,7 +75,20 @@ const StepSummary = () => {
                   </Typography>
                 </Box>
               )}
-            </Box>
+              {idx === 4 || idx === 9 ? (
+                <Box
+                  sx={{
+                    backgroundColor: "info.main",
+                    height: "1px",
+                    marginBlock: 1,
+                    width: "30%",
+                    marginInline: "auto",
+                  }}
+                ></Box>
+              ) : (
+                <></>
+              )}
+            </React.Fragment>
           );
         })}
 

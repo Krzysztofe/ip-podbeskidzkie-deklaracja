@@ -23,10 +23,10 @@ const StepConfirmationParagraphs = () => {
         imieniu prezydium mogły się z nimi zapoznać,
       </Typography>
       <Typography {...typographyProps} sx={{ ml: 3, my: 1.6 }}>
-        <strong>b)</strong> dzień, w którym po wprowadzeniu tego oświadczenia (
-        w sposób wskazany w lit. a) prezydium podstawowej jednostki
-        organizacyjnej związku podjęło się jej obrony wobec podmiotu
-        zatrudniającego (w tym pracodawcy).
+        <strong>b)</strong> dzień, w którym po wprowadzeniu tego oświadczenia (w
+        sposób wskazany w lit. a) prezydium podstawowej jednostki organizacyjnej
+        związku podjęło się jej obrony wobec podmiotu zatrudniającego (w tym
+        pracodawcy).
       </Typography>
     </article>
   );

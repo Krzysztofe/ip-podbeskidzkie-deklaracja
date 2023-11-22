@@ -20,7 +20,7 @@ const StepSummaryMembership = () => {
           right: "50%",
           left: "50%",
           transform: "translate(-50%)",
-          width: "40%",
+          width: "30%",
           height: "1px",
           backgroundColor: "info.main",
         },

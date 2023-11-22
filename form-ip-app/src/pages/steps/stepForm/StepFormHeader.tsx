@@ -7,8 +7,8 @@ const StepFormHeader = () => {
   return (
     <Box py={3.9} borderBottom={1} borderColor={"info.light"}>
       <Typography variant="h1" color="info.dark" mb={4.2}>
-        Deklaracja Przystąpienia <br />
-        do OZZIP Amazon
+        Deklaracja Przystąpienia do<br />
+        OZZIP Amazon
       </Typography>
 
       <HeadingPrimary

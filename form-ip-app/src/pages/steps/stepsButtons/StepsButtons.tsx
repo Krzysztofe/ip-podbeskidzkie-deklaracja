@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import StepClauseForm from "../stepClause/stepClauseForm/StepClauseForm";
 import Captcha from "../stepSummary/Captcha";
-import ButtonClauseSumit from "./ButtonClauseSumit";
+import ButtonClauseSubmit from "./ButtonClauseSubmit";
 import ButtonFormSubmit from "./ButtonFormSubmit";
 import ButtonPOSTvalues from "./ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";
@@ -41,7 +41,7 @@ const StepsButtons = () => {
       >
         <ButtonReturn />
         <ButtonFormSubmit />
-        <ButtonClauseSumit />
+        <ButtonClauseSubmit />
         <ButtonPOSTvalues />
       </Box>
     </Container>
