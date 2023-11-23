@@ -46,7 +46,7 @@ export const dataWorkTimeInputs = ["Cały etat", "Pół etatu"];
 export const dataMembershipInputs = [
   "Nie należę do innego związku zawodowego u pracodawcy",
   "Należę do innego związku zawodowego u pracodawcy, jednak chcę, by przy podawaniu informacji o liczbie członków moje członkostwo uwzględniał wyłącznie OZZIP",
-  "Należę do innego związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji i liczbie członków OZZIP uwzględniał moje członkostwo",
+  "Należę do innego związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji o liczbie członków OZZIP uwzględniał moje członkostwo",
 ];
 
 export const dataDepartmentInputs = [{ label: "Dział", value: "department", type: "text" }];
