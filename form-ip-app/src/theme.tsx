@@ -59,7 +59,7 @@ declare module "@mui/material/styles" {
     };
   }
   interface PaletteOptions {
-    themeWhite: string; 
+    themeWhite: string;
   }
 }
 
