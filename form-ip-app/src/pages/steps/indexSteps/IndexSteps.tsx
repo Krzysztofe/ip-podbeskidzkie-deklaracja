@@ -7,7 +7,6 @@ import StepConfirmation from "../stepConfirmation/StepConfirmation";
 import StepsButtons from "../stepsButtons/StepsButtons";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
-import { initialAnimation } from "./dataIndexSteps";
 
 const IndexSteps = () => {
   const { steps, currentStepIdx, formik, formikClause, isLastStep } =
@@ -38,23 +37,9 @@ const IndexSteps = () => {
   return (
     <>
       <header>
-        <Container
-          sx={{
-            height: rwd("56px", "92px"),
-            position: "fixed",
-            top: 0,
-            left: "50%",
-            transform: "translate(-50%)",
-            display: "flex",
-            alignItems: "center",
-            pl: "16px !important",
-            bgcolor: "white",
-            zIndex: 2,
-          }}
-        >
-          <StepsHeader />
-        </Container>
+        <StepsHeader />
       </header>
+
       <main>
         <HttpRequestState />
 
@@ -78,9 +63,8 @@ const IndexSteps = () => {
                   height,
                   display: "grid",
                   gridTemplateColumns: "repeat(3, 100%)",
-                  transform: `translate(-${currentStepIdx}00%, 100%)`,
+                  transform: `translate(-${currentStepIdx}00%)`,
                   transition: "transform 0.5s ease",
-                  animation: `${initialAnimation} 2s 0.5s forwards ease`,
                 }}
               >
                 {steps.slice(0, -1).map((step, idx) => {

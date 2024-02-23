@@ -7,6 +7,7 @@ export const initialAnimation = keyframes`
             transform: translateY(-100%);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
+            opacity: 1
    
   }
   38% {

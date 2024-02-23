@@ -10,7 +10,7 @@ const useStepFormFormik = () => {
 
   const formik = useFormik<InitialValues>({
     initialValues: initialValues,
-    validationSchema: validationSchema,
+    // validationSchema: validationSchema,
     onSubmit: () => {
       setIsSubmited(true);
     },

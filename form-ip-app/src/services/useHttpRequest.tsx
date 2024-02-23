@@ -2,39 +2,39 @@ import { useState } from "react";
 
 const useHttpRequest = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<any>(null);
 
-  const sendRequest = (
+  const sendRequest = async (
     requestConfig: any,
     returnData: React.Dispatch<React.SetStateAction<boolean>>
   ) => {
     setIsLoading(true);
     setError(null);
 
-    fetch(requestConfig.url, {
-      method: requestConfig.method || "GET",
-      body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then(resp => {
-        if (!resp.ok) {
-          throw Error("Coś poszło nie tak...");
-        } else {
-          returnData(resp.ok);
-          return resp.json();
-        }
-      })
-      .then(() => {
-        setIsLoading(false);
-      })
-      .catch(err => {
-        setError(err);
-        setIsLoading(false);
+    try {
+      const response = await fetch(requestConfig.url, {
+        method: requestConfig.method || "GET",
+        body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
       });
+
+      if (!response.ok) {
+        throw Error("Something went wrong...");
+      } else {
+        returnData(response.ok);
+        const responseData = await response.json();
+        return responseData;
+      }
+    } catch (err) {
+      setError(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
+
   return { isLoading, error, sendRequest };
 };
 

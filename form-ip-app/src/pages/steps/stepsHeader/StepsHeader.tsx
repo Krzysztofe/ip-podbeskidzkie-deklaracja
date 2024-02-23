@@ -1,16 +1,31 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 import React from "react";
+import { rwd } from "../../../utils/rwd";
 import StepFormAlert from "./StepFormAlert";
 import StepsHeaderNumber from "./StepsHeaderNumber";
 import StepsHeaderText from "./StepsHeaderText";
-import { rwd } from "../../../utils/rwd";
 
 const StepsHeader = () => {
   const dataSteps = ["Formularz", "Klauzula", "Wysyłka", "Potwierdzenie"];
 
   return (
-    <>
+    <Container
+      sx={{
+        height: rwd("56px", "92px"),
+        position: "fixed",
+        top: 0,
+        left: "50%",
+        transform: "translate(-50%)",
+        display: "flex",
+        alignItems: "center",
+        pl: "16px !important",
+        bgcolor: "white",
+        zIndex: 2,
+        scrollbarGutter: "stable",
+      }}
+    >
       <StepFormAlert />
       <Box
         sx={{
@@ -48,7 +63,7 @@ const StepsHeader = () => {
           );
         })}
       </Box>
-    </>
+    </Container>
   );
 };
 
