@@ -5,8 +5,10 @@ import { useContext } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import { rwd } from "../../../utils/rwd";
 
+
 const HttpRequestState = () => {
   const { error, isLoading } = useContext(StepsContext);
+
 
   const BoxStylesBackground = {
     position: "absolute",

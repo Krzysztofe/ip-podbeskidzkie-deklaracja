@@ -1,13 +1,13 @@
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import React from "react";
 import { rwd } from "../../../utils/rwd";
 import StepFormAlert from "./StepFormAlert";
 import StepsHeaderNumber from "./StepsHeaderNumber";
 import StepsHeaderText from "./StepsHeaderText";
+import StepHeaderArrow from "./StepHeaderArrow";
+import { memo } from "react";
 
-const StepsHeader = () => {
+const StepsHeader = memo(() => {
   const dataSteps = ["Formularz", "Klauzula", "Wysyłka", "Potwierdzenie"];
 
   return (
@@ -38,33 +38,23 @@ const StepsHeader = () => {
       >
         {dataSteps.map((text, idx, arr) => {
           return (
-            <React.Fragment key={text}>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  position: "relative",
-                }}
-              >
-                <StepsHeaderNumber idx={idx} />
-                <StepsHeaderText text={text} />
-
-                {idx < arr.length - 1 && (
-                  <ArrowForwardIosIcon
-                    color="secondary"
-                    sx={{
-                      mx: "21px",
-                      fontSize: rwd("0.8rem", "small"),
-                    }}
-                  />
-                )}
-              </Box>
-            </React.Fragment>
+            <Box
+              key={text}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                position: "relative",
+              }}
+            >
+              <StepsHeaderNumber idx={idx} />
+              <StepsHeaderText text={text} />
+              <StepHeaderArrow idx={idx} array={arr} />
+            </Box>
           );
         })}
       </Box>
     </Container>
   );
-};
+});
 
 export default StepsHeader;
