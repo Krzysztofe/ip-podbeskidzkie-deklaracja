@@ -1,15 +1,14 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useContext } from "react";
-import { StepsContext } from "../../../context/ContextProv";
 import { rwd } from "../../../utils/rwd";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 type Props = {
   idx: number;
 };
 
 const StepsHeaderNumber = (props: Props) => {
-  const { currentStepIdx } = useContext(StepsContext);
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   return (
     <>
       <Box

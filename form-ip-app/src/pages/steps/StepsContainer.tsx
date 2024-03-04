@@ -1,19 +1,19 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { rwd } from "../../utils/rwd";
 import { useContext, useEffect, useRef } from "react";
+import { StepsContext } from "../../context/ContextProv";
+import { rwd } from "../../utils/rwd";
+import useMultistepFormStore from "../../zustandStores/useMultistepFormStore";
 import StepConfirmation from "./stepConfirmation/StepConfirmation";
 import StepsButtons from "./stepsButtons/StepsButtons";
-import { StepsContext } from "../../context/ContextProv";
 
 const StepsContainer = () => {
-  const { steps, currentStepIdx, formik, formikClause, isLastStep } =
-    useContext(StepsContext);
-  // const { count, name, changeName, increment, decrement } = useFormStore(
-  //   (state: any) => state
-  // );
+  const { formik, formikClause } = useContext(StepsContext);
 
-  // console.log("", name);
+  const steps = useMultistepFormStore(state => state.steps);
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+
+  const isLastStep = currentStepIdx === steps.length - 1;
 
   const scrollBoxRefs = [
     useRef<HTMLElement | null>(null),
@@ -45,8 +45,6 @@ const StepsContainer = () => {
         padding: "0px !important",
       }}
     >
-
-
       {currentStepIdx < 3 && (
         <form
           onSubmit={formSubmit}
@@ -64,7 +62,7 @@ const StepsContainer = () => {
               transition: "transform 0.5s ease",
             }}
           >
-            {steps.slice(0, -1).map((step, idx) => {
+            {steps.slice(0, -1).map((steps, idx) => {
               return (
                 <Box
                   key={idx}
@@ -74,7 +72,7 @@ const StepsContainer = () => {
                     px: 1.6,
                   }}
                 >
-                  {step}
+                  {steps}
                 </Box>
               );
             })}

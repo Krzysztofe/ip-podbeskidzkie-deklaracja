@@ -3,10 +3,13 @@ import Button from "@mui/material/Button";
 import { useContext, useEffect } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import { rwd } from "../../../utils/rwd";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const ButtonFormSubmit = () => {
-  const { currentStepIdx, isSubmited, next, formik } = useContext(StepsContext);
+  const { isSubmited, formik } = useContext(StepsContext);
 
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+  const next = useMultistepFormStore(state => state.next);
   const isError = Object.values(formik.errors);
 
   useEffect(() => {

@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { StepsContext } from "../../../context/ContextProv";
 import Button from "@mui/material/Button";
-import { Box } from "@mui/material";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import { URL } from "../../../data/dataURL";
 import { currentDateInNumbers } from "../../../utils/currentDateInNumbers";
@@ -9,8 +8,8 @@ import { rwd } from "../../../utils/rwd";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import { keyframes } from "@mui/system";
 import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
-import useHttpRequest from "../../../services/useHttpRequest";
 import useHttpRequestStore from "../../../zustandStores/useHttpStore";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const arrowUp = keyframes`
   0% {
@@ -22,13 +21,13 @@ const arrowUp = keyframes`
 `;
 
 const ButtonPOSTvalues = () => {
-  const { formik, currentStepIdx, next } =
-    useContext(StepsContext);
+  const { formik } = useContext(StepsContext);
 
-  const isCaptcha = useCaptchaStore((state) => state.isCaptcha);
-  const setChaptcha = useCaptchaStore((state) => state.setChaptcha);
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+  const next = useMultistepFormStore(state => state.next);
+  const isCaptcha = useCaptchaStore(state => state.isCaptcha);
+  const setChaptcha = useCaptchaStore(state => state.setChaptcha);
   const sendRequest = useHttpRequestStore(state => state.sendRequest);
-   
 
   const [responseStatus, setResponseStatus] = useState(false);
 

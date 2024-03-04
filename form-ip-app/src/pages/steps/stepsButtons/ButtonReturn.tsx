@@ -1,11 +1,13 @@
 import KeyboardDoubleArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowLeftOutlined";
 import Button from "@mui/material/Button";
-import { useContext } from "react";
-import { StepsContext } from "../../../context/ContextProv";
 import { rwd } from "../../../utils/rwd";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const ButtonReturn = () => {
-  const { currentStepIdx, back } = useContext(StepsContext);
+ const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+ const back = useMultistepFormStore(state => state.back);
+ 
+
   return (
     <>
       {currentStepIdx > 0 && (

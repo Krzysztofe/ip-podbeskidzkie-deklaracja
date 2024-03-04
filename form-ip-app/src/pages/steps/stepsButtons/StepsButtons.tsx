@@ -1,17 +1,17 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { useContext } from "react";
-import { StepsContext } from "../../../context/ContextProv";
+import { rwd } from "../../../utils/rwd";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 import StepClauseForm from "../stepClause/stepClauseForm/StepClauseForm";
 import Captcha from "../stepSummary/Captcha";
 import ButtonClauseSubmit from "./ButtonClauseSubmit";
 import ButtonFormSubmit from "./ButtonFormSubmit";
 import ButtonPOSTvalues from "./ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";
-import { rwd } from "../../../utils/rwd";
 
 const StepsButtons = () => {
-  const { currentStepIdx } = useContext(StepsContext);
+
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
 
   return (
     <Container

@@ -1,8 +1,6 @@
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
-import { useContext } from "react";
-import { StepsContext } from "../../../context/ContextProv";
 import { rwd } from "../../../utils/rwd";
 import useHttpRequestStore from "../../../zustandStores/useHttpStore";
 
@@ -28,8 +26,6 @@ const BoxStylesContent = {
 };
 
 const HttpRequestState = () => {
-  // const { error } = useContext(StepsContext);
-
   const isLoading = useHttpRequestStore(state => state.isLoading);
   const error = useHttpRequestStore(state => state.error);
 
