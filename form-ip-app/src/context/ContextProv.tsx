@@ -17,12 +17,6 @@ type ContextType = {
   formikClause: ReturnType<typeof useStepClauseFormik>["formikClause"];
   isSubmited: boolean;
   isConfirmed: boolean;
-  isLoading: boolean;
-  error: any;
-  sendRequest: (
-    requestConfig: any,
-    returnData: React.Dispatch<React.SetStateAction<boolean>>
-  ) => void;
   steps: JSX.Element[];
   currentStepIdx: number;
   isLastStep: boolean;
@@ -36,7 +30,6 @@ export const StepsContext = createContext<ContextType>({} as ContextType);
 const StepsContextProv = (props: Props) => {
   const { formik, isSubmited } = useStepFormFormik();
   const { formikClause, isConfirmed } = useStepClauseFormik();
-  const { isLoading, error, sendRequest } = useHttpRequest();
   const { steps, currentStepIdx, step, back, next, isLastStep } =
     useMultistepForm([
       <StepForm />,
@@ -54,9 +47,6 @@ const StepsContextProv = (props: Props) => {
         formikClause,
         isSubmited,
         isConfirmed,
-        isLoading,
-        error,
-        sendRequest,
         steps,
         currentStepIdx,
         isLastStep,

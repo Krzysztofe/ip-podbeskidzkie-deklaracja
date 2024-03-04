@@ -9,6 +9,8 @@ import { rwd } from "../../../utils/rwd";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import { keyframes } from "@mui/system";
 import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
+import useHttpRequest from "../../../services/useHttpRequest";
+import useHttpRequestStore from "../../../zustandStores/useHttpStore";
 
 const arrowUp = keyframes`
   0% {
@@ -20,11 +22,13 @@ const arrowUp = keyframes`
 `;
 
 const ButtonPOSTvalues = () => {
-  const { formik, sendRequest, currentStepIdx, next } =
+  const { formik, currentStepIdx, next } =
     useContext(StepsContext);
 
-  const isCaptcha = useCaptchaStore((state: any) => state.isCaptcha);
-  const setChaptcha = useCaptchaStore((state: any) => state.setChaptcha);
+  const isCaptcha = useCaptchaStore((state) => state.isCaptcha);
+  const setChaptcha = useCaptchaStore((state) => state.setChaptcha);
+  const sendRequest = useHttpRequestStore(state => state.sendRequest);
+   
 
   const [responseStatus, setResponseStatus] = useState(false);
 
@@ -62,6 +66,7 @@ const ButtonPOSTvalues = () => {
             onClick={() => {
               currentStepIdx < 2 && next();
               isCaptcha && handlePOST();
+              //  handlePOST();
             }}
             endIcon={
               isCaptcha ? (
