@@ -1,18 +1,19 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { rwd } from "../../../utils/rwd";
-import { useFormStore } from "../../../store";
+import { rwd } from "../../utils/rwd";
 import { useContext, useEffect, useRef } from "react";
-import StepConfirmation from "../stepConfirmation/StepConfirmation";
-import StepsButtons from "../stepsButtons/StepsButtons";
-import { StepsContext } from "../../../context/ContextProv";
+import StepConfirmation from "./stepConfirmation/StepConfirmation";
+import StepsButtons from "./stepsButtons/StepsButtons";
+import { StepsContext } from "../../context/ContextProv";
 
 const StepsContainer = () => {
   const { steps, currentStepIdx, formik, formikClause, isLastStep } =
     useContext(StepsContext);
-  const { count, increment, decrement } = useFormStore((state: any) => state);
+  // const { count, name, changeName, increment, decrement } = useFormStore(
+  //   (state: any) => state
+  // );
 
-  console.log("", count);
+  // console.log("", name);
 
   const scrollBoxRefs = [
     useRef<HTMLElement | null>(null),
@@ -44,8 +45,8 @@ const StepsContainer = () => {
         padding: "0px !important",
       }}
     >
-      <button onClick={increment}>inc</button>
-      <button onClick={decrement}>dec</button>
+
+
       {currentStepIdx < 3 && (
         <form
           onSubmit={formSubmit}

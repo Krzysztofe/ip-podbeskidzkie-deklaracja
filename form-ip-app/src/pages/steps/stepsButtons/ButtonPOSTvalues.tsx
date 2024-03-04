@@ -8,9 +8,9 @@ import { currentDateInNumbers } from "../../../utils/currentDateInNumbers";
 import { rwd } from "../../../utils/rwd";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import { keyframes } from "@mui/system";
+import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
 
-
- const arrowUp = keyframes`
+const arrowUp = keyframes`
   0% {
      transform: translateY(20%)
   }
@@ -19,10 +19,12 @@ import { keyframes } from "@mui/system";
   }
 `;
 
-
 const ButtonPOSTvalues = () => {
-  const { formik, sendRequest, isCaptcha, setIsCaptcha, currentStepIdx, next } =
+  const { formik, sendRequest, currentStepIdx, next } =
     useContext(StepsContext);
+
+  const isCaptcha = useCaptchaStore((state: any) => state.isCaptcha);
+  const setChaptcha = useCaptchaStore((state: any) => state.setChaptcha);
 
   const [responseStatus, setResponseStatus] = useState(false);
 
@@ -32,7 +34,7 @@ const ButtonPOSTvalues = () => {
 
   useEffect(() => {
     if (currentStepIdx !== 2) {
-      setIsCaptcha(false);
+      setChaptcha(false);
     }
   }, [currentStepIdx]);
 
@@ -50,7 +52,6 @@ const ButtonPOSTvalues = () => {
       );
     }
   };
-
 
   return (
     <>

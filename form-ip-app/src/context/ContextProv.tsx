@@ -23,8 +23,6 @@ type ContextType = {
     requestConfig: any,
     returnData: React.Dispatch<React.SetStateAction<boolean>>
   ) => void;
-  isCaptcha: boolean;
-  setIsCaptcha: React.Dispatch<React.SetStateAction<boolean>>;
   steps: JSX.Element[];
   currentStepIdx: number;
   isLastStep: boolean;
@@ -39,7 +37,6 @@ const StepsContextProv = (props: Props) => {
   const { formik, isSubmited } = useStepFormFormik();
   const { formikClause, isConfirmed } = useStepClauseFormik();
   const { isLoading, error, sendRequest } = useHttpRequest();
-  const [isCaptcha, setIsCaptcha] = useState(false);
   const { steps, currentStepIdx, step, back, next, isLastStep } =
     useMultistepForm([
       <StepForm />,
@@ -58,8 +55,6 @@ const StepsContextProv = (props: Props) => {
         isSubmited,
         isConfirmed,
         isLoading,
-        isCaptcha,
-        setIsCaptcha,
         error,
         sendRequest,
         steps,

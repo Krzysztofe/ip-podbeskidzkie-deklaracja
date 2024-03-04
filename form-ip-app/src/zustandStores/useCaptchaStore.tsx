@@ -1,13 +1,13 @@
 import { create } from "zustand";
 
-type CaptchaStore = {
+type FormStore = {
   isCaptcha: boolean;
   setChaptcha: (isCaptcha: boolean) => void;
 };
 
-export const useCaptchaStore = create<CaptchaStore>(set => ({
+export const useCaptchaStore = create<FormStore>(set => ({
   isCaptcha: false,
-  setChaptcha: isCaptcha => {
+  setChaptcha: (isCaptcha) => {
     set(state => ({ isCaptcha: isCaptcha }));
   },
 }));

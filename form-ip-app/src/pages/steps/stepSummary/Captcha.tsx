@@ -3,14 +3,17 @@ import { useContext } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { StepsContext } from "../../../context/ContextProv";
 import { rwd } from "../../../utils/rwd";
+import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
 
 const Captcha = () => {
-  const { setIsCaptcha } = useContext(StepsContext);
+  const setChaptcha = useCaptchaStore((state: any) => state.setChaptcha);
+
+  // const { setIsCaptcha } = useContext(StepsContext);
 
   const key = process.env.REACT_APP_reCaptchaKey;
 
   const handleChange = () => {
-    setIsCaptcha(true);
+    setChaptcha(true);
   };
 
   if (!key) {
