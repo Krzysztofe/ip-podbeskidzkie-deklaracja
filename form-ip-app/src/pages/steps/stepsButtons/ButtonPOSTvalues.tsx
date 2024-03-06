@@ -10,6 +10,8 @@ import { keyframes } from "@mui/system";
 import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
 import useHttpRequestStore from "../../../zustandStores/useHttpStore";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
+import { useFormikContext } from "formik";
+import { ModelMember } from "../stepForm/stepFormFormik/dataStepFormik";
 
 const arrowUp = keyframes`
   0% {
@@ -21,8 +23,8 @@ const arrowUp = keyframes`
 `;
 
 const ButtonPOSTvalues = () => {
-  const { formik } = useContext(StepsContext);
 
+  const { values } = useFormikContext<ModelMember>();
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const next = useMultistepFormStore(state => state.next);
   const isCaptcha = useCaptchaStore(state => state.isCaptcha);
@@ -47,7 +49,7 @@ const ButtonPOSTvalues = () => {
         {
           url: URL,
           body: {
-            member: { ...formik.values, submitDate: currentDateInNumbers() },
+            member: { ...values, submitDate: currentDateInNumbers() },
           },
           method: "POST",
         },

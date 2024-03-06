@@ -23,7 +23,8 @@ const ButtonClauseSubmit = () => {
         <Button
           variant="contained"
           type="submit"
-          onClick={() => isConfirmed && isErrorInClause.length === 0 && next()}
+          // onClick={() => isConfirmed && isErrorInClause.length === 0 && next()}
+          onClick={() => next()}
           endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
           sx={{
             width: rwd("65%", "12rem"),

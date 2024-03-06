@@ -1,31 +1,24 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import useStepFormFormik from "../stepFormFormik/useStepFormFormik";
-import useStepClauseFormik from "../../stepClause/stepClauseForm/useStepClauseFormik";
+import { ModelMember } from "../stepFormFormik/dataStepFormik";
+import { FormikErrors, FormikTouched } from "formik";
 
 type Props = {
   value: string;
   otherValue?: string;
-  formik:
-    | ReturnType<typeof useStepFormFormik>["formik"]
-    | ReturnType<typeof useStepClauseFormik>["formikClause"];
+  errors: FormikErrors<ModelMember>;
+  touched: FormikTouched<ModelMember>;
 };
 
-
-
 const InputsErrors = (props: Props) => {
-  const touchedValue =
-    props.formik.touched[props.value as keyof typeof props.formik.touched];
-  const errorValue =
-    props.formik.errors[props.value as keyof typeof props.formik.errors];
+  const touchedValue = props.touched[props.value as keyof typeof props.touched];
+  const errorValue = props.errors[props.value as keyof typeof props.errors];
   const showError = touchedValue && errorValue;
 
   if (props.otherValue) {
     return (
       <Box sx={{ height: theme => theme.spacing(2.5) }}>
-        {(props.formik.touched[
-          props.otherValue as keyof typeof props.formik.touched
-        ] ||
+        {(props.touched[props.otherValue as keyof typeof props.touched] ||
           touchedValue) &&
           errorValue && (
             <Typography variant="subtitle1" color="error">

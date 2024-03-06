@@ -3,12 +3,11 @@ import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
-import { useContext } from "react";
+import { useFormikContext } from "formik";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
-import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "./InputsErrors";
 import { rwd } from "../../../../utils/rwd";
-import useStepFormFormik from "../stepFormFormik/useStepFormFormik";
+import InputsErrors from "./InputsErrors";
+import { ModelMember } from "../stepFormFormik/dataStepFormik";
 
 type Props = {
   headingText: string;
@@ -18,7 +17,8 @@ type Props = {
 };
 
 const InputsRadio = (props: Props) => {
-  const { formik } = useContext(StepsContext);
+  const { values, handleBlur, setFieldValue, errors, touched } =
+    useFormikContext<ModelMember>();
 
   return (
     <>
@@ -26,9 +26,9 @@ const InputsRadio = (props: Props) => {
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name={props.inputValue}
-          value={formik.values[props.inputValue as keyof typeof formik.values]}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
+          value={values[props.inputValue as keyof typeof values]}
+          onChange={e => setFieldValue(props.inputValue, e.target.value)}
+          onBlur={handleBlur}
           sx={{
             width: rwd("80%", "60%"),
             marginInline: "auto",
@@ -64,7 +64,11 @@ const InputsRadio = (props: Props) => {
             mt: 1,
           }}
         >
-          <InputsErrors formik={formik} value={props.inputValue} />
+          <InputsErrors
+            value={props.inputValue}
+            errors={errors}
+            touched={touched}
+          />
         </Box>
       </FormControl>
     </>

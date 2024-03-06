@@ -1,13 +1,14 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import React, { useContext } from "react";
+import { useFormikContext } from "formik";
+import React from "react";
 import { v4 as UUID } from "uuid";
 import HeadingPrimary from "../../../components/HeadingPrimary";
-import { StepsContext } from "../../../context/ContextProv";
 import { rwd } from "../../../utils/rwd";
 import StepSummaryClauseConfirmation from "./StepSummaryClauseConfirmation";
 import StepSummaryMembership from "./StepSummaryMembership";
 import StepSummarySubmitDate from "./StepSummarySubmitDate";
+import { ModelMember } from "../stepForm/stepFormFormik/dataStepFormik";
 
 const dataSummary = [
   "Imię",
@@ -31,9 +32,9 @@ const dataSummary = [
 ];
 
 const StepSummary = () => {
-  const { formik } = useContext(StepsContext);
+  const { values } = useFormikContext<ModelMember>();
 
-  const formikValues = Object.values(formik.values).slice(0, -1);
+  const formikValues = Object.values(values).slice(0, -1);
 
   return (
     <Box sx={{ position: "relative" }}>
@@ -71,7 +72,7 @@ const StepSummary = () => {
                       textAlign: "left",
                     }}
                   >
-                    {formikValues[idx]}
+                    {formikValues[idx] as string}
                   </Typography>
                 </Box>
               )}

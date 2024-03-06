@@ -1,10 +1,12 @@
-import { StepsContext } from "../../../../context/ContextProv";
-import { useContext } from "react";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
-import InputsErrors from "./InputsErrors";
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
+import { useFormikContext } from "formik";
+import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { rwd } from "../../../../utils/rwd";
+import InputsErrors from "./InputsErrors";
+import { useFormStore } from "../../../../zustandStores/useFormStore";
+import { useEffect } from "react";
+import { ModelMember } from "../stepFormFormik/dataStepFormik";
 
 type Props = {
   headingText: string;
@@ -12,8 +14,14 @@ type Props = {
 };
 
 const InputsTexts = (props: Props) => {
-  const { formik } = useContext(StepsContext);
+  const { values, handleBlur, setFieldValue, errors, touched } =
+    useFormikContext<ModelMember>();
 
+  const setError = useFormStore(state => state.setError);
+
+  useEffect(() => {
+    setError(errors);
+  }, [errors]);
 
   return (
     <>
@@ -35,9 +43,9 @@ const InputsTexts = (props: Props) => {
               type={type}
               name={value}
               label={label}
-              value={formik.values[value as keyof typeof formik.values]}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              value={values[value as keyof typeof values]}
+              onChange={e => setFieldValue(value, e.target.value)}
+              onBlur={handleBlur}
               size="small"
               sx={{
                 "& .MuiInputBase-input": {
@@ -46,7 +54,7 @@ const InputsTexts = (props: Props) => {
               }}
             />
 
-            <InputsErrors value={value} formik={formik} />
+            <InputsErrors value={value} errors={errors} touched={touched} />
           </FormGroup>
         );
       })}

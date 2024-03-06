@@ -1,4 +1,4 @@
-export type InitialValues = {
+export type ModelMember = {
   name: string;
   surname: string;
   phone: string;
@@ -22,7 +22,7 @@ export type InitialValues = {
   membership: string;
 };
 
-export const initialValues: InitialValues = {
+export const initialValues: ModelMember = {
   name: "",
   surname: "",
   phone: "",

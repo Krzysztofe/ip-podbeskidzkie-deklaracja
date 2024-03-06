@@ -3,14 +3,13 @@ import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
-import { useContext } from "react";
-import HeadingPrimary from "../../../../../components/HeadingPrimary";
-import { StepsContext } from "../../../../../context/ContextProv";
-import InputsErrors from "../InputsErrors";
 import TextField from "@mui/material/TextField";
-import { handleRadioChange } from "./utilsRadioWithText";
-import { handleTextChange } from "./utilsRadioWithText";
+import { useFormikContext } from "formik";
+import HeadingPrimary from "../../../../../components/HeadingPrimary";
 import { rwd } from "../../../../../utils/rwd";
+import InputsErrors from "../InputsErrors";
+import { handleRadioChange, handleTextChange } from "./utilsRadioWithText";
+import { ModelMember } from "../../stepFormFormik/dataStepFormik";
 
 type Props = {
   headingText: string;
@@ -20,7 +19,15 @@ type Props = {
 };
 
 const InputsRadioWithText = (props: Props) => {
-  const { formik } = useContext(StepsContext);
+  const {
+    values,
+    handleBlur,
+    setFieldValue,
+    setErrors,
+    validateForm,
+    errors,
+    touched,
+  } = useFormikContext<ModelMember>();
 
   return (
     <>
@@ -29,11 +36,18 @@ const InputsRadioWithText = (props: Props) => {
       <FormControl sx={{ width: "100%" }}>
         <RadioGroup
           name={props.radioValue}
-          value={formik.values[props.radioValue as keyof typeof formik.values]}
+          value={values[props.radioValue as keyof typeof values]}
           onChange={e =>
-            handleRadioChange(e, formik, props.radioValue, props.textValue)
+            handleRadioChange(
+              e,
+              setFieldValue,
+              setErrors,
+              validateForm,
+              props.radioValue,
+              props.textValue
+            )
           }
-          onBlur={formik.handleBlur}
+          onBlur={handleBlur}
           sx={{
             width: rwd("80%", "60%"),
             marginInline: "auto",
@@ -73,19 +87,26 @@ const InputsRadioWithText = (props: Props) => {
             type={"text"}
             name={props.textValue}
             label={"Inny"}
-            value={formik.values[props.textValue as keyof typeof formik.values]}
+            value={values[props.textValue as keyof typeof values]}
             onChange={e =>
-              handleTextChange(e, formik, props.radioValue, props.textValue)
+              handleTextChange(
+                e,
+                setFieldValue,
+                setErrors,
+                validateForm,
+                props.radioValue,
+                props.textValue
+              )
             }
-            onBlur={formik.handleBlur}
+            onBlur={handleBlur}
             size="small"
             sx={{ width: "100%" }}
           />
 
           <InputsErrors
-            value={props.textValue}
-            otherValue={props.textValue}
-            formik={formik}
+            value={props.radioValue}
+            errors={errors}
+            touched={touched}
           />
         </Box>
       </FormControl>

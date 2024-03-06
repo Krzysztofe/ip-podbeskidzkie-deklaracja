@@ -1,11 +1,11 @@
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { useContext } from "react";
-import { StepsContext } from "../../../context/ContextProv";
+import Typography from "@mui/material/Typography";
+import { useFormikContext } from "formik";
 import { rwd } from "../../../utils/rwd";
+import { ModelMember } from "../stepForm/stepFormFormik/dataStepFormik";
 
 const StepSummaryMembership = () => {
-  const { formik } = useContext(StepsContext);
+  const { values } = useFormikContext<ModelMember>();
 
   return (
     <Box
@@ -46,7 +46,7 @@ const StepSummaryMembership = () => {
           textAlign: rwd("center", "center", "left"),
         }}
       >
-        {formik.values.membership}
+        {values.membership}
       </Typography>
     </Box>
   );

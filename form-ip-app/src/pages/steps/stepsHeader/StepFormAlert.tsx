@@ -1,11 +1,11 @@
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
-import { useContext } from "react";
-import { StepsContext } from "../../../context/ContextProv";
+import { useFormStore } from "../../../zustandStores/useFormStore";
 
 const StepFormAlert = () => {
-  const { formik } = useContext(StepsContext);
-  const isError = Object.values(formik.errors);
+  const errors = useFormStore(state => state.isError);
+
+  const isError = Object.values(errors);
 
   return (
     <Box
@@ -18,9 +18,7 @@ const StepFormAlert = () => {
         left: "50%",
         right: "50%",
         transform:
-          isError.length > 0
-            ? "translate(-50%)"
-            : "translate(-50%, -100%)",
+          isError.length > 0 ? "translate(-50%)" : "translate(-50%, -100%)",
         transition: "0.5s",
         display: "grid",
         placeItems: "center",

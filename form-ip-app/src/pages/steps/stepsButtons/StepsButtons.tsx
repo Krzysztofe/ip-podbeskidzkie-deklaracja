@@ -10,8 +10,8 @@ import ButtonPOSTvalues from "./ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";
 
 const StepsButtons = () => {
-
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+
 
   return (
     <Container

@@ -7,9 +7,11 @@ import { useContext } from "react";
 import { StepsContext } from "../../../../context/ContextProv";
 import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
 import { rwd } from "../../../../utils/rwd";
+import useClauseStore from "../../../../zustandStores/useClauseStore";
 
 const StepClauseForm = () => {
   const { formikClause } = useContext(StepsContext);
+
 
   return (
     <Box
@@ -56,7 +58,7 @@ const StepClauseForm = () => {
           bottom: rwd("-11px", "-8px", "-1px"),
         }}
       >
-        <InputsErrors formik={formikClause} value={"confirmation"} />
+        {/* <InputsErrors formik={formikClause} value={"confirmation"} /> */}
       </Box>
     </Box>
   );

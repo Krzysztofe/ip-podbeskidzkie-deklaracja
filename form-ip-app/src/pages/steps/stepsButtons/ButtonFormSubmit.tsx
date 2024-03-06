@@ -1,16 +1,20 @@
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import Button from "@mui/material/Button";
-import { useContext, useEffect } from "react";
-import { StepsContext } from "../../../context/ContextProv";
+import { useFormikContext } from "formik";
+import { useEffect } from "react";
 import { rwd } from "../../../utils/rwd";
+import { useFormStore } from "../../../zustandStores/useFormStore";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
+import { ModelMember } from "../stepForm/stepFormFormik/dataStepFormik";
 
 const ButtonFormSubmit = () => {
-  const { isSubmited, formik } = useContext(StepsContext);
+  const { errors } = useFormikContext<ModelMember>();
+
+  const isSubmited = useFormStore(state => state.isSubmited);
 
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const next = useMultistepFormStore(state => state.next);
-  const isError = Object.values(formik.errors);
+  const isError = Object.values(errors);
 
   useEffect(() => {
     if (isSubmited && isError.length === 0) next();

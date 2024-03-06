@@ -6,12 +6,17 @@ import { rwd } from "../../utils/rwd";
 import useMultistepFormStore from "../../zustandStores/useMultistepFormStore";
 import StepConfirmation from "./stepConfirmation/StepConfirmation";
 import StepsButtons from "./stepsButtons/StepsButtons";
+import { Form, Formik } from "formik";
+import useFormikForm from "./stepForm/stepFormFormik/useFormikForm";
+// import useClauseStore from "../../zustandStores/useClauseStore";
 
 const StepsContainer = () => {
-  const { formik, formikClause } = useContext(StepsContext);
+  // const { formik, formikClause } = useContext(StepsContext);
 
   const steps = useMultistepFormStore(state => state.steps);
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+
+  const { initialValues, validation, onSubmit } = useFormikForm();
 
   const isLastStep = currentStepIdx === steps.length - 1;
 
@@ -29,8 +34,8 @@ const StepsContainer = () => {
     });
   }, [currentStepIdx]);
 
-  const formSubmit =
-    currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
+  // const formSubmit =
+  //   currentStepIdx === 0 ? formik.handleSubmit : formikClause.handleSubmit;
 
   const height =
     currentStepIdx === 0
@@ -46,39 +51,44 @@ const StepsContainer = () => {
       }}
     >
       {currentStepIdx < 3 && (
-        <form
-          onSubmit={formSubmit}
-          style={{
-            height: "100%",
-            overflow: "hidden",
-          }}
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validation}
+          onSubmit={onSubmit}
         >
-          <Box
-            sx={{
-              height,
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 100%)",
-              transform: `translate(-${currentStepIdx}00%)`,
-              transition: "transform 0.5s ease",
+          <Form
+            style={{
+              height: "100%",
+              overflow: "hidden",
             }}
           >
-            {steps.slice(0, -1).map((steps, idx) => {
-              return (
-                <Box
-                  key={idx}
-                  ref={scrollBoxRefs[idx]}
-                  sx={{
-                    overflowY: "auto",
-                    px: 1.6,
-                  }}
-                >
-                  {steps}
-                </Box>
-              );
-            })}
-          </Box>
-          {!isLastStep && <StepsButtons />}
-        </form>
+            <Box
+              sx={{
+                height,
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 100%)",
+                transform: `translate(-${currentStepIdx}00%)`,
+                transition: "transform 0.5s ease",
+              }}
+            >
+              {steps.slice(0, -1).map((steps, idx) => {
+                return (
+                  <Box
+                    key={idx}
+                    ref={scrollBoxRefs[idx]}
+                    sx={{
+                      overflowY: "auto",
+                      px: 1.6,
+                    }}
+                  >
+                    {steps}
+                  </Box>
+                );
+              })}
+            </Box>
+            {!isLastStep && <StepsButtons />}
+          </Form>
+        </Formik>
       )}
 
       {isLastStep && <StepConfirmation />}

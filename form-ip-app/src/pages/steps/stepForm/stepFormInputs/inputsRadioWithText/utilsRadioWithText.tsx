@@ -1,26 +1,42 @@
-import useStepFormFormik from "../../stepFormFormik/useStepFormFormik";
-
-export const handleRadioChange = async (
-  event: React.ChangeEvent<HTMLInputElement>, formik: ReturnType<typeof useStepFormFormik>["formik"], radioValue: string, textValue:string
-) => {
-  formik.handleChange(event);
-  if (event.target.value !== "") {
-    formik.setErrors({ [radioValue]: "", [textValue]: "" });
-    await formik.validateForm();
-    formik.setFieldValue(textValue, "");
-  }
-};
+import { ModelMember } from "../../stepFormFormik/dataStepFormik";
+import { FormikErrors } from "formik";
 
 export const handleTextChange = async (
   event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  formik: ReturnType<typeof useStepFormFormik>["formik"],
+  setFieldValue: (
+    field: string,
+    value: any,
+    shouldValidate?: boolean | undefined
+  ) => Promise<void | FormikErrors<ModelMember>>,
+  setErrors: (errors: FormikErrors<ModelMember>) => void,
+  validateForm: (values?: any) => Promise<FormikErrors<ModelMember>>,
   radioValue: string,
   textValue: string
 ) => {
-  formik.handleChange(event);
+  setFieldValue(textValue, event.target.value);
   if (event.target.value !== "") {
-    formik.setErrors({ [radioValue]: "", [textValue]: "" });
-    await formik.validateForm();
-    formik.setFieldValue(radioValue, "");
+    setErrors({ [radioValue]: "", [textValue]: "" });
+    await validateForm();
+    setFieldValue(radioValue, "");
+  }
+};
+
+export const handleRadioChange = async (
+  event: React.ChangeEvent<HTMLInputElement>,
+  setFieldValue: (
+    field: string,
+    value: any,
+    shouldValidate?: boolean | undefined
+  ) => Promise<void | FormikErrors<ModelMember>>,
+  setErrors: (errors: FormikErrors<ModelMember>) => void,
+  validateForm: (values?: any) => Promise<FormikErrors<ModelMember>>,
+  radioValue: string,
+  textValue: string
+) => {
+  setFieldValue(radioValue, event.target.value);
+  if (event.target.value !== "") {
+    setErrors({ [radioValue]: "", [textValue]: "" });
+    await validateForm();
+    setFieldValue(textValue, "");
   }
 };

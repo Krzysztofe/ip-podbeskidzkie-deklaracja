@@ -6,9 +6,7 @@ import { rwd } from "../../../utils/rwd";
 import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
 
 const Captcha = () => {
-  const setChaptcha = useCaptchaStore((state: any) => state.setChaptcha);
-
-  // const { setIsCaptcha } = useContext(StepsContext);
+  const setChaptcha = useCaptchaStore((state) => state.setChaptcha);
 
   const key = process.env.REACT_APP_reCaptchaKey;
 
