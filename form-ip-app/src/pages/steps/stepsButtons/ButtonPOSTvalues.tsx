@@ -11,7 +11,8 @@ import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
 import useHttpRequestStore from "../../../zustandStores/useHttpStore";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 import { useFormikContext } from "formik";
-import { ModelMember } from "../stepForm/stepFormFormik/dataStepFormik";
+import { ModelMember } from "../../../sharedModels/ModelMember";
+
 
 const arrowUp = keyframes`
   0% {

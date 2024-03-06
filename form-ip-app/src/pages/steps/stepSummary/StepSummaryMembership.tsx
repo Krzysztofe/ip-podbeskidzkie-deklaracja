@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useFormikContext } from "formik";
 import { rwd } from "../../../utils/rwd";
-import { ModelMember } from "../stepForm/stepFormFormik/dataStepFormik";
+import { ModelMember } from "../../../sharedModels/ModelMember";
 
 const StepSummaryMembership = () => {
   const { values } = useFormikContext<ModelMember>();

@@ -1,5 +1,5 @@
-import { ModelMember } from "../../stepFormFormik/dataStepFormik";
 import { FormikErrors } from "formik";
+import { ModelMember } from "../../../../../sharedModels/ModelMember";
 
 export const handleTextChange = async (
   event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,

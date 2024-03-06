@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import { ModelMember } from "../pages/steps/stepForm/stepFormFormik/dataStepFormik";
 import { FormikErrors } from "formik";
+import { ModelMember } from "../sharedModels/ModelMember";
 
 type FormStore = {
   isSubmited: boolean;

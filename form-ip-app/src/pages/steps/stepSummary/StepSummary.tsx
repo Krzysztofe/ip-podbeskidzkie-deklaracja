@@ -8,7 +8,7 @@ import { rwd } from "../../../utils/rwd";
 import StepSummaryClauseConfirmation from "./StepSummaryClauseConfirmation";
 import StepSummaryMembership from "./StepSummaryMembership";
 import StepSummarySubmitDate from "./StepSummarySubmitDate";
-import { ModelMember } from "../stepForm/stepFormFormik/dataStepFormik";
+import { ModelMember } from "../../../sharedModels/ModelMember";
 
 const dataSummary = [
   "Imię",

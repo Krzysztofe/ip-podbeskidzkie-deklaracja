@@ -7,7 +7,7 @@ import { useFormikContext } from "formik";
 import HeadingPrimary from "../../../../components/HeadingPrimary";
 import { rwd } from "../../../../utils/rwd";
 import InputsErrors from "./InputsErrors";
-import { ModelMember } from "../stepFormFormik/dataStepFormik";
+import { ModelMember } from "../../../../sharedModels/ModelMember";
 
 type Props = {
   headingText: string;

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { rwd } from "../../../utils/rwd";
 import { useFormStore } from "../../../zustandStores/useFormStore";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
-import { ModelMember } from "../stepForm/stepFormFormik/dataStepFormik";
+import { ModelMember } from "../../../sharedModels/ModelMember";
 
 const ButtonFormSubmit = () => {
   const { errors } = useFormikContext<ModelMember>();

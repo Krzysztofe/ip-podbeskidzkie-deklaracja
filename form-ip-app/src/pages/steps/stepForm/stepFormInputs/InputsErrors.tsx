@@ -1,7 +1,8 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { ModelMember } from "../stepFormFormik/dataStepFormik";
 import { FormikErrors, FormikTouched } from "formik";
+import { ModelMember } from "../../../../sharedModels/ModelMember";
+
 
 type Props = {
   value: string;

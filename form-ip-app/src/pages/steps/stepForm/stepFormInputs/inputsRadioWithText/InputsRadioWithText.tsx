@@ -9,7 +9,7 @@ import HeadingPrimary from "../../../../../components/HeadingPrimary";
 import { rwd } from "../../../../../utils/rwd";
 import InputsErrors from "../InputsErrors";
 import { handleRadioChange, handleTextChange } from "./utilsRadioWithText";
-import { ModelMember } from "../../stepFormFormik/dataStepFormik";
+import { ModelMember } from "../../../../../sharedModels/ModelMember";
 
 type Props = {
   headingText: string;
