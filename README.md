@@ -20,7 +20,7 @@ The application's styles are designed based on the UI graphic design created in 
 ## Technologies  
 * Material UI,
 * React, TypeScript
-* Context
+* Zustand
 * HTTP: POST
 * Formik / Yup 
 * Lazy loading
