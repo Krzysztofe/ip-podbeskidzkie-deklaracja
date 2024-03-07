@@ -4,6 +4,7 @@ import HeadingPrimary from "../../../components/HeadingPrimary";
 import { dataClauseParagraphs } from "./dataStepClause";
 import { rwd } from "../../../utils/rwd";
 
+
 const StepClause = () => {
   return (
     <Box

@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { StepsContext } from "../../../context/ContextProv";
 import Button from "@mui/material/Button";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import { URL } from "../../../data/dataURL";
@@ -31,7 +30,6 @@ const ButtonPOSTvalues = () => {
   const isCaptcha = useCaptchaStore(state => state.isCaptcha);
   const setChaptcha = useCaptchaStore(state => state.setChaptcha);
   const sendRequest = useHttpRequestStore(state => state.sendRequest);
-
   const [responseStatus, setResponseStatus] = useState(false);
 
   useEffect(() => {

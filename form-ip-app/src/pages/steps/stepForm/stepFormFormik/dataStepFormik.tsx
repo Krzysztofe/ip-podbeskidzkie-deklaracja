@@ -22,4 +22,6 @@ export const initialValues: ModelMember = {
   workTimeOther: "",
   department: "",
   membership: "",
+
+  confirmation:false
 };

@@ -1,23 +1,15 @@
 import create from "zustand";
-import { useFormik } from "formik";
-import { validationSchemaClause } from "../pages/steps/stepClause/stepClauseForm/validationStepClauseForm";
-import { FormikValues } from "formik";
 
-type FormStore = {
+type ClauseStore = {
   isConfirmed: boolean;
-  formikClausex: ReturnType<typeof useFormik>;
+  setConfirmed: (isConfirmed: boolean) => void;
 };
 
-const useClauseStore = create<FormStore>(set => ({
+const useClauseStore = create<ClauseStore>(set => ({
   isConfirmed: false,
-  formikClausex: useFormik<FormikValues>({
-    initialValues: { confirmation: false },
-    validationSchema: validationSchemaClause,
-    onSubmit: () => {
-      set({ isConfirmed: true });
-    },
-  }),
+  setConfirmed: isConfirmed => {
+    set(state => ({ isConfirmed: isConfirmed }));
+  },
 }));
 
 export default useClauseStore;
-

@@ -27,7 +27,8 @@ const StepsButtons = () => {
         zIndex: 2,
       }}
     >
-      {currentStepIdx === 1 && <StepClauseForm />}
+      {/* {currentStepIdx === 1 && <StepClauseForm />} */}
+      {/* <StepClauseForm /> */}
       {currentStepIdx === 2 && <Captcha />}
 
       <Box

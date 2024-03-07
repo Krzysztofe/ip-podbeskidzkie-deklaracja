@@ -1,7 +1,13 @@
 import * as yup from "yup";
 
 const errMsg = "Podaj dane";
-const validation = yup.string().transform((value, originalValue) => (typeof originalValue === "string" ? originalValue.trim() : originalValue)).required(errMsg).min(3, "Min. 3 znaki");
+const validation = yup
+  .string()
+  .transform((value, originalValue) =>
+    typeof originalValue === "string" ? originalValue.trim() : originalValue
+  )
+  .required(errMsg)
+  .min(3, "Min. 3 znaki");
 const validationWithOther = (radioInput: string, textInput: string) => {
   return yup
     .string()
@@ -20,7 +26,10 @@ export const validationSchema = yup.object({
   surname: validation,
   city: validation,
   phone: yup.string().required(errMsg).matches(phoneRegex, "Min. 9 cyfr"),
-  email: yup.string().required(errMsg).matches(emailRegex, "Podaj właściwy e-mail"),
+  email: yup
+    .string()
+    .required(errMsg)
+    .matches(emailRegex, "Podaj właściwy e-mail"),
   employer: validationWithOther("employer", "employerOther"),
   employerOther: validationWithOther("employer", "employerOther"),
 

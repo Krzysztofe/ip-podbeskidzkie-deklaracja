@@ -3,15 +3,13 @@ import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { useContext } from "react";
-import { StepsContext } from "../../../../context/ContextProv";
-import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
+import { useFormikContext } from "formik";
 import { rwd } from "../../../../utils/rwd";
-import useClauseStore from "../../../../zustandStores/useClauseStore";
+import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
 
 const StepClauseForm = () => {
-  const { formikClause } = useContext(StepsContext);
-
+  const { values, setFieldValue, errors, touched } =
+    useFormikContext<any>();
 
   return (
     <Box
@@ -32,21 +30,19 @@ const StepClauseForm = () => {
             icon={<RadioButtonUncheckedIcon />}
             sx={{
               "&:hover": { boxShadow: 2 },
-              color: formikClause.values.confirmation
-                ? "main.dark"
-                : "primary.main",
+              color: values.confirmation ? "main.dark" : "primary.main",
             }}
           />
         }
         name="confirmation"
-        checked={formikClause.values.confirmation}
-        onChange={formikClause.handleChange}
+        checked={values.confirmation}
+        onChange={e =>
+          setFieldValue("confirmation", (e.target as HTMLInputElement).checked)
+        }
         label="Zapoznałem/-łam się z klauzulą informacyjną i wyrażam zgodę na przetwarzanie moich danych osobowych na zasadach i w celach w niej wskazanych"
         sx={{
           "& .MuiFormControlLabel-label": {
-            color: formikClause.values.confirmation
-              ? "main.dark"
-              : "primary.main",
+            color: values.confirmation ? "main.dark" : "primary.main",
             fontSize: theme => theme.typography.fs_12_rg,
           },
         }}
@@ -58,7 +54,11 @@ const StepClauseForm = () => {
           bottom: rwd("-11px", "-8px", "-1px"),
         }}
       >
-        {/* <InputsErrors formik={formikClause} value={"confirmation"} /> */}
+        <InputsErrors
+          value={"confirmation"}
+          errors={errors}
+          touched={touched}
+        />
       </Box>
     </Box>
   );

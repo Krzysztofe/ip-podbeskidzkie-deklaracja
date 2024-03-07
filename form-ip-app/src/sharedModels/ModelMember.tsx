@@ -20,4 +20,6 @@ export type ModelMember = {
   workTimeOther: string;
   department: string;
   membership: string;
+
+  confirmation: boolean
 };

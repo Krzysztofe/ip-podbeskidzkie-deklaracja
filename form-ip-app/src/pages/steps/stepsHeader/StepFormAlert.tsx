@@ -2,10 +2,16 @@ import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import { useFormStore } from "../../../zustandStores/useFormStore";
 
+type Errors = {
+  confirmation?: string;
+};
+
 const StepFormAlert = () => {
   const errors = useFormStore(state => state.isError);
+  const errorsInForm: Errors = { ...errors };
+  delete errorsInForm?.confirmation;
 
-  const isError = Object.values(errors);
+  const isError = Object.values(errorsInForm);
 
   return (
     <Box

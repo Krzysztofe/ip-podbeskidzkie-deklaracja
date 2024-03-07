@@ -9,9 +9,7 @@ import { ModelMember } from "../../../sharedModels/ModelMember";
 
 const ButtonFormSubmit = () => {
   const { errors } = useFormikContext<ModelMember>();
-
   const isSubmited = useFormStore(state => state.isSubmited);
-
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const next = useMultistepFormStore(state => state.next);
   const isError = Object.values(errors);
@@ -20,25 +18,25 @@ const ButtonFormSubmit = () => {
     if (isSubmited && isError.length === 0) next();
   }, [isSubmited]);
 
+  if (currentStepIdx !== 0) return null;
+  
   return (
     <>
-      {currentStepIdx === 0 && (
-        <Button
-          variant="contained"
-          type="submit"
-          onClick={() => {
-            isSubmited && isError.length === 0 && next();
-          }}
-          endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
-          sx={{
-            width: rwd("65%", "12rem"),
-            "&:hover": { bgcolor: "#2455BA" },
-            marginLeft: rwd(0, "auto"),
-          }}
-        >
-          Zatwierdź
-        </Button>
-      )}
+      <Button
+        variant="contained"
+        type="submit"
+        onClick={() => {
+          isSubmited && isError.length === 0 && next();
+        }}
+        endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
+        sx={{
+          width: rwd("65%", "12rem"),
+          "&:hover": { bgcolor: "#2455BA" },
+          marginLeft: rwd(0, "auto"),
+        }}
+      >
+        Zatwierdź
+      </Button>
     </>
   );
 };
