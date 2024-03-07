@@ -9,6 +9,7 @@ function App() {
       <Suspense fallback={<LoadingPage />}>
         <Routes>
           <Route path="/" element={<IndexSteps />} />
+          <Route path="/*" element={<IndexSteps />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
