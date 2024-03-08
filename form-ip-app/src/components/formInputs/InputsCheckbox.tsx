@@ -29,12 +29,12 @@ const InputsCheckbox = (props: Props) => {
                   icon={<RadioButtonUncheckedIcon />}
                   sx={{
                     "&:hover": { boxShadow: 2 },
-                    color: values.value ? "main.dark" : "primary.main",
+                    color: values[value] ? "main.dark" : "primary.main",
                   }}
                 />
               }
-              name="confirmation"
-              checked={values.value}
+              name={value}
+              checked={values[value]}
               onChange={e =>
                 setFieldValue(
                   value,
