@@ -30,12 +30,14 @@ const dataSummary = [
 const CustomTypography = ({
   children,
   align,
+  variant,
 }: {
   children: React.ReactNode;
   align?: "left" | "right";
+  variant?: "fs_16_rg" | "fs_16_sb";
 }) => (
   <Typography
-    variant="fs_16_sb"
+    variant={variant || "fs_16_sb"}
     component="p"
     color="info.dark"
     sx={{
@@ -66,7 +68,7 @@ const StepSummaryMemberData = () => {
                 <CustomTypography align="right">
                   {text}:&nbsp; &nbsp;&nbsp;
                 </CustomTypography>
-                <CustomTypography align="left">
+                <CustomTypography align="left" variant="fs_16_rg">
                   {formikValues[idx] as string}
                 </CustomTypography>
               </Box>

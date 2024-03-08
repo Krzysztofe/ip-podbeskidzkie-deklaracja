@@ -5,6 +5,28 @@ import { rwd } from "../../../utils/rwd";
 import { ModelMember } from "../../../sharedModels/ModelMember";
 import StepBorderline from "./StepBorderline";
 
+const CustomTypography = ({
+  children,
+  align,
+  variant,
+}: {
+  children: React.ReactNode;
+  align?: "left" | "right";
+  variant?: "fs_16_rg" | "fs_16_sb";
+}) => (
+  <Typography
+    variant={variant || "fs_16_sb"}
+    component="p"
+    color="info.dark"
+    sx={{
+      width: rwd("100%", "100%", "50%"),
+      textAlign: rwd("center", "center", align || "right"),
+    }}
+  >
+    {children}
+  </Typography>
+);
+
 const StepSummaryMembership = () => {
   const { values } = useFormikContext<ModelMember>();
 
@@ -16,28 +38,14 @@ const StepSummaryMembership = () => {
           mb: 1,
         }}
       >
-        <Typography
-          variant="fs_16_sb"
-          component="p"
-          color="info.dark"
-          sx={{
-            width: rwd("100%", "100%", "50%"),
-            textAlign: rwd("center", "center", "right"),
-          }}
-        >
+        <CustomTypography align="right">
           Przynależność do związków zawodowych:&nbsp; &nbsp;&nbsp;
-        </Typography>
-        <Typography
-          variant="fs_16_rg"
-          component="p"
-          color="info.dark"
-          sx={{
-            width: rwd("100%", "100%", "50%"),
-            textAlign: rwd("center", "center", "left"),
-          }}
-        >
+        </CustomTypography>
+        <CustomTypography align="left" variant="fs_16_rg">
           {values.membership}
-        </Typography>
+        </CustomTypography>
+
+      
       </Box>
       <StepBorderline />
     </>
