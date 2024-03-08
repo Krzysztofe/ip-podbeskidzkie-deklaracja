@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { rwd } from "../../../utils/rwd";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
-import ButtonClauseSubmit from "./ButtonClauseSubmit";
+import ButtonClauseSubmit from "./buttonClauseSubmit/ButtonClauseSubmit";
 import ButtonFormSubmit from "./ButtonFormSubmit";
 import ButtonPOSTvalues from "./buttonPOST/ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";

@@ -10,6 +10,7 @@ type Props = {
 
 const FormContextWrapper = (props: Props) => {
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+  console.log("", currentStepIdx);
 
   const {
     initialValues: valuesForm,
