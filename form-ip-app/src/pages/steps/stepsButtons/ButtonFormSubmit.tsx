@@ -12,11 +12,15 @@ const ButtonFormSubmit = () => {
   const isSubmited = useFormStore(state => state.isSubmited);
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const next = useMultistepFormStore(state => state.next);
-  const isError = Object.values(errors);
+  let isError = Object.values(errors);
 
   useEffect(() => {
     if (isSubmited && isError.length === 0) next();
   }, [isSubmited]);
+
+  useEffect(() => {
+    if (currentStepIdx === 0) isError = [];
+  }, [currentStepIdx]);
 
   if (currentStepIdx !== 0) return null;
 

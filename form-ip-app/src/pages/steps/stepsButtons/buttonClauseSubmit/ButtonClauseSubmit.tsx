@@ -6,6 +6,7 @@ import useClauseStore from "../../../../zustandStores/useClauseStore";
 import useMultistepFormStore from "../../../../zustandStores/useMultistepFormStore";
 import useClauseSubmit from "./useClauseSubmit";
 
+
 const ButtonClauseSubmit = () => {
   const isConfirmed = useClauseStore(state => state.isConfirmed);
   const { errors } = useFormikContext<{ confirmation: boolean }>();
