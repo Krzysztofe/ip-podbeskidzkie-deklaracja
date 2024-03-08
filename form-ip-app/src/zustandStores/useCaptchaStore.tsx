@@ -2,12 +2,12 @@ import { create } from "zustand";
 
 type CaptchaStore = {
   isCaptcha: boolean;
-  setChaptcha: (isCaptcha: boolean) => void;
+  setCaptcha: (isCaptcha: boolean) => void;
 };
 
 export const useCaptchaStore = create<CaptchaStore>(set => ({
   isCaptcha: false,
-  setChaptcha: isCaptcha => {
+  setCaptcha: isCaptcha => {
     set(state => ({ isCaptcha: isCaptcha }));
   },
 }));

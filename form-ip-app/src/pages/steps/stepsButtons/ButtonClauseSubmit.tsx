@@ -17,23 +17,21 @@ const ButtonClauseSubmit = () => {
     if (isConfirmed && isErrorInClause.length === 0) next();
   }, [isConfirmed]);
 
+  if (currentStepIdx !== 1) return null;
+
   return (
-    <>
-      {currentStepIdx === 1 && (
-        <Button
-          variant="contained"
-          type="submit"
-          onClick={() => isConfirmed && isErrorInClause.length === 0 && next()}
-          endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
-          sx={{
-            width: rwd("65%", "12rem"),
-            "&:hover": { bgcolor: "#2455BA" },
-          }}
-        >
-          Zatwierdź
-        </Button>
-      )}
-    </>
+    <Button
+      variant="contained"
+      type="submit"
+      onClick={() => isConfirmed && isErrorInClause.length === 0 && next()}
+      endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
+      sx={{
+        width: rwd("65%", "12rem"),
+        "&:hover": { bgcolor: "#2455BA" },
+      }}
+    >
+      Zatwierdź
+    </Button>
   );
 };
 

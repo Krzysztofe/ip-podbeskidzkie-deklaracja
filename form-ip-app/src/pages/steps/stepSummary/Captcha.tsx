@@ -5,12 +5,12 @@ import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const Captcha = () => {
-  const setChaptcha = useCaptchaStore(state => state.setChaptcha);
+  const setCaptcha = useCaptchaStore(state => state.setCaptcha);
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const key = process.env.REACT_APP_reCaptchaKey;
 
   const handleChange = () => {
-    setChaptcha(true);
+    setCaptcha(true);
   };
 
   if (currentStepIdx !== 2) return null;

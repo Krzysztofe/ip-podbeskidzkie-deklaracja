@@ -4,28 +4,25 @@ import { rwd } from "../../../utils/rwd";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const ButtonReturn = () => {
- const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
- const back = useMultistepFormStore(state => state.back);
- 
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+  const back = useMultistepFormStore(state => state.back);
+
+  if (currentStepIdx === 0) return null;
 
   return (
-    <>
-      {currentStepIdx > 0 && (
-        <Button
-          variant="contained"
-          startIcon={<KeyboardDoubleArrowLeftOutlinedIcon />}
-          onClick={() => back()}
-          sx={{
-            height: "fit-content",
-            width: rwd("65%", "12rem"),
-            "&:hover": { bgcolor: "#2455BA" },
-            mt: rwd(1, 0),
-          }}
-        >
-          Wróć
-        </Button>
-      )}
-    </>
+    <Button
+      variant="contained"
+      startIcon={<KeyboardDoubleArrowLeftOutlinedIcon />}
+      onClick={() => back()}
+      sx={{
+        height: "fit-content",
+        width: rwd("65%", "12rem"),
+        "&:hover": { bgcolor: "#2455BA" },
+        mt: rwd(1, 0),
+      }}
+    >
+      Wróć
+    </Button>
   );
 };
 

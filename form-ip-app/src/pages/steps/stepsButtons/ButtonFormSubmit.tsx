@@ -19,25 +19,23 @@ const ButtonFormSubmit = () => {
   }, [isSubmited]);
 
   if (currentStepIdx !== 0) return null;
-  
+
   return (
-    <>
-      <Button
-        variant="contained"
-        type="submit"
-        onClick={() => {
-          isSubmited && isError.length === 0 && next();
-        }}
-        endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
-        sx={{
-          width: rwd("65%", "12rem"),
-          "&:hover": { bgcolor: "#2455BA" },
-          marginLeft: rwd(0, "auto"),
-        }}
-      >
-        Zatwierdź
-      </Button>
-    </>
+    <Button
+      variant="contained"
+      type="submit"
+      onClick={() => {
+        isSubmited && isError.length === 0 && next();
+      }}
+      endIcon={<KeyboardDoubleArrowRightOutlinedIcon />}
+      sx={{
+        width: rwd("65%", "12rem"),
+        "&:hover": { bgcolor: "#2455BA" },
+        marginLeft: rwd(0, "auto"),
+      }}
+    >
+      Zatwierdź
+    </Button>
   );
 };
 

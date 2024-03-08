@@ -19,7 +19,7 @@ const FormContextWrapper = (props: Props) => {
   const { validation: validationClause, onSubmit: onSubmitClause } =
     useFormikClause();
 
-  if (currentStepIdx > 3) return null;
+  if (currentStepIdx > 2) return null;
 
   return (
     <Formik

@@ -4,14 +4,13 @@ import { rwd } from "../../../utils/rwd";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 import ButtonClauseSubmit from "./ButtonClauseSubmit";
 import ButtonFormSubmit from "./ButtonFormSubmit";
-import ButtonPOSTvalues from "./ButtonPOSTvalues";
+import ButtonPOSTvalues from "./buttonPOST/ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";
 
 const StepsButtons = () => {
- const isLastStep = useMultistepFormStore(state => state.isLastStep);
+  const isLastStep = useMultistepFormStore(state => state.isLastStep);
 
-if (isLastStep) return null;
-
+  if (isLastStep) return null;
 
   return (
     <Container
@@ -27,7 +26,6 @@ if (isLastStep) return null;
         zIndex: 2,
       }}
     >
-
       <Box
         sx={{
           height: rwd("120px", "90px"),
