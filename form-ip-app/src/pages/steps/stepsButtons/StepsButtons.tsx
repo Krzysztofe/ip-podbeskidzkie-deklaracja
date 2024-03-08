@@ -2,15 +2,15 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { rwd } from "../../../utils/rwd";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
-import StepClauseForm from "../stepClause/stepClauseForm/StepClauseForm";
-import Captcha from "../stepSummary/Captcha";
 import ButtonClauseSubmit from "./ButtonClauseSubmit";
 import ButtonFormSubmit from "./ButtonFormSubmit";
 import ButtonPOSTvalues from "./ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";
 
 const StepsButtons = () => {
-  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+ const isLastStep = useMultistepFormStore(state => state.isLastStep);
+
+if (isLastStep) return null;
 
 
   return (
@@ -27,9 +27,6 @@ const StepsButtons = () => {
         zIndex: 2,
       }}
     >
-      {/* {currentStepIdx === 1 && <StepClauseForm />} */}
-      {/* <StepClauseForm /> */}
-      {currentStepIdx === 2 && <Captcha />}
 
       <Box
         sx={{

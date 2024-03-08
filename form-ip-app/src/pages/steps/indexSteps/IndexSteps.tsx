@@ -1,8 +1,20 @@
+import { useEffect } from "react";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 import StepsMainContainer from "../StepsMainContainer";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
+import Container from "@mui/material/Container";
+import { rwd } from "../../../utils/rwd";
+import { heightHeaderXS, heightHeaderSM } from "../data/dataCompnentsHeight";
 
 const IndexSteps = () => {
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+  const setLastStep = useMultistepFormStore(state => state.setLastStep);
+
+  useEffect(() => {
+    setLastStep(currentStepIdx);
+  }, [currentStepIdx]);
+
   return (
     <>
       <header>
@@ -10,7 +22,18 @@ const IndexSteps = () => {
       </header>
       <main>
         <HttpRequestState />
-        <StepsMainContainer />
+        <Container
+          sx={{
+            height: rwd(
+              `calc(100vh - ${heightHeaderXS})`,
+              `calc(100vh -  ${heightHeaderSM})`
+            ),
+            mt: rwd(heightHeaderXS, heightHeaderSM),
+            padding: "0px !important",
+          }}
+        >
+          <StepsMainContainer />
+        </Container>
       </main>
     </>
   );

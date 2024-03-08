@@ -5,13 +5,19 @@ import StepConfirmationHeading from "./StepConfirmationHeading";
 import StepConfirmationBanksList from "./StepConfirmationBanksList";
 import StepConfirmationFooter from "./StepConfirmationFooter";
 import StepConfirmationParagraphs from "./StepConfirmationParagraphs";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
-const StepConfirmation = () => {
   const HeadingPrimaryTexts = [
     "Jednym ze sposobów weryfikacji przynależności do komisji OZZIP Amazon jest uiszczanie składek członkowskich, co można wykonać przelewem bankowym na konto:",
     "28 2130 0004 2001 0577 6570 0014 <br> OZZ Inicjatywa Pracownicza ul. Kościelna 4, 60-538 Poznań.",
     "Tytuł przelweu: (imię i nazwisko), składka za (miesiąc/kwartał).",
   ];
+
+const StepConfirmation = () => {
+
+ const isLastStep = useMultistepFormStore(state => state.isLastStep);
+
+ if (!isLastStep) return null;
 
   return (
     <Box sx={{ px: 1.6, pt: 4 }}>

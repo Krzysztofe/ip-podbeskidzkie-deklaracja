@@ -2,16 +2,19 @@ import Box from "@mui/material/Box";
 import ReCAPTCHA from "react-google-recaptcha";
 import { rwd } from "../../../utils/rwd";
 import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const Captcha = () => {
-  const setChaptcha = useCaptchaStore((state) => state.setChaptcha);
-
+  const setChaptcha = useCaptchaStore(state => state.setChaptcha);
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const key = process.env.REACT_APP_reCaptchaKey;
 
   const handleChange = () => {
     setChaptcha(true);
   };
 
+  if (currentStepIdx !== 2) return null;
+  
   if (!key) {
     return <div>CAPTCHA nie istnieje.</div>;
   }

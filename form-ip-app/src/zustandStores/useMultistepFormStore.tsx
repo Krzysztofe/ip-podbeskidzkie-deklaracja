@@ -7,7 +7,9 @@ import StepConfirmation from "../pages/steps/stepConfirmation/StepConfirmation";
 type MultistepFormState = {
   currentStepIdx: number;
   steps: JSX.Element[];
+  isLastStep: boolean;
   setCurrentStepIdx: (stepIdx: number) => void;
+  setLastStep: (currentStepIdx: number) => void;
   next: () => void;
   back: () => void;
 };
@@ -15,8 +17,13 @@ type MultistepFormState = {
 const useMultistepFormStore = create<MultistepFormState>(set => ({
   currentStepIdx: 0,
   steps: [<StepForm />, <StepClause />, <StepSummary />, <StepConfirmation />],
-  setCurrentStepIdx: (stepIdx: number) =>
-    set(state => ({ currentStepIdx: stepIdx })),
+  isLastStep: false,
+  setLastStep: currentStepIdx =>
+    set(state => ({
+      isLastStep: currentStepIdx === state.steps.length - 1,
+    })),
+
+  setCurrentStepIdx: stepIdx => set(state => ({ currentStepIdx: stepIdx })),
   next: () => set(state => ({ currentStepIdx: state.currentStepIdx + 1 })),
   back: () => set(state => ({ currentStepIdx: state.currentStepIdx - 1 })),
 }));
