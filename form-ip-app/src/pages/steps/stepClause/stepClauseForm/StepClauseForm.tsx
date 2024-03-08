@@ -5,11 +5,10 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useFormikContext } from "formik";
 import { rwd } from "../../../../utils/rwd";
-import InputsErrors from "../../stepForm/stepFormInputs/InputsErrors";
+import InputsErrors from "../../../../components/formInputs/InputsErrors";
 
 const StepClauseForm = () => {
-  const { values, setFieldValue, errors, touched } =
-    useFormikContext<any>();
+  const { values, setFieldValue, errors, touched } = useFormikContext<any>();
 
   return (
     <Box

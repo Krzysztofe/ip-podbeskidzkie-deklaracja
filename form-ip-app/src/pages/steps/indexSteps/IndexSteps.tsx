@@ -1,4 +1,4 @@
-import StepsContainer from "../StepsContainer";
+import StepsMainContainer from "../StepsMainContainer";
 import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
 
@@ -10,7 +10,7 @@ const IndexSteps = () => {
       </header>
       <main>
         <HttpRequestState />
-        <StepsContainer />
+        <StepsMainContainer />
       </main>
     </>
   );

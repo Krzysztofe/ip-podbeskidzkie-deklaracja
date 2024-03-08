@@ -1,13 +1,12 @@
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
 import { useFormikContext } from "formik";
-import HeadingPrimary from "../../../../components/HeadingPrimary";
-import { rwd } from "../../../../utils/rwd";
+import HeadingPrimary from "../HeadingPrimary";
+import { rwd } from "../../utils/rwd";
 import InputsErrors from "./InputsErrors";
-import { useFormStore } from "../../../../zustandStores/useFormStore";
+import { useFormStore } from "../../zustandStores/useFormStore";
 import { useEffect } from "react";
-import { ModelMember } from "../../../../sharedModels/ModelMember";
-
+import { ModelMember } from "../../sharedModels/ModelMember";
 
 type Props = {
   headingText: string;

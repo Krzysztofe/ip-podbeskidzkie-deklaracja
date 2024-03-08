@@ -3,7 +3,6 @@ import { Form, Formik } from "formik";
 import useFormikForm from "./stepForm/stepFormFormik/useFormikForm";
 import useFormikClause from "./stepClause/stepClauseForm/useFormikClause";
 import useMultistepFormStore from "../../zustandStores/useMultistepFormStore";
-import { rwd } from "../../utils/rwd";
 
 type Props = {
   children: React.ReactNode;
@@ -11,10 +10,6 @@ type Props = {
 
 const FormContextWrapper = (props: Props) => {
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
-  const height =
-    currentStepIdx === 0
-      ? rwd("calc(100% - 120px)", "calc(100% - 90px)")
-      : rwd("calc(100% - 120px - 74px)", "calc(100% - 90px - 72px)");
 
   const {
     initialValues: valuesForm,
@@ -23,6 +18,8 @@ const FormContextWrapper = (props: Props) => {
   } = useFormikForm();
   const { validation: validationClause, onSubmit: onSubmitClause } =
     useFormikClause();
+
+  if (currentStepIdx > 3) return null;
 
   return (
     <Formik

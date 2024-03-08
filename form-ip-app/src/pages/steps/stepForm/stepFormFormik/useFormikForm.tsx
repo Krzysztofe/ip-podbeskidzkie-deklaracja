@@ -7,8 +7,8 @@ const useFormikForm = () => {
   const setSubmited = useFormStore(state => state.setSubmited);
 
   const initialValues = initialValuesInForm;
-  const validation = validationSchema as yup.ObjectSchema<typeof initialValues>;
-  // const validation = ""
+  // const validation = validationSchema as yup.ObjectSchema<typeof initialValues>;
+  const validation = ""
   const onSubmit = () => {
     setSubmited(true);
   };
