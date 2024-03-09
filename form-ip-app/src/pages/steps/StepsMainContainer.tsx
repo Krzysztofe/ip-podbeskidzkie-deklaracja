@@ -1,7 +1,7 @@
 import FormContextWrapper from "./FormContextWrapper";
 import StepsInForm from "./StepsInForm";
 import StepsInFormWrapper from "./StepsInFormWrapper";
-import StepClauseForm from "./stepClause/stepClauseForm/StepClauseForm";
+import StepFormClause from "./stepClause/StepFormClause";
 import StepConfirmation from "./stepConfirmation/StepConfirmation";
 import Captcha from "./stepSummary/Captcha";
 import StepsButtons from "./stepsButtons/StepsButtons";
@@ -13,7 +13,7 @@ const StepsMainContainer = () => {
         <StepsInFormWrapper>
           <StepsInForm />
         </StepsInFormWrapper>
-        <StepClauseForm />
+        <StepFormClause />
         <Captcha />
         <StepsButtons />
       </FormContextWrapper>

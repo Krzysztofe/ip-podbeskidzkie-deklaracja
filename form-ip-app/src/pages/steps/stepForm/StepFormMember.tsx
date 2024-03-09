@@ -3,18 +3,18 @@ import StepFormHeader from "./StepFormHeader";
 import InputsRadio from "../../../components/formInputs/InputsRadio";
 import InputsRadioWithText from "../../../components/formInputs/inputsRadioWithText/InputsRadioWithText";
 import InputsTexts from "../../../components/formInputs/InputsTexts";
-import { dataEmployerInputs } from "./dataStepForm";
-import { dataUserInputs } from "./dataStepForm";
-import { dataAdressInputs } from "./dataStepForm";
-import { dataWorkplaceInputs } from "./dataStepForm";
-import { dataContractInpts } from "./dataStepForm";
-import { dataWorkTimeInputs } from "./dataStepForm";
-import { dataMembershipInputs } from "./dataStepForm";
-import { dataDepartmentInputs } from "./dataStepForm";
+import { dataEmployerInputs } from "./dataFormMember";
+import { dataParsonalInputs } from "./dataFormMember";
+import { dataAdressInputs } from "./dataFormMember";
+import { dataWorkplaceInputs } from "./dataFormMember";
+import { dataContractInpts } from "./dataFormMember";
+import { dataWorkTimeInputs } from "./dataFormMember";
+import { dataMembershipInputs } from "./dataFormMember";
+import { dataDepartmentInputs } from "./dataFormMember";
 import { rwd } from "../../../utils/rwd";
 
 const dataInputs = [
-  <InputsTexts headingText="Twoje dane:" inputsData={dataUserInputs} />,
+  <InputsTexts headingText="Twoje dane:" inputsData={dataParsonalInputs} />,
   <InputsTexts headingText="Twój adres:" inputsData={dataAdressInputs} />,
 
   <InputsRadioWithText
@@ -53,7 +53,7 @@ const dataInputs = [
   <InputsTexts headingText="Dział:" inputsData={dataDepartmentInputs} />,
 ];
 
-const StepForm = () => {
+const StepFormMember = () => {
   return (
     <>
       <StepFormHeader />
@@ -76,4 +76,4 @@ const StepForm = () => {
   );
 };
 
-export default StepForm;
+export default StepFormMember;

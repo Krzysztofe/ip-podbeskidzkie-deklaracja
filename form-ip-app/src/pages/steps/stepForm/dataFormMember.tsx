@@ -1,4 +1,4 @@
-export const dataUserInputs = [
+export const dataParsonalInputs = [
   { label: "Imię", value: "name", type: "text" },
   { label: "Nazwisko", value: "surname", type: "text" },
   { label: "Telefon", value: "phone", type: "tel" },

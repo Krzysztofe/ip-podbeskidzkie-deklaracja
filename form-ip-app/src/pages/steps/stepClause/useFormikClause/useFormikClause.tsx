@@ -1,9 +1,9 @@
 import * as yup from "yup";
-import { validationSchemaClause } from "./validationStepClauseForm";
-import useClauseStore from "../../../../zustandStores/useClauseStore";
+import { validationSchemaClause } from "./validationFormikClause";
+import useFormClauseStore from "../../../../zustandStores/useFormClauseStore";
 
 const useFormikClause = () => {
-  const setConfirmed = useClauseStore(state => state.setConfirmed);
+  const setConfirmed = useFormClauseStore(state => state.setConfirmed);
 
   const initialValues = { confirmation: false };
 

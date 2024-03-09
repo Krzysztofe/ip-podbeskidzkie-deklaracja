@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Formik } from "formik";
-import useFormikForm from "./stepForm/stepFormFormik/useFormikForm";
-import useFormikClause from "./stepClause/stepClauseForm/useFormikClause";
+import useFormikMember from "./stepForm/useFormikMember/useFormikMember";
+import useFormikClause from "./stepClause/useFormikClause/useFormikClause";
 import useMultistepFormStore from "../../zustandStores/useMultistepFormStore";
 
 type Props = {
@@ -11,12 +11,11 @@ type Props = {
 const FormContextWrapper = (props: Props) => {
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
 
-
   const {
-    initialValues: valuesForm,
-    validation: validationForm,
-    onSubmit: onSubmitForm,
-  } = useFormikForm();
+    initialValues: valuesMamber,
+    validation: validationMember,
+    onSubmit: onSubmitMember,
+  } = useFormikMember();
   const { validation: validationClause, onSubmit: onSubmitClause } =
     useFormikClause();
 
@@ -24,11 +23,11 @@ const FormContextWrapper = (props: Props) => {
 
   return (
     <Formik
-      initialValues={valuesForm}
+      initialValues={valuesMamber}
       validationSchema={
-        currentStepIdx === 0 ? validationForm : validationClause
+        currentStepIdx === 0 ? validationMember : validationClause
       }
-      onSubmit={currentStepIdx === 0 ? onSubmitForm : onSubmitClause}
+      onSubmit={currentStepIdx === 0 ? onSubmitMember : onSubmitClause}
     >
       <Form
         style={{

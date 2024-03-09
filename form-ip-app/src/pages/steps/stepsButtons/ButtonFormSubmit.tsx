@@ -3,13 +3,13 @@ import Button from "@mui/material/Button";
 import { useFormikContext } from "formik";
 import { useEffect } from "react";
 import { rwd } from "../../../utils/rwd";
-import { useFormStore } from "../../../zustandStores/useFormStore";
+import { useFormMemberStore } from "../../../zustandStores/useFormMemberStore";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 import { ModelMember } from "../../../sharedModels/ModelMember";
 
 const ButtonFormSubmit = () => {
   const { errors } = useFormikContext<ModelMember>();
-  const isSubmited = useFormStore(state => state.isSubmited);
+  const isSubmited = useFormMemberStore(state => state.isSubmited);
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const next = useMultistepFormStore(state => state.next);
   let isError = Object.values(errors);

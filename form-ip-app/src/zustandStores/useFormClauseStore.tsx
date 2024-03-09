@@ -1,15 +1,15 @@
 import create from "zustand";
 
-type ClauseStore = {
+type FormClauseStore = {
   isConfirmed: boolean;
   setConfirmed: (isConfirmed: boolean) => void;
 };
 
-const useClauseStore = create<ClauseStore>(set => ({
+const useFormClauseStore = create<FormClauseStore>(set => ({
   isConfirmed: false,
   setConfirmed: isConfirmed => {
     set(state => ({ isConfirmed: isConfirmed }));
   },
 }));
 
-export default useClauseStore;
+export default useFormClauseStore;

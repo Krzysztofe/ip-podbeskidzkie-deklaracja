@@ -1,19 +1,17 @@
 import Box from "@mui/material/Box";
-import InputsCheckbox from "../../../../components/formInputs/InputsCheckbox";
-import { rwd } from "../../../../utils/rwd";
-import useMultistepFormStore from "../../../../zustandStores/useMultistepFormStore";
-
+import InputsCheckbox from "../../../components/formInputs/InputsCheckbox";
+import { rwd } from "../../../utils/rwd";
+import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const dataCheckbox = [
   {
     label:
       "Zapoznałem/-łam się z klauzulą informacyjną i wyrażam zgodę na przetwarzanie moich danych osobowych na zasadach i w celach w niej wskazanych",
-      value: "confirmation",
+    value: "confirmation",
   },
 ];
 
-
-const StepClauseForm = () => {
+const StepFormClause = () => {
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
 
   if (currentStepIdx !== 1) return null;
@@ -30,9 +28,9 @@ const StepClauseForm = () => {
         alignItems: "center",
       }}
     >
-      <InputsCheckbox inputsData = {dataCheckbox}/>
+      <InputsCheckbox inputsData={dataCheckbox} />
     </Box>
   );
 };
 
-export default StepClauseForm;
+export default StepFormClause;

@@ -1,5 +1,5 @@
 import create from "zustand";
-import StepForm from "../pages/steps/stepForm/StepForm";
+import StepFormMember from "../pages/steps/stepForm/StepFormMember";
 import StepClause from "../pages/steps/stepClause/StepClause";
 import StepSummary from "../pages/steps/stepSummary/StepSummary";
 import StepConfirmation from "../pages/steps/stepConfirmation/StepConfirmation";
@@ -16,7 +16,12 @@ type MultistepFormState = {
 
 const useMultistepFormStore = create<MultistepFormState>(set => ({
   currentStepIdx: 0,
-  steps: [<StepForm />, <StepClause />, <StepSummary />, <StepConfirmation />],
+  steps: [
+    <StepFormMember />,
+    <StepClause />,
+    <StepSummary />,
+    <StepConfirmation />,
+  ],
   isLastStep: false,
   setLastStep: currentStepIdx =>
     set(state => ({

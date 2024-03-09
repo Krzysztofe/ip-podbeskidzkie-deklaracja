@@ -1,13 +1,13 @@
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
-import { useFormStore } from "../../../zustandStores/useFormStore";
+import { useFormMemberStore } from "../../../zustandStores/useFormMemberStore";
 
 type Errors = {
   confirmation?: string;
 };
 
 const StepFormAlert = () => {
-  const errors = useFormStore(state => state.isError);
+  const errors = useFormMemberStore(state => state.isError);
   const errorsInForm: Errors = { ...errors };
   delete errorsInForm?.confirmation;
 

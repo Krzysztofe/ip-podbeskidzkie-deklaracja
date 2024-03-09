@@ -4,7 +4,7 @@ import { useFormikContext } from "formik";
 import HeadingPrimary from "../HeadingPrimary";
 import { rwd } from "../../utils/rwd";
 import InputsErrors from "./InputsErrors";
-import { useFormStore } from "../../zustandStores/useFormStore";
+import { useFormMemberStore } from "../../zustandStores/useFormMemberStore";
 import { useEffect } from "react";
 import { ModelMember } from "../../sharedModels/ModelMember";
 
@@ -17,7 +17,7 @@ const InputsTexts = (props: Props) => {
   const { values, handleBlur, setFieldValue, errors, touched } =
     useFormikContext<ModelMember>();
 
-  const setError = useFormStore(state => state.setError);
+  const setError = useFormMemberStore(state => state.setError);
 
   useEffect(() => {
     setError(errors);

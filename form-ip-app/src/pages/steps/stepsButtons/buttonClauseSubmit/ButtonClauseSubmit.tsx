@@ -2,13 +2,12 @@ import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDo
 import Button from "@mui/material/Button";
 import { useFormikContext } from "formik";
 import { rwd } from "../../../../utils/rwd";
-import useClauseStore from "../../../../zustandStores/useClauseStore";
+import useFormClauseStore from "../../../../zustandStores/useFormClauseStore";
 import useMultistepFormStore from "../../../../zustandStores/useMultistepFormStore";
 import useClauseSubmit from "./useClauseSubmit";
 
-
 const ButtonClauseSubmit = () => {
-  const isConfirmed = useClauseStore(state => state.isConfirmed);
+  const isConfirmed = useFormClauseStore(state => state.isConfirmed);
   const { errors } = useFormikContext<{ confirmation: boolean }>();
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const next = useMultistepFormStore(state => state.next);
