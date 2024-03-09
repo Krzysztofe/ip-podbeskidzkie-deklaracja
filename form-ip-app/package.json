@@ -9,10 +9,6 @@
     "@mui/material": "^5.14.9",
     "@mui/styled-engine-sc": "^5.12.0",
     "@mui/x-data-grid": "^6.10.1",
-    "@types/material-ui": "^0.21.12",
-    "@types/node": "^16.18.38",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
     "formik": "^2.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -52,6 +48,10 @@
     ]
   },
   "devDependencies": {
+    "@types/material-ui": "^0.21.12",
+    "@types/node": "^16.18.38",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "@types/react-google-recaptcha": "^2.1.5",
     "@types/uuid": "^9.0.2",
     "gh-pages": "^5.0.0"

@@ -37,7 +37,7 @@ import CheckIcon from "@mui/icons-material/Check";
 
 
 
-const StepConfirmationHeading = () => {
+const StepConfirmationMainHeading = () => {
   const [counterIncrease, setCounterIncrease] = useState(0);
 
   useEffect(() => {
@@ -125,4 +125,4 @@ const StepConfirmationHeading = () => {
   );
 };
 
-export default StepConfirmationHeading;
+export default StepConfirmationMainHeading;
