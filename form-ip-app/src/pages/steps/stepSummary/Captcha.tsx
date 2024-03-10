@@ -29,8 +29,8 @@ const Captcha = () => {
       <Box
         sx={{
           position: "absolute",
-          right: rwd("0", "0", "-14px"),
-          transform: "scale(0.79)",
+          right: rwd("50%", "0", "-14px"),
+          transform: rwd("scale(0.79) translateX(63%)", "scale(0.79)"),
         }}
       >
         <ReCAPTCHA sitekey={key} onChange={handleChange} />
