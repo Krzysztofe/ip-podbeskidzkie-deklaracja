@@ -9,12 +9,10 @@ import useClauseSubmit from "./useClauseSubmit";
 const ButtonClauseSubmit = () => {
   const isConfirmed = useFormClauseStore(state => state.isConfirmed);
   const { errors } = useFormikContext<{ confirmation: boolean }>();
-  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const next = useMultistepFormStore(state => state.next);
   const isErrorInClause = Object.values(errors);
   useClauseSubmit();
 
-  if (currentStepIdx !== 1) return null;
 
   return (
     <Button

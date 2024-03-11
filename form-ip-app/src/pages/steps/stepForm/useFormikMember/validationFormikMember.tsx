@@ -18,13 +18,15 @@ const validationWithOther = (radioInput: string, textInput: string) => {
       return this.parent[radioInput] || this.parent[textInput];
     });
 };
-const phoneRegex = /^\d{9,}$/;
+const phoneRegex = /^\d{3}-\d{3}-\d{3}.*$/;
+const postCodeRegex = /^\d{2}-\d{3}$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 export const validationSchema = yup.object({
   name: validation,
   surname: validation,
   city: validation,
+  postCode: yup.string().matches(postCodeRegex, "Podaj właściwy kod"),
   phone: yup.string().required(errMsg).matches(phoneRegex, "Min. 9 cyfr"),
   email: yup
     .string()

@@ -8,9 +8,7 @@ import ButtonPOSTvalues from "./buttonPOST/ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";
 
 const StepsButtons = () => {
-  const isLastStep = useMultistepFormStore(state => state.isLastStep);
-
-  if (isLastStep) return null;
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
 
   return (
     <Container
@@ -35,10 +33,10 @@ const StepsButtons = () => {
           alignItems: "center",
         }}
       >
-        <ButtonReturn />
-        <ButtonFormSubmit />
-        <ButtonClauseSubmit />
-        <ButtonPOSTvalues />
+        {currentStepIdx !== 0 && <ButtonReturn />}
+        {currentStepIdx === 0 && <ButtonFormSubmit />}
+        {currentStepIdx === 1 && <ButtonClauseSubmit />}
+        {currentStepIdx === 2 && <ButtonPOSTvalues />}
       </Box>
     </Container>
   );

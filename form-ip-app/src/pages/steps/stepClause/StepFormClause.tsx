@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import InputsCheckbox from "../../../components/formInputs/InputsCheckbox";
 import { rwd } from "../../../utils/rwd";
-import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const dataCheckbox = [
   {
@@ -12,10 +11,6 @@ const dataCheckbox = [
 ];
 
 const StepFormClause = () => {
-  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
-
-  if (currentStepIdx !== 1) return null;
-
   return (
     <Box
       sx={{

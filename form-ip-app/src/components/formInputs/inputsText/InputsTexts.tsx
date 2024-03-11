@@ -1,21 +1,28 @@
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
 import { useFormikContext } from "formik";
-import HeadingPrimary from "../HeadingPrimary";
-import { rwd } from "../../utils/rwd";
-import InputsErrors from "./InputsErrors";
-import { useFormMemberStore } from "../../zustandStores/useFormMemberStore";
+import HeadingPrimary from "../../HeadingPrimary";
+import { rwd } from "../../../utils/rwd";
+import InputsErrors from "../InputsErrors";
+import { useFormMemberStore } from "../../../zustandStores/useFormMemberStore";
 import { useEffect } from "react";
-import { ModelMember } from "../../sharedModels/ModelMember";
+import { ModelMember } from "../../../sharedModels/ModelMember";
+import useHandleInputsText from "./useHandleInputsText";
 
 type Props = {
   headingText: string;
-  inputsData: { label: string; value: string; type: string }[];
+  inputsData: {
+    label: string;
+    value: string;
+    type: string;
+    postcode?: boolean;
+  }[];
 };
 
 const InputsTexts = (props: Props) => {
-  const { values, handleBlur, setFieldValue, errors, touched } =
+  const { values, handleBlur, errors, touched } =
     useFormikContext<ModelMember>();
+  const { handleChange } = useHandleInputsText();
 
   const setError = useFormMemberStore(state => state.setError);
 
@@ -44,7 +51,7 @@ const InputsTexts = (props: Props) => {
               name={value}
               label={label}
               value={values[value as keyof typeof values]}
-              onChange={e => setFieldValue(value, e.target.value)}
+              onChange={e => handleChange(value, e)}
               onBlur={handleBlur}
               size="small"
               sx={{

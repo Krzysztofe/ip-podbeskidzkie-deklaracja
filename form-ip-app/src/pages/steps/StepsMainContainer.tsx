@@ -1,3 +1,4 @@
+import useMultistepFormStore from "../../zustandStores/useMultistepFormStore";
 import FormContextWrapper from "./FormContextWrapper";
 import StepsInForm from "./StepsInForm";
 import StepsInFormWrapper from "./StepsInFormWrapper";
@@ -7,17 +8,20 @@ import Captcha from "./stepSummary/Captcha";
 import StepsButtons from "./stepsButtons/StepsButtons";
 
 const StepsMainContainer = () => {
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+  const isLastStep = useMultistepFormStore(state => state.isLastStep);
+
   return (
     <>
       <FormContextWrapper>
         <StepsInFormWrapper>
           <StepsInForm />
         </StepsInFormWrapper>
-        <StepFormClause />
-        <Captcha />
-        <StepsButtons />
+        {currentStepIdx === 1 && <StepFormClause />}
+        {currentStepIdx === 2 && <Captcha />}
+        {!isLastStep && <StepsButtons />}
       </FormContextWrapper>
-      <StepConfirmation />
+      {isLastStep && <StepConfirmation />}
     </>
   );
 };

@@ -4,10 +4,7 @@ import { rwd } from "../../../utils/rwd";
 import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 
 const ButtonReturn = () => {
-  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const back = useMultistepFormStore(state => state.back);
-
-  if (currentStepIdx === 0) return null;
 
   return (
     <Button

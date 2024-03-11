@@ -11,12 +11,12 @@ export const dataAdressInputs = [
   { label: "Ulica", value: "street", type: "text" },
   { label: "Nr domu", value: "houseNumber", type: "text" },
   { label: "Nr mieszkania", value: "apartmentNumber", type: "text" },
-  { label: "Kod pocztowy", value: "postCode", type: "text" },
+  { label: "Kod pocztowy", value: "postCode", type: "text", postcode: true },
 ];
 
 export const dataEmployerInputs = ["Amazon", "Adecco", "Randstad"];
 
-export const dataWorkplaceInputs = [ 
+export const dataWorkplaceInputs = [
   "poz1",
   "poz2",
   "wro1",
@@ -49,4 +49,6 @@ export const dataMembershipInputs = [
   "Należę do innego związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji o liczbie członków OZZIP uwzględniał moje członkostwo",
 ];
 
-export const dataDepartmentInputs = [{ label: "Dział", value: "department", type: "text" }];
+export const dataDepartmentInputs = [
+  { label: "Dział", value: "department", type: "text" },
+];

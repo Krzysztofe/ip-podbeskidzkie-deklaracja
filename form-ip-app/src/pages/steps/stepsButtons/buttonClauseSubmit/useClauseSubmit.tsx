@@ -18,7 +18,7 @@ const useClauseSubmit = () => {
   useEffect(() => {
     if (isConfirmed && isErrorInClause.length === 0) next();
   }, [isConfirmed]);
-  return null;
+
 };
 
 export default useClauseSubmit;

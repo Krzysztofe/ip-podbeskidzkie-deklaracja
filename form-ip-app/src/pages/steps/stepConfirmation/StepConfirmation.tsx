@@ -1,6 +1,5 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
 import StepConfirmationBanksList from "./StepConfirmationBanksList";
 import StepConfirmationFooter from "./StepConfirmationFooter";
 import StepConfirmationMainHeading from "./StepConfirmationMainHeading";
@@ -13,9 +12,7 @@ import {
 } from "./dataStepConfirmation";
 
 const StepConfirmation = () => {
-  const isLastStep = useMultistepFormStore(state => state.isLastStep);
-
-  if (!isLastStep) return null;
+ 
 
   return (
     <Box sx={{ px: 1.6, pt: 4 }}>

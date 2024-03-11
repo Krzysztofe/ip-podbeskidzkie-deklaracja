@@ -14,8 +14,6 @@ const Captcha = () => {
     setCaptcha(true);
   };
 
-  if (currentStepIdx !== 2) return null;
-
   if (!key) {
     return <div>CAPTCHA nie istnieje.</div>;
   }
