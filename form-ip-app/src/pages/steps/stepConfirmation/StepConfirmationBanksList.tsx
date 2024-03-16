@@ -9,6 +9,8 @@ import { rwd } from "../../../utils/rwd";
 const StepConfirmationBanksList = () => {
   const { windowWidth } = useWindowWidth();
 
+  console.log("", dataBanksList);
+
   return (
     <List
       sx={{
@@ -23,7 +25,7 @@ const StepConfirmationBanksList = () => {
         ({ img, link }: { img: JSX.Element; link: string }) => {
           return (
             <ImageListItem
-              key={UUID()}
+              key={link}
               sx={{
                 border: 1,
                 borderColor: "info.light",
