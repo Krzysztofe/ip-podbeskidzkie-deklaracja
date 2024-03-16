@@ -8,9 +8,7 @@ import { rwd } from "../../../utils/rwd";
 
 const StepConfirmationBanksList = () => {
   const { windowWidth } = useWindowWidth();
-
-  console.log("", dataBanksList);
-
+  
   return (
     <List
       sx={{

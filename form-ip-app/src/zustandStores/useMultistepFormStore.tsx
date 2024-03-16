@@ -1,4 +1,4 @@
-import create from "zustand";
+import {create} from "zustand";
 import StepFormMember from "../pages/steps/stepForm/StepFormMember";
 import StepClause from "../pages/steps/stepClause/StepClause";
 import StepSummary from "../pages/steps/stepSummary/StepSummary";
