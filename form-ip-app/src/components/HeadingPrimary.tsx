@@ -6,7 +6,7 @@ interface Props {
   color?: string;
 }
 
-const HeadingPrimary = memo((props: Props) => {
+const HeadingPrimary = (props: Props) => {
   return (
     <Typography
       variant="fs_16_sb"
@@ -16,6 +16,6 @@ const HeadingPrimary = memo((props: Props) => {
       {props.headingText}
     </Typography>
   );
-});
+}
 
 export default HeadingPrimary;
