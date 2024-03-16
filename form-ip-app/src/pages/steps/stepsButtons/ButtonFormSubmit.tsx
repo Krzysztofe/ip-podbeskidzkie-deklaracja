@@ -22,6 +22,8 @@ const ButtonFormSubmit = () => {
     if (currentStepIdx === 0) isError = [];
   }, [currentStepIdx]);
 
+  if (currentStepIdx !== 0) return null;
+  
   return (
     <Button
       variant="contained"

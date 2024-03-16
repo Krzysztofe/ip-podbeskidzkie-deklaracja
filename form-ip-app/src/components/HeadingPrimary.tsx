@@ -6,6 +6,8 @@ interface Props {
 }
 
 const HeadingPrimary = (props: Props) => {
+
+
   return (
     <Typography
       variant="fs_16_sb"

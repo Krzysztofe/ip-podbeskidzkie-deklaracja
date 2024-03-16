@@ -22,6 +22,8 @@ const ButtonPOSTvalues = () => {
   const isCaptcha = useCaptchaStore(state => state.isCaptcha);
   const { handlePOST } = usePOST();
 
+  if (currentStepIdx !== 2) return null;
+
   return (
     <Button
       variant="contained"

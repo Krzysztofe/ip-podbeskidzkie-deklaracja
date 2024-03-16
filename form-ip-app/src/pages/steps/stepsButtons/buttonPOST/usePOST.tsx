@@ -11,10 +11,12 @@ const usePOST = () => {
   const { values } = useFormikContext<ModelMember>();
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
   const next = useMultistepFormStore(state => state.next);
-  const isCaptcha = useCaptchaStore(state => state.isCaptcha);
   const setCaptcha = useCaptchaStore(state => state.setCaptcha);
   const sendRequest = useHttpRequestStore(state => state.sendRequest);
   const [responseStatus, setResponseStatus] = useState(false);
+
+  const phoneNumber = { ...values }.phone.replaceAll("-", "");
+  const formatedValues = { ...values, phone: phoneNumber };
 
   useEffect(() => {
     if (responseStatus) next();
@@ -31,7 +33,7 @@ const usePOST = () => {
       {
         url: URL,
         body: {
-          member: { ...values, submitDate: currentDateInNumbers() },
+          member: { ...formatedValues, submitDate: currentDateInNumbers() },
         },
         method: "POST",
       },

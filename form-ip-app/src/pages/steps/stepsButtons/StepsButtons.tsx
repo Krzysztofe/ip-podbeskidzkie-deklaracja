@@ -1,15 +1,12 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { rwd } from "../../../utils/rwd";
-import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore";
-import ButtonClauseSubmit from "./buttonClauseSubmit/ButtonClauseSubmit";
 import ButtonFormSubmit from "./ButtonFormSubmit";
-import ButtonPOSTvalues from "./buttonPOST/ButtonPOSTvalues";
 import ButtonReturn from "./ButtonReturn";
+import ButtonClauseSubmit from "./buttonClauseSubmit/ButtonClauseSubmit";
+import ButtonPOSTvalues from "./buttonPOST/ButtonPOSTvalues";
 
 const StepsButtons = () => {
-  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
-
   return (
     <Container
       sx={{
@@ -33,10 +30,10 @@ const StepsButtons = () => {
           alignItems: "center",
         }}
       >
-        {currentStepIdx !== 0 && <ButtonReturn />}
-        {currentStepIdx === 0 && <ButtonFormSubmit />}
-        {currentStepIdx === 1 && <ButtonClauseSubmit />}
-        {currentStepIdx === 2 && <ButtonPOSTvalues />}
+        <ButtonReturn />
+        <ButtonFormSubmit />
+        <ButtonClauseSubmit />
+        <ButtonPOSTvalues />
       </Box>
     </Container>
   );

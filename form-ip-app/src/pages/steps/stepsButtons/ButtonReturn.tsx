@@ -5,7 +5,9 @@ import useMultistepFormStore from "../../../zustandStores/useMultistepFormStore"
 
 const ButtonReturn = () => {
   const back = useMultistepFormStore(state => state.back);
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
 
+  if (currentStepIdx === 0) return null;
   return (
     <Button
       variant="contained"

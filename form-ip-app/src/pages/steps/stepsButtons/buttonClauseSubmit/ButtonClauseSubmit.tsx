@@ -10,10 +10,12 @@ const ButtonClauseSubmit = () => {
   const isConfirmed = useFormClauseStore(state => state.isConfirmed);
   const { errors } = useFormikContext<{ confirmation: boolean }>();
   const next = useMultistepFormStore(state => state.next);
+  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
+
   const isErrorInClause = Object.values(errors);
   useClauseSubmit();
 
-
+  if (currentStepIdx !== 1) return null;
   return (
     <Button
       variant="contained"
