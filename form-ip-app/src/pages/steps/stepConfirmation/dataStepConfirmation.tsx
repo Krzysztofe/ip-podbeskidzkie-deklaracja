@@ -44,8 +44,9 @@ export const dataBanksList = [
 
 export const dataPrimaryTexts = [
   "Jednym ze sposobów weryfikacji przynależności do komisji OZZIP Amazon jest uiszczanie składek członkowskich, co można wykonać przelewem bankowym na konto:",
-  "28 2130 0004 2001 0577 6570 0014 <br> OZZ Inicjatywa Pracownicza ul. Kościelna 4, 60-538 Poznań.",
-  "Tytuł przelweu: (imię i nazwisko), składka za (miesiąc/kwartał).",
+  "28 2130 0004 2001 0577 6570 0014",
+  "OZZ Inicjatywa Pracownicza ul. Kościelna 4, 60-538 Poznań.",
+  "Tytuł przelweu: (imię i nazwisko), składka za (miesiąc/kwartał). Składka miesięczna wynosi 15 zł.",
 ];
 
 export const dataSecondaryTexts = ["INFORMACJA O DACIE PRZYJĘCIA DO ZWIĄZKU"];

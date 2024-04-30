@@ -1,14 +1,13 @@
 import ImageListItem from "@mui/material/ImageListItem";
 import List from "@mui/material/List";
 import { Link } from "react-router-dom";
-import { v4 as UUID } from "uuid";
 import useWindowWidth from "../../../hooks/useWindowWidth";
 import { dataBanksList } from "./dataStepConfirmation";
 import { rwd } from "../../../utils/rwd";
 
 const StepConfirmationBanksList = () => {
   const { windowWidth } = useWindowWidth();
-  
+
   return (
     <List
       sx={{
