@@ -11,7 +11,7 @@ export const dataAdressInputs = [
   { label: "Ulica", value: "street", type: "text" },
   { label: "Nr domu", value: "houseNumber", type: "text" },
   { label: "Nr mieszkania", value: "apartmentNumber", type: "text" },
-  { label: "Kod pocztowy", value: "postCode", type: "text", postcode: true },
+  { label: "Kod pocztowy", value: "postCode", type: "tel", postcode: true },
 ];
 
 export const dataEmployerInputs = ["Amazon", "Adecco", "Randstad"];
