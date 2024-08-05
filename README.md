@@ -34,7 +34,7 @@ formik, yup, <br/>
 
 
 
-## Production version deployed on home.pl <a href = "https://deklaracja.ozzip.pl/"> here --> </a>
+## Production versions for 3 differand commisions deployed on home.pl: <a href = "https://deklaracja.ozzip.pl/"> Amazon here --> </a>, <a href = "https://canpack.ozzip.pl/"> Canpack here --> </a>, <a href = "https://fiege.ozzip.pl/"> Zalando here --> </a>
 
 ## Desktop
 <div align="center">
