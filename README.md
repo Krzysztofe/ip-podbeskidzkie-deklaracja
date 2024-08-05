@@ -1,6 +1,6 @@
 # Deklaracja IP
 
-The "Declaracja IP" is a commercial project created for the Workers' Union's use. Thanks to the application, employees can join the trade union. 
+The "Declaracja IP" is a commercial project created for the Workers' Union's use. It was developed after consultation with union activists and a union lawyer to ensure that the application's functionality complies with legal requirements for joining the union. Thanks to the application, employees can join the trade union. 
 
 The application consists of four steps: <br/> 1 A form that collects basic information about employees. <br/> 2 A clause regarding the use of personal data.<br/> 3 A summary of the data provided in the form. <br/> 4 A confirmation message indicating that the data has been sent to the union office.
 
