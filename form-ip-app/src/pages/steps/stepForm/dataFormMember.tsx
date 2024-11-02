@@ -3,7 +3,7 @@ export const dataParsonalInputs = [
   { label: "Nazwisko", value: "surname", type: "text" },
   { label: "Telefon", value: "phone", type: "tel" },
   { label: "E-mail", value: "email", type: "email" },
-  { label: "Login", value: "login", type: "text" },
+  { label: "Data urodzenia", value: "birthDate", type: "date" },
 ];
 
 export const dataAdressInputs = [
@@ -14,34 +14,24 @@ export const dataAdressInputs = [
   { label: "Kod pocztowy", value: "postCode", type: "tel", postcode: true },
 ];
 
-export const dataEmployerInputs = ["Amazon", "Adecco", "Randstad"];
+export const dataEmployerInputs = ["Auchan Polska sp. z o.o."];
 
-export const dataWorkplaceInputs = [
-  "poz1",
-  "poz2",
-  "wro1",
-  "wro2",
-  "wro4",
-  "wro5",
-  "lcj",
-  "lcj2",
-  "lcj3",
-  "lcj4",
-  "ktw1",
-  "ktw3",
-  "ktw4",
-  "szzl",
-];
+export const dataWorkplaceInputs = [{ label: "Nazwa sklepu", value: "shopName", type: "text" }];
 
 export const dataContractInpts = [
   "Na czas nieokreślony",
   "Na czas określony",
-  "Okres próbny",
-  "Umowa zlecenie",
-  "Umowa o pracę tymczasową (agencje)",
+  "Okres próbny"
 ];
 
-export const dataWorkTimeInputs = ["Cały etat", "Pół etatu"];
+export const dataWorkTimeInputs = ["Cały etat"];
+export const dataWorkPosition = [
+  "Kasier",
+  "Pracownik hali",
+  "Pracownik wsparcia klienta",
+  "Magazynier",
+  "Pracownik e-commerce"
+];
 
 export const dataMembershipInputs = [
   "Nie należę do innego związku zawodowego u pracodawcy",
@@ -49,6 +39,3 @@ export const dataMembershipInputs = [
   "Należę do innego związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji o liczbie członków OZZIP uwzględniał moje członkostwo",
 ];
 
-export const dataDepartmentInputs = [
-  { label: "Dział", value: "department", type: "text" },
-];

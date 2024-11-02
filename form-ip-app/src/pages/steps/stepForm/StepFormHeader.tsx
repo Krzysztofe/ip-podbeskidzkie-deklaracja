@@ -7,13 +7,21 @@ const StepFormHeader = () => {
   return (
     <Box py={3.9} borderBottom={1} borderColor={"info.light"}>
       <Typography variant="h1" color="info.dark" mb={4.2}>
-        Deklaracja Przystąpienia do<br />
+        Deklaracja Przystąpienia do
+        <br />
         OZZIP Amazon
       </Typography>
 
       <HeadingPrimary
         headingText={
-          "Przekazane dane są wyłącznie do wiadomości OZZIP Amazon"
+          "Przekazane dane są wyłącznie do wiadomości OZZIP w Fiege Zalando. Pracodawca nie uzyska do nich dostępu."
+        }
+      />
+
+      <Box sx={{ mb: 2 }}></Box>
+      <HeadingPrimary
+        headingText={
+          "Nasz związek zawodowy został skutecznie powołany w zakładzie Fiege E-com North. Żaden pracodawca nie ma prawa zabraniać zrzeszania się w nim."
         }
       />
 

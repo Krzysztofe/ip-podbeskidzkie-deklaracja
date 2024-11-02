@@ -9,26 +9,22 @@ import { dataAdressInputs } from "./dataFormMember";
 import { dataWorkplaceInputs } from "./dataFormMember";
 import { dataContractInpts } from "./dataFormMember";
 import { dataWorkTimeInputs } from "./dataFormMember";
-import { dataMembershipInputs } from "./dataFormMember";
-import { dataDepartmentInputs } from "./dataFormMember";
+import { dataMembershipInputs, dataWorkPosition } from "./dataFormMember";
 import { rwd } from "../../../utils/rwd";
 
 const dataInputs = [
   <InputsTexts headingText="Twoje dane:" inputsData={dataParsonalInputs} />,
   <InputsTexts headingText="Twój adres:" inputsData={dataAdressInputs} />,
 
-  <InputsRadioWithText
+  <InputsRadio
     headingText="Pracodawca:"
     inputsData={dataEmployerInputs}
-    radioValue="employer"
-    textValue="employerOther"
+    inputValue="employer"
   />,
 
-  <InputsRadioWithText
-    headingText="Miejsce Pracy:"
+  <InputsTexts
+    headingText="Miejsce Pracy/Nazwa Sklepu:"
     inputsData={dataWorkplaceInputs}
-    radioValue="workplace"
-    textValue="workplaceOther"
   />,
 
   <InputsRadio
@@ -43,14 +39,19 @@ const dataInputs = [
     textValue="workTimeOther"
   />,
 
+  <InputsRadioWithText
+    headingText="Stanowisko pracy"
+    inputsData={dataWorkPosition}
+    radioValue="workPosition"
+    textValue="workPositionOther"
+  />,
+
   <InputsRadio
     headingText="Przynależność do innych związków zawodowych:"
     inputsData={dataMembershipInputs}
     inputValue="membership"
     membership={true}
   />,
-
-  <InputsTexts headingText="Dział:" inputsData={dataDepartmentInputs} />,
 ];
 
 const StepFormMember = () => {
