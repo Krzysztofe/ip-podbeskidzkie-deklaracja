@@ -5,7 +5,7 @@ import StepsHeader from "../stepsHeader/StepsHeader";
 import HttpRequestState from "./HttpRequestState";
 import Container from "@mui/material/Container";
 import { rwd } from "../../../utils/rwd";
-import { heightHeaderXS, heightHeaderSM } from "../data/dataCompnentsHeight";
+import { heightHeaderXS, heightHeaderMD } from "../data/dataCompnentsHeight";
 
 const IndexSteps = () => {
   const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
@@ -26,10 +26,10 @@ const IndexSteps = () => {
           sx={{
             height: rwd(
               `calc(100vh - ${heightHeaderXS})`,
-              // `calc(100vh -  ${heightHeaderSM})`
-              `calc(100vh - ${heightHeaderXS})`
+              `calc(100vh -  ${heightHeaderXS})`,
+              `calc(100vh - ${heightHeaderMD})`
             ),
-            mt: rwd(heightHeaderXS, heightHeaderSM),
+            mt: rwd(heightHeaderXS, heightHeaderXS, heightHeaderMD),
             padding: "0px !important",
           }}
         >

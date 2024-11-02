@@ -6,6 +6,9 @@ import StepsHeaderNumber from "./StepsHeaderNumber";
 import StepsHeaderText from "./StepsHeaderText";
 import StepHeaderArrow from "./StepHeaderArrow";
 import { memo } from "react";
+import { heightHeaderXS, heightHeaderMD } from "../data/dataCompnentsHeight";
+
+
 
 const StepsHeader = memo(() => {
   const dataSteps = ["Formularz", "Klauzula", "Wysyłka", "Potwierdzenie"];
@@ -13,7 +16,7 @@ const StepsHeader = memo(() => {
   return (
     <Container
       sx={{
-        height: rwd("56px", "56px", "40px"),
+        height: rwd(heightHeaderXS, heightHeaderXS, heightHeaderMD),
         position: "fixed",
         top: 0,
         left: "50%",
@@ -24,7 +27,6 @@ const StepsHeader = memo(() => {
         bgcolor: "white",
         zIndex: 2,
         scrollbarGutter: "stable",
-        backgroundColor: "red",
       }}
     >
       <StepFormAlert />
