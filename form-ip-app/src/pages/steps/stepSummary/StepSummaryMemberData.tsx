@@ -18,13 +18,12 @@ const dataSummary = [
   "Nr mieszkania",
   "Kod",
   "Pracodawca",
-  "Pracodawca",
-  "Miejsce Pracy",
   "Miejsce Pracy",
   "Umowa",
   "Czas pracy",
   "Czas pracy",
-  "Dział",
+  "Stanowisko",
+  "Stanowisko",
 ];
 
 const CustomTypography = ({

@@ -58,6 +58,9 @@ const InputsTexts = (props: Props) => {
                 "& .MuiInputBase-input": {
                   color: "info.main",
                 },
+                "& .MuiFormLabel-root": {
+                  backgroundColor: "themeWhite",
+                },
               }}
             />
 
