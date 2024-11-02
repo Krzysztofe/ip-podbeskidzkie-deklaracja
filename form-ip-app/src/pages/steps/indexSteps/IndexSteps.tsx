@@ -26,7 +26,8 @@ const IndexSteps = () => {
           sx={{
             height: rwd(
               `calc(100vh - ${heightHeaderXS})`,
-              `calc(100vh -  ${heightHeaderSM})`
+              // `calc(100vh -  ${heightHeaderSM})`
+              `calc(100vh - ${heightHeaderXS})`
             ),
             mt: rwd(heightHeaderXS, heightHeaderSM),
             padding: "0px !important",

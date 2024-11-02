@@ -14,10 +14,10 @@ const StepsHeaderText = (props: Props) => {
       sx={{
         width: rwd("100%", "100%", "fit-content"),
         position: rwd("absolute", "absolute", "unset"),
-        top: rwd("22px", "32px"),
+        top: "22px",
         left: "-27px",
         textAlign: "center",
-        ml: rwd(0,0, 1.3),
+        ml: rwd(0, 0, 1.3),
       }}
     >
       {props.text}

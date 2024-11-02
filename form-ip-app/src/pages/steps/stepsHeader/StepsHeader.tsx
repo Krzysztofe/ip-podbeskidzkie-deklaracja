@@ -13,7 +13,7 @@ const StepsHeader = memo(() => {
   return (
     <Container
       sx={{
-        height: rwd("56px", "92px"),
+        height: rwd("56px", "56px", "40px"),
         position: "fixed",
         top: 0,
         left: "50%",
@@ -24,6 +24,7 @@ const StepsHeader = memo(() => {
         bgcolor: "white",
         zIndex: 2,
         scrollbarGutter: "stable",
+        backgroundColor: "red",
       }}
     >
       <StepFormAlert />
@@ -34,6 +35,7 @@ const StepsHeader = memo(() => {
           display: "flex",
           alignItems: "center",
           mb: rwd(1.3, 1.3, 0),
+          mt: rwd(0, 0, 1.3),
         }}
       >
         {dataSteps.map((text, idx, arr) => {

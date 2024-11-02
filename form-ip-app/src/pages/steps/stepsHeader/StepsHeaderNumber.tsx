@@ -13,8 +13,8 @@ const StepsHeaderNumber = (props: Props) => {
     <>
       <Box
         sx={{
-          width: rwd("20px", "30px"),
-          height: rwd("20px", "30px"),
+          width: "20px",
+          height: "20px",
           border: 1,
           borderRadius: "100%",
           display: "grid",
