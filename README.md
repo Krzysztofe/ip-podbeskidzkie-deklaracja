@@ -1,6 +1,8 @@
 # Deklaracja IP
 
-The "Declaracja IP" is a commercial project created for the Workers' Union's use. Thanks to the application, employees can join the trade union. 
+The "Declaracja IP" is a commercial project created for the Workers' Union's use. 
+
+It was developed after consultation with union activists and a union lawyer to ensure that the application's functionality complies with legal requirements for joining the union. Thanks to the application, employees can join the trade union. 
 
 The application consists of four steps: <br/> 1 A form that collects basic information about employees. <br/> 2 A clause regarding the use of personal data.<br/> 3 A summary of the data provided in the form. <br/> 4 A confirmation message indicating that the data has been sent to the union office.
 
@@ -34,7 +36,7 @@ formik, yup, <br/>
 
 
 
-## Production version deployed on home.pl <a href = "https://deklaracja.ozzip.pl/"> here --> </a>
+## Production versions for 3 differand commisions deployed on home.pl: <a href = "https://deklaracja.ozzip.pl/"> Amazon here --> </a>, <a href = "https://canpack.ozzip.pl/"> Canpack here --> </a>, <a href = "https://fiege.ozzip.pl/"> Zalando here --> </a>
 
 ## Desktop
 <div align="center">
@@ -63,9 +65,26 @@ formik, yup, <br/>
 
 <img src="https://github.com/Krzysztofe/deklaracja/assets/96065197/ebc7833b-1fc9-46e4-b9f8-7977669e187d"  width: = "40%" alt="Mobile Screenshot">
 
+<br/>
+
+##
+<div align="center">
+ <img src="https://github.com/user-attachments/assets/861812f5-288d-4257-a490-fe24619968f3" width: = "20%"  alt="Mobile Screenshot"> 
+
+</div>
+
 
 
 
 </div>
+
+## Prerequisites
+* Before getting started, make sure you have the Node.js and npm or yarn
+* Node version: **Node.js v18.16.1**
+* Clone this repository to your local machine
+* Navigate to the project directory: **cd .\form-ip**
+* Install the project dependencies by running **npm install** or **yarn install**
+* Start the development server: **cd .\form-ip\form-ip-app\ npm start** or **yarn start**
+* Open your browser and visit your localhost:3000 to see the running application.
 
 
