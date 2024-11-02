@@ -11,7 +11,7 @@ const dataSummary = [
   "Nazwisko",
   "Telefon",
   "E-mail",
-  "Login",
+  "Data urodzenia",
   "Miejscowość",
   "Ulica",
   "Nr domu",
