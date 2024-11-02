@@ -16,7 +16,7 @@ export const dataAdressInputs = [
 
 export const dataEmployerInputs = ["Auchan Polska sp. z o.o."];
 
-export const dataWorkplaceInputs = [{ label: "Nazwa sklepu", value: "shopName", type: "text" }];
+export const dataWorkplaceInputs = [{ label: "Nazwa sklepu", value: "workplace", type: "text" }];
 
 export const dataContractInpts = [
   "Na czas nieokreślony",
@@ -25,6 +25,7 @@ export const dataContractInpts = [
 ];
 
 export const dataWorkTimeInputs = ["Cały etat"];
+
 export const dataWorkPosition = [
   "Kasier",
   "Pracownik hali",

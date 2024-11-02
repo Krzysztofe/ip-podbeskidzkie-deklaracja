@@ -32,17 +32,18 @@ export const validationSchema = yup.object({
     .string()
     .required(errMsg)
     .matches(emailRegex, "Podaj właściwy e-mail"),
+  birthDate: yup.string().required(errMsg),
   employer: validationWithOther("employer", "employerOther"),
-  employerOther: validationWithOther("employer", "employerOther"),
 
-  workplace: validationWithOther("workplace", "workplaceOther"),
-  workplaceOther: validationWithOther("workplace", "workplaceOther"),
+  workplace: validation,
 
   contract: validation,
 
   workTime: validationWithOther("workTime", "workTimeOther"),
   workTimeOther: validationWithOther("workTime", "workTimeOther"),
 
-  login: validation,
+  workPosition: validationWithOther("workPosition", "workPositionOther"),
+  workPositionOther: validationWithOther("workPosition", "workPositionOther"),
+
   membership: validation,
 });

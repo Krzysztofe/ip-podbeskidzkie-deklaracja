@@ -3,7 +3,7 @@ export type ModelMember = {
   surname: string;
   phone: string;
   email: string;
-  login: string;
+  birthDate: string;
 
   city: string;
   street: string;
@@ -12,14 +12,13 @@ export type ModelMember = {
   postCode: string;
 
   employer: string;
-  employerOther: string;
   workplace: string;
-  workplaceOther: string;
   contract: string;
   workTime: string;
   workTimeOther: string;
-  department: string;
+  workPosition: string;
+  workPositionOther: string;
   membership: string;
 
-  confirmation: boolean
+  confirmation: boolean;
 };

@@ -5,7 +5,7 @@ export const initialValues: ModelMember = {
   surname: "",
   phone: "",
   email: "",
-  login: "",
+  birthDate: "",
 
   city: "",
   street: "",
@@ -14,14 +14,13 @@ export const initialValues: ModelMember = {
   postCode: "",
 
   employer: "",
-  employerOther: "",
   workplace: "",
-  workplaceOther: "",
   contract: "",
   workTime: "",
   workTimeOther: "",
-  department: "",
+  workPosition: "",
+  workPositionOther: "",
   membership: "",
 
-  confirmation:false
+  confirmation: false,
 };
