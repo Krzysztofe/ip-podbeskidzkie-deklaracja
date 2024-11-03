@@ -8,6 +8,8 @@ const Captcha = () => {
   const setCaptcha = useCaptchaStore(state => state.setCaptcha);
   const key = process.env.REACT_APP_reCaptchaKey;
 
+  console.log('',key)
+
   const handleChange = () => {
     setCaptcha(true);
   };

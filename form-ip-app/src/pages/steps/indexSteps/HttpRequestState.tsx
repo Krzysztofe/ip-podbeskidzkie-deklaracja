@@ -3,10 +3,15 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import { rwd } from "../../../utils/rwd";
 import useHttpRequestStore from "../../../zustandStores/useHttpStore";
+import { heightHeaderMD, heightHeaderXS } from "../data/dataCompnentsHeight";
 
 const BoxStylesBackground = {
   position: "absolute",
-  height: rwd("calc(100vh - 56px)", "calc(100vh - 92px)"),
+  height: rwd(
+    `calc(100vh - ${heightHeaderXS})`,
+    `calc(100vh - ${heightHeaderXS})`,
+    `calc(100vh - ${heightHeaderMD})`
+  ),
   width: "100%",
   bgcolor: "white",
   opacity: "0.9",
