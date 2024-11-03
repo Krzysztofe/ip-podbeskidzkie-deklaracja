@@ -8,6 +8,7 @@ import { useFormMemberStore } from "../../../zustandStores/useFormMemberStore";
 import { useEffect } from "react";
 import { ModelMember } from "../../../sharedModels/ModelMember";
 import useHandleInputsText from "./useHandleInputsText";
+import { currentDate } from "../../../utils/currentDate";
 
 type Props = {
   headingText: string;
@@ -29,6 +30,9 @@ const InputsTexts = (props: Props) => {
   useEffect(() => {
     setError(errors);
   }, [errors]);
+
+
+
 
   return (
     <>
@@ -61,6 +65,9 @@ const InputsTexts = (props: Props) => {
                 "& .MuiFormLabel-root": {
                   backgroundColor: "themeWhite",
                 },
+              }}
+              inputProps={{
+                ...(type === "date" && { max: currentDate }),
               }}
             />
 

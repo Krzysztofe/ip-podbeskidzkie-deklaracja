@@ -53,6 +53,8 @@ const StepSummaryMemberData = () => {
 
   const formikValues = Object.values(values).slice(0, -1);
 
+  console.log("wartości", values);
+
   return (
     <>
       {dataSummary.map((text, idx) => {

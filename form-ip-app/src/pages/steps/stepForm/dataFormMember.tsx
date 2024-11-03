@@ -27,7 +27,7 @@ export const dataContractInpts = [
 export const dataWorkTimeInputs = ["Cały etat"];
 
 export const dataWorkPosition = [
-  "Kasier",
+  "Kasjer",
   "Pracownik hali",
   "Pracownik wsparcia klienta",
   "Magazynier",
