@@ -36,7 +36,7 @@ export const dataWorkPosition = [
 
 export const dataMembershipInputs = [
   "Nie należę do innego związku zawodowego u pracodawcy",
-  "Należę do innego związku zawodowego u pracodawcy, jednak chcę, by przy podawaniu informacji o liczbie członków moje członkostwo uwzględniał wyłącznie OZZIP",
+  "Należę do innego związku zawodowego u pracodawcy, jednak <strong>chcę</strong>, by przy podawaniu informacji o liczbie członków moje członkostwo uwzględniał wyłącznie OZZIP",
   "Należę do innego związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji o liczbie członków OZZIP uwzględniał moje członkostwo",
 ];
 
