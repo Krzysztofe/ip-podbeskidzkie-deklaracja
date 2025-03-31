@@ -31,7 +31,7 @@ const StepFormHeader = () => {
               },
             }}
           >
-            Klikinij, aby przeczytać o ostatnim sukcesie naszej komisji w Auchan
+            Klikinij, aby przeczytać o ostatnim sukcesie naszej komisji w Auchan --{">"}
           </Typography>
         </Link>
       </Box>
