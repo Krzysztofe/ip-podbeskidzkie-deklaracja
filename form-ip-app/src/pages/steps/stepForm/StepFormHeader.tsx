@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import HeadingPrimary from "../../../components/HeadingPrimary";
 import { rwd } from "../../../utils/rwd";
+import { Link } from "react-router-dom";
 
 const StepFormHeader = () => {
   return (
@@ -11,6 +12,29 @@ const StepFormHeader = () => {
         <br />
         OZZIP przy Auchan Polska
       </Typography>
+      <Box>
+        <Link
+          to={"https://www.ozzip.pl/informacje/item/3087-inicjatywa-auchan"}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+        >
+          <Typography
+            variant="fs_16_sb"
+            component="p"
+            sx={{
+              py:2,
+             color: "primary.main",
+              transition: "color 0.3s",
+              "&:hover": {
+                color: "secondary.main",
+              },
+            }}
+          >
+            Klikinij, aby przeczytać o ostatnim sukcesie naszej komisji w Auchan
+          </Typography>
+        </Link>
+      </Box>
 
       <HeadingPrimary
         headingText={
