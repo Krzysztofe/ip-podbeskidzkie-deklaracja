@@ -16,6 +16,25 @@ type Props = {
   membership?: boolean;
 };
 
+const highlightText = (text: string) => {
+  const keywords = ["Nie należę", "chcę", "nie chcę"];
+
+  const regex = new RegExp(`(${keywords.join("|")})`, "g");
+  const parts = text.split(regex);
+
+  return (
+    <>
+      {parts.map((part, i) =>
+        keywords.includes(part) ? (
+          <strong key={i}>{part}</strong>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+};
+
 const InputsRadio = (props: Props) => {
   const { values, handleBlur, setFieldValue, errors, touched } =
     useFormikContext<ModelMember>();
@@ -27,7 +46,7 @@ const InputsRadio = (props: Props) => {
         <RadioGroup
           name={props.inputValue}
           value={values[props.inputValue as keyof typeof values]}
-          onChange={e => setFieldValue(props.inputValue, e.target.value)}
+          onChange={(e) => setFieldValue(props.inputValue, e.target.value)}
           onBlur={handleBlur}
           sx={{
             width: rwd("80%", "60%"),
@@ -36,20 +55,20 @@ const InputsRadio = (props: Props) => {
             mt: rwd(4.2, 5.9),
           }}
         >
-          {props.inputsData.map(data => {
+          {props.inputsData.map((data) => {
             return (
               <FormControlLabel
                 key={data}
                 value={data}
                 control={<Radio />}
-                label={data}
+                label={highlightText(data)}
                 sx={{
                   mt: props.membership ? 2 : 0,
                   ml: -1,
                   "& .MuiFormControlLabel-label": {
                     mr: 1,
                     color: "info.dark",
-                    fontSize: theme => theme.typography.fs_16_rg,
+                    fontSize: (theme) => theme.typography.fs_16_rg,
                   },
                 }}
               />

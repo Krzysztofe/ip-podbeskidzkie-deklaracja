@@ -7,11 +7,13 @@ type Errors = {
 };
 
 const StepFormAlert = () => {
-  const errors = useFormMemberStore(state => state.isError);
+  const errors = useFormMemberStore((state) => state.isError);
   const errorsInForm: Errors = { ...errors };
   delete errorsInForm?.confirmation;
 
   const isError = Object.values(errorsInForm);
+
+  console.log(errors);
 
   return (
     <Box
@@ -28,15 +30,15 @@ const StepFormAlert = () => {
         bgcolor: "rgb(253, 237, 237)",
         zIndex: "3",
         display: "flex",
-        alignItems:"center",
-        justifyContent:"center"
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Alert
         severity="error"
         sx={{
           height: "fit-content",
-          backgroundColor: "transparent"
+          backgroundColor: "transparent",
         }}
       >
         Wypełnij pola formularza

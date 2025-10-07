@@ -12,10 +12,8 @@ export type ModelMember = {
   postCode: string;
 
   employer: string;
-  workplace: string;
+  department: string;
   contract: string;
-  workTime: string;
-  workTimeOther: string;
   workPosition: string;
   workPositionOther: string;
   membership: string;

@@ -6,11 +6,10 @@ import InputsTexts from "../../../components/formInputs/inputsText/InputsTexts";
 import { dataEmployerInputs } from "./dataFormMember";
 import { dataParsonalInputs } from "./dataFormMember";
 import { dataAdressInputs } from "./dataFormMember";
-import { dataWorkplaceInputs } from "./dataFormMember";
 import { dataContractInpts } from "./dataFormMember";
-import { dataWorkTimeInputs } from "./dataFormMember";
 import { dataMembershipInputs, dataWorkPosition } from "./dataFormMember";
 import { rwd } from "../../../utils/rwd";
+import { dataDepartmentInputs } from "./dataFormMember";
 
 const dataInputs = [
   <InputsTexts headingText="Twoje dane:" inputsData={dataParsonalInputs} />,
@@ -22,21 +21,16 @@ const dataInputs = [
     inputValue="employer"
   />,
 
-  <InputsTexts
-    headingText="Miejsce Pracy/Nazwa Sklepu:"
-    inputsData={dataWorkplaceInputs}
+  <InputsRadio
+    headingText="Dział:"
+    inputsData={dataDepartmentInputs}
+    inputValue="department"
   />,
 
   <InputsRadio
     headingText="Umowa:"
     inputsData={dataContractInpts}
     inputValue="contract"
-  />,
-  <InputsRadioWithText
-    headingText="Wymiar czasu pracy"
-    inputsData={dataWorkTimeInputs}
-    radioValue="workTime"
-    textValue="workTimeOther"
   />,
 
   <InputsRadioWithText

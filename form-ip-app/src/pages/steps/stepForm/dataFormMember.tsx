@@ -14,29 +14,36 @@ export const dataAdressInputs = [
   { label: "Kod pocztowy", value: "postCode", type: "tel", postcode: true },
 ];
 
-export const dataEmployerInputs = ["Auchan Polska sp. z o.o."];
+export const dataEmployerInputs = [
+  "Electropoli Poland Sp. z o.o. (Zakład Bielsko-Biała)",
+  "Electropoli Poland Sp. z o.o. (Zakład Nowa Sól)",
+  "Eltek Poland Sp. z o.o. (Zakład Bielsko-Biała)",
+];
 
-export const dataWorkplaceInputs = [{ label: "Nazwa sklepu", value: "workplace", type: "text" }];
+export const dataDepartmentInputs = [
+  "Bezpośrednia produkcja",
+  "Działy pośrednio produkcyjne",
+  "Biura",
+];
 
 export const dataContractInpts = [
   "Na czas nieokreślony",
   "Na czas określony",
-  "Okres próbny"
+  "Okres próbny",
+  "Umowa o pracę tymczasową",
+  "Umowa zlecenie",
 ];
-
-export const dataWorkTimeInputs = ["Cały etat"];
 
 export const dataWorkPosition = [
   "Kasjer",
   "Pracownik hali",
   "Pracownik wsparcia klienta",
   "Magazynier",
-  "Pracownik e-commerce"
+  "Pracownik e-commerce",
 ];
 
 export const dataMembershipInputs = [
   "Nie należę do innego związku zawodowego u pracodawcy",
-  "Należę do innego związku zawodowego u pracodawcy, jednak <strong>chcę</strong>, by przy podawaniu informacji o liczbie członków moje członkostwo uwzględniał wyłącznie OZZIP",
+  "Należę do innego związku zawodowego u pracodawcy, jednak chcę, by przy podawaniu informacji o liczbie członków moje członkostwo uwzględniał wyłącznie OZZIP",
   "Należę do innego związku zawodowego u pracodawcy i nie chcę by przy podawaniu informacji o liczbie członków OZZIP uwzględniał moje członkostwo",
 ];
-

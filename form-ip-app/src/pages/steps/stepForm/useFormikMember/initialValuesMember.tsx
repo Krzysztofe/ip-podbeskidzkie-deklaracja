@@ -14,10 +14,8 @@ export const initialValues: ModelMember = {
   postCode: "",
 
   employer: "",
-  workplace: "",
+  department: "",
   contract: "",
-  workTime: "",
-  workTimeOther: "",
   workPosition: "",
   workPositionOther: "",
   membership: "",

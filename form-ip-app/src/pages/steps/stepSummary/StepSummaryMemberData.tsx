@@ -18,10 +18,8 @@ const dataSummary = [
   "Nr mieszkania",
   "Kod",
   "Pracodawca",
-  "Miejsce Pracy",
+  "Dział",
   "Umowa",
-  "Czas pracy",
-  "Czas pracy",
   "Stanowisko",
   "Stanowisko",
 ];
