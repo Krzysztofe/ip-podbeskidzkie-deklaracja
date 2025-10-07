@@ -8,31 +8,13 @@ import HeadingPrimary from "../HeadingPrimary";
 import { rwd } from "../../utils/rwd";
 import InputsErrors from "./InputsErrors";
 import { ModelMember } from "../../sharedModels/ModelMember";
+import { highlightText } from "../../utils/highlightText";
 
 type Props = {
   headingText: string;
   inputsData: string[];
   inputValue: string;
   membership?: boolean;
-};
-
-const highlightText = (text: string) => {
-  const keywords = ["Nie należę", "chcę", "nie chcę"];
-
-  const regex = new RegExp(`(${keywords.join("|")})`, "g");
-  const parts = text.split(regex);
-
-  return (
-    <>
-      {parts.map((part, i) =>
-        keywords.includes(part) ? (
-          <strong key={i}>{part}</strong>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
-    </>
-  );
 };
 
 const InputsRadio = (props: Props) => {
