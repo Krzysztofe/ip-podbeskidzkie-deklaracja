@@ -5,9 +5,9 @@ type CaptchaStore = {
   setCaptcha: (isCaptcha: boolean) => void;
 };
 
-export const useCaptchaStore = create<CaptchaStore>(set => ({
+export const useCaptchaStore = create<CaptchaStore>((set) => ({
   isCaptcha: false,
-  setCaptcha: isCaptcha => {
-    set(state => ({ isCaptcha: isCaptcha }));
+  setCaptcha: (isCaptcha) => {
+    set((state) => ({ isCaptcha: isCaptcha }));
   },
 }));
