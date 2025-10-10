@@ -28,7 +28,7 @@ const ImgMillenium = () => {
           data-name="Rectangle 4707"
           fill="#eaeaea"
           stroke="#efefef"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="58" height="43" stroke="none" />
           <rect x="0.5" y="0.5" width="57" height="42" fill="none" />

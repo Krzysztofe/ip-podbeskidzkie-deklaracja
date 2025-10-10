@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import useWindowWidth from "../../../hooks/useWindowWidth";
 import { dataBanksList } from "./dataStepConfirmation";
 import { rwd } from "../../../utils/rwd";
+import Box from "@mui/material/Box";
 
 const StepConfirmationBanksList = () => {
   const { windowWidth } = useWindowWidth();
+
+  console.log("", dataBanksList);
 
   return (
     <List
@@ -19,7 +22,17 @@ const StepConfirmationBanksList = () => {
       }}
     >
       {dataBanksList.map(
-        ({ img, link }: { img: JSX.Element; link: string }) => {
+        ({
+          path,
+          link,
+          width,
+          height,
+        }: {
+          path: string;
+          link: string;
+          width: string;
+          height: string;
+        }) => {
           return (
             <ImageListItem
               key={link}
@@ -27,8 +40,8 @@ const StepConfirmationBanksList = () => {
                 border: 1,
                 borderColor: "info.light",
                 m: rwd(0.3, 0.8),
-                p: rwd("5%", "10%"),
-                "&:hover": { bgcolor: "rgba(0,0,0,0.1)" },
+                p: "5%",
+                "&:hover": { borderColor: "primary.main" },
               }}
             >
               <Link
@@ -41,7 +54,15 @@ const StepConfirmationBanksList = () => {
                 }}
                 target="_blank"
               >
-                {img}
+                <Box
+                  component="img"
+                  src={path}
+                  alt="Logo OZZIP"
+                  sx={{
+                    width,
+                    height,
+                  }}
+                />
               </Link>
             </ImageListItem>
           );

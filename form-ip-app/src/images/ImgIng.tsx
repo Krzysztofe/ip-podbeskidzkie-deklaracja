@@ -1,11 +1,10 @@
 import React from "react";
 
-const ImgIngMobile = () => {
+const ImgIng = () => {
   return (
     <svg
       id="ING__mobile"
       xmlns="http://www.w3.org/2000/svg"
-
       width="80"
       height="80"
       viewBox="0 0 58 43"
@@ -26,7 +25,7 @@ const ImgIngMobile = () => {
           data-name="Rectangle 4706"
           fill="#f8f8f8"
           stroke="#eaeaea"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="58" height="43" stroke="none" />
           <rect x="0.5" y="0.5" width="57" height="42" fill="none" />
@@ -1180,4 +1179,4 @@ const ImgIngMobile = () => {
   );
 };
 
-export default ImgIngMobile;
+export default ImgIng;

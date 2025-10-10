@@ -27,7 +27,7 @@ const ImgMbank = () => {
           data-name="Rectangle 4711"
           fill="#f8f8f8"
           stroke="#eaeaea"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="58" height="43" stroke="none" />
           <rect x="0.5" y="0.5" width="57" height="42" fill="none" />

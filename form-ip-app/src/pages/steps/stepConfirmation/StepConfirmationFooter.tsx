@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/system";
 import { Link } from "react-router-dom";
-import ImgLogoIp from "../../../images/ImgLogoIp";
 import { rwd } from "../../../utils/rwd";
 
 enum TypographyVariant {
@@ -77,7 +76,15 @@ const StepConfirmationFooter = () => {
           </Typography>
         ))}
       </Box>
-      <ImgLogoIp />
+      <Box
+        component="img"
+        src="/logoIP.webp"
+        alt="Logo OZZIP"
+        sx={{
+          width: rwd("5rem", "8rem"),
+          height: rwd("5rem", "8rem"),
+        }}
+      />
     </Box>
   );
 };

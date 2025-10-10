@@ -1,8 +1,6 @@
 const ImgLogoIp = () => {
   return (
-  
     <svg
-     
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1444.2225 1480.1022"
       height="100"
@@ -10,9 +8,7 @@ const ImgLogoIp = () => {
       id="svg2"
       version="1.1"
     >
-      <metadata id="metadata8">
-
-      </metadata>
+      <metadata id="metadata8"></metadata>
       <defs id="defs6">
         <clipPath id="clipPath22" clipPathUnits="userSpaceOnUse">
           <path id="path20" d="M 0,0 H 1084 V 1111 H 0 Z" />
@@ -43,14 +39,11 @@ const ImgLogoIp = () => {
           </g>
           <text
             id="text30"
-         
-
             style={{
               fontVariant: "normal",
               fontWeight: "normal",
               fontSize: "71.32617188px",
               fontFamily: "DINPro-Regular",
-              fontFeatureSettings: "DINPro-Regular",
               fill: "#231f20",
               fillOpacity: "1",
               fillRule: "nonzero",

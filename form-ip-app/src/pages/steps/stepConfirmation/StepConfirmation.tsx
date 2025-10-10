@@ -12,16 +12,14 @@ import {
 } from "./dataStepConfirmation";
 
 const StepConfirmation = () => {
- 
-
   return (
     <Box sx={{ px: 1.6, pt: 4 }}>
       <StepConfirmationMainHeading />
-      {/* <Box sx={{ mb: 2 }}>
+      <Box sx={{ mb: 2 }}>
         <StepConfirnationHeadings texts={dataPrimaryTexts} />
       </Box>
 
-      <StepConfirmationBanksList /> */}
+      <StepConfirmationBanksList />
 
       <Box sx={{ mb: 1, mt: 2 }}>
         <StepConfirnationHeadings

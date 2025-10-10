@@ -8,8 +8,8 @@ import Captcha from "./stepSummary/Captcha";
 import StepsButtons from "./stepsButtons/StepsButtons";
 
 const StepsMainContainer = () => {
-  const currentStepIdx = useMultistepFormStore(state => state.currentStepIdx);
-  const isLastStep = useMultistepFormStore(state => state.isLastStep);
+  const currentStepIdx = useMultistepFormStore((state) => state.currentStepIdx);
+  const isLastStep = useMultistepFormStore((state) => state.isLastStep);
 
   return (
     <>
@@ -21,7 +21,8 @@ const StepsMainContainer = () => {
         {currentStepIdx === 2 && <Captcha />}
         {!isLastStep && <StepsButtons />}
       </FormContextWrapper>
-      {isLastStep && <StepConfirmation />}
+      {/* {isLastStep && <StepConfirmation />} */}
+      {<StepConfirmation />}
     </>
   );
 };

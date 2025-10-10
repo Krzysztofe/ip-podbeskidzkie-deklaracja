@@ -1,44 +1,51 @@
-import ImgMbank from "../../../images/ImgMbank";
-import ImgIng from "../../../images/ImgIng";
-import ImgPekao from "../../../images/ImgPekao";
-import ImgAlior from "../../../images/ImgAlior";
-import ImgCredit from "../../../images/ImgCredit";
-import ImgMillenium from "../../../images/ImgMillenium";
-import ImgPko from "../../../images/ImgPko";
-import ImgSantander from "../../../images/ImgSantander";
-
 export const dataBanksList = [
   {
-    img: <ImgIng />,
+    path: "/logoING.webp",
     link: "https://www.ing.pl/",
+    width: "5rem",
+    height: "2.3rem",
   },
   {
-    img: <ImgPekao />,
+    path: "/logoPEKAO.webp",
     link: "https://www.pekao.com.pl/",
+    width: "3rem",
+    height: "2.3rem",
   },
   {
-    img: <ImgMillenium />,
+    path: "/logoMillenium.webp",
     link: "https://www.bankmillennium.pl/",
+    width: "5rem",
+    height: "3rem",
   },
   {
-    img: <ImgSantander />,
+    path: "/logoSantander.webp",
     link: "https://www.santander.pl/klient-indywidualny",
+    width: "5.8rem",
+    height: "2rem",
   },
   {
-    img: <ImgAlior />,
+    path: "/logoAlior.webp",
     link: "https://www.aliorbank.pl/",
+    width: "5rem",
+    height: "3rem",
   },
   {
-    img: <ImgCredit />,
+    path: "/logoCreditAgricole.webp",
     link: "https://www.credit-agricole.pl/klienci-indywidualni",
+    width: "5rem",
+    height: "3rem",
   },
   {
-    img: <ImgMbank />,
+    path: "/logoMBank.webp",
     link: "https://www.mbank.pl/indywidualny/",
+    width: "5rem",
+    height: "2rem",
   },
   {
-    img: <ImgPko />,
+    path: "/logoPKO.webp",
     link: "https://www.pkobp.pl/",
+    width: "5rem",
+    height: "3rem",
   },
 ];
 
