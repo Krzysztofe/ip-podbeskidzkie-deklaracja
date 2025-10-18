@@ -21,8 +21,7 @@ const StepsMainContainer = () => {
         {currentStepIdx === 2 && <Captcha />}
         {!isLastStep && <StepsButtons />}
       </FormContextWrapper>
-      {/* {isLastStep && <StepConfirmation />} */}
-      {<StepConfirmation />}
+      {isLastStep && <StepConfirmation />}
     </>
   );
 };

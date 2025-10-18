@@ -9,8 +9,6 @@ import Box from "@mui/material/Box";
 const StepConfirmationBanksList = () => {
   const { windowWidth } = useWindowWidth();
 
-  console.log("", dataBanksList);
-
   return (
     <List
       sx={{
@@ -23,12 +21,12 @@ const StepConfirmationBanksList = () => {
     >
       {dataBanksList.map(
         ({
-          path,
+          src,
           link,
           width,
           height,
         }: {
-          path: string;
+          src: string;
           link: string;
           width: string;
           height: string;
@@ -56,7 +54,7 @@ const StepConfirmationBanksList = () => {
               >
                 <Box
                   component="img"
-                  src={path}
+                  src={src}
                   alt="Logo OZZIP"
                   sx={{
                     width,

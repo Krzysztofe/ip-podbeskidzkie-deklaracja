@@ -16,8 +16,6 @@ export const initialValues: ModelMember = {
   employer: "",
   department: "",
   contract: "",
-  workPosition: "",
-  workPositionOther: "",
   membership: "",
 
   confirmation: false,

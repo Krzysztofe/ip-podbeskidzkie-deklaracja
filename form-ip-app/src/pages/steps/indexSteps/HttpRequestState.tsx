@@ -31,8 +31,8 @@ const BoxStylesContent = {
 };
 
 const HttpRequestState = () => {
-  const isLoading = useHttpRequestStore(state => state.isLoading);
-  const error = useHttpRequestStore(state => state.error);
+  const isLoading = useHttpRequestStore((state) => state.isLoading);
+  const error = useHttpRequestStore((state) => state.error);
 
   if (isLoading) {
     return (
@@ -48,7 +48,7 @@ const HttpRequestState = () => {
       <>
         <Box sx={BoxStylesBackground}></Box>
         <Box sx={BoxStylesContent}>
-          <Typography variant={"fs_12_rg"} component={"p"}>
+          <Typography variant={"fs_16_sb"} component={"p"}>
             Błąd. Ponów próbę
           </Typography>
         </Box>

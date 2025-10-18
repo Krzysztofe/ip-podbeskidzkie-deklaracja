@@ -34,14 +34,6 @@ export const dataContractInpts = [
   "Umowa zlecenie",
 ];
 
-export const dataWorkPosition = [
-  "Kasjer",
-  "Pracownik hali",
-  "Pracownik wsparcia klienta",
-  "Magazynier",
-  "Pracownik e-commerce",
-];
-
 export const dataMembershipInputs = [
   "Nie należę do innego związku zawodowego u pracodawcy",
   "Należę do innego związku zawodowego u pracodawcy, jednak chcę, by przy podawaniu informacji o liczbie członków moje członkostwo uwzględniał wyłącznie OZZIP",

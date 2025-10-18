@@ -7,7 +7,7 @@ import { dataEmployerInputs } from "./dataFormMember";
 import { dataParsonalInputs } from "./dataFormMember";
 import { dataAdressInputs } from "./dataFormMember";
 import { dataContractInpts } from "./dataFormMember";
-import { dataMembershipInputs, dataWorkPosition } from "./dataFormMember";
+import { dataMembershipInputs } from "./dataFormMember";
 import { rwd } from "../../../utils/rwd";
 import { dataDepartmentInputs } from "./dataFormMember";
 
@@ -31,13 +31,6 @@ const dataInputs = [
     headingText="Umowa:"
     inputsData={dataContractInpts}
     inputValue="contract"
-  />,
-
-  <InputsRadioWithText
-    headingText="Stanowisko pracy"
-    inputsData={dataWorkPosition}
-    radioValue="workPosition"
-    textValue="workPositionOther"
   />,
 
   <InputsRadio

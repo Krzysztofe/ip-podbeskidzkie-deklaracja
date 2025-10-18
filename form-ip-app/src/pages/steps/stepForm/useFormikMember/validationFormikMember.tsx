@@ -36,11 +36,6 @@ export const validationSchema = yup.object({
   employer: validation,
 
   department: validation,
-
   contract: validation,
-
-  workPosition: validationWithOther("workPosition", "workPositionOther"),
-  workPositionOther: validationWithOther("workPosition", "workPositionOther"),
-
   membership: validation,
 });

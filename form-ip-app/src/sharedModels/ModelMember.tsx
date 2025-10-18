@@ -14,8 +14,6 @@ export type ModelMember = {
   employer: string;
   department: string;
   contract: string;
-  workPosition: string;
-  workPositionOther: string;
   membership: string;
 
   confirmation: boolean;

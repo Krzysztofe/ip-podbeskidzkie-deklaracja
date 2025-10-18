@@ -5,10 +5,8 @@ import { useCaptchaStore } from "../../../zustandStores/useCaptchaStore";
 import Container from "@mui/material/Container";
 
 const Captcha = () => {
-  const setCaptcha = useCaptchaStore(state => state.setCaptcha);
-  const key = process.env.REACT_APP_reCaptchaKey;
-
-  console.log('',key)
+  const setCaptcha = useCaptchaStore((state) => state.setCaptcha);
+  const key = process.env.REACT_APP_RECAPTCHA_KEY;
 
   const handleChange = () => {
     setCaptcha(true);

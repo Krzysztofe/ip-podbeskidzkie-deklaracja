@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/system";
 import { Link } from "react-router-dom";
 import { rwd } from "../../../utils/rwd";
+import logoIP from "../../../images/logoIP.webp";
 
 enum TypographyVariant {
   FS16RG = "fs_16_rg",
@@ -19,11 +20,19 @@ const texts = [
   { variant: TypographyVariant.FS16SB, text: "KONTAKT:" },
   {
     variant: TypographyVariant.FS16RG,
-    text: "tel. 695-246-740",
+    text: "Electropoli tel. 508 110 328 Madzia Magdalena",
   },
   {
     variant: TypographyVariant.FS16RG,
-    text: "ipauchanlublin@gmail.com",
+    text: "Eltek tel. 661 667 567 Agnieszka Struska",
+  },
+  {
+    variant: TypographyVariant.FS16RG,
+    text: "Eltek tel. 501 465 521 Magdalena Dworaczek",
+  },
+  {
+    variant: TypographyVariant.FS16RG,
+    text: "e-mail: ozzippodbeskidzie@gmail.com",
   },
   { variant: TypographyVariant.FS16SB, text: "WWW:" },
 
@@ -35,8 +44,8 @@ const texts = [
   { variant: TypographyVariant.FS16SB, text: "FACEBOOK:" },
   {
     variant: TypographyVariant.FS16RG,
-    text: "OZZ Inicjatywa Pracownicza",
-    link: "https://www.facebook.com/InicjatywaPracownicza",
+    text: "Komisja Międzyzakładowa OZZ Inicjatywa Pracownicza Pdbeskidzie",
+    link: "https://www.facebook.com/profile.php?id=61577058778735",
   },
 ];
 
@@ -78,7 +87,7 @@ const StepConfirmationFooter = () => {
       </Box>
       <Box
         component="img"
-        src="/logoIP.webp"
+        src={logoIP}
         alt="Logo OZZIP"
         sx={{
           width: rwd("5rem", "8rem"),
